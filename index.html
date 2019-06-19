@@ -20,7 +20,7 @@
     <aside>
         <div class="top">
             <div class="logo">
-                <img src="./assets/logotype_litens_white.png" alt="This is the Litens Logo">
+                <a href=""><img src="./assets/logotype_litens_white.png" alt="This is the Litens Logo"></a>
             </div>
             <div class="minify icon">
                 <a href=""><i class="fas fa-chevron-double-left"></i></a>
@@ -62,21 +62,21 @@
                         </g>
                         </svg></a>
                     <a class="linkText" href="">BASFiltr™</a>
-                    <a class="expander" href=""><i class="far fa-angle-right"></i></a>
+                    <button class="expander"><i class="far fa-angle-right"></i></button>
                 </div>
                 <div class="basTools toolList">
                     <ul>
                         <li>
-                            <a href="">Franks Joint Calculator</a>
+                            <a class="basJointTool" href="#" onclick="return false">Franks Joint Calculator</a>
                         </li>
                         <li>
-                            <a href="">Franks Stress Strain Calculator</a>
+                            <a  class="basStressGen" href="#" onclick="return false">Franks Stress Strain Calculator</a>
                         </li>
                         <li>
-                            <a href="">Press-fit Calculator</a>
+                            <a class="basPressTool" href="#" onclick="return false">Press-fit Calculator</a>
                         </li>
                         <li>
-                            <a href="">Spring Designer</a>
+                            <a class="basSpringTool" href="#" onclick="return false">Spring Designer</a>
                         </li>
                     </ul>
                 </div>
@@ -89,7 +89,7 @@
                         </g>
                         </svg></a>
                     <a class="linkText" href="">ADT</a>
-                    <a class="expander" href=""><i class="far fa-angle-right"></i></a>
+                    <button class="expander"><i class="far fa-angle-right"></i></button>
                 </div>
                 <div class="oad mainLink">
                     <a href=""><svg class="icon" width="164pt" height="163pt" viewBox="0 0 164 163" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
                         </g>
                         </svg></a>
                     <a class="linkText" href="">OAD</a>
-                    <a class="expander" href=""><i class="far fa-angle-right"></i></a>
+                    <button class="expander"><i class="far fa-angle-right"></i></button>
                 </div>
                 <div class="tbt mainLink">
                     <a href=""><svg class="icon" width="161pt" height="166pt" viewBox="0 0 161 166" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -112,7 +112,7 @@
                         </g>
                         </svg></a>
                     <a class="linkText" href="">TBT</a>
-                    <a class="expander" href=""><i class="far fa-angle-right"></i></a>
+                    <button class="expander"><i class="far fa-angle-right"></i></button>
                 </div>
             </div>
         </div>
@@ -162,7 +162,7 @@
                         <h4>
                             Today:
                         </h4>
-                        <h4 class="today">
+                        <h4 id="today">
                             June 19
                         </h4>
                         <a href=""><i class="fal fa-calendar-alt"></i></a>
@@ -174,7 +174,7 @@
         <!-- This is the main content area -->
         <main>
             <div class="dashboard">
-                <div class="mainContent">
+                <div id="main" class="mainContent">
                     <h4>
                         This is the main content area to be switched.
                     </h4>

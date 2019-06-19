@@ -41,6 +41,10 @@ aside {
         }
         .toolList {
             display: none;
+            transition: all 0.5s linear;
+            a {
+                padding: 8px 8px;
+            }
         }
         .expanded {
             display: block;
@@ -79,5 +83,9 @@ aside {
     i {
         font-size: 2rem;
         color: $icon;
+    }
+    button {
+        background: none;
+        border: none;
     }
 }
