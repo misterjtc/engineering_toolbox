@@ -1,0 +1,43 @@
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: $baseFont;
+    h1 {
+        font-size: $h1Desk;
+        margin: 0;
+        padding: 0;
+    }
+    h2 {
+        font-size: $h2Desk;
+        margin: 0;
+        padding: 0;
+    }
+    h3 {
+        font-size: $h3Desk;
+        margin: 0;
+        padding: 0;
+    }
+    h4 {
+        font-size: $h4Desk;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        font-size: $pDesk;
+    }
+    a {
+        font-size: $aDesk;
+    }
+    i {
+        font-size: $iDesk;
+    }
+}
+.uppercase {
+    text-transform: uppercase;
+}
+body {
+    display: flex;
+}
+.main {
+    width: 84%;
+    height: 100vh;
+}

@@ -1,0 +1,83 @@
+aside {
+    background: $navBackground;
+    height: 100vh;
+    width: 16%;
+    color: $medText;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            width: 200px;
+            img {
+                width: 100%;
+            }
+        }
+        .minify {
+            margin-right: 15px;
+            color: $selectedIcon;
+        }
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 25px;
+        width: 100%;
+        .dashSelector {
+            margin: 50px 0 25px 0;
+        }
+        .automationSection {
+            h3 {
+                margin: 15px 0 30px 0;
+            }
+        }
+        .productsSection {
+            width: 100%;
+            h3 {
+                margin: 15px 0 30px 0;
+            }
+        }
+        .toolList {
+            display: none;
+        }
+        .expanded {
+            display: block;
+        }
+    }
+    .icon {
+        width: 2rem;
+        height: auto;
+        fill: $icon;    
+    }
+    .linkText {
+        padding-left: 20px;
+    }
+    .mainLink {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        margin: 10px 0;
+        width: 85%;
+        position: relative;
+        .expander {
+            position: absolute;
+            right: 0;
+            i {
+                color: $medText;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $medText;
+        font-weight: 700;
+        font-size: 1.9rem;
+        display: block;
+    }
+    i {
+        font-size: 2rem;
+        color: $icon;
+    }
+}

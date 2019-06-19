@@ -1,0 +1,15 @@
+// Setup and Partials
+@import "./partials/normalize";
+@import "./partials/borderbox";
+@import "./partials/clearfix";
+@import "./partials/visuallyHidden";
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/site";
+// Main Index Styling
+@import "./sections/aside.scss";
+@import "./sections/dashboard.scss";
+@import "./sections/header.scss";
+@import "./sections/footer.scss";
+// Page Styling
+

@@ -1,0 +1,87 @@
+header {
+    // border: 2px solid cyan;
+    height: 13.5%;
+    .headerContent {
+        height: 60%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 15px;
+        ul {
+            display: flex;
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    padding: 0 5px;
+                    margin: 0 5px;
+                    i {
+                        font-size: 2rem;
+                        color: $selectedIcon;
+                    }
+                }
+            }
+        }
+        h3 {
+            margin: 0 15px;
+        }
+        h1 {
+            background: $selectedIcon;
+            border-radius: 5px;
+            color: $blueText;
+            padding: 5px 20px;
+            margin-left: 10px;
+        }
+    }
+    .headerInfo {
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 2px solid $medText;
+        .headInfo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            h3 {
+                color: $blueText;
+                padding: 5px 35px;
+                // border-right: 1px solid $medText;
+            }
+            h4 {
+                color: $medText;
+                padding: 5px 35px;
+                border-left: 2px solid $medText;
+            }
+        }
+        .calendar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            h4 {
+                color: $medText;
+                padding: 0 15px;
+            }
+            .calendarSelector {
+                display: flex;
+                background: $greyBackground;
+                padding: 7px 10px;
+                border-radius: 5px;
+                margin: 0 15px 0 25px;
+                h4 {
+                    padding: 0 5px;
+                }
+                .today {
+                    color: $icon;
+                }
+                a {
+                    color: $blueText;
+                    padding: 0 10px;
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
