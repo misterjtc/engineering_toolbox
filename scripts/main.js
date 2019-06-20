@@ -2,9 +2,13 @@ $(function(){
     // Check if the function is ready
     console.log("I'm Ready");
     // JS for expanding collapsing sidebar tool menus
-    $(".expander").on("click", function(){
+    $(".basExpander").on("click", function(){
         console.log('clicking');
         $(".basTools").toggleClass("expanded");
+    });
+    $(".genExpander").on("click", function(){
+        console.log('clicking');
+        $(".genTools").toggleClass("expanded");
     });
     // JS for displaying current date on dashboard
     n =  new Date();
@@ -24,5 +28,8 @@ $(function(){
     });
     $(".basSpringTool").on("click", function(){
         $("#main").load("wip.html"); 
+    });
+    $(".tvTool").on("click", function(){
+        $("#main").load("tvTool.html"); 
     });
 });
