@@ -212,7 +212,7 @@ html {
 .uppercase {
   text-transform: uppercase; }
 
-body {
+.framework {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -328,7 +328,16 @@ main {
     main .dashboard .mainContent {
       color: #999999;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
 
 header {
   height: 13.5%; }
@@ -472,5 +481,78 @@ footer {
   align-items: center; }
 
 body .tvApp {
-  height: 100%;
+  height: 95%;
   width: 100%; }
+
+@font-face {
+  font-family: 'NeoSansPro-Regular';
+  src: url(..//..//fonts/NeoSansPro-Regular.otf) format("opentype"); }
+
+.splash {
+  width: 100%;
+  height: 100vh;
+  background: url(../assets/0008_00_00_50.842.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 2; }
+  .splash .splashContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .splash .splashContent .splashLogo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 20vh; }
+      .splash .splashContent .splashLogo img {
+        display: block;
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: auto;
+        width: 200px; }
+      .splash .splashContent .splashLogo h1 {
+        font-family: 'NeoSansPro-Regular';
+        font-size: 6rem; }
+    .splash .splashContent .splashApp {
+      margin: 0 0 35px 60px; }
+      .splash .splashContent .splashApp h2 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 2.5rem; }
+    .splash .splashContent .login a {
+      text-decoration: none;
+      text-align: center;
+      background: #193c82;
+      color: black;
+      width: 200px;
+      border: none;
+      font-size: 3rem;
+      border-radius: 10px;
+      padding: 10px 15px;
+      font-weight: 700;
+      display: block;
+      margin-left: 60px; }
