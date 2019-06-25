@@ -40,6 +40,7 @@ aside {
             }
         }
         .toolList {
+            // opacity: 0;
             display: none;
             transition: all 0.5s linear;
             a {
@@ -48,6 +49,12 @@ aside {
         }
         .expanded {
             display: block;
+        }
+        .subLink {
+            transition: color 0.3s linear;
+            &:hover {
+                color: lighten($medText, 30%);
+            }
         }
     }
     .icon {
@@ -65,20 +72,58 @@ aside {
         margin: 10px 0;
         width: 85%;
         position: relative;
+        cursor: pointer;
+        a,i,.expander {
+            transition: color 0.3s linear;
+        }
+        svg {
+            transition: fill 0.3s linear;
+        }
+        &:hover a {
+            color: lighten($medText, 30%);
+        }
+        &:hover .expander i {
+            color: lighten($medText, 30%);
+        }
+        &:hover i {
+            color: lighten($icon, 30%);
+        }
+        &:hover svg {
+            fill: lighten($icon, 30%);
+        }
         .expander {
             position: absolute;
             right: 0;
+            transition: all 0.3s linear;
             i {
                 color: $medText;
             }
         }
+        .expander.expanderDown {
+            transform: rotate(90deg);
+        }
+    }
+    .mainLink.lit {
+        a {
+            color: lighten($medText, 30%);
+        }
+        .expander i {
+            color: lighten($medText, 30%);
+        }
+        i {
+            color: lighten($icon, 30%);
+        }
+        svg {
+            fill: lighten($icon, 30%);
+        }
     }
     a {
         text-decoration: none;
-        color: $medText;
         font-weight: 700;
         font-size: 1.9rem;
         display: block;
+        color: $medText;
+
     }
     i {
         font-size: 2rem;

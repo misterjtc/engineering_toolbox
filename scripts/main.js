@@ -4,11 +4,22 @@ $(function(){
     // JS for expanding collapsing sidebar tool menus
     $(".basExpander").on("click", function(){
         console.log('clicking');
-        $(".basTools").toggleClass("expanded");
+        // $( ".basTools" ).fadeToggle( 1000, "linear" )
+        $(".basTools").toggleClass("expanded", 300, "linear");
+        $(".basExpander > .expander").toggleClass("expanderDown");
+        $(".basExpander").toggleClass("lit");
     });
     $(".genExpander").on("click", function(){
         console.log('clicking');
         $(".genTools").toggleClass("expanded");
+        $(".genExpander > .expander").toggleClass("expanderDown");
+        $(".genExpander").toggleClass("lit");
+    });
+    $(".alphaExpander").on("click", function(){
+        console.log('clicking');
+        $(".alphaTools").toggleClass("expanded");
+        $(".alphaExpander > .expander").toggleClass("expanderDown");
+        $(".alphaExpander").toggleClass("lit");
     });
     // JS for displaying current date on dashboard
     n =  new Date();

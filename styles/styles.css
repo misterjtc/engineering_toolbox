@@ -276,6 +276,12 @@ aside {
         padding: 8px 8px; }
     aside .nav .expanded {
       display: block; }
+    aside .nav .subLink {
+      -webkit-transition: color 0.3s linear;
+      -o-transition: color 0.3s linear;
+      transition: color 0.3s linear; }
+      aside .nav .subLink:hover {
+        color: #e6e6e6; }
   aside .icon {
     width: 2rem;
     height: auto;
@@ -292,18 +298,50 @@ aside {
     padding: 10px 0;
     margin: 10px 0;
     width: 85%;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
+    aside .mainLink a, aside .mainLink i, aside .mainLink .expander {
+      -webkit-transition: color 0.3s linear;
+      -o-transition: color 0.3s linear;
+      transition: color 0.3s linear; }
+    aside .mainLink svg {
+      -webkit-transition: fill 0.3s linear;
+      -o-transition: fill 0.3s linear;
+      transition: fill 0.3s linear; }
+    aside .mainLink:hover a {
+      color: #e6e6e6; }
+    aside .mainLink:hover .expander i {
+      color: #e6e6e6; }
+    aside .mainLink:hover i {
+      color: #5683de; }
+    aside .mainLink:hover svg {
+      fill: #5683de; }
     aside .mainLink .expander {
       position: absolute;
-      right: 0; }
+      right: 0;
+      -webkit-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
       aside .mainLink .expander i {
         color: #999999; }
+    aside .mainLink .expander.expanderDown {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
+  aside .mainLink.lit a {
+    color: #e6e6e6; }
+  aside .mainLink.lit .expander i {
+    color: #e6e6e6; }
+  aside .mainLink.lit i {
+    color: #5683de; }
+  aside .mainLink.lit svg {
+    fill: #5683de; }
   aside a {
     text-decoration: none;
-    color: #999999;
     font-weight: 700;
     font-size: 1.9rem;
-    display: block; }
+    display: block;
+    color: #999999; }
   aside i {
     font-size: 2rem;
     color: #193c82; }
