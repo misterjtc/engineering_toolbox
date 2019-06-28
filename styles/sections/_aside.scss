@@ -40,14 +40,16 @@ aside {
             }
         }
         .toolList {
-            // opacity: 0;
             display: none;
-            transition: all 0.5s linear;
+            width: 85%;
+            ul {
+                margin: 0;
+            }
             a {
                 padding: 8px 8px;
             }
         }
-        .expanded {
+        .toolList.expanded {
             display: block;
         }
         .subLink {
