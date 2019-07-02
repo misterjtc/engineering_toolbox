@@ -1,9 +1,10 @@
-main{
+.centralContent {
     height: 80%;
-    .dashboard {
-        // border: 2px solid hotpink;
+    // margin-top: 13.5%;
+    margin-left: $asideWidth;
+    .contentSwitch {
         height: 100%;
-        background: $greyBackground;
+        background: $powerApps;
         display: flex;
         justify-content: center;
         align-items: center;

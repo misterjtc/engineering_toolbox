@@ -17,25 +17,25 @@
    <link rel="stylesheet" href="./styles/styles.css"/>
 </head>
 <body class="framework">
-    <aside>
+    <aside class="navPanel">
         <div class="top">
             <div class="logo">
-                <a href=""><img src="./assets/logotype_litens_white.png" alt="This is the Litens Logo"></a>
+                <a href="#"><img src="./assets/logotype_litens_white.png" alt="This is the Litens Logo"></a>
             </div>
             <div class="minify icon">
-                <a href=""><i class="fas fa-chevron-double-left"></i></a>
+                <a href="" onclick="return false"><i class="fas fa-chevron-double-left"></i></a>
             </div>
         </div>
         <div class="nav">
-            <div class="dashSelector mainLink">
-                <a href=""><i class="fas fa-box"></i></a>
-                <a class="linkText" href="">Dashboard</a>
+            <div class="dashSelector mainLink rootLink">
+                <a href="" onclick="return false"><i class="fas fa-box"></i></a>
+                <a class="linkText" href="" onclick="return false">Dashboard</a>
             </div>
             <div class="automationSection">
-                <h3 class="uppercase">
+                <h3 class="uppercase sectionBreak automationBreak">
                     Automation
                 </h3>
-                <div class="productAutomator mainLink">
+                <div class="productAutomator mainLink rootLink">
                     <a href=""><svg class="icon" width="187pt" height="187pt" viewBox="0 0 187 187" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <g id="#ffffffff">
                         </g>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="productsSection">
-                <h3 class="uppercase">
+                <h3 class="uppercase sectionBreak toolboxBreak">
                     Toolbox
                 </h3>
                 <div class="general genExpander mainLink">
@@ -168,8 +168,8 @@
             </div>
         </header>
         <!-- This is the main content area -->
-        <main>
-            <div class="dashboard">
+        <main class="centralContent">
+            <div class="contentSwitch">
                 <div id="main" class="mainContent">
                     <h4>
                         This is the main content area to be switched.

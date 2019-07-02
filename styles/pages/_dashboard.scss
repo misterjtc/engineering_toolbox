@@ -1,0 +1,27 @@
+.dashboard {
+    position: absolute;
+    left: $asideWidth;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background: $greyBackground;
+    height: auto;
+    padding: 10px 10px;
+    margin-top: 125px;
+    margin-bottom: 60.89px;
+    .dashBox {
+        width: calc(50% - 20px);
+        // height: calc(50% - 20px);
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: white;
+        margin: 10px 10px;
+        border-radius: 5px;
+    }
+}

@@ -1,6 +1,10 @@
 header {
-    // border: 2px solid cyan;
+    position: fixed;
     height: 13.5%;
+    width: calc(100% - #{$asideWidth});
+    background: white;
+    margin-left: $asideWidth;
+    z-index: 10;
     .headerContent {
         height: 60%;
         display: flex;
@@ -46,7 +50,6 @@ header {
             h3 {
                 color: $blueText;
                 padding: 5px 35px;
-                // border-right: 1px solid $medText;
             }
             h4 {
                 color: $medText;

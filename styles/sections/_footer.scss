@@ -1,9 +1,15 @@
 footer {
-    // border: 2px solid palegoldenrod;
+    position: fixed;
+    left:0;
+    bottom:0;
     height: 6.5%;
+    width: calc(100% - #{$asideWidth});
+    margin-left: $asideWidth;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: white;
+    z-index: 10;
     h3 {
         margin-left: 25px;
         font-size: 1.5rem;
@@ -21,9 +27,14 @@ footer {
                 a { 
                     text-decoration: none;
                     color: $darkText;
-                    padding: 0 10px;
-                    margin: 0 5px;
+                    padding: 2px 5px;
+                    margin: 0 10px;
                     font-weight: 500;
+                    border-bottom: 1px solid transparent;
+                    transition: border-bottom 0.3s linear;
+                    &:hover {
+                        border-bottom: 1px solid $darkText;
+                    }
                 }
             }
         }

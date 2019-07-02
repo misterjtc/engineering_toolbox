@@ -8,11 +8,13 @@
 @import "./partials/site";
 // Main Index Styling
 @import "./sections/aside.scss";
-@import "./sections/dashboard.scss";
+@import "./pages/dashboard.scss";
+@import "./sections/contentSwitch.scss";
 @import "./sections/header.scss";
 @import "./sections/footer.scss";
 // Page Styling
 @import "./pages/wip.scss";
 @import "./pages/tvTool.scss";
 @import "./pages/login.scss";
-@import "./pages/jointTool.scss"
+@import "./pages/jointTool.scss";
+@import "./pages/dashboard.scss";

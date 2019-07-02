@@ -1,8 +1,10 @@
 aside {
+    position: fixed;
     background: $navBackground;
     height: 100vh;
-    width: 16%;
+    width: $asideWidth;
     color: $medText;
+    z-index: 10;
     .top {
         display: flex;
         justify-content: space-between;
@@ -16,6 +18,12 @@ aside {
         .minify {
             margin-right: 15px;
             color: $selectedIcon;
+            i {
+                transition: all 0.3s linear;
+            }
+            &:hover i {
+                color: lighten($selectedIcon, 30%);
+            }
         }
     }
     .nav {
@@ -58,11 +66,17 @@ aside {
                 color: lighten($medText, 30%);
             }
         }
+        .subLink.litLink {
+            color: lighten($medText, 30%);
+        }
+        .dotHolder {
+            color: $medText;
+        }
     }
     .icon {
         width: 2rem;
         height: auto;
-        fill: $icon;    
+        fill: $icon;
     }
     .linkText {
         padding-left: 20px;
@@ -70,6 +84,7 @@ aside {
     .mainLink {
         display: flex;
         align-items: center;
+        // justify-content: center;
         padding: 10px 0;
         margin: 10px 0;
         width: 85%;
@@ -105,6 +120,17 @@ aside {
             transform: rotate(90deg);
         }
     }
+    .rootLink.litLink {
+        a {
+            color: lighten($medText, 30%);
+        }
+        i {
+            color: lighten($icon, 30%);
+        }
+        svg {
+            color: lighten($icon, 30%);
+        }
+    }
     .mainLink.lit {
         a {
             color: lighten($medText, 30%);
@@ -134,5 +160,44 @@ aside {
     button {
         background: none;
         border: none;
+    }
+}
+.navPanel.navMinify {
+    .main {
+        width: 95%;
+    }
+    .top {
+        width: 100%;
+        height: 80px;
+        justify-content: center;
+        .logo {
+            // transition: all 0.4s linear;
+            // opacity: 0;
+            display: none;
+        }
+        .minify a i {
+            transform: rotate(180deg);
+        }
+    }
+    .nav {
+        .dashSelector {
+            // margin: 0;
+        }
+    }
+    .sectionBreak {
+        // transition: all 0.4s linear;
+        // display: none;
+        // opacity: 0;
+    }
+    .mainLink {
+        // justify-content: center;
+    }
+    .mainLink .linkText {
+        // transition: all 0.4s linear;
+        display: none;
+    }
+    .expander {
+        // transition: all 0.4s linear;
+        display: none;
     }
 }
