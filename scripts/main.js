@@ -7,13 +7,15 @@ $(function(){
     // Set margin for main content switch based on height of header
     var $headerHeight = $("header").height()
     console.log($headerHeight);
+    var $asideWidth = $('aside').width();
+    console.log($asideWidth);
     $('.centralContent').css('margin-top',$headerHeight);
+    $('.centralContent').css('margin-left',$asideWidth);
     // $('.dashboard').css('margin-top',$headerHeight);
     // JS for collapsing and expanding aside nav menu
     $(".minify").on("click", function(){
-        var $asideWidth = $('aside').width();
-        console.log($asideWidth);
         // Close all tool lists and remove expansion formatting
+        var $asideWidth = $('aside').width();
         $(".basExpander > .expander").removeClass("expanderDown");
         $(".basExpander").removeClass("lit");
         $(".genExpander > .expander").removeClass("expanderDown");
@@ -23,12 +25,15 @@ $(function(){
         $(".basTools").slideUp();
         $(".genTools").slideUp();
         $(".alphaTools").slideUp();
+        console.log($asideWidth);
         // If the nav bar is less than 100px, expand it and do some formatting
         if ( $asideWidth < 100 ) {
             $('aside').animate({width: "16%"}, 400, "linear");
             $('.main').animate({width: "84%"}, 400, "linear");
-            $(".centralContent").animate({marginLeft: "16%"}, 400, "linear");
-            // $(".dashboard").animate({left: "16%"}, 400, "linear");
+            $('header').animate({marginLeft: "16%", width: "84%"}, 400, "linear");
+            $('footer').animate({marginLeft: "16%", width: "84%"}, 400, "linear");
+            $(".centralContent").animate({marginLeft: $asideWidth}, 400, "linear");
+            $("#main .imported").animate({left: "16%"}, 400, "linear");
             $('aside').removeClass('navMinify');
             $(".automationBreak").html('<h3 class="uppercase sectionBreak automationSection">Automation</h3>');
             $(".toolboxBreak").html('<h3 class="uppercase sectionBreak toolboxSection">Toolbox</h3>');
@@ -36,7 +41,10 @@ $(function(){
         } else {
             $('aside').animate({width: "5%"}, 400, "linear");
             $('.main').animate({width: "95%"}, 400, "linear");
-            $(".centralContent").animate({marginLeft: "5%"}, 400, "linear");
+            $('header').animate({marginLeft: "5%", width: "95%"}, 400, "linear");
+            $('footer').animate({marginLeft: "5%", width: "95%"}, 400, "linear");
+            $(".centralContent").animate({marginLeft: $asideWidth}, 400, "linear")
+            $("#main .imported").animate({left: "5%"}, 400, "linear");;
             $('aside').addClass('navMinify');
             $(".automationBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
             $(".toolboxBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');

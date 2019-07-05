@@ -262,15 +262,19 @@ aside {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding-left: 25px;
+    margin: 0 auto;
     width: 100%; }
     aside .nav .dashSelector {
-      margin: 50px 0 25px 0; }
-    aside .nav .automationSection h3 {
-      margin: 15px 0 30px 0; }
+      margin: 50px 0 25px 0;
+      width: 100%; }
+    aside .nav .automationSection {
+      width: 100%; }
+      aside .nav .automationSection h3 {
+        margin: 15px 0 30px 0; }
     aside .nav .productsSection {
       width: 100%; }
       aside .nav .productsSection h3 {
@@ -428,6 +432,7 @@ aside {
 
 .centralContent {
   height: 80%;
+  width: 100%;
   margin-left: 16%; }
   .centralContent .contentSwitch {
     height: 100%;
