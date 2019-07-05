@@ -618,6 +618,10 @@ body .tvApp {
   height: 95%;
   width: 100%; }
 
+body .freqApp {
+  height: 95%;
+  width: 100%; }
+
 @font-face {
   font-family: 'NeoSansPro-Regular';
   src: url(..//..//fonts/NeoSansPro-Regular.otf) format("opentype"); }
