@@ -1,6 +1,6 @@
 .centralContent {
     height: 80%;
-    width: 100%;
+    width: calc(100% - $asideWidth);
     margin-left: $asideWidth;
     .contentSwitch {
         height: 100%;
