@@ -1,0 +1,15 @@
+.appContent {
+    position: absolute;
+    left: $asideWidth;
+    top: 0;
+    right: 0;
+    height: 80%;
+    margin-top: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .powerApp {
+        width: 100%;
+        height: 95%;
+    }
+}

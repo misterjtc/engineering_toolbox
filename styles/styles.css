@@ -393,43 +393,6 @@ aside {
 .navPanel.navMinify .expander {
   display: none; }
 
-.dashboard {
-  position: absolute;
-  left: 16%;
-  top: 0;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  background: #dddddd;
-  height: auto;
-  padding: 10px 10px;
-  margin-top: 125px;
-  margin-bottom: 60.89px; }
-  .dashboard .dashBox {
-    width: calc(50% - 20px);
-    height: 500px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-align: center;
-    background: white;
-    margin: 10px 10px;
-    border-radius: 5px; }
-
 .centralContent {
   height: 80%;
   width: calc(100% - $asideWidth);
@@ -619,14 +582,6 @@ footer {
   -ms-flex-align: center;
   align-items: center; }
 
-body .tvApp {
-  height: 95%;
-  width: 100%; }
-
-body .freqApp {
-  height: 95%;
-  width: 100%; }
-
 @font-face {
   font-family: 'NeoSansPro-Regular';
   src: url(..//..//fonts/NeoSansPro-Regular.otf) format("opentype"); }
@@ -700,10 +655,6 @@ body .freqApp {
       display: block;
       margin-left: 60px; }
 
-body .jointApp {
-  height: 95%;
-  width: 100%; }
-
 .dashboard {
   position: absolute;
   left: 16%;
@@ -740,3 +691,23 @@ body .jointApp {
     background: white;
     margin: 10px 10px;
     border-radius: 5px; }
+
+.appContent {
+  position: absolute;
+  left: 16%;
+  top: 0;
+  right: 0;
+  height: 80%;
+  margin-top: 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .appContent .powerApp {
+    width: 100%;
+    height: 95%; }
