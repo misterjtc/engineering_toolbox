@@ -70,24 +70,31 @@ $(function(){
     // JS for loading specific content onto the dashboard based on user selection
     $(".dashSelector").on("click", function(){
         $("#main").load("dashboard.html");
+        $(".headToolSwitch").html('Dashboard');
     });
     $(".tvTool").on("click", function(){
-        $("#main").load("tvTool.html"); 
+        $("#main").load("tvTool.html");
+        $(".headToolSwitch").html('Torsional Vibration Calculator');
     });
     $(".freqTool").on("click", function(){
-        $("#main").load("freqTool.html"); 
+        $("#main").load("freqTool.html");
+        $(".headToolSwitch").html('System Natural Freq. Calculator');
     });
     $(".basJointTool").on("click", function(){
         $("#main").load("jointTool.html"); 
+        $(".headToolSwitch").html('Frank\'s Bolted Joint Calculator');
     });
     $(".basStressGen").on("click", function(){
-        $("#main").load("wip.html"); 
+        $("#main").load("wip.html");
+        $(".headToolSwitch").html('Under Construction');
     });
     $(".basPressTool").on("click", function(){
-        $("#main").load("wip.html"); 
+        $("#main").load("wip.html");
+        $(".headToolSwitch").html('Cylindrical Press-fit Calculator');
     });
     $(".basSpringTool").on("click", function(){
-        $("#main").load("wip.html"); 
+        $("#main").load("wip.html");
+        $(".headToolSwitch").html('Arc Spring Calculator');
     });
     // JS for styling tool items when they are selected
     $(".subLink").on("click", function(){
