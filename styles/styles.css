@@ -655,53 +655,25 @@ footer {
       display: block;
       margin-left: 60px; }
 
-.dashboard {
-  position: absolute;
-  left: 16%;
-  top: 0;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+.grid {
+  position: relative;
   background: #dddddd;
-  height: auto;
-  padding: 10px 10px;
-  margin-top: 125px;
-  margin-bottom: 60.89px; }
-  .dashboard .dashBox {
-    width: calc(50% - 20px);
-    height: 500px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-align: center;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  left: 0; }
+  .grid .item {
+    display: block;
+    position: absolute;
+    z-index: 1;
     background: white;
-    margin: 10px 10px;
-    border-radius: 5px; }
-  .dashboard .ronsQuotes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    .dashboard .ronsQuotes .quoteMain {
+    color: #999999;
+    margin: 15px;
+    border-radius: 10px; }
+    .grid .item .item-content {
+      position: relative;
       width: 100%;
-      height: 85%;
+      height: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -711,117 +683,137 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      margin: 15px 0;
-      padding: 0 15px; }
-      .dashboard .ronsQuotes .quoteMain .quotePic {
-        width: 50%;
-        height: 100%;
-        padding-right: 15px; }
-        .dashboard .ronsQuotes .quoteMain .quotePic img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          -o-object-fit: cover;
-          object-fit: cover;
-          border-radius: 5px; }
-      .dashboard .ronsQuotes .quoteMain .quoteText {
-        width: 50%;
-        height: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .grid .item .item-content .quoteMain {
+        width: 100%;
+        height: 85%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        padding-left: 15px; }
-        .dashboard .ronsQuotes .quoteMain .quoteText .quoteBox {
-          width: 100%;
-          font-size: 2.5rem; }
-        .dashboard .ronsQuotes .quoteMain .quoteText .quoteAuthor {
-          width: 100%;
-          text-align: right;
-          font-size: 1.7rem;
-          padding-right: 25px; }
-  .dashboard .popularApps {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    .dashboard .popularApps .popularApps {
+        margin: 15px 0;
+        padding: 0 15px; }
+        .grid .item .item-content .quoteMain .quotePic {
+          width: 50%;
+          height: 100%;
+          padding-right: 15px; }
+          .grid .item .item-content .quoteMain .quotePic img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            border-radius: 5px; }
+        .grid .item .item-content .quoteMain .quoteText {
+          width: 50%;
+          height: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          padding-left: 15px; }
+          .grid .item .item-content .quoteMain .quoteText .quoteBox {
+            width: 100%;
+            font-size: 2.2rem; }
+          .grid .item .item-content .quoteMain .quoteText .quoteAuthor {
+            width: 100%;
+            text-align: right;
+            font-size: 1.7rem;
+            padding-right: 25px; }
+      .grid .item .item-content .popularApps {
+        width: 100%;
+        height: 85%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 15px 0;
+        padding: 0 15px; }
+        .grid .item .item-content .popularApps .popApp {
+          width: 25%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          cursor: pointer;
+          text-decoration: none; }
+          .grid .item .item-content .popularApps .popApp i {
+            font-size: 5rem; }
+          .grid .item .item-content .popularApps .popApp p {
+            width: 75%;
+            text-align: center; }
+        .grid .item .item-content .popularApps .popApp1 i {
+          color: #0f2241; }
+        .grid .item .item-content .popularApps .popApp2 i {
+          color: #3e4d54; }
+        .grid .item .item-content .popularApps .popApp3 i {
+          color: #1e6932; }
+        .grid .item .item-content .popularApps .popApp4 i {
+          color: #32a550; }
+        .grid .item .item-content .popularApps .popApp5 i {
+          color: #193c82; }
+        .grid .item .item-content .popularApps .popApp6 i {
+          color: #4187a5; }
+    .grid .item .contentHeader {
       width: 100%;
-      height: 85%;
+      height: 15%;
+      text-align: left;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      margin: 15px 0;
-      padding: 0 15px; }
-      .dashboard .popularApps .popularApps .popApp {
-        width: 25%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        cursor: pointer; }
-        .dashboard .popularApps .popularApps .popApp i {
-          font-size: 5rem; }
-        .dashboard .popularApps .popularApps .popApp p {
-          width: 75%; }
-      .dashboard .popularApps .popularApps .popApp1 i {
-        color: #0f2241; }
-      .dashboard .popularApps .popularApps .popApp2 i {
-        color: #3e4d54; }
-      .dashboard .popularApps .popularApps .popApp3 i {
-        color: #1e6932; }
-      .dashboard .popularApps .popularApps .popApp4 i {
-        color: #32a550; }
-      .dashboard .popularApps .popularApps .popApp5 i {
-        color: #193c82; }
-      .dashboard .popularApps .popularApps .popApp6 i {
-        color: #4187a5; }
-  .dashboard .contentHeader {
-    width: 100%;
-    height: 15%;
-    text-align: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-bottom: 1px solid #dddddd; }
-    .dashboard .contentHeader h3 {
-      margin-left: 25px; }
+      border-bottom: 1px solid #dddddd;
+      padding: 10px 0; }
+      .grid .item .contentHeader h3 {
+        margin: 5px 25px; }
+  .grid .item.size1 {
+    width: 600px;
+    height: 400px; }
+  .grid .item.muuri-item-dragging {
+    z-index: 3; }
+  .grid .item.muuri-item-releasing {
+    z-index: 2; }
+  .grid .item.muuri-item-hidden {
+    z-index: 0; }
 
 .appContent {
   position: absolute;

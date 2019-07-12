@@ -2,14 +2,14 @@ $(function(){
     // Check if the function is ready
     console.log("I'm Ready");
     // Load the dashboard on site load
-    $("#main").load("dashboard.html");
+    // $("#main").load("dashboard.html");
     $(".dashSelector").addClass("litLink"); 
     // Set margin for main content switch based on height of header
-    var $headerHeight = $("header").height()
-    console.log($headerHeight);
-    var $asideWidth = $('aside').width();
-    console.log($asideWidth);
+    var $headerHeight = $("header").height();
+    var $footerHeight = $("footer").height();
     $('.centralContent').css('margin-top',$headerHeight);
+    $('.grid').css('margin-top',$headerHeight);
+    $('.grid').css('margin-bottom',$footerHeight);
     $(".minify").on("click", function(){
         // Close all tool lists and remove expansion formatting
         var $asideWidth = $('aside').width();

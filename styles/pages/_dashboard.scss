@@ -1,132 +1,141 @@
-.dashboard {
-    position: absolute;
-    left: $asideWidth;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+.grid {
+    position: relative;
     background: $greyBackground;
-    height: auto;
-    padding: 10px 10px;
-    margin-top: 125px;
-    margin-bottom: 60.89px;
-    .dashBox {
-        width: calc(50% - 20px);
-        height: 500px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    width: 100%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    .item {
+        display: block;
+        position: absolute;
+        // width: 300px;
+        // height: 300px;
+        z-index: 1;
         background: white;
-        margin: 10px 10px;
-        border-radius: 5px;
-    }
-    .ronsQuotes {
-        display: flex;
-        flex-direction: column;
-        .quoteMain {
+        color: $medText;
+        margin: 15px;
+        border-radius: 10px;
+        .item-content {
+            position: relative;
             width: 100%;
-            height: 85%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 15px 0;
-            padding: 0 15px;
-            .quotePic {
-                width: 50%;
-                height: 100%;
-                padding-right: 15px;
-                img {
-                    display:block;
-                    width: 100%;
+            flex-direction: column;
+            .quoteMain {
+                width: 100%;
+                height: 85%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 15px 0;
+                padding: 0 15px;
+                .quotePic {
+                    width: 50%;
                     height: 100%;
-                    object-fit: cover;
-                    border-radius: 5px;
+                    padding-right: 15px;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 5px;
+                    }
+                }
+                .quoteText {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: 15px;
+                    .quoteBox {
+                        width: 100%;
+                        font-size: 2.2rem;
+                    }
+                    .quoteAuthor {
+                        width: 100%;
+                        text-align: right;
+                        font-size: 1.7rem;
+                        padding-right: 25px;
+                    }
                 }
             }
-            .quoteText {
-                width: 50%;
-                height: 100%;
+            .popularApps {
+                width: 100%;
+                height: 85%;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                flex-flow: row wrap;
+                justify-content: space-around;
                 align-items: center;
-                padding-left: 15px;
-                .quoteBox {
-                    width: 100%;
-                    font-size: 2.5rem;
+                margin: 15px 0;
+                padding: 0 15px;
+                .popApp {
+                    width: 25%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    text-decoration: none;
+                    &:hover {
+                        // color: lighten(30%);
+                    }
+                    i {
+                        font-size: 5rem;
+                    }
+                    p {
+                        width: 75%;
+                        text-align: center;
+                    }
                 }
-                .quoteAuthor {
-                    width: 100%;
-                    text-align: right;
-                    font-size: 1.7rem;
-                    padding-right: 25px;
+                .popApp1 i {
+                    color: $liDeepBlue;
+                }
+                .popApp2 i {
+                    color: $liPetroleum;
+                }
+                .popApp3 i {
+                    color: $adtGreen;
+                }
+                .popApp4 i {
+                    color: $tbtGreen;
+                }
+                .popApp5 i {
+                    color: $hybBlue;
+                }
+                .popApp6 i {
+                    color: $beltBlue;
                 }
             }
         }
-    }
-    .popularApps {
-        display: flex;
-        flex-direction: column;
-        .popularApps {
+        .contentHeader {
             width: 100%;
-            height: 85%;
+            height: 15%;
+            text-align: left;
             display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
+            justify-content: flex-start;
             align-items: center;
-            margin: 15px 0;
-            padding: 0 15px;
-            .popApp {
-                width: 25%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                &:hover {
-                    // color: lighten(30%);
-                }
-                i {
-                    font-size: 5rem;
-                }
-                p {
-                    width: 75%;
-                }
-            }
-            .popApp1 i {
-                color: $liDeepBlue;
-            }
-            .popApp2 i {
-                color: $liPetroleum;
-            }
-            .popApp3 i {
-                color: $adtGreen;
-            }
-            .popApp4 i {
-                color: $tbtGreen;
-            }
-            .popApp5 i {
-                color: $hybBlue;
-            }
-            .popApp6 i {
-                color: $beltBlue;
+            border-bottom: 1px solid $greyBackground;
+            padding: 10px 0;
+            h3 {
+                margin: 5px 25px;
             }
         }
     }
-    .contentHeader {
-        width: 100%;
-        height: 15%;
-        text-align: left;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        border-bottom: 1px solid $greyBackground;
-        h3 {
-            margin-left: 25px;
-        }
+    .item.size1 {
+        width: 600px;
+        height: 400px;
     }
-
+    .item.muuri-item-dragging {
+        z-index: 3;
+    }
+    .item.muuri-item-releasing {
+        z-index: 2;
+    }
+    .item.muuri-item-hidden {
+        z-index: 0;
+    }
 }
