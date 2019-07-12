@@ -84,17 +84,17 @@ $(function(){
         $("#main").load("jointTool.html"); 
         $(".headToolSwitch").html('Frank\'s Bolted Joint Calculator');
     });
-    $(".basStressGen").on("click", function(){
-        $("#main").load("wip.html");
-        $(".headToolSwitch").html('Under Construction');
+    $(".stressGen").on("click", function(){
+        $("#main").load("stressStrainTool.html");
+        $(".headToolSwitch").html('Frank\'s Stress Strain Generator');
     });
-    $(".basPressTool").on("click", function(){
-        $("#main").load("wip.html");
+    $(".pressTool").on("click", function(){
+        $("#main").load("pressTool.html");
         $(".headToolSwitch").html('Cylindrical Press-fit Calculator');
     });
     $(".basSpringTool").on("click", function(){
         $("#main").load("wip.html");
-        $(".headToolSwitch").html('Arc Spring Calculator');
+        $(".headToolSwitch").html('Under Construction');
     });
     // JS for styling tool items when they are selected
     $(".subLink").on("click", function(){
