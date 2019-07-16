@@ -227,7 +227,13 @@ aside {
   height: 100vh;
   width: 16%;
   color: #999999;
-  z-index: 10; }
+  z-index: 10;
+  font-weight: 400;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  aside :-webkit-scrollbar {
+    width: 0 !important; }
   aside .top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -237,7 +243,8 @@ aside {
     justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    height: 10%; }
     aside .top .logo {
       width: 200px; }
       aside .top .logo img {
@@ -265,9 +272,10 @@ aside {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding-left: 25px;
     margin: 0 auto;
-    width: 100%; }
+    width: 85%;
+    font-weight: 400;
+    margin-bottom: 25px; }
     aside .nav .dashSelector {
       margin: 50px 0 25px 0;
       width: 100%; }
@@ -311,9 +319,12 @@ aside {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     padding: 10px 0;
     margin: 10px 0;
-    width: 85%;
+    width: 100%;
     position: relative;
     cursor: pointer; }
     aside .mainLink a, aside .mainLink i, aside .mainLink .expander {
@@ -375,22 +386,39 @@ aside {
   width: 95%; }
 
 .navPanel.navMinify .top {
-  width: 100%;
-  height: 80px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
   .navPanel.navMinify .top .logo {
     display: none; }
+  .navPanel.navMinify .top .minify {
+    margin: 0; }
   .navPanel.navMinify .top .minify a i {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
 
+.navPanel.navMinify .toolList {
+  opacity: 0; }
+
+.navPanel.navMinify .sectionBreak {
+  text-align: center; }
+
+.navPanel.navMinify .mainLink {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 .navPanel.navMinify .mainLink .linkText {
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
   display: none; }
 
 .navPanel.navMinify .expander {
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
   display: none; }
 
 .centralContent {
@@ -421,7 +449,8 @@ aside {
       justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      position: relative; }
 
 header {
   position: fixed;
@@ -656,7 +685,7 @@ footer {
       margin-left: 60px; }
 
 .grid {
-  position: relative;
+  position: absolute;
   background: #dddddd;
   width: 100%;
   height: 80%;
@@ -770,7 +799,8 @@ footer {
           -ms-flex-align: center;
           align-items: center;
           cursor: pointer;
-          text-decoration: none; }
+          text-decoration: none;
+          color: #999999; }
           .grid .item .item-content .popularApps .popApp i {
             font-size: 5rem; }
           .grid .item .item-content .popularApps .popApp p {
@@ -788,6 +818,20 @@ footer {
           color: #193c82; }
         .grid .item .item-content .popularApps .popApp6 i {
           color: #4187a5; }
+      .grid .item .item-content .anotherApp {
+        width: 100%;
+        height: 85%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 15px 0;
+        padding: 0 15px; }
     .grid .item .contentHeader {
       width: 100%;
       height: 15%;
@@ -806,8 +850,17 @@ footer {
       .grid .item .contentHeader h3 {
         margin: 5px 25px; }
   .grid .item.size1 {
-    width: 600px;
+    width: 550px;
     height: 400px; }
+  .grid .item.size2 {
+    width: 700px;
+    height: 400px; }
+  .grid .item.size3 {
+    width: 400px;
+    height: 400px; }
+  .grid .item.size4 {
+    width: 400px;
+    height: 185px; }
   .grid .item.muuri-item-dragging {
     z-index: 3; }
   .grid .item.muuri-item-releasing {
@@ -821,7 +874,6 @@ footer {
   top: 0;
   right: 0;
   height: 80%;
-  margin-top: 125px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

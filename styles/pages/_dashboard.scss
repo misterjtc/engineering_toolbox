@@ -1,5 +1,6 @@
+// CSS styling for the main dashboard and its muuri containers
 .grid {
-    position: relative;
+    position: absolute;
     background: $greyBackground;
     width: 100%;
     height: 80%;
@@ -80,6 +81,7 @@
                     align-items: center;
                     cursor: pointer;
                     text-decoration: none;
+                    color: $medText;
                     &:hover {
                         // color: lighten(30%);
                     }
@@ -110,6 +112,15 @@
                     color: $beltBlue;
                 }
             }
+            .anotherApp {
+                width: 100%;
+                height: 85%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 15px 0;
+                padding: 0 15px;
+            }
         }
         .contentHeader {
             width: 100%;
@@ -126,8 +137,20 @@
         }
     }
     .item.size1 {
-        width: 600px;
+        width: 550px;
         height: 400px;
+    }
+    .item.size2 {
+        width: 700px;
+        height: 400px;
+    }
+    .item.size3 {
+        width: 400px;
+        height: 400px;
+    }
+    .item.size4 {
+        width: 400px;
+        height: 185px;
     }
     .item.muuri-item-dragging {
         z-index: 3;

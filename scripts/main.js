@@ -5,23 +5,22 @@ $(function(){
     // $("#main").load("dashboard.html");
     $(".dashSelector").addClass("litLink"); 
     // Set margin for main content switch based on height of header
-    var $headerHeight = $("header").height();
+    var $headerHeight = $('header').css('height');
     var $footerHeight = $("footer").height();
-    $('.centralContent').css('margin-top',$headerHeight);
-    $('.grid').css('margin-top',$headerHeight);
-    $('.grid').css('margin-bottom',$footerHeight);
+    $('.centralContent').css('margin-top', $headerHeight);
+    $('.grid').css('margin-bottom', $footerHeight);
     $(".minify").on("click", function(){
         // Close all tool lists and remove expansion formatting
         var $asideWidth = $('aside').width();
-        $(".basExpander > .expander").removeClass("expanderDown");
-        $(".basExpander").removeClass("lit");
-        $(".genExpander > .expander").removeClass("expanderDown");
-        $(".genExpander").removeClass("lit");
-        $(".alphaExpander > .expander").removeClass("expanderDown");
-        $(".alphaExpander").removeClass("lit");
-        $(".basTools").slideUp();
-        $(".genTools").slideUp();
-        $(".alphaTools").slideUp();
+        // $(".basExpander > .expander").removeClass("expanderDown");
+        // $(".basExpander").removeClass("lit");
+        // $(".genExpander > .expander").removeClass("expanderDown");
+        // $(".genExpander").removeClass("lit");
+        // $(".alphaExpander > .expander").removeClass("expanderDown");
+        // $(".alphaExpander").removeClass("lit");
+        // $(".basTools").slideUp();
+        // $(".genTools").slideUp();
+        // $(".alphaTools").slideUp();
         console.log($asideWidth);
         // If the nav bar is less than 100px, expand it and do some formatting
         if ( $asideWidth < 110) {
