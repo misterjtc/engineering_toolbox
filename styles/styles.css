@@ -185,21 +185,25 @@ template {
 
 html {
   font-family: 'Raleway', sans-serif;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-weight: 400; }
   html h1 {
     font-size: 4.2rem;
     margin: 0;
     padding: 0; }
   html h2 {
     font-size: 3.3rem;
+    font-weight: 400;
     margin: 0;
     padding: 0; }
   html h3 {
     font-size: 2rem;
+    font-weight: 400;
     margin: 0;
     padding: 0; }
   html h4 {
     font-size: 1.7rem;
+    font-weight: 400;
     margin: 0;
     padding: 0; }
   html p {
@@ -227,8 +231,7 @@ aside {
   height: 100vh;
   width: 16%;
   color: #999999;
-  z-index: 10;
-  font-weight: 400;
+  z-index: 9999;
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: auto; }
@@ -272,13 +275,13 @@ aside {
     align-items: center;
     margin: 0 auto;
     width: 85%;
-    font-weight: 400;
     margin-bottom: 25px; }
     aside .nav .dashSelector {
       margin: 50px 0 25px 0;
       width: 100%; }
     aside .nav .automationSection {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 15px; }
       aside .nav .automationSection h3 {
         margin: 15px 0 30px 0; }
     aside .nav .productsSection {
@@ -369,7 +372,6 @@ aside {
     fill: #5683de; }
   aside a {
     text-decoration: none;
-    font-weight: 700;
     font-size: 1.9rem;
     display: block;
     color: #999999; }
@@ -397,7 +399,7 @@ aside {
     transform: rotate(180deg); }
 
 .navPanel.navMinify .toolList {
-  display: none; }
+  display: none !important; }
 
 .navPanel.navMinify .sectionBreak {
   text-align: center; }
@@ -688,7 +690,8 @@ footer {
   width: 100%;
   height: 80%;
   top: 0;
-  left: 0; }
+  left: 0;
+  margin: 0 auto; }
   .grid .item {
     display: block;
     position: absolute;
@@ -868,10 +871,10 @@ footer {
 
 .appContent {
   position: absolute;
-  left: 16%;
   top: 0;
   right: 0;
-  height: 80%;
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

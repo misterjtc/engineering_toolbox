@@ -9,6 +9,7 @@ $(function(){
     var $footerHeight = $("footer").height();
     $('.centralContent').css('margin-top', $headerHeight);
     $('.grid').css('margin-bottom', $footerHeight);
+    // JS for collapsing/expanding the nav bar when the user clicks the button
     $(".minify").on("click", function(){
         // Close all tool lists and remove expansion formatting
         var $asideWidth = $('aside').width();
@@ -23,13 +24,14 @@ $(function(){
         // $(".alphaTools").slideUp();
         console.log($asideWidth);
         // If the nav bar is less than 100px, expand it and do some formatting
-        if ( $asideWidth < 110) {
+        if ( $('aside').hasClass("navCheck") ) {
             $('aside').animate({width: "16%"}, 400, "linear");
             $('header').animate({width: "84%", marginLeft: "16%"}, 400, "linear");
             $('footer').animate({marginLeft: "16%", width: "84%"}, 400, "linear");
             $(".centralContent").animate({marginLeft: "16%"}, 400, "linear");
-            $("#main .imported").animate({left: "16%"}, 400, "linear");
+            // $("#main .imported").animate({left: "16%"}, 400, "linear");
             $('aside').removeClass('navMinify');
+            $('aside').removeClass('navCheck');
             $(".automationBreak").html('<h3 class="uppercase sectionBreak automationSection">Automation</h3>');
             $(".toolboxBreak").html('<h3 class="uppercase sectionBreak toolboxSection">Toolbox</h3>');
         // Else if the nav bar is expanded shrink it and do some formatting
@@ -38,7 +40,34 @@ $(function(){
             $('header').animate({width: "95%", marginLeft: "5%"}, 400, "linear");
             $('footer').animate({marginLeft: "5%", width: "95%"}, 400, "linear");
             $(".centralContent").animate({marginLeft: "5%"}, 400, "linear");
-            $("#main .imported").animate({left: "5%"}, 400, "linear");
+            // $("#main .imported").animate({left: "5%"}, 400, "linear");
+            $('aside').addClass('navMinify');
+            $('aside').addClass('navCheck');
+            $(".automationBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
+            $(".toolboxBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
+        }
+    });
+    // JS for collapsing/expanding the nav panel when the users hovers over it if its collapsed
+    $("aside").hover(function () {
+        // stuff to do when the mouse enters the element
+        var $asideWidth = $('aside').width();
+        console.log("you hovered in the aside region!")
+        if ( $asideWidth < 110 && $('aside').hasClass("navCheck") ) {
+            $('aside').animate({width: "16%"}, 400, "linear");
+            $('aside').removeClass('navMinify');
+            $(".automationBreak").html('<h3 class="uppercase sectionBreak automationSection">Automation</h3>');
+            $(".toolboxBreak").html('<h3 class="uppercase sectionBreak toolboxSection">Toolbox</h3>');
+        } else {
+            // just do nothing bro
+        }
+    }, 
+    function () {
+        //stuff to do when the mouse leaves the element
+        var $dashPosition = $('.centralContent').css('margin-left');
+        console.log("central content margin value: " + $dashPosition);
+        if ( $('aside').hasClass("navCheck") ) {
+            console.log("i entered the hover returner");
+            $('aside').animate({width: "5%"}, 400, "linear");
             $('aside').addClass('navMinify');
             $(".automationBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
             $(".toolboxBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
@@ -67,10 +96,17 @@ $(function(){
     d = n.getDate();
     document.getElementById("today").innerHTML = m + "/" + d + "/" + y;
     // JS for loading specific content onto the dashboard based on user selection
+    // Dashboard loader
     $(".dashSelector").on("click", function(){
-        $("#main").load("dashboard.html");
+        console.log("dash button was clicked!");
+        $("#main").html('<div id="dashboard" class="dashboard grid"><div class="contentItem1 dashBox item size1"><div class="item-content ronsQuotes"><div class="contentHeader"><h3> Ron\'s Inspirational Quotes</h3></div><div class="quoteMain"><div class="quotePic"> <img src="./assets/mark-adriane-muS2RraYRuQ-unsplash.jpg" alt="These are random inspiration images from unsplash"></div><div class="quoteText"><div class="quoteBox"></div><p class="quoteAuthor"></p></div></div></div></div><div class="contentItem2 dashBox item size1"><div class="item-content popularApps"><div class="contentHeader"><h3> Kyle\'s Favourite Apps</h3></div><div class="popularApps"> <a href="" class="popApp popApp1"> <i class="fas fa-wave-sine"></i><p> Torsional Vibration</p> </a> <a href="" class="popApp popApp2"> <i class="fas fa-cogs"></i><p> System Natural Freq.</p> </a> <a href="" class="popApp popApp3"> <i class="fas fa-wrench"></i><p> Frank\'s Bolted Joints</p> </a> <a href="" class="popApp popApp4"> <i class="fas fa-chart-line"></i><p> Frank\'s Stress-Strain</p> </a> <a href="" class="popApp popApp5"> <i class="far fa-scrubber"></i><p> Frank\'s Press-fits</p> </a></div></div></div><div class="contentItem3 dashBox autoFeed item size3"><div class="item-content"><div class="contentHeader"><h3> Peter\'s Automotive Feed</h3></div><div class="anotherApp"></div></div></div><div class="contentItem4 dashBox item size3"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 1</h3></div><div class="anotherApp"></div></div></div><div class="contentItem5 dashBox item size3"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 2</h3></div><div class="anotherApp"></div></div></div><div class="contentItem6 dashBox item size2"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 3</h3></div><div class="anotherApp"></div></div></div><div class="contentItem7 dashBox item size1"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 4</h3></div><div class="anotherApp"></div></div></div><div class="contentItem8 dashBox item size4"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 5</h3></div><div class="anotherApp"></div></div></div><div class="contentItem9 dashBox item size4"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 6</h3></div><div class="anotherApp"></div></div></div></div>');
         $(".headToolSwitch").html('Dashboard');
+        // Reload the Muuri whenever we reload the dashboard
+        var grid = new Muuri('.grid', {dragEnabled: true});
+        // Reload the quote function whenever we reload the dashbaord
+        getQuote();
     });
+    // Loading for various tools
     $(".tvTool").on("click", function(){
         $("#main").load("tvTool.html");
         $(".headToolSwitch").html('Torsional Vibration Calculator');
@@ -149,4 +185,7 @@ $(function(){
     });
     }
     getQuote();
+    // Muuri draggable dashboard content
+    var grid = new Muuri('.grid', {dragEnabled: true});
 });
+

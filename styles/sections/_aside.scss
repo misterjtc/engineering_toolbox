@@ -4,8 +4,7 @@ aside {
     height: 100vh;
     width: $asideWidth;
     color: $medText;
-    z-index: 10;
-    font-weight: 400;
+    z-index: 9999;
     overflow: scroll;
     overflow-x: hidden;
     overflow-y: auto;
@@ -38,7 +37,6 @@ aside {
         align-items: center;
         margin: 0 auto;
         width: 85%;
-        font-weight: 400;
         margin-bottom: 25px;
         .dashSelector {
             margin: 50px 0 25px 0;
@@ -46,6 +44,7 @@ aside {
         }
         .automationSection {
             width: 100%;
+            margin-bottom: 15px;
             h3 {
                 margin: 15px 0 30px 0;
             }
@@ -156,7 +155,6 @@ aside {
     }
     a {
         text-decoration: none;
-        font-weight: 700;
         font-size: 1.9rem;
         display: block;
         color: $medText;
@@ -187,11 +185,10 @@ aside {
         }
         .minify a i {
             transform: rotate(180deg);
-            // margin: 0;
         }
     }
     .toolList {
-        display: none;
+        display: none !important;
     }
     .sectionBreak {
         text-align: center;

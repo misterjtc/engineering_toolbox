@@ -9,10 +9,6 @@
    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
    <!-- Font Awesome Kit -->
    <script src="https://kit.fontawesome.com/9cc76b9d7b.js"></script>
-   <!-- Load JQuery -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   <!-- Main JS Site Script -->
-   <script src="./scripts/main.js"></script>
    <!-- Main Site Styles -->
    <link rel="stylesheet" href="./styles/styles.css"/>
 </head>
@@ -45,7 +41,7 @@
                         <path d=" M 17.25 40.02 C 22.27 39.49 27.13 38.03 32.15 37.55 C 32.77 40.13 33.20 42.75 33.53 45.38 C 34.07 48.28 35.47 51.86 33.38 54.40 C 19.05 76.09 18.04 105.79 30.89 128.38 C 40.53 146.01 58.02 159.04 77.60 163.50 C 79.28 163.78 80.97 164.03 82.61 164.50 C 96.81 166.18 111.44 164.55 124.46 158.43 C 125.84 157.74 127.22 157.06 128.61 156.39 C 130.74 155.16 132.59 153.11 135.02 152.60 C 139.90 152.97 144.68 154.19 149.52 154.92 C 148.98 158.82 148.33 162.72 147.54 166.58 C 147.38 167.64 147.25 168.71 147.12 169.79 C 133.76 178.95 118.08 184.96 101.89 186.32 C 94.42 185.95 86.74 187.29 79.42 185.53 C 56.70 182.16 35.44 169.86 21.11 151.93 C 11.84 140.57 5.47 126.91 2.44 112.59 C 0.60 105.19 0.46 97.59 0.65 90.01 C 0.32 84.72 1.48 79.54 2.44 74.39 C 5.01 62.08 10.16 50.38 17.25 40.02 Z" />
                         </g>
                         </svg></a>
-                    <a class="linkText" href="">Product Automator</a>
+                    <a class="linkText" href="" onclick="return false">Product Automator</a>
                 </div>
             </div>
             <div class="productsSection">
@@ -176,7 +172,7 @@
         <main class="centralContent">
             <div class="contentSwitch">
                 <div id="main" class="mainContent">
-                <div class="dashboard grid">
+                    <div id="dashboard" class="dashboard grid">
                         <div class="contentItem1 dashBox item size1">
                             <div class="item-content ronsQuotes">
                                 <div class="contentHeader">
@@ -345,9 +341,12 @@
         </footer>
     </section>
 </body>
+ <!-- Load JQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <!-- Main JS Site Script -->
+ <script src="./scripts/main.js"></script>
 <!-- Load Muuri and Dependencies -->
 <script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
 <script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
 <script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
-<script src="./scripts/muuri.js"></script>
 </html>
