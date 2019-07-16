@@ -9,9 +9,6 @@ aside {
     overflow: scroll;
     overflow-x: hidden;
     overflow-y: auto;
-    :-webkit-scrollbar { 
-        width: 0 !important 
-    }
     .top {
         display: flex;
         justify-content: space-between;
@@ -194,8 +191,7 @@ aside {
         }
     }
     .toolList {
-
-        opacity: 0;
+        display: none;
     }
     .sectionBreak {
         text-align: center;

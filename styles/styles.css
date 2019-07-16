@@ -232,8 +232,6 @@ aside {
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: auto; }
-  aside :-webkit-scrollbar {
-    width: 0 !important; }
   aside .top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -399,7 +397,7 @@ aside {
     transform: rotate(180deg); }
 
 .navPanel.navMinify .toolList {
-  opacity: 0; }
+  display: none; }
 
 .navPanel.navMinify .sectionBreak {
   text-align: center; }
