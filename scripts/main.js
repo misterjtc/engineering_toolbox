@@ -1,8 +1,7 @@
 $(function(){
     // Check if the function is ready
     console.log("I'm Ready");
-    // Load the dashboard on site load
-    // $("#main").load("dashboard.html");
+    // Show dashboard as selected on site load
     $(".dashSelector").addClass("litLink"); 
     // Set margin for main content switch based on height of header
     var $headerHeight = $('header').css('height');
@@ -101,6 +100,7 @@ $(function(){
         console.log("dash button was clicked!");
         $("#main").html('<div id="dashboard" class="dashboard grid"><div class="contentItem1 dashBox item size1"><div class="item-content ronsQuotes"><div class="contentHeader"><h3> Ron\'s Inspirational Quotes</h3></div><div class="quoteMain"><div class="quotePic"> <img src="./assets/mark-adriane-muS2RraYRuQ-unsplash.jpg" alt="These are random inspiration images from unsplash"></div><div class="quoteText"><div class="quoteBox"></div><p class="quoteAuthor"></p></div></div></div></div><div class="contentItem2 dashBox item size1"><div class="item-content popularApps"><div class="contentHeader"><h3> Kyle\'s Favourite Apps</h3></div><div class="popularApps"> <a href="" class="popApp popApp1"> <i class="fas fa-wave-sine"></i><p> Torsional Vibration</p> </a> <a href="" class="popApp popApp2"> <i class="fas fa-cogs"></i><p> System Natural Freq.</p> </a> <a href="" class="popApp popApp3"> <i class="fas fa-wrench"></i><p> Frank\'s Bolted Joints</p> </a> <a href="" class="popApp popApp4"> <i class="fas fa-chart-line"></i><p> Frank\'s Stress-Strain</p> </a> <a href="" class="popApp popApp5"> <i class="far fa-scrubber"></i><p> Frank\'s Press-fits</p> </a></div></div></div><div class="contentItem3 dashBox autoFeed item size3"><div class="item-content"><div class="contentHeader"><h3> Peter\'s Automotive Feed</h3></div><div class="anotherApp"></div></div></div><div class="contentItem4 dashBox item size3"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 1</h3></div><div class="anotherApp"></div></div></div><div class="contentItem5 dashBox item size3"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 2</h3></div><div class="anotherApp"></div></div></div><div class="contentItem6 dashBox item size2"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 3</h3></div><div class="anotherApp"></div></div></div><div class="contentItem7 dashBox item size1"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 4</h3></div><div class="anotherApp"></div></div></div><div class="contentItem8 dashBox item size4"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 5</h3></div><div class="anotherApp"></div></div></div><div class="contentItem9 dashBox item size4"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 6</h3></div><div class="anotherApp"></div></div></div></div>');
         $(".headToolSwitch").html('Dashboard');
+        $('.grid').css('margin-bottom', $footerHeight);
         // Reload the Muuri whenever we reload the dashboard
         var grid = new Muuri('.grid', {dragEnabled: true});
         // Reload the quote function whenever we reload the dashbaord
@@ -141,6 +141,17 @@ $(function(){
         $(".subLink").removeClass("litLink");
         $(".rootLink").removeClass("litLink");
         $(this).addClass("litLink"); 
+    });
+    // Loading pop-up content when footer links are clicked
+    $(".aboutLink").on("click", function(){
+        $( ".aboutPopup" ).fadeToggle( "slow", function() {
+            // Animation complete
+        });
+    });
+    $(".teamLink").on("click", function(){
+        $( ".teamPopup" ).fadeToggle( "slow", function() {
+            // Animation complete
+        });
     });
     // Random quote generator
     var colorWheel = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"];

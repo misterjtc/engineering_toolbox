@@ -8,6 +8,8 @@ aside {
     overflow: scroll;
     overflow-x: hidden;
     overflow-y: auto;
+    // hide scrollbar in firefox
+    scrollbar-width: none;
     .top {
         display: flex;
         justify-content: space-between;
@@ -204,4 +206,8 @@ aside {
         transition: all 0.4s linear;
         display: none;
     }
+}
+// remove the scroll bar from the nav
+aside::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
 }
