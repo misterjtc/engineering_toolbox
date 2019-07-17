@@ -62,10 +62,7 @@ $(function(){
     }, 
     function () {
         //stuff to do when the mouse leaves the element
-        var $dashPosition = $('.centralContent').css('margin-left');
-        console.log("central content margin value: " + $dashPosition);
         if ( $('aside').hasClass("navCheck") ) {
-            console.log("i entered the hover returner");
             $('aside').animate({width: "5%"}, 400, "linear");
             $('aside').addClass('navMinify');
             $(".automationBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
@@ -105,6 +102,11 @@ $(function(){
         var grid = new Muuri('.grid', {dragEnabled: true});
         // Reload the quote function whenever we reload the dashbaord
         getQuote();
+    });
+    // Agile loader
+    $(".agileSelector").on("click", function(){
+        $("#main").load("agile.html");
+        $(".headToolSwitch").html('Agile');
     });
     // Loading for various tools
     $(".tvTool").on("click", function(){
@@ -198,5 +200,16 @@ $(function(){
     getQuote();
     // Muuri draggable dashboard content
     var grid = new Muuri('.grid', {dragEnabled: true});
+    window.addEventListener('load', function () {
+        grid.refreshItems().layout();
+      });
+    // Flickity config for Kathys Kool Pics
+    $('.kathyHero').flickity({
+        pageDots: true,
+        contain: true,
+        autoPlay: 4000,
+        cellSelector: '.kathyCell',
+        prevNextButtons: false,
+    });
 });
 
