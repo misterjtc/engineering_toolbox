@@ -6,6 +6,7 @@ $(function(){
     // Set margin for main content switch based on height of header
     var $headerHeight = $('header').css('height');
     var $footerHeight = $("footer").height();
+    console.log("This is the header height: " + $headerHeight);
     $('.centralContent').css('margin-top', $headerHeight);
     $('.grid').css('margin-bottom', $footerHeight);
     // JS for collapsing/expanding the nav bar when the user clicks the button
@@ -206,10 +207,12 @@ $(function(){
     // Flickity config for Kathys Kool Pics
     $('.kathyHero').flickity({
         pageDots: true,
+        draggable: false,
         contain: true,
         autoPlay: 4000,
         cellSelector: '.kathyCell',
         prevNextButtons: false,
+        wrapAround: true,
     });
 });
 

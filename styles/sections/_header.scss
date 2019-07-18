@@ -42,7 +42,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-top: 2px solid $medText;
+        border-top: 1px solid $medText;
         .headInfo {
             display: flex;
             justify-content: flex-start;
@@ -54,7 +54,7 @@ header {
             h4 {
                 color: $medText;
                 padding: 5px 35px;
-                border-left: 2px solid $medText;
+                border-left: 1px solid $medText;
             }
         }
         .calendar {
