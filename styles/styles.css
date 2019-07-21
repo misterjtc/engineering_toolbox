@@ -186,7 +186,8 @@ template {
 html {
   font-family: 'Raleway', sans-serif;
   font-size: 62.5%;
-  font-weight: 400; }
+  font-weight: 400;
+  position: relative; }
   html h1 {
     font-size: 4.2rem;
     margin: 0;
@@ -219,8 +220,7 @@ html {
 .framework {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  position: relative; }
+  display: flex; }
 
 .main {
   width: 100%;
