@@ -445,7 +445,8 @@ aside::-webkit-scrollbar {
 .centralContent {
   height: 80%;
   width: calc(100% - $asideWidth);
-  margin-left: 16%; }
+  margin-left: 16%;
+  margin-top: 125.5px; }
   .centralContent .contentSwitch {
     height: 100%;
     background: #505050;
@@ -472,6 +473,11 @@ aside::-webkit-scrollbar {
       -ms-flex-align: center;
       align-items: center;
       position: relative; }
+      .centralContent .contentSwitch .mainContent .loader {
+        width: 250px;
+        height: 250px; }
+        .centralContent .contentSwitch .mainContent .loader img {
+          width: 100%; }
 
 header {
   position: fixed;
@@ -712,7 +718,8 @@ footer {
   height: 80%;
   top: 0;
   left: 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  opacity: 0; }
   .grid .item {
     display: block;
     position: absolute;

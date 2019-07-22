@@ -1,14 +1,21 @@
 $(function(){
     // Check if the function is ready
     console.log("I'm Ready");
-    // Show dashboard as selected on site load
-    $(".dashSelector").addClass("litLink"); 
     // Set margin for main content switch based on height of header
     var $headerHeight = $('header').css('height');
     var $footerHeight = $("footer").height();
-    console.log("This is the header height: " + $headerHeight);
     $('.centralContent').css('margin-top', $headerHeight);
     $('.grid').css('margin-bottom', $footerHeight);
+    // Show dashboard as selected on site load
+    $(".dashSelector").addClass("litLink"); 
+    // Trying the loader config
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("dashboard").style.opacity = "1";
+        $('#dashboard').fadeIn("slow");
+    }
+    setTimeout(showPage, 1500);
+    
     // JS for collapsing/expanding the nav bar when the user clicks the button
     $(".minify").on("click", function(){
         // Close all tool lists and remove expansion formatting
@@ -51,7 +58,6 @@ $(function(){
     $("aside").hover(function () {
         // stuff to do when the mouse enters the element
         var $asideWidth = $('aside').width();
-        console.log("you hovered in the aside region!")
         if ( $asideWidth < 110 && $('aside').hasClass("navCheck") ) {
             $('aside').animate({width: "16%"}, 400, "linear");
             $('aside').removeClass('navMinify');
@@ -214,5 +220,10 @@ $(function(){
         prevNextButtons: false,
         wrapAround: true,
     });
+    // Time delay function for loading dashboard
+    // var loaderTimer;
+    // $(window).load(function() {
+    //     console.log("the loader function ran");
+    // });
 });
 
