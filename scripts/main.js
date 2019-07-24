@@ -110,10 +110,10 @@ $(function(){
         // Reload the quote function whenever we reload the dashbaord
         getQuote();
     });
-    // Agile loader
-    $(".agileSelector").on("click", function(){
-        $("#main").load("agile.html");
-        $(".headToolSwitch").html('Agile');
+    // Automator loader
+    $(".productAutomator").on("click", function(){
+        $("#main").load("automator.html");
+        $(".headToolSwitch").html('Patrick\'s Automator');
     });
     // Loading for various tools
     $(".tvTool").on("click", function(){
