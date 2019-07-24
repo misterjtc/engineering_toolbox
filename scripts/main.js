@@ -20,15 +20,6 @@ $(function(){
     $(".minify").on("click", function(){
         // Close all tool lists and remove expansion formatting
         var $asideWidth = $('aside').width();
-        // $(".basExpander > .expander").removeClass("expanderDown");
-        // $(".basExpander").removeClass("lit");
-        // $(".genExpander > .expander").removeClass("expanderDown");
-        // $(".genExpander").removeClass("lit");
-        // $(".alphaExpander > .expander").removeClass("expanderDown");
-        // $(".alphaExpander").removeClass("lit");
-        // $(".basTools").slideUp();
-        // $(".genTools").slideUp();
-        // $(".alphaTools").slideUp();
         console.log($asideWidth);
         // If the nav bar is less than 100px, expand it and do some formatting
         if ( $('aside').hasClass("navCheck") ) {
@@ -47,7 +38,6 @@ $(function(){
             $('header').animate({width: "95%", marginLeft: "5%"}, 400, "linear");
             $('footer').animate({marginLeft: "5%", width: "95%"}, 400, "linear");
             $(".centralContent").animate({marginLeft: "5%"}, 400, "linear");
-            // $("#main .imported").animate({left: "5%"}, 400, "linear");
             $('aside').addClass('navMinify');
             $('aside').addClass('navCheck');
             $(".automationBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
@@ -56,7 +46,7 @@ $(function(){
     });
     // JS for collapsing/expanding the nav panel when the users hovers over it if its collapsed
     $("aside").hover(function () {
-        // stuff to do when the mouse enters the element
+        // stuff to do when the mouse enters the nav region
         var $asideWidth = $('aside').width();
         if ( $asideWidth < 110 && $('aside').hasClass("navCheck") ) {
             $('aside').animate({width: "16%"}, 400, "linear");
@@ -68,7 +58,7 @@ $(function(){
         }
     }, 
     function () {
-        //stuff to do when the mouse leaves the element
+        //stuff to do when the mouse leaves the nav region
         if ( $('aside').hasClass("navCheck") ) {
             $('aside').animate({width: "5%"}, 400, "linear");
             $('aside').addClass('navMinify');
@@ -100,15 +90,30 @@ $(function(){
     document.getElementById("today").innerHTML = m + "/" + d + "/" + y;
     // JS for loading specific content onto the dashboard based on user selection
     // Dashboard loader
-    $(".dashSelector").on("click", function(){
-        console.log("dash button was clicked!");
-        $("#main").html('<div id="dashboard" class="dashboard grid"><div class="contentItem1 dashBox item size1"><div class="item-content ronsQuotes"><div class="contentHeader"><h3> Ron\'s Inspirational Quotes</h3></div><div class="quoteMain"><div class="quotePic"> <img src="./assets/mark-adriane-muS2RraYRuQ-unsplash.jpg" alt="These are random inspiration images from unsplash"></div><div class="quoteText"><div class="quoteBox"></div><p class="quoteAuthor"></p></div></div></div></div><div class="contentItem2 dashBox item size1"><div class="item-content popularApps"><div class="contentHeader"><h3> Kyle\'s Favourite Apps</h3></div><div class="popularApps"> <a href="" class="popApp popApp1"> <i class="fas fa-wave-sine"></i><p> Torsional Vibration</p> </a> <a href="" class="popApp popApp2"> <i class="fas fa-cogs"></i><p> System Natural Freq.</p> </a> <a href="" class="popApp popApp3"> <i class="fas fa-wrench"></i><p> Frank\'s Bolted Joints</p> </a> <a href="" class="popApp popApp4"> <i class="fas fa-chart-line"></i><p> Frank\'s Stress-Strain</p> </a> <a href="" class="popApp popApp5"> <i class="far fa-scrubber"></i><p> Frank\'s Press-fits</p> </a></div></div></div><div class="contentItem3 dashBox autoFeed item size3"><div class="item-content"><div class="contentHeader"><h3> Peter\'s Automotive Feed</h3></div><div class="anotherApp"></div></div></div><div class="contentItem4 dashBox item size3"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 1</h3></div><div class="anotherApp"></div></div></div><div class="contentItem5 dashBox item size3"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 2</h3></div><div class="anotherApp"></div></div></div><div class="contentItem6 dashBox item size2"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 3</h3></div><div class="anotherApp"></div></div></div><div class="contentItem7 dashBox item size1"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 4</h3></div><div class="anotherApp"></div></div></div><div class="contentItem8 dashBox item size4"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 5</h3></div><div class="anotherApp"></div></div></div><div class="contentItem9 dashBox item size4"><div class="item-content"><div class="contentHeader"><h3> Another Important Tool 6</h3></div><div class="anotherApp"></div></div></div></div>');
+    $(".dashSelector, .logo").on("click", function(){
+        $("#main").html('<div id="loader" class="loader"> <img src="./assets/symbol_litens_black.png" alt="This is the Litens logo"> </div><div id="dashboard" class="dashboard grid"> <div class="contentItem1 dashBox item size1"> <div class="item-content ronsQuotes"> <div class="contentHeader"> <h3> Ron\'s Inspirational Quotes </h3> </div><div class="quoteMain"> <div class="quotePic"> <img src="./assets/ronsvibes.jpg" alt="These are random inspiration images from unsplash"> </div><div class="quoteText"> <div class="quoteBox"> </div><p class="quoteAuthor"> </p></div></div></div></div><div class="contentItem2 dashBox item size1"> <div class="item-content popularApps"> <div class="contentHeader"> <h3> Frank\'s Favourite Apps </h3> </div><div class="popularApps"> <a href="" class="popApp popApp1" onclick="return false"> <i class="fas fa-wave-sine"></i> <p> Torsional Vibration </p></a> <a href="" class="popApp popApp2" onclick="return false"> <i class="fas fa-cogs"></i> <p> System Natural Freq. </p></a> <a href="" class="popApp popApp3" onclick="return false"> <i class="fas fa-wrench"></i> <p> Frank\'s Bolted Joints </p></a> <a href="" class="popApp popApp4" onclick="return false"> <i class="fas fa-chart-line"></i> <p> Frank\'s Stress-Strain </p></a> <a href="" class="popApp popApp5" onclick="return false"> <i class="far fa-scrubber"></i> <p> Frank\'s Press-fits </p></a> </div></div></div><div class="contentItem3 dashBox autoFeed item size5"> <div class="item-content"> <div class="contentHeader"> <h3> Peter\'s Twitter Feed </h3> </div><div class="feedContent"> <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw">Tweets by realDonaldTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div></div></div><div class="contentItem4 dashBox item size1 katsPics"> <div class="item-content"> <div class="contentHeader"> <h3> Kathy\'s Kool Pics </h3> </div><div class="kathyHero"> <img src="./assets/test1.jpg" alt="" class="kathyCell"> <img src="./assets/test2.jpg" alt="" class="kathyCell"> <img src="./assets/test3.jpg" alt="" class="kathyCell"> <img src="./assets/test4.jpg" alt="" class="kathyCell"> <img src="/assets/test5.jpg" alt="" class="kathyCell"> </div></div></div><div class="contentItem5 dashBox item size1 eventList"> <div class="item-content"> <div class="contentHeader"> <h3> JCooks Most Magnificent Events </h3> </div><div class="cooksCalendar"> <iframe src="https://outlook.office365.com/calendar/group/litens.onmicrosoft.com/team_global_pe_hybrid_systems/view/day" frameborder="0"></iframe> </div></div></div><div class="contentItem6 dashBox item size2"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 3 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem7 dashBox item size1"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 4 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem8 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 5 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem9 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 6 </h3> </div><div class="anotherApp"> </div></div></div></div>');
         $(".headToolSwitch").html('Dashboard');
         $('.grid').css('margin-bottom', $footerHeight);
         // Reload the Muuri whenever we reload the dashboard
         var grid = new Muuri('.grid', {dragEnabled: true});
         // Reload the quote function whenever we reload the dashbaord
         getQuote();
+        // Flickity
+        $('.kathyHero').flickity({
+            pageDots: true,
+            draggable: false,
+            contain: true,
+            autoPlay: 4000,
+            cellSelector: '.kathyCell',
+            prevNextButtons: false,
+            wrapAround: true,
+        });
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("dashboard").style.opacity = "1";
+            $('#dashboard').fadeIn("slow");
+        }
+        setTimeout(showPage, 1500);
     });
     // Automator loader
     $(".productAutomator").on("click", function(){
@@ -220,10 +225,5 @@ $(function(){
         prevNextButtons: false,
         wrapAround: true,
     });
-    // Time delay function for loading dashboard
-    // var loaderTimer;
-    // $(window).load(function() {
-    //     console.log("the loader function ran");
-    // });
 });
 
