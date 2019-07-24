@@ -8,14 +8,6 @@ $(function(){
     $('.grid').css('margin-bottom', $footerHeight);
     // Show dashboard as selected on site load
     $(".dashSelector").addClass("litLink"); 
-    // Trying the loader config
-    function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("dashboard").style.opacity = "1";
-        $('#dashboard').fadeIn("slow");
-    }
-    setTimeout(showPage, 1500);
-    
     // JS for collapsing/expanding the nav bar when the user clicks the button
     $(".minify").on("click", function(){
         // Close all tool lists and remove expansion formatting
@@ -91,29 +83,8 @@ $(function(){
     // JS for loading specific content onto the dashboard based on user selection
     // Dashboard loader
     $(".dashSelector, .logo").on("click", function(){
-        $("#main").html('<div id="loader" class="loader"> <img src="./assets/symbol_litens_black.png" alt="This is the Litens logo"> </div><div id="dashboard" class="dashboard grid"> <div class="contentItem1 dashBox item size1"> <div class="item-content ronsQuotes"> <div class="contentHeader"> <h3> Ron\'s Inspirational Quotes </h3> </div><div class="quoteMain"> <div class="quotePic"> <img src="./assets/ronsvibes.jpg" alt="These are random inspiration images from unsplash"> </div><div class="quoteText"> <div class="quoteBox"> </div><p class="quoteAuthor"> </p></div></div></div></div><div class="contentItem2 dashBox item size1"> <div class="item-content popularApps"> <div class="contentHeader"> <h3> Frank\'s Favourite Apps </h3> </div><div class="popularApps"> <a href="" class="popApp popApp1" onclick="return false"> <i class="fas fa-wave-sine"></i> <p> Torsional Vibration </p></a> <a href="" class="popApp popApp2" onclick="return false"> <i class="fas fa-cogs"></i> <p> System Natural Freq. </p></a> <a href="" class="popApp popApp3" onclick="return false"> <i class="fas fa-wrench"></i> <p> Frank\'s Bolted Joints </p></a> <a href="" class="popApp popApp4" onclick="return false"> <i class="fas fa-chart-line"></i> <p> Frank\'s Stress-Strain </p></a> <a href="" class="popApp popApp5" onclick="return false"> <i class="far fa-scrubber"></i> <p> Frank\'s Press-fits </p></a> </div></div></div><div class="contentItem3 dashBox autoFeed item size5"> <div class="item-content"> <div class="contentHeader"> <h3> Peter\'s Twitter Feed </h3> </div><div class="feedContent"> <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw">Tweets by realDonaldTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div></div></div><div class="contentItem4 dashBox item size1 katsPics"> <div class="item-content"> <div class="contentHeader"> <h3> Kathy\'s Kool Pics </h3> </div><div class="kathyHero"> <img src="./assets/test1.jpg" alt="" class="kathyCell"> <img src="./assets/test2.jpg" alt="" class="kathyCell"> <img src="./assets/test3.jpg" alt="" class="kathyCell"> <img src="./assets/test4.jpg" alt="" class="kathyCell"> <img src="/assets/test5.jpg" alt="" class="kathyCell"> </div></div></div><div class="contentItem5 dashBox item size1 eventList"> <div class="item-content"> <div class="contentHeader"> <h3> JCooks Most Magnificent Events </h3> </div><div class="cooksCalendar"> <iframe src="https://outlook.office365.com/calendar/group/litens.onmicrosoft.com/team_global_pe_hybrid_systems/view/day" frameborder="0"></iframe> </div></div></div><div class="contentItem6 dashBox item size2"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 3 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem7 dashBox item size1"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 4 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem8 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 5 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem9 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 6 </h3> </div><div class="anotherApp"> </div></div></div></div>');
+        $("#main").html('<div id="loader" class="loader"> <h1> Welcome to Kyle\'s Dashboard! </h1> <img src="./assets/symbol_litens_black.png" alt="This is the Litens logo"> </div>');
         $(".headToolSwitch").html('Dashboard');
-        $('.grid').css('margin-bottom', $footerHeight);
-        // Reload the Muuri whenever we reload the dashboard
-        var grid = new Muuri('.grid', {dragEnabled: true});
-        // Reload the quote function whenever we reload the dashbaord
-        getQuote();
-        // Flickity
-        $('.kathyHero').flickity({
-            pageDots: true,
-            draggable: false,
-            contain: true,
-            autoPlay: 4000,
-            cellSelector: '.kathyCell',
-            prevNextButtons: false,
-            wrapAround: true,
-        });
-        function showPage() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("dashboard").style.opacity = "1";
-            $('#dashboard').fadeIn("slow");
-        }
-        setTimeout(showPage, 1500);
     });
     // Automator loader
     $(".productAutomator").on("click", function(){
@@ -166,64 +137,6 @@ $(function(){
         $( ".teamPopup" ).fadeToggle( "slow", function() {
             // Animation complete
         });
-    });
-    // Random quote generator
-    var colorWheel = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"];
-
-    var quoteAuthor = "";
-    var quoteText = "";
-
-    function getQuote() {
-    $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?", function(data) {
-        quoteText = data.quoteText;
-
-        if (data.quoteAuthor) {
-        quoteAuthor = data.quoteAuthor;
-        } else {
-        quoteAuthor = "Anonymous"
-        }
-
-        $('.quoteBox').animate({
-        opacity: 0
-        }, 500, function() {
-        $('.quoteBox').html(quoteText);
-        $(this).animate({
-            opacity: 1
-        }, 500);
-        });
-
-        $('.quoteAuthor').animate({
-        opacity: 0
-        }, 500, function() {
-        $('.quoteAuthor').html(" - " + quoteAuthor);
-        $(this).animate({
-            opacity: 1
-        }, 500);
-        });
-
-        var choice = Math.floor(Math.random() * colorWheel.length);
-
-        $('.quoteText').animate({
-        backgroundColor: colorWheel[choice],
-        color: colorWheel[choice],
-        }, 1000);
-    });
-    }
-    getQuote();
-    // Muuri draggable dashboard content
-    var grid = new Muuri('.grid', {dragEnabled: true});
-    window.addEventListener('load', function () {
-        grid.refreshItems().layout();
-      });
-    // Flickity config for Kathys Kool Pics
-    $('.kathyHero').flickity({
-        pageDots: true,
-        draggable: false,
-        contain: true,
-        autoPlay: 4000,
-        cellSelector: '.kathyCell',
-        prevNextButtons: false,
-        wrapAround: true,
     });
 });
 
