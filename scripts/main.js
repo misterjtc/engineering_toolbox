@@ -30,7 +30,6 @@ $(function(){
             // $("#main .imported").animate({left: "16%"}, 400, "linear");
             $('aside').removeClass('navMinify');
             $('aside').removeClass('navCheck');
-            $(".automationBreak").html('<h3 class="uppercase sectionBreak automationSection">Automation</h3>');
             $(".toolboxBreak").html('<h3 class="uppercase sectionBreak toolboxSection">Toolbox</h3>');
         // Else if the nav bar is expanded shrink it and do some formatting
         } else {
@@ -40,7 +39,6 @@ $(function(){
             $(".centralContent").animate({marginLeft: "5%"}, 400, "linear");
             $('aside').addClass('navMinify');
             $('aside').addClass('navCheck');
-            $(".automationBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
             $(".toolboxBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
         }
     });
@@ -51,7 +49,6 @@ $(function(){
         if ( $asideWidth < 110 && $('aside').hasClass("navCheck") ) {
             $('aside').animate({width: "16%"}, 400, "linear");
             $('aside').removeClass('navMinify');
-            $(".automationBreak").html('<h3 class="uppercase sectionBreak automationSection">Automation</h3>');
             $(".toolboxBreak").html('<h3 class="uppercase sectionBreak toolboxSection">Toolbox</h3>');
         } else {
             // just do nothing bro
@@ -62,25 +59,19 @@ $(function(){
         if ( $('aside').hasClass("navCheck") ) {
             $('aside').animate({width: "5%"}, 400, "linear");
             $('aside').addClass('navMinify');
-            $(".automationBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
             $(".toolboxBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
         }
     });
     // JS for expanding collapsing sidebar tool menus
-    $(".basExpander").on("click", function(){
-        $(".basTools").slideToggle();
-        $(".basExpander > .expander").toggleClass("expanderDown");
-        $(".basExpander").toggleClass("lit");
+    $(".mechExpander").on("click", function(){
+        $(".mechTools").slideToggle();
+        $(".mechExpander > .expander").toggleClass("expanderDown");
+        $(".mechExpander").toggleClass("lit");
     });
-    $(".genExpander").on("click", function(){
-        $(".genTools").slideToggle();
-        $(".genExpander > .expander").toggleClass("expanderDown");
-        $(".genExpander").toggleClass("lit");
-    });
-    $(".alphaExpander").on("click", function(){
-        $(".alphaTools").slideToggle();
-        $(".alphaExpander > .expander").toggleClass("expanderDown");
-        $(".alphaExpander").toggleClass("lit");
+    $(".vibExpander").on("click", function(){
+        $(".vibTools").slideToggle();
+        $(".vibExpander > .expander").toggleClass("expanderDown");
+        $(".vibExpander").toggleClass("lit");
     });
     // JS for displaying current date on dashboard
     n =  new Date();
@@ -90,6 +81,7 @@ $(function(){
     document.getElementById("today").innerHTML = m + "/" + d + "/" + y;
     // JS for loading specific content onto the dashboard based on user selection
     // Dashboard loader
+    // Run all of this code when the user clicks on the Dashboard menu selector
     $(".dashSelector, .logo").on("click", function(){
         $("#main").html('<div id="loader" class="loader"> <img src="./assets/symbol_litens_black.png" alt="This is the Litens logo"> </div><div id="dashboard" class="dashboard grid"> <div class="contentItem1 dashBox item size1"> <div class="item-content ronsQuotes"> <div class="contentHeader"> <h3> Ron\'s Inspirational Quotes </h3> </div><div class="quoteMain"> <div class="quotePic"> <img src="./assets/ronsvibes.jpg" alt="These are random inspiration images from unsplash"> </div><div class="quoteText"> <div class="quoteBox"> </div><p class="quoteAuthor"> </p></div></div></div></div><div class="contentItem2 dashBox item size1"> <div class="item-content popularApps"> <div class="contentHeader"> <h3> Frank\'s Favourite Apps </h3> </div><div class="popularApps"> <a href="" class="popApp popApp1" onclick="return false"> <i class="fas fa-wave-sine"></i> <p> Torsional Vibration </p></a> <a href="" class="popApp popApp2" onclick="return false"> <i class="fas fa-cogs"></i> <p> System Natural Freq. </p></a> <a href="" class="popApp popApp3" onclick="return false"> <i class="fas fa-wrench"></i> <p> Frank\'s Bolted Joints </p></a> <a href="" class="popApp popApp4" onclick="return false"> <i class="fas fa-chart-line"></i> <p> Frank\'s Stress-Strain </p></a> <a href="" class="popApp popApp5" onclick="return false"> <i class="far fa-scrubber"></i> <p> Frank\'s Press-fits </p></a> </div></div></div><div class="contentItem3 dashBox autoFeed item size5"> <div class="item-content"> <div class="contentHeader"> <h3> Peter\'s Twitter Feed </h3> </div><div class="feedContent"> <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw">Tweets by realDonaldTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div></div></div><div class="contentItem4 dashBox item size1 katsPics"> <div class="item-content"> <div class="contentHeader"> <h3> Kathy\'s Kool Pics </h3> </div><div class="kathyHero"> <img src="./assets/test1.jpg" alt="" class="kathyCell"> <img src="./assets/test2.jpg" alt="" class="kathyCell"> <img src="./assets/test3.jpg" alt="" class="kathyCell"> <img src="./assets/test4.jpg" alt="" class="kathyCell"> <img src="/assets/test5.jpg" alt="" class="kathyCell"> </div></div></div><div class="contentItem5 dashBox item size1 eventList"> <div class="item-content"> <div class="contentHeader"> <h3> JCooks Most Magnificent Events </h3> </div><div class="cooksCalendar"> <iframe src="https://outlook.office365.com/calendar/group/litens.onmicrosoft.com/team_global_pe_hybrid_systems/view/day" frameborder="0"></iframe> </div></div></div><div class="contentItem6 dashBox item size2"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 3 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem7 dashBox item size1"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 4 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem8 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 5 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem9 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 6 </h3> </div><div class="anotherApp"> </div></div></div></div>');
         $(".headToolSwitch").html('Dashboard');
@@ -99,12 +91,12 @@ $(function(){
         // Reload the quote function whenever we reload the dashbaord
         getQuote();
         // Flickity
-        $('.kathyHero').flickity({
+        $('.koolHero').flickity({
             pageDots: true,
             draggable: false,
             contain: true,
             autoPlay: 4000,
-            cellSelector: '.kathyCell',
+            cellSelector: '.koolCell',
             prevNextButtons: false,
             wrapAround: true,
         });
@@ -115,11 +107,6 @@ $(function(){
         }
         setTimeout(showPage, 1500);
     });
-    // Automator loader
-    $(".productAutomator").on("click", function(){
-        $("#main").load("automator.html");
-        $(".headToolSwitch").html('Patrick\'s Automator');
-    });
     // Loading for various tools
     $(".tvTool").on("click", function(){
         $("#main").load("tvTool.html");
@@ -129,7 +116,7 @@ $(function(){
         $("#main").load("freqTool.html");
         $(".headToolSwitch").html('System Natural Freq. Calculator');
     });
-    $(".basJointTool").on("click", function(){
+    $(".jointTool").on("click", function(){
         $("#main").load("jointTool.html"); 
         $(".headToolSwitch").html('Frank\'s Bolted Joint Calculator');
     });
@@ -141,7 +128,7 @@ $(function(){
         $("#main").load("pressTool.html");
         $(".headToolSwitch").html('Cylindrical Press-fit Calculator');
     });
-    $(".basSpringTool").on("click", function(){
+    $(".springTool").on("click", function(){
         $("#main").load("wip.html");
         $(".headToolSwitch").html('Under Construction');
     });
@@ -216,12 +203,12 @@ $(function(){
         grid.refreshItems().layout();
       });
     // Flickity config for Kathys Kool Pics
-    $('.kathyHero').flickity({
+    $('.koolHero').flickity({
         pageDots: true,
         draggable: false,
         contain: true,
         autoPlay: 4000,
-        cellSelector: '.kathyCell',
+        cellSelector: '.koolCell',
         prevNextButtons: false,
         wrapAround: true,
     });

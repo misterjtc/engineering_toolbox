@@ -847,27 +847,27 @@ footer {
           color: #193c82; }
         .grid .item .item-content .popularApps .popApp6 i {
           color: #4187a5; }
-      .grid .item .item-content .kathyHero {
+      .grid .item .item-content .koolHero {
         width: 100%;
         height: 85%; }
-        .grid .item .item-content .kathyHero .flickity-viewport {
+        .grid .item .item-content .koolHero .flickity-viewport {
           height: 100%;
           width: 100%;
           position: relative;
           border-bottom-left-radius: 10px;
           border-bottom-right-radius: 10px; }
-        .grid .item .item-content .kathyHero img {
+        .grid .item .item-content .koolHero img {
           width: 100%;
           -o-object-fit: fill;
           object-fit: fill;
           display: block;
           height: 100%; }
-        .grid .item .item-content .kathyHero .flickity-page-dots {
+        .grid .item .item-content .koolHero .flickity-page-dots {
           position: absolute;
           z-index: 3;
           right: 0px;
           bottom: 10px; }
-          .grid .item .item-content .kathyHero .flickity-page-dots .dot {
+          .grid .item .item-content .koolHero .flickity-page-dots .dot {
             background: white;
             border: 1px solid white; }
       .grid .item .item-content .cooksCalendar {
