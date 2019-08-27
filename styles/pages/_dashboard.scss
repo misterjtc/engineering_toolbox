@@ -214,30 +214,45 @@
         border: 2px solid $blueText;
         color: $blueText;
         border-color: $blueText;
+        .contentHeader {
+            border-bottom: 2px solid $blueText;
+        }
     }
     .item.size2 {
         width: 700px;
         height: 400px;
         border: 2px solid $selectedIcon;
         color: $selectedIcon;
+        .contentHeader {
+            border-bottom: 2px solid $selectedIcon;
+        }
     }
     .item.size3 {
         width: 400px;
         height: 400px;
         border: 2px solid $liPetroleum;
         color: $liPetroleum;
+        .contentHeader {
+            border-bottom: 2px solid $liPetroleum;
+        }
     }
     .item.size4 {
         width: 400px;
         height: 185px;
         border: 2px solid $thermOrg;
         color: $thermOrg;
+        .contentHeader {
+            border-bottom: 2px solid $thermOrg;
+        }
     }
     .item.size5 {
         width: 400px;
         height: 830px;
         border: 2px solid $adtGreen;
         color: $adtGreen;
+        .contentHeader {
+            border-bottom: 2px solid $adtGreen;
+        }
     }
     .item.muuri-item-dragging {
         z-index: 3;

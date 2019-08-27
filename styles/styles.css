@@ -290,21 +290,12 @@ aside {
     width: 85%;
     margin-bottom: 25px; }
     aside .nav .dashSelector {
-      margin: 50px 0 25px 0;
+      margin: 50px 0 50px 0;
       width: 100%; }
-    aside .nav .automationSection {
+    aside .nav .asideSection {
       width: 100%;
       margin-bottom: 15px; }
-      aside .nav .automationSection h3 {
-        margin: 15px 0 30px 0; }
-    aside .nav .productsSection {
-      width: 100%;
-      margin-bottom: 15px; }
-      aside .nav .productsSection h3 {
-        margin: 15px 0 30px 0; }
-    aside .nav .forumSection {
-      width: 100%; }
-      aside .nav .forumSection h3 {
+      aside .nav .asideSection h3 {
         margin: 15px 0 30px 0; }
     aside .nav .toolList {
       display: none;
@@ -949,26 +940,36 @@ footer {
     border: 2px solid #193c82;
     color: #193c82;
     border-color: #193c82; }
+    .grid .item.size1 .contentHeader {
+      border-bottom: 2px solid #193c82; }
   .grid .item.size2 {
     width: 700px;
     height: 400px;
     border: 2px solid #4187a5;
     color: #4187a5; }
+    .grid .item.size2 .contentHeader {
+      border-bottom: 2px solid #4187a5; }
   .grid .item.size3 {
     width: 400px;
     height: 400px;
     border: 2px solid #3e4d54;
     color: #3e4d54; }
+    .grid .item.size3 .contentHeader {
+      border-bottom: 2px solid #3e4d54; }
   .grid .item.size4 {
     width: 400px;
     height: 185px;
     border: 2px solid #f59119;
     color: #f59119; }
+    .grid .item.size4 .contentHeader {
+      border-bottom: 2px solid #f59119; }
   .grid .item.size5 {
     width: 400px;
     height: 830px;
     border: 2px solid #1e6932;
     color: #1e6932; }
+    .grid .item.size5 .contentHeader {
+      border-bottom: 2px solid #1e6932; }
   .grid .item.muuri-item-dragging {
     z-index: 3; }
   .grid .item.muuri-item-releasing {

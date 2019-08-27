@@ -73,6 +73,21 @@ $(function(){
         $(".vibExpander > .expander").toggleClass("expanderDown");
         $(".vibExpander").toggleClass("lit");
     });
+    $(".erpEngExpander").on("click", function(){
+        $(".erpEngTools").slideToggle();
+        $(".erpEngExpander > .expander").toggleClass("expanderDown");
+        $(".erpEngExpander").toggleClass("lit");
+    });
+    $(".erpPurExpander").on("click", function(){
+        $(".erpPurTools").slideToggle();
+        $(".erpPurExpander > .expander").toggleClass("expanderDown");
+        $(".erpPurExpander").toggleClass("lit");
+    });
+    $(".erpDocExpander").on("click", function(){
+        $(".erpDocTools").slideToggle();
+        $(".erpDocExpander > .expander").toggleClass("expanderDown");
+        $(".erpDocExpander").toggleClass("lit");
+    });
     // JS for displaying current date on dashboard
     n =  new Date();
     y = n.getFullYear();
