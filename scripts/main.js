@@ -168,6 +168,10 @@ $(function(){
         $("#main").load("wip.html");
         $(".headToolSwitch").html('Under Construction');
     });
+    $(".purReq").on("click", function(){
+        $("#main").load("purReq.html");
+        $(".headToolSwitch").html('Purchase Requisitions');
+    });
     // JS for styling tool items when they are selected
     $(".subLink").on("click", function(){
         $(".subLink").removeClass("litLink");
@@ -178,10 +182,6 @@ $(function(){
         $(".subLink").removeClass("litLink");
         $(".rootLink").removeClass("litLink");
         $(this).addClass("litLink"); 
-    });
-    $(".agile").on("click", function(){
-        $("#main").load("agile.html");
-        $(".headToolSwitch").html('Agile');
     });
     // ********************************************************** */
     // Loading pop-up content when footer links are clicked
