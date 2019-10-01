@@ -179,6 +179,10 @@ $(function(){
         $(".rootLink").removeClass("litLink");
         $(this).addClass("litLink"); 
     });
+    $(".agile").on("click", function(){
+        $("#main").load("agile.html");
+        $(".headToolSwitch").html('Agile');
+    });
     // ********************************************************** */
     // Loading pop-up content when footer links are clicked
     // ********************************************************** */
