@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -306,11 +307,11 @@ aside {
         padding: 8px 8px; }
     aside .nav .toolList.expanded {
       display: block; }
-    aside .nav .subLink {
+    aside .nav .subLink, aside .nav .subLinkExt {
       -webkit-transition: color 0.3s linear;
       -o-transition: color 0.3s linear;
       transition: color 0.3s linear; }
-      aside .nav .subLink:hover {
+      aside .nav .subLink:hover, aside .nav .subLinkExt:hover {
         color: #e6e6e6; }
     aside .nav .subLink.litLink {
       color: #e6e6e6; }
@@ -702,7 +703,7 @@ footer {
       display: block;
       margin-left: 60px; }
 
-.grid {
+#dashboard {
   position: absolute;
   background: #dddddd;
   width: 100%;
@@ -710,8 +711,8 @@ footer {
   top: 0;
   left: 0;
   margin: 0 auto;
-  opacity: 0; }
-  .grid .item {
+  display: none; }
+  #dashboard .item {
     display: block;
     position: absolute;
     z-index: 1;
@@ -719,7 +720,7 @@ footer {
     color: #999999;
     margin: 15px;
     border-radius: 10px; }
-    .grid .item .item-content {
+    #dashboard .item .item-content {
       position: relative;
       width: 100%;
       height: 100%;
@@ -736,7 +737,7 @@ footer {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; }
-      .grid .item .item-content .quoteMain {
+      #dashboard .item .item-content .quoteMain {
         width: 100%;
         height: 85%;
         display: -webkit-box;
@@ -750,18 +751,18 @@ footer {
         align-items: center;
         margin: 15px 0;
         padding: 0 15px; }
-        .grid .item .item-content .quoteMain .quotePic {
+        #dashboard .item .item-content .quoteMain .quotePic {
           width: 50%;
           height: 100%;
           padding-right: 15px; }
-          .grid .item .item-content .quoteMain .quotePic img {
+          #dashboard .item .item-content .quoteMain .quotePic img {
             display: block;
             width: 100%;
             height: 100%;
             -o-object-fit: cover;
             object-fit: cover;
             border-radius: 5px; }
-        .grid .item .item-content .quoteMain .quoteText {
+        #dashboard .item .item-content .quoteMain .quoteText {
           width: 50%;
           height: 100%;
           display: -webkit-box;
@@ -778,15 +779,15 @@ footer {
           -ms-flex-align: center;
           align-items: center;
           padding-left: 15px; }
-          .grid .item .item-content .quoteMain .quoteText .quoteBox {
+          #dashboard .item .item-content .quoteMain .quoteText .quoteBox {
             width: 100%;
             font-size: 2.2rem; }
-          .grid .item .item-content .quoteMain .quoteText .quoteAuthor {
+          #dashboard .item .item-content .quoteMain .quoteText .quoteAuthor {
             width: 100%;
             text-align: right;
             font-size: 1.7rem;
             padding-right: 25px; }
-      .grid .item .item-content .popularApps {
+      #dashboard .item .item-content .popularApps {
         width: 100%;
         height: 85%;
         display: -webkit-box;
@@ -803,7 +804,7 @@ footer {
         align-items: center;
         margin: 15px 0;
         padding: 0 15px; }
-        .grid .item .item-content .popularApps .popApp {
+        #dashboard .item .item-content .popularApps .popApp {
           width: 25%;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -821,47 +822,47 @@ footer {
           cursor: pointer;
           text-decoration: none;
           color: #999999; }
-          .grid .item .item-content .popularApps .popApp i {
+          #dashboard .item .item-content .popularApps .popApp i {
             font-size: 5rem; }
-          .grid .item .item-content .popularApps .popApp p {
+          #dashboard .item .item-content .popularApps .popApp p {
             width: 85%;
             text-align: center; }
-        .grid .item .item-content .popularApps .popApp1 i {
+        #dashboard .item .item-content .popularApps .popApp1 i {
           color: #0f2241; }
-        .grid .item .item-content .popularApps .popApp2 i {
+        #dashboard .item .item-content .popularApps .popApp2 i {
           color: #3e4d54; }
-        .grid .item .item-content .popularApps .popApp3 i {
+        #dashboard .item .item-content .popularApps .popApp3 i {
           color: #1e6932; }
-        .grid .item .item-content .popularApps .popApp4 i {
+        #dashboard .item .item-content .popularApps .popApp4 i {
           color: #32a550; }
-        .grid .item .item-content .popularApps .popApp5 i {
+        #dashboard .item .item-content .popularApps .popApp5 i {
           color: #193c82; }
-        .grid .item .item-content .popularApps .popApp6 i {
+        #dashboard .item .item-content .popularApps .popApp6 i {
           color: #4187a5; }
-      .grid .item .item-content .koolHero {
+      #dashboard .item .item-content .koolHero {
         width: 100%;
         height: 85%; }
-        .grid .item .item-content .koolHero .flickity-viewport {
+        #dashboard .item .item-content .koolHero .flickity-viewport {
           height: 100%;
           width: 100%;
           position: relative;
           border-bottom-left-radius: 10px;
           border-bottom-right-radius: 10px; }
-        .grid .item .item-content .koolHero img {
+        #dashboard .item .item-content .koolHero img {
           width: 100%;
           -o-object-fit: fill;
           object-fit: fill;
           display: block;
           height: 100%; }
-        .grid .item .item-content .koolHero .flickity-page-dots {
+        #dashboard .item .item-content .koolHero .flickity-page-dots {
           position: absolute;
           z-index: 3;
           right: 0px;
           bottom: 10px; }
-          .grid .item .item-content .koolHero .flickity-page-dots .dot {
+          #dashboard .item .item-content .koolHero .flickity-page-dots .dot {
             background: white;
             border: 1px solid white; }
-      .grid .item .item-content .cooksCalendar {
+      #dashboard .item .item-content .cooksCalendar {
         width: 100%;
         height: 85%;
         display: -webkit-box;
@@ -875,11 +876,11 @@ footer {
         align-items: center;
         margin: 15px 0 0 0;
         padding: 0 15px 15px 15px; }
-        .grid .item .item-content .cooksCalendar iframe {
+        #dashboard .item .item-content .cooksCalendar iframe {
           width: 100%;
           height: 100%;
           border-radius: 10px; }
-      .grid .item .item-content .anotherApp {
+      #dashboard .item .item-content .anotherApp {
         width: 100%;
         height: 85%;
         display: -webkit-box;
@@ -893,7 +894,7 @@ footer {
         align-items: center;
         margin: 15px 0;
         padding: 0 15px; }
-    .grid .item .contentHeader {
+    #dashboard .item .contentHeader {
       width: 100%;
       height: 15%;
       text-align: left;
@@ -908,11 +909,11 @@ footer {
       align-items: center;
       border-bottom: 1px solid #dddddd;
       padding: 10px 0; }
-      .grid .item .contentHeader h3 {
+      #dashboard .item .contentHeader h3 {
         margin: 5px 25px; }
-  .grid .autoFeed .item-content .contentHeader {
+  #dashboard .autoFeed .item-content .contentHeader {
     height: 6.8%; }
-  .grid .autoFeed .item-content .feedContent {
+  #dashboard .autoFeed .item-content .feedContent {
     width: 100%;
     height: 93.2%;
     overflow: scroll !important;
@@ -928,108 +929,215 @@ footer {
     -ms-flex-align: start;
     align-items: flex-start;
     margin-bottom: 15px; }
-    .grid .autoFeed .item-content .feedContent iframe {
+    #dashboard .autoFeed .item-content .feedContent iframe {
       position: absolute !important;
       top: 5px !important;
       width: 90% !important; }
-  .grid .autoFeed .item-content .feedContent::-webkit-scrollbar {
+  #dashboard .autoFeed .item-content .feedContent::-webkit-scrollbar {
     width: 0; }
-  .grid .item.size1 {
+  #dashboard .item.size1 {
     width: 550px;
     height: 400px;
     border: 2px solid #193c82;
     color: #193c82;
     border-color: #193c82; }
-    .grid .item.size1 .contentHeader {
+    #dashboard .item.size1 .contentHeader {
       border-bottom: 2px solid #193c82; }
-  .grid .item.size2 {
+  #dashboard .item.size2 {
     width: 700px;
     height: 400px;
     border: 2px solid #4187a5;
     color: #4187a5; }
-    .grid .item.size2 .contentHeader {
+    #dashboard .item.size2 .contentHeader {
       border-bottom: 2px solid #4187a5; }
-  .grid .item.size3 {
+  #dashboard .item.size3 {
     width: 400px;
     height: 400px;
     border: 2px solid #3e4d54;
     color: #3e4d54; }
-    .grid .item.size3 .contentHeader {
+    #dashboard .item.size3 .contentHeader {
       border-bottom: 2px solid #3e4d54; }
-  .grid .item.size4 {
+  #dashboard .item.size4 {
     width: 400px;
     height: 185px;
     border: 2px solid #f59119;
     color: #f59119; }
-    .grid .item.size4 .contentHeader {
+    #dashboard .item.size4 .contentHeader {
       border-bottom: 2px solid #f59119; }
-  .grid .item.size5 {
+  #dashboard .item.size5 {
     width: 400px;
     height: 830px;
     border: 2px solid #1e6932;
     color: #1e6932; }
-    .grid .item.size5 .contentHeader {
+    #dashboard .item.size5 .contentHeader {
       border-bottom: 2px solid #1e6932; }
-  .grid .item.muuri-item-dragging {
+  #dashboard .item.muuri-item-dragging {
     z-index: 3; }
-  .grid .item.muuri-item-releasing {
+  #dashboard .item.muuri-item-releasing {
     z-index: 2; }
-  .grid .item.muuri-item-hidden {
+  #dashboard .item.muuri-item-hidden {
     z-index: 0; }
 
-.appContent {
+#majorTest {
   position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
+  background: #dddddd;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .appContent .powerApp {
-    width: 100%;
-    height: 95%; }
-
-.appContent {
-  position: absolute;
-  top: 0;
-  right: 0;
   height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .appContent .agile {
-    width: 100%;
-    height: 95%; }
-
-.appContent {
-  position: absolute;
   top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .appContent .patricksAutomator {
+  left: 0;
+  margin: 0 auto;
+  display: block; }
+  #majorTest .tvToolMain {
+    height: 100%;
     width: 100%;
-    height: 100%; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #majorTest .tvToolMain h3 {
+      font-size: 1.9rem;
+      margin-bottom: 15px; }
+    #majorTest .tvToolMain .tvToolForm {
+      background: white;
+      height: 85%;
+      width: 20%;
+      margin: 0 1%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 1.9rem;
+      border-radius: 10px; }
+      #majorTest .tvToolMain .tvToolForm .tvLabel {
+        margin-bottom: 15px; }
+      #majorTest .tvToolMain .tvToolForm .tvFormItem {
+        margin: 0 0; }
+      #majorTest .tvToolMain .tvToolForm .numCyls {
+        width: 50%;
+        height: 35px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid black;
+        background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+        background-repeat: no-repeat;
+        background-position: 95% center;
+        padding-left: 15px;
+        margin-bottom: 40px;
+        border-radius: 5px; }
+      #majorTest .tvToolMain .tvToolForm .inRPM {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 10px;
+        width: 50%;
+        margin-bottom: 40px;
+        background: #999999;
+        border-radius: 5px; }
+        #majorTest .tvToolMain .tvToolForm .inRPM::-webkit-slider-thumb {
+          -webkit-box-shadow: 1px 1px 1px #000000;
+          box-shadow: 1px 1px 1px #000000;
+          border: 1px solid #000000;
+          height: 25px;
+          width: 15px;
+          border-radius: 5px;
+          background: #FFFFFF;
+          cursor: pointer;
+          -webkit-appearance: none; }
+      #majorTest .tvToolMain .tvToolForm .tvAmp {
+        width: 50%;
+        margin-bottom: 40px;
+        height: 35px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding-left: 15px; }
+      #majorTest .tvToolMain .tvToolForm .tvCalc {
+        padding: 10px;
+        background: #0f2241;
+        border-radius: 10px;
+        color: #999999;
+        font-family: inherit;
+        border: none; }
+    #majorTest .tvToolMain .tvToolOutput {
+      background: white;
+      height: 85%;
+      width: 20%;
+      margin: 0 1%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-radius: 10px;
+      font-size: 1.9rem; }
+      #majorTest .tvToolMain .tvToolOutput .tvMaxVel {
+        width: 50%; }
+        #majorTest .tvToolMain .tvToolOutput .tvMaxVel .tvMaxVelOut {
+          width: 100%;
+          margin-bottom: 40px;
+          height: 35px;
+          border: 1px solid black;
+          border-radius: 5px;
+          padding-left: 15px;
+          position: relative; }
+          #majorTest .tvToolMain .tvToolOutput .tvMaxVel .tvMaxVelOut:after {
+            width: 250px;
+            height: 250px;
+            content: "rad/s";
+            position: absolute;
+            left: 67%; }
+      #majorTest .tvToolMain .tvToolOutput .tvMaxAcc {
+        width: 50%; }
+        #majorTest .tvToolMain .tvToolOutput .tvMaxAcc .tvMaxAccOut {
+          width: 100%;
+          margin-bottom: 40px;
+          height: 35px;
+          border: 1px solid black;
+          border-radius: 5px;
+          padding-left: 15px;
+          position: relative; }
+          #majorTest .tvToolMain .tvToolOutput .tvMaxAcc .tvMaxAccOut:after {
+            width: 250px;
+            height: 250px;
+            content: "rad/s²";
+            position: absolute;
+            left: 63%; }
+    #majorTest .tvToolMain .tvToolGraph {
+      background: white;
+      height: 85%;
+      width: 40%;
+      margin: 0 1%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-radius: 10px; }
+      #majorTest .tvToolMain .tvToolGraph canvas {
+        margin: 0 25px; }

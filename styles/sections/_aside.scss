@@ -65,7 +65,7 @@ aside {
         .toolList.expanded {
             display: block;
         }
-        .subLink {
+        .subLink, .subLinkExt {
             transition: color 0.3s linear;
             &:hover {
                 color: lighten($medText, 30%);
@@ -173,8 +173,6 @@ aside {
     .top {
         justify-content: center;
         .logo {
-            // transition: all 0.4s linear;
-            // opacity: 0;
             display: none;
         }
         .minify {

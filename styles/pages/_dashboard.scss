@@ -1,5 +1,5 @@
 // CSS styling for the main dashboard and its muuri containers
-.grid {
+#dashboard {
     position: absolute;
     background: $greyBackground;
     width: 100%;
@@ -7,7 +7,8 @@
     top: 0;
     left: 0;
     margin: 0 auto;
-    opacity: 0;
+    // opacity: 0;
+    display: none;
     .item {
         display: block;
         position: absolute;
@@ -264,3 +265,4 @@
         z-index: 0;
     }
 }
+
