@@ -467,6 +467,7 @@ aside::-webkit-scrollbar {
       align-items: center;
       position: relative; }
       .centralContent .contentSwitch .mainContent .loader {
+        display: none;
         width: 250px; }
         .centralContent .contentSwitch .mainContent .loader img {
           width: 100%; }
@@ -978,7 +979,7 @@ footer {
   #dashboard .item.muuri-item-hidden {
     z-index: 0; }
 
-#majorTest {
+#tvToolApp {
   position: absolute;
   background: #dddddd;
   width: 100%;
@@ -986,8 +987,8 @@ footer {
   top: 0;
   left: 0;
   margin: 0 auto;
-  display: block; }
-  #majorTest .tvToolMain {
+  display: none; }
+  #tvToolApp .tvToolMain {
     height: 100%;
     width: 100%;
     display: -webkit-box;
@@ -999,13 +1000,13 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    #majorTest .tvToolMain h3 {
+    #tvToolApp .tvToolMain h3 {
       font-size: 1.9rem;
       margin-bottom: 15px; }
-    #majorTest .tvToolMain .tvToolForm {
+    #tvToolApp .tvToolMain .tvToolForm {
       background: white;
       height: 85%;
-      width: 20%;
+      width: 25%;
       margin: 0 1%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1022,11 +1023,11 @@ footer {
       align-items: center;
       font-size: 1.9rem;
       border-radius: 10px; }
-      #majorTest .tvToolMain .tvToolForm .tvLabel {
+      #tvToolApp .tvToolMain .tvToolForm .tvLabel {
         margin-bottom: 15px; }
-      #majorTest .tvToolMain .tvToolForm .tvFormItem {
+      #tvToolApp .tvToolMain .tvToolForm .tvFormItem {
         margin: 0 0; }
-      #majorTest .tvToolMain .tvToolForm .numCyls {
+      #tvToolApp .tvToolMain .tvToolForm .numCyls {
         width: 50%;
         height: 35px;
         -webkit-appearance: none;
@@ -1039,7 +1040,7 @@ footer {
         padding-left: 15px;
         margin-bottom: 40px;
         border-radius: 5px; }
-      #majorTest .tvToolMain .tvToolForm .inRPM {
+      #tvToolApp .tvToolMain .tvToolForm .inRPM {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -1048,7 +1049,7 @@ footer {
         margin-bottom: 40px;
         background: #999999;
         border-radius: 5px; }
-        #majorTest .tvToolMain .tvToolForm .inRPM::-webkit-slider-thumb {
+        #tvToolApp .tvToolMain .tvToolForm .inRPM::-webkit-slider-thumb {
           -webkit-box-shadow: 1px 1px 1px #000000;
           box-shadow: 1px 1px 1px #000000;
           border: 1px solid #000000;
@@ -1058,24 +1059,24 @@ footer {
           background: #FFFFFF;
           cursor: pointer;
           -webkit-appearance: none; }
-      #majorTest .tvToolMain .tvToolForm .tvAmp {
+      #tvToolApp .tvToolMain .tvToolForm .tvAmp {
         width: 50%;
         margin-bottom: 40px;
         height: 35px;
         border: 1px solid black;
         border-radius: 5px;
         padding-left: 15px; }
-      #majorTest .tvToolMain .tvToolForm .tvCalc {
+      #tvToolApp .tvToolMain .tvToolForm .tvCalc {
         padding: 10px;
         background: #0f2241;
         border-radius: 10px;
         color: #999999;
         font-family: inherit;
         border: none; }
-    #majorTest .tvToolMain .tvToolOutput {
+    #tvToolApp .tvToolMain .tvToolOutput {
       background: white;
       height: 85%;
-      width: 20%;
+      width: 25%;
       margin: 0 1%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1092,9 +1093,9 @@ footer {
       align-items: center;
       border-radius: 10px;
       font-size: 1.9rem; }
-      #majorTest .tvToolMain .tvToolOutput .tvMaxVel {
+      #tvToolApp .tvToolMain .tvToolOutput .tvMaxVel {
         width: 50%; }
-        #majorTest .tvToolMain .tvToolOutput .tvMaxVel .tvMaxVelOut {
+        #tvToolApp .tvToolMain .tvToolOutput .tvMaxVel .tvMaxVelOut {
           width: 100%;
           margin-bottom: 40px;
           height: 35px;
@@ -1102,15 +1103,15 @@ footer {
           border-radius: 5px;
           padding-left: 15px;
           position: relative; }
-          #majorTest .tvToolMain .tvToolOutput .tvMaxVel .tvMaxVelOut:after {
+          #tvToolApp .tvToolMain .tvToolOutput .tvMaxVel .tvMaxVelOut:after {
             width: 250px;
             height: 250px;
             content: "rad/s";
             position: absolute;
             left: 67%; }
-      #majorTest .tvToolMain .tvToolOutput .tvMaxAcc {
+      #tvToolApp .tvToolMain .tvToolOutput .tvMaxAcc {
         width: 50%; }
-        #majorTest .tvToolMain .tvToolOutput .tvMaxAcc .tvMaxAccOut {
+        #tvToolApp .tvToolMain .tvToolOutput .tvMaxAcc .tvMaxAccOut {
           width: 100%;
           margin-bottom: 40px;
           height: 35px;
@@ -1118,16 +1119,16 @@ footer {
           border-radius: 5px;
           padding-left: 15px;
           position: relative; }
-          #majorTest .tvToolMain .tvToolOutput .tvMaxAcc .tvMaxAccOut:after {
+          #tvToolApp .tvToolMain .tvToolOutput .tvMaxAcc .tvMaxAccOut:after {
             width: 250px;
             height: 250px;
             content: "rad/s²";
             position: absolute;
             left: 63%; }
-    #majorTest .tvToolMain .tvToolGraph {
+    #tvToolApp .tvToolMain .tvToolGraph {
       background: white;
       height: 85%;
-      width: 40%;
+      width: 35%;
       margin: 0 1%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1135,9 +1136,192 @@ footer {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
       border-radius: 10px; }
-      #majorTest .tvToolMain .tvToolGraph canvas {
-        margin: 0 25px; }
+      #tvToolApp .tvToolMain .tvToolGraph .tvGraphSizer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 70%;
+        height: 90%; }
+
+#stressToolApp {
+  position: absolute;
+  background: #dddddd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  display: block; }
+  #stressToolApp .stressAppMain {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #stressToolApp .stressAppMain .stressToolForm {
+      background: white;
+      height: 85%;
+      width: 25%;
+      margin: 0 1%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 1.9rem;
+      border-radius: 10px; }
+      #stressToolApp .stressAppMain .stressToolForm .stressLabel {
+        margin-bottom: 15px;
+        width: 50%; }
+      #stressToolApp .stressAppMain .stressToolForm .stressFormItem {
+        margin: 0 0;
+        width: 50%;
+        margin-bottom: 30px;
+        height: 35px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding-left: 15px; }
+      #stressToolApp .stressAppMain .stressToolForm .stressDoWork {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        #stressToolApp .stressAppMain .stressToolForm .stressDoWork .stressButton {
+          padding: 10px;
+          background: #0f2241;
+          border-radius: 10px;
+          color: #999999;
+          font-family: inherit;
+          border: none;
+          margin: 0 10px; }
+      #stressToolApp .stressAppMain .stressToolForm .stressAdvOptions {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        #stressToolApp .stressAppMain .stressToolForm .stressAdvOptions h3 {
+          margin-bottom: 15px; }
+        #stressToolApp .stressAppMain .stressToolForm .stressAdvOptions .stressAdvInputs {
+          width: 60%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center; }
+          #stressToolApp .stressAppMain .stressToolForm .stressAdvOptions .stressAdvInputs .stressAdvPower {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column; }
+            #stressToolApp .stressAppMain .stressToolForm .stressAdvOptions .stressAdvInputs .stressAdvPower .stressPower {
+              width: 60%; }
+          #stressToolApp .stressAppMain .stressToolForm .stressAdvOptions .stressAdvInputs .stressAdvOffset {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column; }
+            #stressToolApp .stressAppMain .stressToolForm .stressAdvOptions .stressAdvInputs .stressAdvOffset .stressOffset {
+              width: 60%; }
+    #stressToolApp .stressAppMain .stressToolGraph {
+      background: white;
+      height: 85%;
+      width: 45%;
+      margin: 0 1%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-radius: 10px; }
+      #stressToolApp .stressAppMain .stressToolGraph .stressGraphSizer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 85%;
+        height: 90%; }

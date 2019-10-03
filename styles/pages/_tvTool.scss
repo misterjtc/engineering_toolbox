@@ -1,4 +1,4 @@
-#majorTest {
+#tvToolApp {
     position: absolute;
     background: $greyBackground;
     width: 100%;
@@ -6,8 +6,8 @@
     top: 0;
     left: 0;
     margin: 0 auto;
-    // display: none;
-    display: block;
+    display: none;
+    // display: block;
     .tvToolMain {
         height: 100%;
         width: 100%;
@@ -21,7 +21,7 @@
         .tvToolForm {
             background: white;
             height: 85%;
-            width: 20%;
+            width: 25%;
             margin: 0 1%;
             display: flex;
             flex-direction: column;
@@ -83,13 +83,12 @@
                 color: $medText;
                 font-family: inherit;
                 border: none;
-
             }
         }
         .tvToolOutput {
             background: white;
             height: 85%;
-            width: 20%;
+            width: 25%;
             margin: 0 1%;
             display: flex;
             flex-direction: column;
@@ -139,14 +138,20 @@
         .tvToolGraph {
             background: white;
             height: 85%;
-            width: 40%;
+            width: 35%;
             margin: 0 1%;
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
             border-radius: 10px;
-            canvas {
-                margin: 0 25px;
+            .tvGraphSizer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 70%;
+                height: 90%;
             }
         }
     }

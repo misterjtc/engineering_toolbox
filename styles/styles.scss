@@ -7,13 +7,14 @@
 @import "./partials/mixins";
 @import "./partials/site";
 // Main Index Styling
-@import "./sections/aside.scss";
-@import "./sections/contentSwitch.scss";
-@import "./sections/header.scss";
-@import "./sections/footer.scss";
+@import "./sections/aside";
+@import "./sections/contentSwitch";
+@import "./sections/header";
+@import "./sections/footer";
 // Page Styling
-@import "./pages/wip.scss";
-@import "./pages/login.scss";
-@import "./pages/dashboard.scss";
-@import "./pages/tvTool.scss";
+@import "./pages/wip";
+@import "./pages/login";
+@import "./pages/dashboard";
+@import "./pages/tvTool";
+@import "./pages/stressTool"
 

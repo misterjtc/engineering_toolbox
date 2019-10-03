@@ -338,22 +338,22 @@ Designed and developed by:
                             </div>
                         </div>
                     </div>
-                    <div id="majorTest" class="tvToolApp">
+                    <div id="tvToolApp" class="tvToolApp">
                         <div class="tvToolMain">
                             <form class="tvToolForm">
                                 <label for="numCyls" class="tvLabel">Number of Cylinders</label>
                                 <select name="numCyls" class="numCyls tvFormItem">
                                     <option value="3">3</option>
-                                    <option value="4">4</option>
+                                    <option value="4" selected>4</option>
                                     <option value="5">5</option>
                                     <option value="6">6</option>
-                                    <option value="8" selected>8</option>
+                                    <option value="8">8</option>
                                 </select>
                                 <label for="inRPM" class="tvLabel">RPM</label>
                                 <input type="range" id="inRPMId" class="inRPM tvFormItem" name="inRPM" value="800" min="600" max="10000" step="100" oninput="outRPMId.value = inRPMId.value">
                                 <output name="outRPM" class="outRPM" id="outRPMId">800</output>
                                 <label for="tvAmp" class="tvLabel">Torsional Ampliture [° pk-pk]</label>
-                                <input name="tvAmp" type="text" class="tvAmp tvFormItem" value="10">
+                                <input name="tvAmp" type="text" class="tvAmp tvFormItem" value="12">
                                 <button type="button" class="tvCalc">Calculate!</button>
                             </form>
                             <div class="tvToolOutput">
@@ -364,7 +364,6 @@ Designed and developed by:
                                     <div class="tvMaxVelOut tvFormItem">
 
                                     </div>
-                                    <!-- <input name="tvMaxVel" type="text" class="tvMaxVelOut tvFormItem" value=""> -->
                                 </div>
                                 <div class="tvMaxAcc">
                                     <h3>
@@ -376,7 +375,60 @@ Designed and developed by:
                                 </div>
                             </div>
                             <div class="tvToolGraph">
-                                <canvas id="tvChart"></canvas>
+                                <div class="tvGraphSizer">
+                                    <canvas id="tvDispChart"></canvas>
+                                    <canvas id="tvVelChart"></canvas>
+                                    <canvas id="tvAccChart"></canvas>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stressToolApp" id="stressToolApp">
+                        <div class="stressAppMain">
+                            <form action="" class="stressToolForm">
+                                <label for="stressModulus" class="stressLabel">Young's Modulus [MPa]</label>
+                                <input name="stressModulus" type="number" class="stressModulus stressFormItem" value="210000">
+                                <label for="stressYield" class="stressLabel">Engineering Yield Strength [MPa]</label>
+                                <input name="stressYield" type="number" class="stressYield stressFormItem" value="1280">
+                                <label for="stressUltimate" class="stressLabel">Engineering Ultimate Strength [MPa]</label>
+                                <input name="stressUltimate" type="number" class="stressUltimate stressFormItem" value="1420">
+                                <label for="stressStrain" class="stressLabel">Engineering Strain</label>
+                                <input name="stressStrain" type="number" class="stressStrain stressFormItem" value="0.11">
+                                <div class="stressAdvOptions">
+                                    <h3>
+                                        Advanced Options
+                                    </h3>
+                                    <div class="stressAdvInputs">
+                                        <div class="stressAdvPower">
+                                            <label for="stressPower" class="stressLabel">Power</label>
+                                            <input name="stressPower" type="number" class="stressPower stressFormItem" value="0.5">
+                                        </div>
+                                        <div class="stressAdvOffset">
+                                            <label for="stressOffset" class="stressLabel">Offset</label>
+                                            <input name="stressOffset" type="number" class="stressOffset stressFormItem" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stressDoWork">
+                                    <button type="button" 
+                                    class="stressCalc stressButton">Generate!</button>
+                                    <button type="button" 
+                                    class="stressShowDat stressButton">Show Data!</button>
+                                </div>
+                            </form>
+                            <div class="stressToolGraph">
+                                <div class="stressGraphSizer">
+                                    <canvas id="stressStrainChart"></canvas>
+                                </div>
+                                <div class="stressGraphData">
+                                    <div class="stressDataContainer">
+
+                                    </div>
+                                    <div class="strainDataContainer">
+
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
