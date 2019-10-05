@@ -48,7 +48,7 @@ Designed and developed by:
                 <div class="mechTools toolList">
                     <ul>
                         <li>
-                            <a  class="stressGen subLink" href="#" onclick="return false">Stress Strain Generator</a>
+                            <a id="stressGen" class="stressGen subLink" href="#" onclick="return false">Stress Strain Generator</a>
                         </li>
                         <li>
                             <a class="pressTool subLink" href="#" onclick="return false">Cylindrical Press-Fit Calculator</a>
@@ -416,19 +416,18 @@ Designed and developed by:
                                     class="stressShowDat stressButton">Show Data!</button>
                                 </div>
                             </form>
+                            <div class="stressToolData">
+                                <div id="stressDataContainer">
+                                    
+                                </div>
+                                <div id="strainDataContainer">
+                                    
+                                </div>
+                            </div>  
                             <div class="stressToolGraph">
-                                <div class="stressGraphSizer">
+                                <div id="stressGraphSizer">
                                     <canvas id="stressStrainChart"></canvas>
-                                </div>
-                                <div class="stressGraphData">
-                                    <div class="stressDataContainer">
-
-                                    </div>
-                                    <div class="strainDataContainer">
-
-                                    </div>
-                                </div>
-                                
+                                </div>    
                             </div>
                         </div>
                     </div>

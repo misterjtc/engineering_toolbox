@@ -14,12 +14,12 @@ $(function(){
     // Trying the loader config
     // ********************************************************* */
     // This code display an image shortly while the page loads and then displays the dashbaord
-    // function showPage() {
-    //     document.getElementById("loader").style.display = "none";
-    //     document.getElementById("dashboard").style.opacity = "1";
-    //     $('#dashboard').fadeIn("slow");
-    // }
-    // setTimeout(showPage, 1500);
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("dashboard").style.opacity = "1";
+        $('#dashboard').fadeIn("slow");
+    }
+    setTimeout(showPage, 1500);
     // ********************************************************** */
     // JS for collapsing/expanding the nav bar when the user clicks the button
     // ********************************************************** */
@@ -117,14 +117,19 @@ $(function(){
     // This is my current inefficient and hacky way until I figure out something better.
     // This is now the better way!! :D
     $(".dashSelector, .logo").on("click", function(){
+        $(".headToolSwitch").html('Dashboard');
         $( "#dashboard" ).fadeIn( "slow", function() {
             // Animation complete
             console.log("dash fade in ran")
         });
-        $( "#tvToolApp" ).fadeOut( "slow", function() {
+        $( "#tvToolApp, #stressToolApp" ).fadeOut( "slow", function() {
             // Animation complete
             console.log("tvtool fade out ran")
         });
+        // $( "#stressToolApp" ).fadeOut( "slow", function() {
+        //     // Animation complete
+        //     console.log("stresstool fade in ran")
+        // });
     });
     // $(".dashSelector, .logo").on("click", function(){
     //     $("#main").html('<div id="loader" class="loader"> <img src="./assets/jcook_engineering_v2_single_vectorized.png" alt="This is the Litens logo"> </div><div id="dashboard" class="dashboard grid"> <div class="contentItem1 dashBox item size1"> <div class="item-content ronsQuotes"> <div class="contentHeader"> <h3> Inspirational Quotes </h3> </div><div class="quoteMain"> <div class="quotePic"> <img src="./assets/ronsvibes.jpg" alt="These are random inspiration images from unsplash"> </div><div class="quoteText"> <div class="quoteBox"> </div><p class="quoteAuthor"> </p></div></div></div></div><div class="contentItem2 dashBox item size1"> <div class="item-content popularApps"> <div class="contentHeader"> <h3> Engineering Apps </h3> </div><div class="popularApps"> <a href="" class="popApp popApp1" onclick="return false"> <i class="fas fa-wave-sine"></i> <p> Torsional Vibration </p></a> <a href="" class="popApp popApp2" onclick="return false"> <i class="fas fa-cogs"></i> <p> System Natural Freq. </p></a> <a href="" class="popApp popApp3" onclick="return false"> <i class="fas fa-wrench"></i> <p> Bolted Joints </p></a> <a href="" class="popApp popApp4" onclick="return false"> <i class="fas fa-chart-line"></i> <p> Stress-Strain Generator </p></a> <a href="" class="popApp popApp5" onclick="return false"> <i class="far fa-scrubber"></i> <p> Press-fits </p></a> </div></div></div><div class="contentItem3 dashBox autoFeed item size5"> <div class="item-content"> <div class="contentHeader"> <h3> Twitter Feed </h3> </div><div class="feedContent"> <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw">Tweets by realDonaldTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div></div></div><div class="contentItem4 dashBox item size1 katsPics"> <div class="item-content"> <div class="contentHeader"> <h3> Kool Pics </h3> </div><div class="koolHero"> <img src="./assets/test1.jpg" alt="" class="koolCell"> <img src="./assets/test2.jpg" alt="" class="koolCell"> <img src="./assets/test3.jpg" alt="" class="koolCell"> <img src="./assets/test4.jpg" alt="" class="koolCell"> <img src="/assets/test5.jpg" alt="" class="koolCell"> </div></div></div><div class="contentItem5 dashBox item size1 eventList"> <div class="item-content"> <div class="contentHeader"> <h3> Magnificent Events </h3> </div><div class="cooksCalendar"> <iframe src="https://outlook.office365.com/calendar/group/litens.onmicrosoft.com/team_global_pe_hybrid_systems/view/day" frameborder="0"></iframe> </div></div></div><div class="contentItem6 dashBox item size2"> <div class="item-content"> <div class="contentHeader"> <h3> Important Forms </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem7 dashBox item size1"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 4 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem8 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 5 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem9 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 6 </h3> </div><div class="anotherApp"> </div></div></div></div>');
@@ -159,26 +164,6 @@ $(function(){
     //     $("#main").load("tvTool.html");
     //     $(".headToolSwitch").html('Torsional Vibration Calculator');
     // });
-    $(".freqTool").on("click", function(){
-        $("#main").load("freqTool.html");
-        $(".headToolSwitch").html('System Natural Freq. Calculator');
-    });
-    $(".jointTool").on("click", function(){
-        $("#main").load("jointTool.html"); 
-        $(".headToolSwitch").html('Frank\'s Bolted Joint Calculator');
-    });
-    $(".stressGen").on("click", function(){
-        $("#main").load("stressStrainTool.html");
-        $(".headToolSwitch").html('Frank\'s Stress Strain Generator');
-    });
-    $(".pressTool").on("click", function(){
-        $("#main").load("pressTool.html");
-        $(".headToolSwitch").html('Cylindrical Press-fit Calculator');
-    });
-    $(".springTool").on("click", function(){
-        $("#main").load("wip.html");
-        $(".headToolSwitch").html('Under Construction');
-    });
     $(".purReq").on("click", function(){
         $("#main").load("purReq.html");
         $(".headToolSwitch").html('Purchase Requisitions');
@@ -197,7 +182,8 @@ $(function(){
     // THIS IS A TEST
     // THIS TEST WORKED I SHOULD USE THIS METHOD MOVING FORWARD
     $("#tvTool").on("click", function(){
-        $( "#dashboard" ).fadeOut( "slow", function() {
+        $(".headToolSwitch").html('Torsional Vibration Calculator');
+        $( "#dashboard, #stressToolApp" ).fadeOut( "slow", function() {
             // Animation complete
             console.log("dash fade out ran")
         });
@@ -205,8 +191,17 @@ $(function(){
             // Animation complete
             console.log("tvtool fade in ran")
         });
-        // document.getElementById("dashboard").style.display = "none";
-        // document.getElementById("majorTest").style.display = "block";
+    });
+    $("#stressGen").on("click", function(){
+        $(".headToolSwitch").html('Frank\'s Stress Strain Generator');
+        $( "#dashboard, #tvToolApp" ).fadeOut( "slow", function() {
+            // Animation complete
+            console.log("dash fade out ran")
+        });
+        $( "#stressToolApp" ).fadeIn( "slow", function() {
+            // Animation complete
+            console.log("stresstool fade in ran")
+        });
     });
     // ********************************************************** */
     // Loading pop-up content when footer links are clicked
@@ -466,27 +461,30 @@ $(function(){
         tvToolAccChart(sinAcc, tvCyc);
     });
     // ********************************************************** */
-    // StressTool graphcs and calcualtions
+    // StressTool graphs and calcualtions
     // ********************************************************** */
-    function stressStrainChart(stressData,strainLabels) {
+    var ssChart;
+    function stressStrainChart(stressStrainData) {
+        // var ssChart;
         var ctx = document.getElementById('stressStrainChart');
-        var tvVelChart = new Chart(ctx, {
-            type: 'line',
+        ssChart = new Chart(ctx, {
+            type: 'scatter',
             data: {
-                labels: strainLabels,
+                // labels: strainLabels,
                 datasets: [{
-                    backgroundColor: 'rgba(30,105,50,0.3)',
-                    borderColor: 'rgba(42,203,52,0.3)',
+                    backgroundColor: 'rgba(62,77,84,0.3)',
+                    borderColor: 'rgba(15,34,65,0.3)',
                     borderWidth: '3',
-                    lineTension: 0.1,
-                    data: stressData,
+                    label: 'Stress-Strain',
+                    data: stressStrainData,
                 }]
             },
             options: {
+                showLines: true,
                 legend: {
                     display: false,
                     labels: {
-                        // fontColor: 'rgb(255,99,132)',
+                        fontColor: 'rgb(255,99,132)',
                         boxWidth: 60,
                         fontSize: 18,
                     }
@@ -498,7 +496,7 @@ $(function(){
                 },
                 scales: {
                     xAxes: [{
-                        // type: 'linear',
+                        type: 'linear',
                         position: 'bottom',
                         scaleLabel: {
                             display: 'true',
@@ -515,9 +513,37 @@ $(function(){
             }
         });
     }
-    var trueStress = [];
-    var trueStrain = [];
+    // Set default stress strain chart data and populate the chart
+    var trueStress = [0,1280,1310,1331,1346,1358,1369,1378,1416,1445,1470,1492,1511,1530,1547,1563,1578];
+    var trueStrain = [0.000,0.006,0.007,0.009,0.011,0.013,0.015,0.017,0.027,0.037,0.046,0.056,0.066,0.076,0.086,0.096,0.104];
+    var stressJson = [];
+    for (var i = 0; i < trueStress.length; i++) {
+        stressJson.push({
+            x: trueStrain[i],
+            y: trueStress[i]
+        });
+    }
+    // Initialize data chart and graph based on default values
+    stressStrainChart(stressJson);
+    var trueStressCat = [];
+    var trueStrainCat = [];
+    var trueStressDisplay = [];
+    var trueStrainDisplay = [];
+    for (i=0;i<trueStress.length;i++) {
+        trueStressCat.push("<h4>" + trueStress[i] + "</h4>");
+        trueStrainCat.push("<h4>" + trueStrain[i] + "</h4>");
+    }
+    trueStressDisplay = trueStressCat.join("");
+    trueStrainDisplay = trueStrainCat.join("");
+    document.getElementById('stressDataContainer').innerHTML= trueStressDisplay;
+    document.getElementById('strainDataContainer').innerHTML= trueStrainDisplay;
+    // Do calcs and update the graph based on user input
     $(".stressCalc").on("click", function(){
+        // ssChart.destroy();
+        document.getElementById("stressGraphSizer").innerHTML = '&nbsp;';
+        document.getElementById("stressGraphSizer").innerHTML = '<canvas id="stressStrainChart"></canvas>';
+        trueStress = [];
+        trueStrain = [];
         var youngsModulus = parseFloat($('.stressModulus').val());
         var engYield = parseFloat($('.stressYield').val());
         var engUltimate = parseFloat($('.stressUltimate').val());
@@ -546,18 +572,41 @@ $(function(){
         {
             trueStress.push((lastTrueStress - engYield + stressStrainOffset)/Math.pow(lastTrueStrain - firstTrueStrain,plasticPower)*Math.pow(trueStrain[j] - firstTrueStrain,plasticPower) + engYield - stressStrainOffset);
         }
-
-        trueStrain.push(lastTrueStrain)
+        trueStrain.push(lastTrueStrain);
         trueStress.push(lastTrueStress);
+        console.log(trueStress);
+        console.log(trueStrain);
         // for loop to reduce the number of decimal places in the 
         for (var x=0;x<17;x++) {
             trueStrain[x] = trueStrain[x].toFixed(3);
+            trueStress[x] = trueStress[x].toFixed(0);
         }
-        stressStrainChart(trueStress, trueStrain);
+        // for loop to fill the data array for sending to the chart
+        for (var i = 0; i < trueStress.length; i++) {
+            stressJson.push({
+                x: trueStrain[i],
+                y: trueStress[i]
+            });
+        }
+        // Call the chart function
+        stressStrainChart(stressJson);
     });
+    // Show data when user clicks
     $(".stressShowDat").on("click", function(){
-        $('.stressDataContainer').text(trueStress);
-        $('.strainDataContainer').text(trueStress);
+        console.log(trueStress);
+        console.log(trueStrain);
+        trueStressCat = [];
+        trueStrainCat = [];
+        trueStressDisplay = [];
+        trueStrainDisplay = [];
+        for (i=0;i<trueStress.length;i++) {
+            trueStressCat.push("<h4>" + trueStress[i] + "</h4>");
+            trueStrainCat.push("<h4>" + trueStrain[i] + "</h4>");
+        }
+        trueStressDisplay = trueStressCat.join("");
+        trueStrainDisplay = trueStrainCat.join("");
+        document.getElementById('stressDataContainer').innerHTML= trueStressDisplay;
+        document.getElementById('strainDataContainer').innerHTML= trueStrainDisplay;
     });
 });
 

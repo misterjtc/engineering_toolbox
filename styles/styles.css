@@ -467,7 +467,6 @@ aside::-webkit-scrollbar {
       align-items: center;
       position: relative; }
       .centralContent .contentSwitch .mainContent .loader {
-        display: none;
         width: 250px; }
         .centralContent .contentSwitch .mainContent .loader img {
           width: 100%; }
@@ -712,7 +711,7 @@ footer {
   top: 0;
   left: 0;
   margin: 0 auto;
-  display: none; }
+  opacity: 0; }
   #dashboard .item {
     display: block;
     position: absolute;
@@ -1169,7 +1168,7 @@ footer {
   top: 0;
   left: 0;
   margin: 0 auto;
-  display: block; }
+  display: none; }
   #stressToolApp .stressAppMain {
     height: 100%;
     width: 100%;
@@ -1293,7 +1292,7 @@ footer {
     #stressToolApp .stressAppMain .stressToolGraph {
       background: white;
       height: 85%;
-      width: 45%;
+      width: 40%;
       margin: 0 1%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1309,7 +1308,7 @@ footer {
       -ms-flex-align: center;
       align-items: center;
       border-radius: 10px; }
-      #stressToolApp .stressAppMain .stressToolGraph .stressGraphSizer {
+      #stressToolApp .stressAppMain .stressToolGraph #stressGraphSizer {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1324,4 +1323,56 @@ footer {
         -ms-flex-direction: column;
         flex-direction: column;
         width: 85%;
-        height: 90%; }
+        height: 45%; }
+    #stressToolApp .stressAppMain .stressToolData {
+      background: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 25%;
+      height: 85%;
+      border-radius: 10px; }
+      #stressToolApp .stressAppMain .stressToolData #stressDataContainer {
+        width: 30%;
+        font-size: 1rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 25px 0; }
+        #stressToolApp .stressAppMain .stressToolData #stressDataContainer h4 {
+          margin: 5px 5px; }
+      #stressToolApp .stressAppMain .stressToolData #strainDataContainer {
+        width: 30%;
+        font-size: 1rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 25px 0; }
+        #stressToolApp .stressAppMain .stressToolData #strainDataContainer h4 {
+          margin: 5px 5px; }

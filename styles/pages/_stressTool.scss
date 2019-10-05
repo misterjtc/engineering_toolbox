@@ -6,8 +6,8 @@
     top: 0;
     left: 0;
     margin: 0 auto;
-    // display: none;
-    display: block;
+    display: none;
+    // display: block;
     .stressAppMain {
         height: 100%;
         width: 100%;
@@ -90,20 +90,54 @@
         .stressToolGraph {
             background: white;
             height: 85%;
-            width: 45%;
+            width: 40%;
             margin: 0 1%;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
             border-radius: 10px;
-            .stressGraphSizer {
+            #stressGraphSizer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
                 width: 85%;
-                height: 90%;
+                height: 45%;
+            }
+        }
+        .stressToolData {
+            background: white;
+            display: flex;
+            justify-content: center;
+            // flex-direction: column;
+            align-items: center;
+            width: 25%;
+            height: 85%;
+            border-radius: 10px;
+            #stressDataContainer {
+                width: 30%;
+                font-size: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 25px 0;
+                h4 {
+                    margin: 5px 5px;
+                }
+            }
+            #strainDataContainer {
+                width: 30%;
+                font-size: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 25px 0;
+                h4 {
+                    margin: 5px 5px;
+                }
             }
         }
     }
