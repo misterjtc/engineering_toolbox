@@ -14,12 +14,12 @@ $(function(){
     // Trying the loader config
     // ********************************************************* */
     // This code display an image shortly while the page loads and then displays the dashbaord
-    function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("dashboard").style.opacity = "1";
-        $('#dashboard').fadeIn("slow");
-    }
-    setTimeout(showPage, 1500);
+    // function showPage() {
+    //     document.getElementById("loader").style.display = "none";
+    //     document.getElementById("dashboard").style.opacity = "1";
+    //     $('#dashboard').fadeIn("slow");
+    // }
+    // setTimeout(showPage, 1500);
     // ********************************************************** */
     // JS for collapsing/expanding the nav bar when the user clicks the button
     // ********************************************************** */
@@ -607,6 +607,59 @@ $(function(){
         trueStrainDisplay = trueStrainCat.join("");
         document.getElementById('stressDataContainer').innerHTML= trueStressDisplay;
         document.getElementById('strainDataContainer').innerHTML= trueStrainDisplay;
+    });
+    // ********************************************************** */
+    // Bolted joint tool calculations
+    // ********************************************************** */
+    $(".boltCalc").on("click", function(){
+        // Declare variables and grab user inputs
+        var boltSize = parseFloat($('.boltSize').val());
+        var threadPitch = parseFloat($('.threadPitch').val());
+        var boltHeadDia = parseFloat($('.boltHead').val());
+        var threadFriction = parseFloat($('.threadFriction').val());
+        var bearingFriction = parseFloat($('.bearingFriction').val());
+        var boltGrade = parseFloat($('.boltStrength').val());
+        var boltYieldStrength = 1000;
+        var boltHoleDia = 12.2;
+        // Set the bolt yield strength based on user bolt grade selection
+        if (boltGrade == 5.8) {
+            boltYieldStrength = 420;
+        } else if (boltGrade == 8.8) {
+            boltYieldStrength = 660;
+        } else if (boltGrade == 10.9) {
+            boltYieldStrength = 940;
+        } else if (boltGrade == 12.9) {
+            boltYieldStrength = 1100;
+        }
+        // Define variables and do necessary joint calcs
+        var pitchDiameter = boltSize - 0.649515*threadPitch;
+        var extMinorDiameter = boltSize - 1.082532*threadPitch;
+        var triangleHeight = 0.866025*threadPitch;
+        var diameterThree = extMinorDiameter - triangleHeight / 6;
+        var stressArea = Math.PI / 4 * Math.pow(((pitchDiameter+diameterThree)/2),2);
+        var stressDiameter = Math.sqrt(4 * stressArea / Math.PI);
+        var alphaPrime = Math.atan(Math.tan(30*Math.PI/180)*Math.cos(Math.atan(threadPitch / (Math.PI * boltSize))));
+        var jointStressAdjustment = 1 / Math.sqrt(1 + 3 * Math.pow(2 / stressDiameter * (threadPitch / Math.PI + threadFriction * pitchDiameter * (1 / Math.cos(alphaPrime))),2));
+        var settledClamp = boltYieldStrength * stressArea * jointStressAdjustment / 1000;
+        var torqueYield = settledClamp*(threadPitch / (2 * Math.PI) + pitchDiameter * threadFriction / (2 * Math.cos(30 * Math.PI / 180)) + (boltSize + boltHeadDia) * bearingFriction / 4);
+        var unsettledClamp = stressArea * boltYieldStrength / 1000;
+        var boltHeadPressure = 1000 * unsettledClamp / (Math.pow(boltHeadDia, 2) - Math.pow(boltHoleDia, 2)) / Math.PI * 4;
+        $('.boltUnsettledClampOut').text(unsettledClamp.toFixed(2));
+        $('.boltSettledClampOut').text(settledClamp.toFixed(2));
+        $('.boltSurfacePressureOut').text(boltHeadPressure.toFixed(2));
+        $('.boltTorqueYieldOut').text(torqueYield.toFixed(2));
+        // Define variables and do necessary torque transmission calcs
+        var interfaceOD = parseFloat($('.interfaceOD').val());
+        var interfaceID = parseFloat($('.interfaceID').val());
+        var interfaceCOF = parseFloat($('.interfaceFriction').val());
+        var jointClampLoad = parseFloat($('.jointClampLoad').val());
+        var jointTorque = 2 * interfaceCOF * jointClampLoad * (Math.pow(interfaceOD, 3) - Math.pow(interfaceID, 3)) / (8 * 0.75 * (Math.pow(interfaceOD, 2) - Math.pow(interfaceID, 2)));
+        $('.jointTorqueOut').text(jointTorque.toFixed(2));
+        console.log(jointTorque);
+        console.log(interfaceOD);
+        console.log(interfaceID);
+        console.log(interfacCOF);
+        console.log(jointClampLoad)
     });
 });
 

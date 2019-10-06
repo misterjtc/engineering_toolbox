@@ -467,6 +467,7 @@ aside::-webkit-scrollbar {
       align-items: center;
       position: relative; }
       .centralContent .contentSwitch .mainContent .loader {
+        display: none;
         width: 250px; }
         .centralContent .contentSwitch .mainContent .loader img {
           width: 100%; }
@@ -711,7 +712,7 @@ footer {
   top: 0;
   left: 0;
   margin: 0 auto;
-  opacity: 0; }
+  display: none; }
   #dashboard .item {
     display: block;
     position: absolute;
@@ -1376,3 +1377,161 @@ footer {
         margin: 25px 0; }
         #stressToolApp .stressAppMain .stressToolData #strainDataContainer h4 {
           margin: 5px 5px; }
+
+#boltToolApp {
+  position: absolute;
+  background: #dddddd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  display: block; }
+  #boltToolApp .boltAppMain {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #boltToolApp .boltAppMain .boltAppMainItem {
+      background: white;
+      border-radius: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 30%;
+      height: 85%;
+      margin: 0 1%; }
+    #boltToolApp .boltAppMain .boltToolForm {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 1.9rem; }
+      #boltToolApp .boltAppMain .boltToolForm .boltLabel {
+        margin-bottom: 15px;
+        width: 50%; }
+      #boltToolApp .boltAppMain .boltToolForm .boltButton {
+        padding: 10px;
+        background: #0f2241;
+        color: #999999;
+        font-family: inherit;
+        border: none;
+        margin: 0 10px;
+        border-radius: 10px; }
+    #boltToolApp .boltAppMain .boltToolOutput {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 1.9rem; }
+      #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer {
+        width: 50%;
+        position: relative; }
+        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer h3 {
+          margin-bottom: 15px; }
+        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltFormItem {
+          width: 100%; }
+        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltUnsettledClampOut:after {
+          text-align: right;
+          content: "kN";
+          position: absolute;
+          top: 42%;
+          left: 88%; }
+        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltSettledClampOut:after {
+          text-align: right;
+          content: "kN";
+          position: absolute;
+          top: 42%;
+          left: 88%; }
+        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltSurfacePressureOut:after {
+          text-align: right;
+          content: "MPa";
+          position: absolute;
+          top: 42%;
+          left: 83%; }
+        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltTorqueYieldOut:after {
+          text-align: right;
+          content: "N·m";
+          position: absolute;
+          top: 42%;
+          left: 83%; }
+    #boltToolApp .boltAppMain .boltToolTorque {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-size: 1.9rem; }
+      #boltToolApp .boltAppMain .boltToolTorque .boltTorqueForm {
+        width: 100%; }
+      #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%; }
+        #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput .torqueOutputContainer {
+          position: relative;
+          width: 50%; }
+          #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput .torqueOutputContainer h3 {
+            margin-bottom: 15px; }
+          #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput .torqueOutputContainer .jointTorqueOut {
+            width: 100%; }
+            #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput .torqueOutputContainer .jointTorqueOut:after {
+              text-align: right;
+              content: "N·m";
+              position: absolute;
+              top: 42%;
+              left: 83%; }
+    #boltToolApp .boltAppMain .boltFormItem {
+      margin: 0 0;
+      width: 50%;
+      margin-bottom: 20px;
+      height: 35px;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding-left: 15px; }

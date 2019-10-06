@@ -189,6 +189,9 @@ Designed and developed by:
                     <div id="loader" class="loader">
                         <img src="./assets/jcook_engineering_v2_single_vectorized.png" alt="This is the Litens logo">
                     </div>
+                    <!-- *************************************************** -->
+                    <!--            The Main Dashboard Starts here           -->
+                    <!-- *************************************************** -->
                     <div id="dashboard" class="dashboard grid">
                         <div class="contentItem1 dashBox item size1">
                             <div class="item-content ronsQuotes">
@@ -338,6 +341,9 @@ Designed and developed by:
                             </div>
                         </div>
                     </div>
+                    <!-- *************************************************** -->
+                    <!-- Torsional Vibration Tool -->
+                    <!-- *************************************************** -->
                     <div id="tvToolApp" class="tvToolApp">
                         <div class="tvToolMain">
                             <form class="tvToolForm">
@@ -383,6 +389,9 @@ Designed and developed by:
                             </div>
                         </div>
                     </div>
+                    <!-- *************************************************** -->
+                    <!-- Stress-Strain Tool -->
+                    <!-- *************************************************** -->
                     <div class="stressToolApp" id="stressToolApp">
                         <div class="stressAppMain">
                             <form action="" class="stressToolForm">
@@ -417,10 +426,10 @@ Designed and developed by:
                                 </div>
                             </form>
                             <div class="stressToolData">
-                                <div id="stressDataContainer">
+                                <div id="strainDataContainer">
                                     
                                 </div>
-                                <div id="strainDataContainer">
+                                <div id="stressDataContainer">
                                     
                                 </div>
                             </div>  
@@ -431,10 +440,93 @@ Designed and developed by:
                             </div>
                         </div>
                     </div>
+                    <div id="boltToolApp">
+                        <div class="boltAppMain">
+                            <div class="boltToolForm boltAppMainItem">
+                                <label for="boltSize" class="boltLabel">Bolt Ø</label>
+                                <input name="boltSize" type="number" class="boltSize boltFormItem" value="12">
+                                <label for="threadPitch" class="boltLabel">Thread Pitch</label>
+                                <input name="threadPitch" type="number" class="threadPitch boltFormItem" value="1.25">
+                                <label for="boltHead" class="boltLabel">Bolt Head Ø</label>
+                                <input name="boltHead" type="number" class="boltHead boltFormItem" value="14.63">
+                                <label for="threadFriction" class="boltLabel">CoF of Threads</label>
+                                <input name="threadFriction" type="number" class="threadFriction boltFormItem" value="0.15">
+                                <label for="bearingFriction" class="boltLabel">CoF of Bearing Surface</label>
+                                <input name="bearingFriction" type="number" class="bearingFriction boltFormItem" value="0.15">
+                                <label for="boltStrength" class="boltLabel">Bolt Grade</label>
+                                <select name="boltStrength" class="boltStrength boltFormItem">
+                                    <option value="5.8">5.8</option>
+                                    <option value="8.8">8.8</option>
+                                    <option value="10.9">10.9</option>
+                                    <option value="12.9" selected>12.9</option>
+                                </select>
+                                <button type="button" 
+                                    class="boltCalc boltButton">Calculate!</button>
+                            </div>
+                            <div class="boltToolOutput boltAppMainItem">
+                                <div class="boltUnsettledClamp boltOutputContainer">
+                                    <h3>
+                                        Unsettled Clamp Load
+                                    </h3>
+                                    <div class="boltUnsettledClampOut boltFormItem">
+
+                                    </div>
+                                </div>
+                                <div class="boltSettledClamp boltOutputContainer">
+                                    <h3>
+                                        Settled Clamp Load
+                                    </h3>
+                                    <div class="boltSettledClampOut boltFormItem">
+
+                                    </div>
+                                </div>
+                                <div class="boltSurfacePressure boltOutputContainer">
+                                    <h3>
+                                        Surface Pressure @ Yield
+                                    </h3>
+                                    <div class="boltSurfacePressureOut boltFormItem">
+
+                                    </div>
+                                </div>
+                                <div class="boltTorqueYield boltOutputContainer">
+                                    <h3>
+                                        Torque to Yield
+                                    </h3>
+                                    <div class="boltTorqueYieldOut boltFormItem">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boltToolTorque boltAppMainItem">
+                                <div class="boltTorqueForm boltToolForm">
+                                    <label for="interfaceOD" class="boltLabel">Interface Outside Ø</label>
+                                    <input name="interfaceOD" type="number" class="interfaceOD boltFormItem" value="42">
+                                    <label for="interfaceID" class="boltLabel">Interface Outside Ø</label>
+                                    <input name="interfaceID" type="number" class="interfaceID boltFormItem" value="28">
+                                    <label for="interfaceFriction" class="boltLabel">Interface CoF</label>
+                                    <input name="interfaceFriction" type="number" class="interfaceFriction boltFormItem" value="0.3">
+                                    <label for="jointClampLoad" class="boltLabel">Joint Clamp Load</label>
+                                    <input name="jointClampLoad" type="number" class="jointClampLoad boltFormItem" value="81.13">
+                                </div>
+                                <div class="boltTorqueOutput">
+                                    <div class="jointTorque torqueOutputContainer">
+                                        <h3>
+                                            Joint Torque Capacity
+                                        </h3>
+                                        <div class="jointTorqueOut boltFormItem">
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
+        <!-- *************************************************** -->
         <!-- This is the footer section -->
+        <!-- *************************************************** -->
         <footer>
             <h3>
                 Designed and Coded with ❤️ by J. Cook.
@@ -468,6 +560,9 @@ Designed and developed by:
         </div>
     </section>
 </body>
+<!-- *************************************************** -->
+<!--        Loading all scripts and dependencies         -->
+<!-- *************************************************** -->
  <!-- Load JQuery -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  <!-- Font Awesome Kit -->

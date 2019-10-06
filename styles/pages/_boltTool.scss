@@ -1,0 +1,143 @@
+#boltToolApp {
+    position: absolute;
+    background: $greyBackground;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    // display: none;
+    display: block;
+    .boltAppMain {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .boltAppMainItem {
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            height: 85%;
+            margin: 0 1%;
+        }
+        .boltToolForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.9rem;
+            .boltLabel {
+                margin-bottom: 15px;
+                width: 50%;
+            }
+            .boltButton {
+                padding: 10px;
+                background: $navBackground;
+                color: $medText;
+                font-family: inherit;
+                border: none;
+                margin: 0 10px;
+                border-radius: 10px;
+            }
+        }
+        .boltToolOutput {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.9rem;
+            .boltOutputContainer {
+                width: 50%;
+                position: relative;
+                h3 {
+                    margin-bottom: 15px;
+                }
+                .boltFormItem {
+                    width: 100%;
+                }
+                .boltUnsettledClampOut {
+                    &:after {
+                        text-align: right;
+                        content: "kN";
+                        position: absolute;
+                        top: 42%;
+                        left: 88%;
+                    }
+                }
+                .boltSettledClampOut {
+                    &:after {
+                        text-align: right;
+                        content: "kN";
+                        position: absolute;
+                        top: 42%;
+                        left: 88%;
+                    }
+                }
+                .boltSurfacePressureOut {
+                    &:after {
+                        text-align: right;
+                        content: "MPa";
+                        position: absolute;
+                        top: 42%;
+                        left: 83%;
+                    }
+                }
+                .boltTorqueYieldOut {
+                    &:after {
+                        text-align: right;
+                        content: "N·m";
+                        position: absolute;
+                        top: 42%;
+                        left: 83%;
+                    }
+                }
+            }
+        }
+        .boltToolTorque {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 1.9rem;
+            .boltTorqueForm {
+                width: 100%;
+            }
+            .boltTorqueOutput {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                .torqueOutputContainer {
+                    position: relative;
+                    width: 50%;
+                    h3 {
+                        margin-bottom: 15px;
+                    }
+                    .jointTorqueOut {
+                        width: 100%;
+                        &:after {
+                            text-align: right;
+                            content: "N·m";
+                            position: absolute;
+                            top: 42%;
+                            left: 83%;
+                        }
+                    }
+                }
+            }
+        }
+        .boltFormItem {
+            margin: 0 0;
+            width: 50%;
+            margin-bottom: 20px;
+            height: 35px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding-left: 15px;
+        }
+    }
+}
