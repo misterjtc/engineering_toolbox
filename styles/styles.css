@@ -467,7 +467,6 @@ aside::-webkit-scrollbar {
       align-items: center;
       position: relative; }
       .centralContent .contentSwitch .mainContent .loader {
-        display: none;
         width: 250px; }
         .centralContent .contentSwitch .mainContent .loader img {
           width: 100%; }
@@ -712,7 +711,7 @@ footer {
   top: 0;
   left: 0;
   margin: 0 auto;
-  display: none; }
+  opacity: 0; }
   #dashboard .item {
     display: block;
     position: absolute;
@@ -1386,7 +1385,7 @@ footer {
   top: 0;
   left: 0;
   margin: 0 auto;
-  display: block; }
+  display: none; }
   #boltToolApp .boltAppMain {
     height: 100%;
     width: 100%;
@@ -1398,7 +1397,8 @@ footer {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     #boltToolApp .boltAppMain .boltAppMainItem {
       background: white;
       border-radius: 10px;
@@ -1440,6 +1440,24 @@ footer {
         border: none;
         margin: 0 10px;
         border-radius: 10px; }
+    #boltToolApp .boltAppMain .boltSpecDataContainer {
+      position: absolute;
+      width: 50%;
+      height: 50%; }
+      #boltToolApp .boltAppMain .boltSpecDataContainer .boltSpecData {
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: relative;
+        z-index: 999; }
+        #boltToolApp .boltAppMain .boltSpecDataContainer .boltSpecData img {
+          display: block;
+          width: 100%; }
+        #boltToolApp .boltAppMain .boltSpecDataContainer .boltSpecData .closePopup {
+          display: block;
+          position: absolute;
+          top: 5px;
+          right: 5px; }
     #boltToolApp .boltAppMain .boltToolOutput {
       display: -webkit-box;
       display: -ms-flexbox;

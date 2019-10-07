@@ -54,7 +54,7 @@ Designed and developed by:
                             <a class="pressTool subLink" href="#" onclick="return false">Cylindrical Press-Fit Calculator</a>
                         </li>
                         <li>
-                            <a class="jointTool subLink" href="#" onclick="return false">Bolted Joint Calculator</a>
+                            <a  id="jointTool" class="jointTool subLink" href="#" onclick="return false">Bolted Joint Calculator</a>
                         </li>
                         <li>
                             <a class="basSpringTool subLink" href="#" onclick="return false">Arc Spring Designer</a>
@@ -440,9 +440,12 @@ Designed and developed by:
                             </div>
                         </div>
                     </div>
+                    <!-- *************************************************** -->
+                    <!-- Bolted Joint Tool -->
+                    <!-- *************************************************** -->
                     <div id="boltToolApp">
                         <div class="boltAppMain">
-                            <div class="boltToolForm boltAppMainItem">
+                            <form class="boltToolForm boltAppMainItem">
                                 <label for="boltSize" class="boltLabel">Bolt Ø</label>
                                 <input name="boltSize" type="number" class="boltSize boltFormItem" value="12">
                                 <label for="threadPitch" class="boltLabel">Thread Pitch</label>
@@ -455,13 +458,23 @@ Designed and developed by:
                                 <input name="bearingFriction" type="number" class="bearingFriction boltFormItem" value="0.15">
                                 <label for="boltStrength" class="boltLabel">Bolt Grade</label>
                                 <select name="boltStrength" class="boltStrength boltFormItem">
-                                    <option value="5.8">5.8</option>
+                                    <option value="4.6">4.6</option>
                                     <option value="8.8">8.8</option>
                                     <option value="10.9">10.9</option>
                                     <option value="12.9" selected>12.9</option>
                                 </select>
-                                <button type="button" 
+                                <div class="boltDoWork">
+                                    <button type="button" 
                                     class="boltCalc boltButton">Calculate!</button>
+                                    <button type="button" 
+                                    class="boltSpecs boltButton">Show Data!</button>
+                                </div>
+                            </form>
+                            <div class="boltSpecDataContainer">
+                                <div class="boltSpecData" tabindex="-1">
+                                    <img src="./assets/fastenal_bolt_property_data.PNG" alt="bolt property data from Fastenal">
+                                    <a href="" class="closePopup" onclick="return false"><i class="fas fa-times-circle"></i></a>
+                                </div>
                             </div>
                             <div class="boltToolOutput boltAppMainItem">
                                 <div class="boltUnsettledClamp boltOutputContainer">

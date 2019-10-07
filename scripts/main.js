@@ -14,12 +14,12 @@ $(function(){
     // Trying the loader config
     // ********************************************************* */
     // This code display an image shortly while the page loads and then displays the dashbaord
-    // function showPage() {
-    //     document.getElementById("loader").style.display = "none";
-    //     document.getElementById("dashboard").style.opacity = "1";
-    //     $('#dashboard').fadeIn("slow");
-    // }
-    // setTimeout(showPage, 1500);
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("dashboard").style.opacity = "1";
+        $('#dashboard').fadeIn("slow");
+    }
+    setTimeout(showPage, 1500);
     // ********************************************************** */
     // JS for collapsing/expanding the nav bar when the user clicks the button
     // ********************************************************** */
@@ -183,24 +183,29 @@ $(function(){
     // THIS TEST WORKED I SHOULD USE THIS METHOD MOVING FORWARD
     $("#tvTool").on("click", function(){
         $(".headToolSwitch").html('Torsional Vibration Calculator');
-        $( "#dashboard, #stressToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #stressToolApp , #boltToolApp" ).fadeOut( "slow", function() {
             // Animation complete
-            console.log("dash fade out ran")
         });
         $( "#tvToolApp" ).fadeIn( "slow", function() {
             // Animation complete
-            console.log("tvtool fade in ran")
         });
     });
     $("#stressGen").on("click", function(){
         $(".headToolSwitch").html('Frank\'s Stress Strain Generator');
-        $( "#dashboard, #tvToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #boltToolApp" ).fadeOut( "slow", function() {
             // Animation complete
-            console.log("dash fade out ran")
         });
         $( "#stressToolApp" ).fadeIn( "slow", function() {
             // Animation complete
-            console.log("stresstool fade in ran")
+        });
+    });
+    $("#jointTool").on("click", function(){
+        $(".headToolSwitch").html('Bolted Joint Calculator');
+        $( "#dashboard, #tvToolApp, #stressToolApp" ).fadeOut( "slow", function() {
+            // Animation complete
+        });
+        $( "#boltToolApp" ).fadeIn( "slow", function() {
+            // Animation complete
         });
     });
     // ********************************************************** */
@@ -623,7 +628,7 @@ $(function(){
         var boltHoleDia = 12.2;
         // Set the bolt yield strength based on user bolt grade selection
         if (boltGrade == 5.8) {
-            boltYieldStrength = 420;
+            boltYieldStrength = 240;
         } else if (boltGrade == 8.8) {
             boltYieldStrength = 660;
         } else if (boltGrade == 10.9) {
@@ -655,11 +660,15 @@ $(function(){
         var jointClampLoad = parseFloat($('.jointClampLoad').val());
         var jointTorque = 2 * interfaceCOF * jointClampLoad * (Math.pow(interfaceOD, 3) - Math.pow(interfaceID, 3)) / (8 * 0.75 * (Math.pow(interfaceOD, 2) - Math.pow(interfaceID, 2)));
         $('.jointTorqueOut').text(jointTorque.toFixed(2));
-        console.log(jointTorque);
-        console.log(interfaceOD);
-        console.log(interfaceID);
-        console.log(interfacCOF);
-        console.log(jointClampLoad)
     });
+    $(".boltSpecs").on("click", function(e){
+        e.preventDefault();
+        $( ".boltSpecData" ).fadeIn(300, function() {
+            $(this).focus();
+        });
+    });
+    $(".boltSpecData").on('blur',function(){
+        $(this).fadeOut(300);
+    }); 
 });
 
