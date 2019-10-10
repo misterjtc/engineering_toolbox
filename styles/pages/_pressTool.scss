@@ -1,0 +1,165 @@
+#pressToolApp {
+    position: absolute;
+    background: $greyBackground;
+    width: 100%;
+    // height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    // display: none;
+    display: block;
+    overflow: scroll;
+    overflow-x: hidden;
+    .pressLabel {
+        margin-bottom: 5px;
+        width: 50%;
+    }
+    .pressFormItem {
+        margin: 0 0;
+        width: 60%;
+        margin-bottom: 10px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding-left: 15px;
+    }
+    .pressAppMain {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        margin-top: 2.5%;
+        justify-content: center;
+        align-items: center;
+        // position: relative;
+        flex-wrap: wrap;
+        .pressToolInputs {
+            background: white;
+            height: 90%;
+            width: 27%;
+            margin: 0 1%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.7rem;
+            border-radius: 10px;
+            border: 2px solid hotpink;
+            overflow: scroll;
+            overflow-x: hidden;
+            // overflow-y: hidden;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            .pressAppTitle {
+                width: 100%;
+                height: 55px;
+                // margin-top: 25px;
+                border-bottom: 2px solid hotpink;
+            }
+            .pressInputsContainer {
+                width: 100%;
+                height: calc(100% - 55px);
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                .pressInputs {
+                    width: 90%;
+                    // height: 35%;
+                    h3 {
+                        margin: 10px 0;
+                    }
+                    .pressForm {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .inputDims {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            div {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pressToolInputs::-webkit-scrollbar {
+            width:0;
+        }
+        .pressToolOutputs {
+            background: white;
+            height: 90%;
+            width: 27%;
+            margin: 0 1%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.7rem;
+            border-radius: 10px;
+            border: 2px solid royalblue;
+            .pressAppTitle {
+                width: 100%;
+                height: 55px;
+                border-bottom: 2px solid royalblue;
+            }
+            .pressOutput {
+                width: 100%;
+                height: calc(100% - 55px);
+            }
+        }
+        .pressToolGraph {
+            background: white;
+            height: 90%;
+            width: 37%;
+            margin: 0 1%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.7rem;
+            border-radius: 10px;
+            border: 2px solid goldenrod;
+            .pressAppTitle {
+                width: 100%;
+                height: 55px;
+                border-bottom: 2px solid goldenrod;
+            }
+            .pressGraph {
+                width: 100%;
+                height: calc(100% - 55px);
+            }
+        }
+        .pressToolDetailedOutput {
+            background: white;
+            height: 90%;
+            width: 95%;
+            margin: 2.5% 0% 2.5% 0%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 1.9rem;
+            border-radius: 10px;
+            border: 2px solid darkslategray;
+            .pressAppTitle {
+                width: 100%;
+                height: 55px;
+                border-bottom: 2px solid darkslategray;
+            }
+            .pressDetailedOutput {
+                width: 100%;
+                height: calc(100% - 55px);
+            }
+
+        }
+    }
+}

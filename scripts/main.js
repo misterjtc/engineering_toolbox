@@ -14,12 +14,12 @@ $(function(){
     // Trying the loader config
     // ********************************************************* */
     // This code display an image shortly while the page loads and then displays the dashbaord
-    function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("dashboard").style.opacity = "1";
-        $('#dashboard').fadeIn("slow");
-    }
-    setTimeout(showPage, 1500);
+    // function showPage() {
+    //     document.getElementById("loader").style.display = "none";
+    //     document.getElementById("dashboard").style.opacity = "1";
+    //     $('#dashboard').fadeIn("slow");
+    // }
+    // setTimeout(showPage, 1500);
     // ********************************************************** */
     // JS for collapsing/expanding the nav bar when the user clicks the button
     // ********************************************************** */
@@ -116,21 +116,6 @@ $(function(){
     // Run all of this code when the user clicks on the Dashboard menu selector or the side logo
     // This is my current inefficient and hacky way until I figure out something better.
     // This is now the better way!! :D
-    $(".dashSelector, .logo").on("click", function(){
-        $(".headToolSwitch").html('Dashboard');
-        $( "#dashboard" ).fadeIn( "slow", function() {
-            // Animation complete
-            console.log("dash fade in ran")
-        });
-        $( "#tvToolApp, #stressToolApp" ).fadeOut( "slow", function() {
-            // Animation complete
-            console.log("tvtool fade out ran")
-        });
-        // $( "#stressToolApp" ).fadeOut( "slow", function() {
-        //     // Animation complete
-        //     console.log("stresstool fade in ran")
-        // });
-    });
     // $(".dashSelector, .logo").on("click", function(){
     //     $("#main").html('<div id="loader" class="loader"> <img src="./assets/jcook_engineering_v2_single_vectorized.png" alt="This is the Litens logo"> </div><div id="dashboard" class="dashboard grid"> <div class="contentItem1 dashBox item size1"> <div class="item-content ronsQuotes"> <div class="contentHeader"> <h3> Inspirational Quotes </h3> </div><div class="quoteMain"> <div class="quotePic"> <img src="./assets/ronsvibes.jpg" alt="These are random inspiration images from unsplash"> </div><div class="quoteText"> <div class="quoteBox"> </div><p class="quoteAuthor"> </p></div></div></div></div><div class="contentItem2 dashBox item size1"> <div class="item-content popularApps"> <div class="contentHeader"> <h3> Engineering Apps </h3> </div><div class="popularApps"> <a href="" class="popApp popApp1" onclick="return false"> <i class="fas fa-wave-sine"></i> <p> Torsional Vibration </p></a> <a href="" class="popApp popApp2" onclick="return false"> <i class="fas fa-cogs"></i> <p> System Natural Freq. </p></a> <a href="" class="popApp popApp3" onclick="return false"> <i class="fas fa-wrench"></i> <p> Bolted Joints </p></a> <a href="" class="popApp popApp4" onclick="return false"> <i class="fas fa-chart-line"></i> <p> Stress-Strain Generator </p></a> <a href="" class="popApp popApp5" onclick="return false"> <i class="far fa-scrubber"></i> <p> Press-fits </p></a> </div></div></div><div class="contentItem3 dashBox autoFeed item size5"> <div class="item-content"> <div class="contentHeader"> <h3> Twitter Feed </h3> </div><div class="feedContent"> <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw">Tweets by realDonaldTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div></div></div><div class="contentItem4 dashBox item size1 katsPics"> <div class="item-content"> <div class="contentHeader"> <h3> Kool Pics </h3> </div><div class="koolHero"> <img src="./assets/test1.jpg" alt="" class="koolCell"> <img src="./assets/test2.jpg" alt="" class="koolCell"> <img src="./assets/test3.jpg" alt="" class="koolCell"> <img src="./assets/test4.jpg" alt="" class="koolCell"> <img src="/assets/test5.jpg" alt="" class="koolCell"> </div></div></div><div class="contentItem5 dashBox item size1 eventList"> <div class="item-content"> <div class="contentHeader"> <h3> Magnificent Events </h3> </div><div class="cooksCalendar"> <iframe src="https://outlook.office365.com/calendar/group/litens.onmicrosoft.com/team_global_pe_hybrid_systems/view/day" frameborder="0"></iframe> </div></div></div><div class="contentItem6 dashBox item size2"> <div class="item-content"> <div class="contentHeader"> <h3> Important Forms </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem7 dashBox item size1"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 4 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem8 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 5 </h3> </div><div class="anotherApp"> </div></div></div><div class="contentItem9 dashBox item size4"> <div class="item-content"> <div class="contentHeader"> <h3> Another Important Tool 6 </h3> </div><div class="anotherApp"> </div></div></div></div>');
     //     $(".headToolSwitch").html('Dashboard');
@@ -181,9 +166,20 @@ $(function(){
     });
     // THIS IS A TEST
     // THIS TEST WORKED I SHOULD USE THIS METHOD MOVING FORWARD
+    $(".dashSelector, .logo").on("click", function(){
+        $(".headToolSwitch").html('Dashboard');
+        $( "#dashboard" ).fadeIn( "slow", function() {
+            // Animation complete
+            console.log("dash fade in ran")
+        });
+        $( "#tvToolApp, #stressToolApp, #boltToolApp, #pressToolApp" ).fadeOut( "slow", function() {
+            // Animation complete
+            console.log("tvtool fade out ran")
+        });
+    });
     $("#tvTool").on("click", function(){
         $(".headToolSwitch").html('Torsional Vibration Calculator');
-        $( "#dashboard, #stressToolApp , #boltToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #stressToolApp , #boltToolApp, #pressToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#tvToolApp" ).fadeIn( "slow", function() {
@@ -192,7 +188,7 @@ $(function(){
     });
     $("#stressGen").on("click", function(){
         $(".headToolSwitch").html('Frank\'s Stress Strain Generator');
-        $( "#dashboard, #tvToolApp, #boltToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #boltToolApp, #pressToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#stressToolApp" ).fadeIn( "slow", function() {
@@ -201,7 +197,7 @@ $(function(){
     });
     $("#jointTool").on("click", function(){
         $(".headToolSwitch").html('Bolted Joint Calculator');
-        $( "#dashboard, #tvToolApp, #stressToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#boltToolApp" ).fadeIn( "slow", function() {
