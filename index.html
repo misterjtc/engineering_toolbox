@@ -342,7 +342,7 @@ Designed and developed by:
                         </div>
                     </div>
                     <!-- *************************************************** -->
-                    <!-- Torsional Vibration Tool -->
+                    <!--                Torsional Vibration Tool             -->
                     <!-- *************************************************** -->
                     <div id="tvToolApp" class="tvToolApp">
                         <div class="tvToolMain">
@@ -390,7 +390,7 @@ Designed and developed by:
                         </div>
                     </div>
                     <!-- *************************************************** -->
-                    <!-- Stress-Strain Tool -->
+                    <!--                  Stress-Strain Tool                 -->
                     <!-- *************************************************** -->
                     <div class="stressToolApp" id="stressToolApp">
                         <div class="stressAppMain">
@@ -441,7 +441,7 @@ Designed and developed by:
                         </div>
                     </div>
                     <!-- *************************************************** -->
-                    <!-- Bolted Joint Tool -->
+                    <!--                  Bolted Joint Tool                  -->
                     <!-- *************************************************** -->
                     <div id="boltToolApp">
                         <div class="boltAppMain">
@@ -540,6 +540,9 @@ Designed and developed by:
                     <div id="pressToolApp">
                         <div class="pressAppMain">
                             <div class="pressToolInputs">
+                                <div class="pressScrollBro">
+                                    <a href="" onclick="return false"><i class="fas fa-angle-down"></i></a>
+                                </div>
                                 <h3 class="pressAppTitle">
                                     Inputs
                                 </h3>
@@ -552,11 +555,11 @@ Designed and developed by:
                                             <div class="inputDims">
                                                 <div>
                                                     <label for="innerInterfaceOD" class="pressLabel">Outside Ø</label>
-                                                    <input name="innerInterfaceOD" type="number" class="innerInterfaceOD pressFormItem" value="20.1975">
+                                                    <input name="innerInterfaceOD" type="number" class="innerInterfaceOD pressFormItem mmDim" value="20.1975">
                                                 </div>
                                                 <div>
                                                     <label for="innerInterfaceODTolerance" class="pressLabel">Tolerance (±)</label>
-                                                    <input name="innerInterfaceODTolerance" type="number" class="innerInterfaceODTolerance pressFormItem" value="0.025">
+                                                    <input name="innerInterfaceODTolerance" type="number" class="innerInterfaceODTolerance pressFormItem mmDim" value="0.025">
                                                 </div>
                                             </div>
                                             <div class="inputDims">
@@ -614,7 +617,7 @@ Designed and developed by:
                                         <h3>
                                             Other Inputs
                                         </h3>
-                                        <form class="pressForm">
+                                        <form id="pressInputsBottom" class="pressForm">
                                             <div class="inputDims">
                                                 <div>
                                                     <label for="pressMinTemp" class="pressLabel">Min. Temp.</label>
@@ -627,6 +630,17 @@ Designed and developed by:
                                                 <div>
                                                     <label for="pressRoomTemp" class="pressLabel">Room Temp.</label>
                                                     <input name="pressRoomTemp" type="number" class="pressRoomTemp pressFormItem" value="20">
+                                                </div>
+                                            </div>
+                                            <div class="inputDims">
+                                                <div>
+                                                    <label for="pressInterfaceFriction" class="pressLabel">CoF</label>
+                                                    <input name="pressInterfaceFriction" type="number" class="pressInterfaceFriction pressFormItem" value="0.25">
+                                                </div>
+                                                <div>
+                                                    <label for="pressInterfaceLength" class="pressLabel">Length</label>
+                                                    <input name="pressInterfaceLength" type="number" class="pressInterfaceLength pressFormItem" value="15">
+                                                    <span class="toolUnits">mm</span>
                                                 </div>
                                             </div>
                                         </form>
@@ -703,12 +717,12 @@ Designed and developed by:
 <!-- *************************************************** -->
  <!-- Load JQuery -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <!-- Font Awesome Kit -->
- <script src="https://kit.fontawesome.com/9cc76b9d7b.js"></script>
- <!-- Load Flickity -->
- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
- <!-- Main JS Site Script -->
- <script src="./scripts/main.js"></script>
+<!-- Font Awesome Kit -->
+<script src="https://kit.fontawesome.com/9cc76b9d7b.js"></script>
+<!-- Load Flickity -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<!-- Main JS Site Script -->
+<script src="./scripts/main.js"></script>
 <!-- Load Muuri and Dependencies -->
 <script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
 <script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
@@ -716,4 +730,5 @@ Designed and developed by:
 <!-- Load chart.js dependencies -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
 </html>
