@@ -172,6 +172,24 @@ $(function(){
             // Animation complete
         });
     });
+    $("#jointTool").on("click", function(){
+        $(".headToolSwitch").html('Bolted Joint Calculator');
+        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp" ).fadeOut( "slow", function() {
+            // Animation complete
+        });
+        $( "#boltToolApp" ).fadeIn( "slow", function() {
+            // Animation complete
+        });
+    });
+    $("#pressTool").on("click", function(){
+        $(".headToolSwitch").html('Press-Fit Calculator');
+        $( "#dashboard, #tvToolApp, #stressToolApp, #jointToolApp" ).fadeOut( "slow", function() {
+            // Animation complete
+        });
+        $( "#pressToolApp" ).fadeIn( "slow", function() {
+            // Animation complete
+        });
+    });
     // ********************************************************** */
     // Loading pop-up content when footer links are clicked
     // ********************************************************** */
@@ -252,8 +270,11 @@ $(function(){
     // ********************************************************** */
     // TVTool graphcs and calcualtions
     // ********************************************************** */
-    tvLabels = [0,90.180,270,360];
-    tvData = [1,0,1,0,1];
+    // Set data for inital graphs on load
+    tvCyc = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
+    sinDisp = [6,4.85,1.85,-1.85,-4.85,-6,-4.85,-1.85,1.85,4.85];
+    sinVel = [0,-10.31,-16.68,-16.68,-10.31,0,10.31,16.68,16.68,10.31];
+    sinAcc = [-2937,-2376,-907,907,2376,2937,2376,907,-907,-2376];
     Chart.defaults.global.defaultFontSize = '16';
     Chart.defaults.global.defaultFontColor = '#999999';
     Chart.defaults.global.defaultFontFamily = "'Raleway','Helvetica','sans-serif'";
@@ -359,8 +380,8 @@ $(function(){
             data: {
                 labels: tvAccLabels,
                 datasets: [{
-                    backgroundColor: 'rgba(30,105,50,0.3)',
-                    borderColor: 'rgba(42,203,52,0.3)',
+                    backgroundColor: 'rgba(62,77,84,0.3)',
+                    borderColor: 'rgba(15,34,65,0.3)',
                     borderWidth: '3',
                     data: tvAccData,
                 }]
@@ -398,6 +419,10 @@ $(function(){
             }
         });
     }
+    // populate graphs on page load
+    tvToolDispChart(sinDisp, tvCyc);
+    tvToolVelChart(sinVel, tvCyc);
+    tvToolAccChart(sinAcc, tvCyc);
     // tvTool Calculations
     $(".tvCalc").on("click", function(){
         var numCyls = $('.numCyls').val();
@@ -408,15 +433,13 @@ $(function(){
         var period = 1 / fFreq;
         var timeX = [];
         var tvCyc = [1/10,2/10,3/10,4/10,5/10,6/10,7/10,8/10,9/10,1];
-        var sinDisp = [];
-        var sinVel = [];
-        var sinAcc = [];
         var maxVel = tvAmpRad * 2 * Math.PI * fFreq;
         var maxAcc = tvAmpRad * ((2*Math.PI*fFreq)*(2*Math.PI*fFreq));
         $('.tvMaxVelOut').text(maxVel.toFixed(2));
         $('.tvMaxAccOut').text(maxAcc.toFixed(2));
         for (var j=0;j<10;j++)
         {
+
             timeX[j] = period * j * 0.1;
         }
         for (var i=0;i<timeX.length;i++)
@@ -428,6 +451,9 @@ $(function(){
         tvToolDispChart(sinDisp, tvCyc);
         tvToolVelChart(sinVel, tvCyc);
         tvToolAccChart(sinAcc, tvCyc);
+        console.log(sinDisp);
+        console.log(sinVel);
+        console.log(sinAcc);
     });
     // ********************************************************** */
     // StressTool graphs and calcualtions

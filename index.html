@@ -51,7 +51,7 @@ Designed and developed by:
                             <a id="stressGen" class="stressGen subLink" href="#" onclick="return false">Stress Strain Generator</a>
                         </li>
                         <li>
-                            <a class="pressTool subLink" href="#" onclick="return false">Cylindrical Press-Fit Calculator</a>
+                            <a id="pressTool" class="pressTool subLink" href="#" onclick="return false">Cylindrical Press-Fit Calculator</a>
                         </li>
                         <li>
                             <a  id="jointTool" class="jointTool subLink" href="#" onclick="return false">Bolted Joint Calculator</a>
@@ -367,16 +367,16 @@ Designed and developed by:
                                     <h3>
                                         Max Velocity
                                     </h3>
-                                    <div class="tvMaxVelOut tvFormItem">
-
+                                    <div class="tvMaxVelOut tvFormItem rotVelUnits">
+                                        17.54
                                     </div>
                                 </div>
                                 <div class="tvMaxAcc">
                                     <h3>
                                         Max Acceleration
                                     </h3>
-                                    <div class="tvMaxAccOut tvFormItem">
-
+                                    <div class="tvMaxAccOut tvFormItem rotAccUnits">
+                                        2837.50
                                     </div>
                                 </div>
                             </div>
@@ -652,7 +652,62 @@ Designed and developed by:
                                     Outputs
                                 </h3>
                                 <div class="pressOutput">
-
+                                    <div class="pressFinalDia pressOutputContainer">
+                                        <h3>
+                                            Final Ø of Interface
+                                        </h3>
+                                        <div class="pressFinalDiaOut pressFormItem mmUnits">
+    
+                                        </div>
+                                    </div>
+                                    <div class="pressInnerMaxDef pressOutputContainer">
+                                        <h3>
+                                            Inner Component Max δ
+                                        </h3>
+                                        <div class="pressInnerMaxDefOut pressFormItem mmUnits">
+    
+                                        </div>
+                                    </div>
+                                    <div class="pressOuterMaxDef pressOutputContainer">
+                                        <h3>
+                                            Outer Component Max δ
+                                        </h3>
+                                        <div class="pressOuterMaxDefOut pressFormItem mmUnits">
+    
+                                        </div>
+                                    </div>
+                                    <div class="pressInnerMaxStress pressOutputContainer">
+                                        <h3>
+                                            Inner Component Max σ
+                                        </h3>
+                                        <div class="pressInnerMaxStressOut pressFormItem stressUnits">
+    
+                                        </div>
+                                    </div>
+                                    <div class="pressOuterMaxStress pressOutputContainer">
+                                        <h3>
+                                            Outer Component Max σ
+                                        </h3>
+                                        <div class="pressOuterMaxStressOut pressFormItem stressUnits">
+    
+                                        </div>
+                                    </div>
+                                    <div class="pressAssemForce pressOutputContainer">
+                                        <h3>
+                                            Assembly Force
+                                        </h3>
+                                        <div class="pressAssmForceOut pressFormItem forceUnits">
+    
+                                        </div>
+                                    </div>
+                                    <div class="pressTorqCap pressOutputContainer">
+                                        <h3>
+                                            Torque Capacity
+                                        </h3>
+                                        <div class="pressTorqCapOut pressFormItem torqueUnits">
+    
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="pressToolGraph">

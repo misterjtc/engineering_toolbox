@@ -106,13 +106,6 @@
                     border-radius: 5px;
                     padding-left: 15px;
                     position: relative;
-                    &:after {
-                        width: 250px;
-                        height: 250px;
-                        content: "rad/s";
-                        position: absolute;
-                        left: 67%;
-                    }
                 }
             }
             .tvMaxAcc {
@@ -125,13 +118,6 @@
                     border-radius: 5px;
                     padding-left: 15px;
                     position: relative;
-                    &:after {
-                        width: 250px;
-                        height: 250px;
-                        content: "rad/s²";
-                        position: absolute;
-                        left: 63%;
-                    }
                 }
             }
         }

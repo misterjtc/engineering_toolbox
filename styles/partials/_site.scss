@@ -39,6 +39,7 @@ html {
 .uppercase {
     text-transform: uppercase;
 }
+// Main Framework Content
 .framework {
     display: flex;
     // position: relative;
@@ -57,4 +58,60 @@ html {
         background: white;
         border-radius: 10px;
     }
+}
+// Main Tool Configuration
+// Tool Output Config.
+.mmUnits {
+    &:after {
+        text-align: right;
+        content: "mm";
+        position: absolute;
+        top: 5px;
+        left: 80%;
+    }
+}
+.stressUnits {
+    &:after {
+        text-align: right;
+        content: "MPa";
+        position: absolute;
+        top: 5px;
+        left: 80%;
+    }
+}
+.forceUnits {
+    &:after {
+        text-align: right;
+        content: "N";
+        position: absolute;
+        top: 5px;
+        left: 80%;
+    }
+}
+.torqueUnits {
+    &:after {
+        text-align: right;
+        content: "N·m";
+        position: absolute;
+        top: 5px;
+        left: 80%;
+    }
+}
+.rotVelUnits {
+    &:after {
+        text-align: right;
+        content: "rad/s";
+        position: absolute;
+        top: 5px;
+        left: 80%;
+    }
+}
+.rotAccUnits {
+    &:after {
+        text-align: right;
+        content: "rad/s²";
+        position: absolute;
+        top: 5px;
+        left: 80%;
+    }   
 }
