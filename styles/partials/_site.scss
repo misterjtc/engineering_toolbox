@@ -60,6 +60,20 @@ html {
     }
 }
 // Main Tool Configuration
+// Tool input config
+.calcButton {
+    padding: 10px;
+    background: $navBackground;
+    color: $medText;
+    font-family: inherit;
+    border: none;
+    margin: 20px 10px;
+    border-radius: 10px;
+    transition: background 0.3s linear;
+    &:hover {
+        background: lighten($navBackground, 20%);
+    }
+}
 // Tool Output Config.
 .mmUnits {
     &:after {

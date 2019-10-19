@@ -1,6 +1,7 @@
 $(function(){
     // Check if the function is ready
     console.log("I'm Ready");
+    console.log()
     //********************************************************** */
     // Set margin for main content switch based on height of header
     //********************************************************** */
@@ -666,6 +667,41 @@ $(function(){
     // $(".pressScrollBro").on("click", function(){
     //     window.scrollTo(300,document.querySelector(".pressToolInputs").scrollHeight);
     // });
+    $(".pressCalc").on("click", function(){
+        // Define variables for storing user inputs
+        // Inner component inputs
+        var innerInterfaceOD = parseFloat($('.innerInterfaceOD').val());
+        var innerInterfaceODTolerance = parseFloat($('.innerInterfaceODTolerance').val());
+        var innerInterfaceID = parseFloat($('.innerInterfaceID').val());
+        var innerInterfaceIDTolerance = parseFloat($('.innerInterfaceIDTolerance').val());
+        var innerInterfaceOD = parseFloat($('.innerInterfaceOD').val());
+        var innerModulus = parseFloat($('.innerModulus').val());
+        var innerPoissons = parseFloat($('.innerPoissons').val());
+        var innerThermalExp = parseFloat($('.innerThermalExp').val());
+        // Outer component inputs
+        var outerInterfaceID = parseFloat($('.outerInterfaceID').val());
+        var outerInterfaceIDTolernace = parseFloat($('.outerInterfaceIDTolerance').val());
+        var outerInterfaceOD = parseFloat($('.outerInterfaceOD').val());
+        var outerInterfaceODTolerance = parseFloat($('.outerInterfaceODTolerance').val());
+        var outerModulus = parseFloat($('.outerModulus').val());
+        var outerPoissons = parseFloat($('.outerPoissons').val());
+        var outerThermExp = parseFloat($('.outerThermExp').val());
+        // Other inputs
+        var pressMaxTemp = parseFloat($('.pressMaxTemp').val());
+        var pressMinTemp = parseFloat($('.pressMinTemp').val());
+        var pressRoomTemp = parseFloat($('.pressRoomTemp').val());
+        var pressInterfaceFriction = parseFloat($('.pressInterfaceFriction').val());
+        var pressInterfaceLength = parseFloat($('.pressInterfaceLength').val());
+        // Define variables for calcs
+        var innerODRad = innerInterfaceOD / 2000;
+        var innerIDRad = innerInterfaceID / 2000;
+        var outerODRad = outerInterfaceOD / 2000;
+        var outerIDRad = outerInterfaceID / 2000;
+        var pressDiff = innerODRad - outerIDRad;
+        var startRadius = 1;
+        var calcRadius = 2;
+    });
+
     $(".pressInputsContainer").scroll(function(){
         // Show after the user scrolls 800px
         var y = $(this).scrollTop();
