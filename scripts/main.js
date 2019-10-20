@@ -1,7 +1,6 @@
 $(function(){
     // Check if the function is ready
     console.log("I'm Ready");
-    console.log()
     //********************************************************** */
     // Set margin for main content switch based on height of header
     //********************************************************** */
@@ -667,14 +666,13 @@ $(function(){
     // $(".pressScrollBro").on("click", function(){
     //     window.scrollTo(300,document.querySelector(".pressToolInputs").scrollHeight);
     // });
-    $(".pressCalc").on("click", function(){
+    $(".pressButton").on("click", function(){
         // Define variables for storing user inputs
         // Inner component inputs
         var innerInterfaceOD = parseFloat($('.innerInterfaceOD').val());
         var innerInterfaceODTolerance = parseFloat($('.innerInterfaceODTolerance').val());
         var innerInterfaceID = parseFloat($('.innerInterfaceID').val());
         var innerInterfaceIDTolerance = parseFloat($('.innerInterfaceIDTolerance').val());
-        var innerInterfaceOD = parseFloat($('.innerInterfaceOD').val());
         var innerModulus = parseFloat($('.innerModulus').val());
         var innerPoissons = parseFloat($('.innerPoissons').val());
         var innerThermalExp = parseFloat($('.innerThermalExp').val());
@@ -693,13 +691,82 @@ $(function(){
         var pressInterfaceFriction = parseFloat($('.pressInterfaceFriction').val());
         var pressInterfaceLength = parseFloat($('.pressInterfaceLength').val());
         // Define variables for calcs
+        // Convert user Ø inputs into radii and mm to m
         var innerODRad = innerInterfaceOD / 2000;
         var innerIDRad = innerInterfaceID / 2000;
         var outerODRad = outerInterfaceOD / 2000;
         var outerIDRad = outerInterfaceID / 2000;
+        // Check if user inputs are actually an interference
         var pressDiff = innerODRad - outerIDRad;
-        var startRadius = 1;
-        var calcRadius = 2;
+        var startRadius = innerInterfaceOD * 0.005;
+        var calcRadius = outerInterfaceID * 0.005;
+        var allowedError = 0.000000000001;
+
+        var pressCounter = 0;
+        // console.log("This are the main inputs from the user:");
+        // console.log(innerInterfaceOD);
+        // console.log(innerInterfaceID);
+        // console.log(innerModulus);
+        // console.log(innerPoissons);
+        // console.log(outerInterfaceID);
+        // console.log(outerInterfaceOD);
+        // console.log(outerModulus);
+        // console.log(outerPoissons);
+        // console.log(pressDiff);
+        // console.log(startRadius - calcRadius);
+        // If the press-fit is a clearance then exit the function and let the user know of the issue
+        if (pressDiff < 0) {
+            return "Clearance";
+            alert("Your press-fit is a clearance. Please adjust the values and try again.");
+        } else {
+            while ((startRadius - calcRadius) > allowedError) {
+                var mainTerm = (Math.pow(outerODRad, 2) + Math.pow(startRadius, 2)) / (Math.pow(outerODRad, 2) - Math.pow(startRadius, 2)) / outerModulus + outerPoissons / outerModulus + (Math.pow(startRadius, 2) + Math.pow(innerIDRad, 2)) / (Math.pow(startRadius, 2) - Math.pow(innerIDRad, 2)) / innerModulus - innerPoissons / innerModulus;
+                var interfacePressure = pressDiff * 0.5 / startRadius / mainTerm / 1e6;
+                var outerDelta = startRadius * interfacePressure / outerModulus * ((Math.pow(outerODRad, 2) + Math.pow(startRadius, 2)) / (Math.pow(outerODRad, 2) - Math.pow(startRadius, 2)) + outerPoissons) * 1e6;
+                calcRadius = outerIDRad + outerDelta;
+                startRadius = (calcRadius + startRadius) * 0.5;
+                pressCounter = pressCounter + 1;
+                if (pressCounter > 100) {
+                    alert("The tool failed to do the calcs bro");
+                    return "Error";
+                    break;
+                } else {
+                    var finalInterfaceRad = startRadius * 1000;
+                    var finalInterfaceDia = finalInterfaceRad *2;
+                    $('.pressFinalDiaOut').text(finalInterfaceDia.toFixed(3));
+                }
+                // console.log("This is the number iterations:");
+                // console.log(pressCounter);
+                // console.log('This is supposed to be the important outputs:');
+                // console.log(startRadius - calcRadius);
+                console.log(mainTerm);
+                // console.log(outerDelta);
+                // console.log(calcRadius);
+                // console.log(startRadius);
+                console.log(finalInterfaceRad);
+            }
+        }
+        // Declare output variables and do necessary simple calcs
+        // Inner component deflection
+        var pressInnerMaxDef = (finalInterfaceDia - outerInterfaceID);
+        $('.pressInnerMaxDefOut').text(pressInnerMaxDef.toFixed(3));
+        // Outer component max deflection
+        var pressOuterMaxDef = (innerInterfaceOD - finalInterfaceDia);
+        $('.pressOuterMaxDefOut').text(pressOuterMaxDef.toFixed(3));
+        // Interface pressure
+        var pressInterfacePressure = (pressInnerMaxDef + pressOuterMaxDef) / 2 / finalInterfaceRad / mainTerm;
+        $('.pressInterfacePressureOut').text(pressInterfacePressure.toFixed(1));
+        // Hoop stress
+        var outerHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure / (Math.pow(outerODRad*1000, 2) - Math.pow(finalInterfaceRad, 2)) * (1 + Math.pow(outerODRad*1000, 2) / Math.pow(finalInterfaceRad, 2));
+        $('.pressOuterMaxStressOut').text(outerHoopStress.toFixed(1));
+        var innerHoopStress = pressInterfacePressure * 2 * Math.pow(finalInterfaceRad, 2) / (Math.pow(finalInterfaceRad, 2) - Math.pow(innerIDRad*1000, 2));
+        $('.pressInnerMaxStressOut').text(innerHoopStress.toFixed(1));
+        // Assembly force
+        pressAssemblyForce = pressInterfacePressure * 1000 * 2 * Math.PI * finalInterfaceRad * pressInterfaceLength / 1000 * pressInterfaceFriction;
+        $('.pressAssmForceOut').text(pressAssemblyForce.toFixed(1));
+        // Torque capacity of press-fit joint
+        pressTorqueCapacity = pressAssemblyForce * finalInterfaceRad / 1000;
+        $('.pressTorqCapOut').text(pressTorqueCapacity.toFixed(1));
     });
 
     $(".pressInputsContainer").scroll(function(){
