@@ -701,23 +701,12 @@ $(function(){
         var startRadius = innerInterfaceOD * 0.005;
         var calcRadius = outerInterfaceID * 0.005;
         var allowedError = 0.000000000001;
-
         var pressCounter = 0;
-        // console.log("This are the main inputs from the user:");
-        // console.log(innerInterfaceOD);
-        // console.log(innerInterfaceID);
-        // console.log(innerModulus);
-        // console.log(innerPoissons);
-        // console.log(outerInterfaceID);
-        // console.log(outerInterfaceOD);
-        // console.log(outerModulus);
-        // console.log(outerPoissons);
-        // console.log(pressDiff);
-        // console.log(startRadius - calcRadius);
         // If the press-fit is a clearance then exit the function and let the user know of the issue
         if (pressDiff < 0) {
             return "Clearance";
             alert("Your press-fit is a clearance. Please adjust the values and try again.");
+        // else do the main press-fit calculations
         } else {
             while ((startRadius - calcRadius) > allowedError) {
                 var mainTerm = (Math.pow(outerODRad, 2) + Math.pow(startRadius, 2)) / (Math.pow(outerODRad, 2) - Math.pow(startRadius, 2)) / outerModulus + outerPoissons / outerModulus + (Math.pow(startRadius, 2) + Math.pow(innerIDRad, 2)) / (Math.pow(startRadius, 2) - Math.pow(innerIDRad, 2)) / innerModulus - innerPoissons / innerModulus;
@@ -735,15 +724,6 @@ $(function(){
                     var finalInterfaceDia = finalInterfaceRad *2;
                     $('.pressFinalDiaOut').text(finalInterfaceDia.toFixed(3));
                 }
-                // console.log("This is the number iterations:");
-                // console.log(pressCounter);
-                // console.log('This is supposed to be the important outputs:');
-                // console.log(startRadius - calcRadius);
-                console.log(mainTerm);
-                // console.log(outerDelta);
-                // console.log(calcRadius);
-                // console.log(startRadius);
-                console.log(finalInterfaceRad);
             }
         }
         // Declare output variables and do necessary simple calcs
