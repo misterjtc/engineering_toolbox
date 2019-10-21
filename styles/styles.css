@@ -1842,4 +1842,42 @@ footer {
         border-bottom: 2px solid darkslategray; }
       #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput {
         width: 100%;
-        height: calc(100% - 55px); }
+        height: calc(100% - 55px);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end; }
+        #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .cellHeader h3 {
+            font-weight: 700; }
+          #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center; }
+            #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .row h3 {
+              margin: 7px 15px;
+              text-align: center; }

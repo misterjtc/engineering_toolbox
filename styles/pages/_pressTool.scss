@@ -201,8 +201,30 @@
             .pressDetailedOutput {
                 width: 100%;
                 height: calc(100% - 55px);
-            }
-
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                .subTable {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    .cellHeader {
+                        h3{
+                            font-weight: 700;
+                        }
+                    }
+                    .row {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        h3 {
+                            margin: 7px 15px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }          
         }
     }
 }

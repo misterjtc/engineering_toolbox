@@ -748,7 +748,7 @@ $(function(){
         pressTorqueCapacity = pressAssemblyForce * finalInterfaceRad / 1000;
         $('.pressTorqCapOut').text(pressTorqueCapacity.toFixed(1));
     });
-
+    // Initial smoothscrolling for the required containers
     $(".pressInputsContainer").scroll(function(){
         // Show after the user scrolls 800px
         var y = $(this).scrollTop();
