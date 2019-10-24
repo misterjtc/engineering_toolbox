@@ -588,11 +588,11 @@ Designed and developed by:
                                             <div class="inputDims">
                                                 <div>
                                                     <label for="outerInterfaceID" class="pressLabel">Inside Ø</label>
-                                                    <input name="outerInterfaceID" type="number" class="outerInterfaceID pressFormItem" value="20.175">
+                                                    <input name="outerInterfaceID" type="number" class="outerInterfaceID pressFormItem" value="20.135">
                                                 </div>
                                                 <div>
                                                     <label for="outerInterfaceIDTolerance" class="pressLabel">Tolerance (±)</label>
-                                                    <input name="outerInterfaceIDTolerance" type="number" class="outerInterfaceIDTolerance pressFormItem" value="0.1">
+                                                    <input name="outerInterfaceIDTolerance" type="number" class="outerInterfaceIDTolerance pressFormItem" value="0.05">
                                                 </div>
                                             </div>
                                             <div class="inputDims">
@@ -602,7 +602,7 @@ Designed and developed by:
                                                 </div>
                                                 <div>
                                                     <label for="outerInterfaceODTolerance" class="pressLabel">Tolerance (±)</label>
-                                                    <input name="outerInterfaceODTolerance" type="number" class="innerInterfaceODTolerance pressFormItem" value="0.3">
+                                                    <input name="outerInterfaceODTolerance" type="number" class="outerInterfaceODTolerance pressFormItem" value="0.3">
                                                 </div>
                                             </div>
                                             <label for="outerModulus" class="pressLabel">Young's Modulus</label>
@@ -736,7 +736,7 @@ Designed and developed by:
                                     Detailed Outputs
                                 </h3>
                                 <div class="pressDetailedOutput">
-                                    <div class="subTable">
+                                    <div class="subTable pressTableLabels">
                                         <div class=" row cellHeader">
                                             <h3>Items</h3>
                                         </div>
@@ -771,16 +771,16 @@ Designed and developed by:
                                             <h3>Interface Pressure</h3>
                                         </div>
                                         <div class="row">
-                                            <h3>Max Outer Hoop Sdivess</h3>
+                                            <h3>Max Outer Hoop σ</h3>
                                         </div>
                                         <div class="row">
-                                            <h3>Min Outer Hoop Sdivess</h3>
+                                            <h3>Min Outer Hoop σ</h3>
                                         </div>
                                         <div class="row">
-                                            <h3>Max Inner Hoop Sdivess</h3>
+                                            <h3>Max Inner Hoop σ</h3>
                                         </div>
                                         <div class="row">
-                                            <h3>Min Inner Hoop Sdivess</h3>
+                                            <h3>Min Inner Hoop σ</h3>
                                         </div>
                                         <div class="row">
                                             <h3>Assembly Force</h3>
@@ -789,7 +789,7 @@ Designed and developed by:
                                             <h3>Torque Capacity</h3>
                                         </div>
                                     </div>
-                                    <div class="subTable">
+                                    <div class="subTable pressTableRoom">
                                         <div class="row cellHeader">
                                             <h3>Room Temperature (20°C)</h3>
                                         </div>
@@ -798,9 +798,9 @@ Designed and developed by:
                                             <h3>Nom.</h3>
                                             <h3>Max.</h3>
                                         </div>
-                                        <div class="row">
+                                        <div class="row otherTest">
                                             <h3>1</h3>
-                                            <h3>2</h3>
+                                            <h3 class="pressTest">2</h3>
                                             <h3>3</h3>
                                         </div>
                                         <div class="row">
@@ -879,7 +879,7 @@ Designed and developed by:
                                             <h3>3</h3>
                                         </div>
                                     </div>
-                                    <div class="subTable">
+                                    <div class="subTable pressTableCold">
                                         <div class="row cellHeader">
                                             <h3>Min. Temperature (-40°C)</h3>
                                         </div>
@@ -969,7 +969,7 @@ Designed and developed by:
                                             <h3>3</h3>
                                         </div>
                                     </div>
-                                    <div class="subTable">
+                                    <div class="subTable pressTableHot">
                                         <div class="row cellHeader">
                                             <h3>Max Temperature (120°C)</h3>
                                         </div>
@@ -1059,6 +1059,9 @@ Designed and developed by:
                                             <h3>3</h3>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="pressEndNote">
+                                    <p>Note: Min. and max. refer to the cases of minimum and maximum interference, respectively.</p>
                                 </div>
                             </div>
                         </div>

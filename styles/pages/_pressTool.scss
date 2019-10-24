@@ -52,10 +52,7 @@
             font-size: 1.7rem;
             border-radius: 10px;
             border: 2px solid hotpink;
-            // overflow-y: hidden;
             position: relative;
-            // top: 0;
-            // left: 0;
             .pressScrollBro {
                 position: absolute;
                 bottom: 25px;
@@ -79,7 +76,6 @@
             .pressAppTitle {
                 width: 100%;
                 height: 55px;
-                // margin-top: 25px;
                 border-bottom: 2px solid hotpink;
             }
             .pressInputsContainer {
@@ -135,7 +131,7 @@
             border: 2px solid royalblue;
             .pressAppTitle {
                 width: 100%;
-                height: 55px;
+                height: 55px !important;
                 border-bottom: 2px solid royalblue;
             }
             .pressOutput {
@@ -193,6 +189,7 @@
             font-size: 1.9rem;
             border-radius: 10px;
             border: 2px solid darkslategray;
+            position: relative;
             .pressAppTitle {
                 width: 100%;
                 height: 55px;
@@ -204,6 +201,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
+                padding-bottom: 20px;
                 .subTable {
                     display: flex;
                     justify-content: center;
@@ -218,13 +216,34 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        width: 300px;
                         h3 {
                             margin: 7px 15px;
                             text-align: center;
+                            width: 50px
+                        }
+                    }
+                    .row.cellHeader {
+                        h3 {
+                            width: 100%;
                         }
                     }
                 }
-            }          
+                .subTable.pressTableLabels {
+                    h3 {
+                        width: 100%;
+                        text-align: right;
+                    }
+                }
+            }  
+            .pressEndNote {
+                position: absolute;
+                left: 10px;
+                bottom: -10px;
+                p {
+                    font-size: 1.2rem;
+                }
+            }      
         }
     }
 }
