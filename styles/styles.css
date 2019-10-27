@@ -261,7 +261,8 @@ html {
   height: 30px;
   border: 1px solid black;
   border-radius: 5px;
-  padding-left: 15px; }
+  padding-left: 15px;
+  position: relative; }
 
 .toolOutputPackage {
   width: 100%;
@@ -278,6 +279,24 @@ html {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+
+.toolContainerBelowTitle {
+  width: 100%;
+  height: calc(100% - 55px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 20px; }
 
 .calcButton {
   padding: 10px;
@@ -1120,7 +1139,7 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1.9rem;
+      font-size: 1.7rem;
       border-radius: 10px;
       border: 2px solid dodgerblue; }
       #tvToolApp .tvToolMain .tvToolForm .numCyls {
@@ -1164,7 +1183,7 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1.9rem;
+      font-size: 1.7rem;
       border-radius: 10px;
       border: 2px solid khaki; }
       #tvToolApp .tvToolMain .tvToolOutput .tvMaxVel {
@@ -1189,7 +1208,7 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1.9rem;
+      font-size: 1.7rem;
       border-radius: 10px;
       border: 2px solid crimson; }
       #tvToolApp .tvToolMain .tvToolGraph .tvGraphSizer {
@@ -1236,7 +1255,7 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     border-radius: 10px;
     border: 2px solid palegoldenrod; }
     #stressToolApp .stressToolForm .stressAdvOptions h3 {
@@ -1269,7 +1288,7 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     border-radius: 10px;
     border: 2px solid thistle; }
     #stressToolApp .stressToolGraph #stressGraphSizer {
@@ -1306,7 +1325,7 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     border-radius: 10px;
     border: 2px solid steelBlue;
     -ms-flex-direction: row;
@@ -1544,7 +1563,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 2.5%;
+    margin-top: 1.25%;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1555,8 +1574,8 @@ footer {
     flex-wrap: wrap; }
     #pressToolApp .pressAppMain .pressToolInputs {
       background: white;
-      height: 90%;
-      width: 27%;
+      height: 95%;
+      width: 28%;
       margin: 0 1%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1565,9 +1584,9 @@ footer {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
@@ -1603,21 +1622,6 @@ footer {
         height: 55px;
         border-bottom: 2px solid hotpink; }
       #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer {
-        width: 100%;
-        height: calc(100% - 55px);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
         overflow: scroll;
         overflow-x: hidden; }
         #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs {
@@ -1648,27 +1652,12 @@ footer {
               -webkit-box-align: center;
               -ms-flex-align: center;
               align-items: center; }
-              #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs .pressForm .inputDims div {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                position: relative; }
       #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer::-webkit-scrollbar {
         width: 0; }
     #pressToolApp .pressAppMain .pressToolOutputs {
       background: white;
-      height: 90%;
-      width: 27%;
+      height: 95%;
+      width: 28%;
       margin: 0 1%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1685,38 +1674,16 @@ footer {
       align-items: center;
       font-size: 1.7rem;
       border-radius: 10px;
-      border: 2px solid royalblue; }
+      border: 2px solid royalblue;
+      position: relative; }
       #pressToolApp .pressAppMain .pressToolOutputs .pressAppTitle {
         width: 100%;
         height: 55px !important;
         border-bottom: 2px solid royalblue; }
-      #pressToolApp .pressAppMain .pressToolOutputs .pressOutput {
-        width: 100%;
-        height: calc(100% - 55px);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin-top: 20px; }
-        #pressToolApp .pressAppMain .pressToolOutputs .pressOutput .pressOutputContainer {
-          width: 50%; }
-          #pressToolApp .pressAppMain .pressToolOutputs .pressOutput .pressOutputContainer h3 {
-            margin-bottom: 15px; }
-          #pressToolApp .pressAppMain .pressToolOutputs .pressOutput .pressOutputContainer .pressFormItem {
-            width: 100%; }
     #pressToolApp .pressAppMain .pressToolGraph {
       background: white;
-      height: 90%;
-      width: 37%;
+      height: 95%;
+      width: 38%;
       margin: 0 1%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1738,48 +1705,38 @@ footer {
         width: 100%;
         height: 55px;
         border-bottom: 2px solid goldenrod; }
-      #pressToolApp .pressAppMain .pressToolGraph .pressGraph {
-        width: 100%;
-        height: calc(100% - 55px); }
     #pressToolApp .pressAppMain .pressToolDetailedOutput {
       background: white;
-      height: 90%;
-      width: 95%;
-      margin: 2.5% 0% 2.5% 0%;
+      height: 95%;
+      width: 97.5%;
+      margin: 0 1%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      font-size: 1.9rem;
+      font-size: 1.7rem;
       border-radius: 10px;
       border: 2px solid darkslategray;
+      margin: 1.25% 0% 1.25% 0%;
       position: relative; }
       #pressToolApp .pressAppMain .pressToolDetailedOutput .pressAppTitle {
         width: 100%;
         height: 55px;
         border-bottom: 2px solid darkslategray; }
       #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput {
-        width: 100%;
-        height: calc(100% - 55px);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
-        padding-bottom: 20px; }
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; }
         #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable {
           display: -webkit-box;
           display: -ms-flexbox;

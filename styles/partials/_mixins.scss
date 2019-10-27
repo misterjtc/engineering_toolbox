@@ -7,6 +7,11 @@
     left: 0;
     margin: 0 auto;
 }
+@mixin appTitle($borderColor) {
+    width: 100%;
+    height: 55px;
+    border-bottom: 2px solid $borderColor; 
+}
 @mixin toolContainer($width, $borderColour) {
     background: white;
     height: 95%;
@@ -16,7 +21,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     border-radius: 10px;
     border: 2px solid $borderColour;
+    // position: relative;
 }
