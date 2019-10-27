@@ -1,135 +1,57 @@
 #stressToolApp {
-    position: absolute;
-    background: $greyBackground;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
+    @include mainToolContainer();
     display: none;
     // display: block;
-    .stressAppMain {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .stressToolForm {
-            background: white;
-            height: 85%;
-            width: 25%;
-            margin: 0 1%;
+    .stressToolForm {
+        @include toolContainer(25%, palegoldenrod);
+        .stressAdvOptions {
+            h3 {
+                margin-bottom: 10px;
+            }
+        }
+        .stressDoWork {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .stressToolGraph {
+        @include toolContainer(35%, thistle);
+        #stressGraphSizer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 85%;
+            height: 45%;
+        }
+    }
+    .stressToolData {
+        @include toolContainer(25%, steelBlue);
+        flex-direction: row;
+        #stressDataContainer {
+            width: 30%;
+            font-size: 1rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 1.9rem;
-            border-radius: 10px;
-            .stressLabel {
-                margin-bottom: 15px;
-                width: 50%;
-            }
-            .stressFormItem {
-                margin: 0 0;
-                width: 50%;
-                margin-bottom: 30px;
-                height: 35px;
-                border: 1px solid black;
-                border-radius: 5px;
-                padding-left: 15px;
-            }
-            .stressDoWork {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .stressAdvOptions {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                h3 {
-                    margin-bottom: 15px;
-                }
-                .stressAdvInputs {
-                    width: 60%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    .stressAdvPower {
-                        // width: 40%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        .stressPower {
-                            width: 60%;
-                        }
-                    }
-                    .stressAdvOffset {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        .stressOffset {
-                            width: 60%;
-                        }
-                    }
-                }
+            margin: 25px 0;
+            h4 {
+                // border-top: 1px solid grey;
+                margin: 5px 5px;
             }
         }
-        .stressToolGraph {
-            background: white;
-            height: 85%;
-            width: 40%;
-            margin: 0 1%;
+        #strainDataContainer {
+            width: 30%;
+            font-size: 1rem;
             display: flex;
-            justify-content: center;
             flex-direction: column;
-            align-items: center;
-            border-radius: 10px;
-            #stressGraphSizer {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                width: 85%;
-                height: 45%;
-            }
-        }
-        .stressToolData {
-            background: white;
-            display: flex;
             justify-content: center;
-            // flex-direction: column;
             align-items: center;
-            width: 25%;
-            height: 85%;
-            border-radius: 10px;
-            #stressDataContainer {
-                width: 30%;
-                font-size: 1rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin: 25px 0;
-                h4 {
-                    // border-top: 1px solid grey;
-                    margin: 5px 5px;
-                }
-            }
-            #strainDataContainer {
-                width: 30%;
-                font-size: 1rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin: 25px 0;
-                h4 {
-                    margin: 5px 5px;
-                }
+            margin: 25px 0;
+            h4 {
+                margin: 5px 5px;
             }
         }
     }

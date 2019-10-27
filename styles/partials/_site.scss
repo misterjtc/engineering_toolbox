@@ -61,6 +61,33 @@ html {
 }
 // Main Tool Configuration
 // Tool input config
+.appMain {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.appLabel {
+    margin-bottom: 10px;
+    width: 50%;
+}
+.formItem {
+    margin: 0 0;
+    width: 60%;
+    margin-bottom: 20px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+.toolOutputPackage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .calcButton {
     padding: 10px;
     background: $navBackground;

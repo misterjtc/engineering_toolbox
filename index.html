@@ -347,35 +347,35 @@ Designed and developed by:
                     <div id="tvToolApp" class="tvToolApp">
                         <div class="tvToolMain">
                             <form class="tvToolForm">
-                                <label for="numCyls" class="tvLabel">Number of Cylinders</label>
-                                <select name="numCyls" class="numCyls tvFormItem">
+                                <label for="numCyls" class="appLabel">Number of Cylinders</label>
+                                <select name="numCyls" class="numCyls formItem">
                                     <option value="3">3</option>
                                     <option value="4" selected>4</option>
                                     <option value="5">5</option>
                                     <option value="6">6</option>
                                     <option value="8">8</option>
                                 </select>
-                                <label for="inRPM" class="tvLabel">RPM</label>
-                                <input type="range" id="inRPMId" class="inRPM tvFormItem" name="inRPM" value="800" min="600" max="10000" step="100" oninput="outRPMId.value = inRPMId.value">
+                                <label for="inRPM" class="appLabel">RPM</label>
+                                <input type="range" id="inRPMId" class="formItem inRPM" name="inRPM" value="800" min="600" max="10000" step="100" oninput="outRPMId.value = inRPMId.value">
                                 <output name="outRPM" class="outRPM" id="outRPMId">800</output>
-                                <label for="tvAmp" class="tvLabel">Torsional Ampliture [° pk-pk]</label>
-                                <input name="tvAmp" type="text" class="tvAmp tvFormItem" value="12">
-                                <button type="button" class="tvCalc">Calculate!</button>
+                                <label for="tvAmp" class="appLabel">Torsional Ampliture [° pk-pk]</label>
+                                <input name="tvAmp" type="text" class="tvAmp formItem" value="12">
+                                <button type="button" class="calcButton">Calculate!</button>
                             </form>
                             <div class="tvToolOutput">
-                                <div class="tvMaxVel">
+                                <div class="toolOutputPackage">
                                     <h3>
                                         Max Velocity
                                     </h3>
-                                    <div class="tvMaxVelOut tvFormItem rotVelUnits">
+                                    <div class="tvMaxVelOut formItem rotVelUnits">
                                         17.54
                                     </div>
                                 </div>
-                                <div class="tvMaxAcc">
+                                <div class="toolOutputPackage">
                                     <h3>
                                         Max Acceleration
                                     </h3>
-                                    <div class="tvMaxAccOut tvFormItem rotAccUnits">
+                                    <div class="tvMaxAccOut formItem rotAccUnits">
                                         2837.50
                                     </div>
                                 </div>
@@ -393,28 +393,36 @@ Designed and developed by:
                     <!--                  Stress-Strain Tool                 -->
                     <!-- *************************************************** -->
                     <div class="stressToolApp" id="stressToolApp">
-                        <div class="stressAppMain">
+                        <div class="appMain">
                             <form action="" class="stressToolForm">
-                                <label for="stressModulus" class="stressLabel">Young's Modulus [MPa]</label>
-                                <input name="stressModulus" type="number" class="stressModulus stressFormItem" value="210000">
-                                <label for="stressYield" class="stressLabel">Engineering Yield Strength [MPa]</label>
-                                <input name="stressYield" type="number" class="stressYield stressFormItem" value="1280">
-                                <label for="stressUltimate" class="stressLabel">Engineering Ultimate Strength [MPa]</label>
-                                <input name="stressUltimate" type="number" class="stressUltimate stressFormItem" value="1420">
-                                <label for="stressStrain" class="stressLabel">Engineering Strain</label>
-                                <input name="stressStrain" type="number" class="stressStrain stressFormItem" value="0.11">
+                                <div class="toolOutputPackage">
+                                    <label for="stressModulus" class="appLabel">Young's Modulus [MPa]</label>
+                                    <input name="stressModulus" type="number" class="stressModulus formItem" value="210000">
+                                </div>
+                                <div class="toolOutputPackage">
+                                    <label for="stressYield" class="appLabel">Engineering Yield Strength [MPa]</label>
+                                    <input name="stressYield" type="number" class="stressYield formItem" value="1280">
+                                </div>
+                                <div class="toolOutputPackage">
+                                    <label for="stressUltimate" class="appLabel">Engineering Ultimate Strength [MPa]</label>
+                                    <input name="stressUltimate" type="number" class="stressUltimate formItem" value="1420">
+                                </div>
+                                <div class="toolOutputPackage">
+                                    <label for="stressStrain" class="appLabel">Engineering Strain</label>
+                                    <input name="stressStrain" type="number" class="stressStrain formItem" value="0.11">
+                                </div>
                                 <div class="stressAdvOptions">
                                     <h3>
                                         Advanced Options
                                     </h3>
-                                    <div class="stressAdvInputs">
-                                        <div class="stressAdvPower">
-                                            <label for="stressPower" class="stressLabel">Power</label>
-                                            <input name="stressPower" type="number" class="stressPower stressFormItem" value="0.5">
+                                    <div class="toolOutputPackage">
+                                        <div class="toolOutputPackage">
+                                            <label for="stressPower" class="appLabel">Power</label>
+                                            <input name="stressPower" type="number" class="stressPower formItem" value="0.5">
                                         </div>
-                                        <div class="stressAdvOffset">
-                                            <label for="stressOffset" class="stressLabel">Offset</label>
-                                            <input name="stressOffset" type="number" class="stressOffset stressFormItem" value="0">
+                                        <div class="toolOutputPackage">
+                                            <label for="stressOffset" class="appLabel">Offset</label>
+                                            <input name="stressOffset" type="number" class="stressOffset formItem" value="0">
                                         </div>
                                     </div>
                                 </div>
@@ -554,30 +562,30 @@ Designed and developed by:
                                         <form class="pressForm">
                                             <div class="inputDims">
                                                 <div>
-                                                    <label for="innerInterfaceOD" class="pressLabel">Outside Ø</label>
-                                                    <input name="innerInterfaceOD" type="number" class="innerInterfaceOD pressFormItem mmDim" value="20.1975">
+                                                    <label for="innerInterfaceOD" class="appLabel">Outside Ø</label>
+                                                    <input name="innerInterfaceOD" type="number" class="innerInterfaceOD formItem mmDim" value="20.1975">
                                                 </div>
                                                 <div>
-                                                    <label for="innerInterfaceODTolerance" class="pressLabel">Tolerance (±)</label>
-                                                    <input name="innerInterfaceODTolerance" type="number" class="innerInterfaceODTolerance pressFormItem mmDim" value="0.025">
+                                                    <label for="innerInterfaceODTolerance" class="appLabel">Tolerance (±)</label>
+                                                    <input name="innerInterfaceODTolerance" type="number" class="innerInterfaceODTolerance formItem mmDim" value="0.025">
                                                 </div>
                                             </div>
                                             <div class="inputDims">
                                                 <div>
-                                                    <label for="innerInterfaceID" class="pressLabel">Inside Ø</label>
-                                                    <input name="innerInterfaceID" type="number" class="innerInterfaceID pressFormItem" value="14.5">
+                                                    <label for="innerInterfaceID" class="appLabel">Inside Ø</label>
+                                                    <input name="innerInterfaceID" type="number" class="innerInterfaceID formItem" value="14.5">
                                                 </div>
                                                 <div>
-                                                    <label for="innerInterfaceIDTolerance" class="pressLabel">Tolerance (±)</label>
-                                                    <input name="innerInterfaceIDTolerance" type="number" class="innerInterfaceIDTolerance pressFormItem" value="0.5">
+                                                    <label for="innerInterfaceIDTolerance" class="appLabel">Tolerance (±)</label>
+                                                    <input name="innerInterfaceIDTolerance" type="number" class="innerInterfaceIDTolerance formItem" value="0.5">
                                                 </div>
                                             </div>
-                                            <label for="innerModulus" class="pressLabel">Young's Modulus</label>
-                                            <input name="innerModulus" type="number" class="innerModulus pressFormItem" value="205000">
-                                            <label for="innerPoissons" class="pressLabel">Poisson's Ratio</label>
-                                            <input name="innerPoissons" type="number" class="innerPoissons pressFormItem" value="0.28">
-                                            <label for="innerThermExp" class="pressLabel">Thermal Expansion Coeff.</label>
-                                            <input name="innerThermExp" type="number" class="innerThermExp pressFormItem" value="0.0000117">
+                                            <label for="innerModulus" class="appLabel">Young's Modulus</label>
+                                            <input name="innerModulus" type="number" class="innerModulus formItem" value="205000">
+                                            <label for="innerPoissons" class="appLabel">Poisson's Ratio</label>
+                                            <input name="innerPoissons" type="number" class="innerPoissons formItem" value="0.28">
+                                            <label for="innerThermExp" class="appLabel">Thermal Expansion Coeff.</label>
+                                            <input name="innerThermExp" type="number" class="innerThermExp formItem" value="0.0000115">
                                         </form>
                                     </div>
                                     <div class="pressInputs">
@@ -587,30 +595,30 @@ Designed and developed by:
                                         <form class="pressForm">
                                             <div class="inputDims">
                                                 <div>
-                                                    <label for="outerInterfaceID" class="pressLabel">Inside Ø</label>
-                                                    <input name="outerInterfaceID" type="number" class="outerInterfaceID pressFormItem" value="20.135">
+                                                    <label for="outerInterfaceID" class="appLabel">Inside Ø</label>
+                                                    <input name="outerInterfaceID" type="number" class="outerInterfaceID formItem" value="20.135">
                                                 </div>
                                                 <div>
-                                                    <label for="outerInterfaceIDTolerance" class="pressLabel">Tolerance (±)</label>
-                                                    <input name="outerInterfaceIDTolerance" type="number" class="outerInterfaceIDTolerance pressFormItem" value="0.05">
+                                                    <label for="outerInterfaceIDTolerance" class="appLabel">Tolerance (±)</label>
+                                                    <input name="outerInterfaceIDTolerance" type="number" class="outerInterfaceIDTolerance formItem" value="0.05">
                                                 </div>
                                             </div>
                                             <div class="inputDims">
                                                 <div>
-                                                    <label for="outerInterfaceOD" class="pressLabel">Outside Ø</label>
-                                                    <input name="outerInterfaceOD" type="number" class="outerInterfaceOD pressFormItem" value="59.935">
+                                                    <label for="outerInterfaceOD" class="appLabel">Outside Ø</label>
+                                                    <input name="outerInterfaceOD" type="number" class="outerInterfaceOD formItem" value="59.935">
                                                 </div>
                                                 <div>
-                                                    <label for="outerInterfaceODTolerance" class="pressLabel">Tolerance (±)</label>
-                                                    <input name="outerInterfaceODTolerance" type="number" class="outerInterfaceODTolerance pressFormItem" value="0.3">
+                                                    <label for="outerInterfaceODTolerance" class="appLabel">Tolerance (±)</label>
+                                                    <input name="outerInterfaceODTolerance" type="number" class="outerInterfaceODTolerance formItem" value="0.3">
                                                 </div>
                                             </div>
-                                            <label for="outerModulus" class="pressLabel">Young's Modulus</label>
-                                            <input name="outerModulus" type="number" class="outerModulus pressFormItem" value="205000">
-                                            <label for="outerPoissons" class="pressLabel">Poisson's Ratio</label>
-                                            <input name="outerPoissons" type="number" class="outerPoissons pressFormItem" value="0.28">
-                                            <label for="outerThermExp" class="pressLabel">Thermal Expansion Coeff.</label>
-                                            <input name="outerThermExp" type="number" class="outerThermExp pressFormItem" value="0.0000117">
+                                            <label for="outerModulus" class="appLabel">Young's Modulus</label>
+                                            <input name="outerModulus" type="number" class="outerModulus formItem" value="205000">
+                                            <label for="outerPoissons" class="appLabel">Poisson's Ratio</label>
+                                            <input name="outerPoissons" type="number" class="outerPoissons formItem" value="0.28">
+                                            <label for="outerThermExp" class="appLabel">Thermal Expansion Coeff.</label>
+                                            <input name="outerThermExp" type="number" class="outerThermExp formItem" value="0.0000117">
                                         </form>
                                     </div>
                                     <div class="pressInputs">
@@ -620,26 +628,26 @@ Designed and developed by:
                                         <form id="pressInputsBottom" class="pressForm">
                                             <div class="inputDims">
                                                 <div>
-                                                    <label for="pressMinTemp" class="pressLabel">Min. Temp.</label>
-                                                    <input name="pressMinTemp" type="number" class="pressMinTemp pressFormItem" value="-40">
+                                                    <label for="pressMinTemp" class="appLabel">Min. Temp.</label>
+                                                    <input name="pressMinTemp" type="number" class="pressMinTemp formItem" value="-40">
                                                 </div>
                                                 <div>
-                                                    <label for="pressMaxTemp" class="pressLabel">Max. Temp.</label>
-                                                    <input name="pressMaxTemp" type="number" class="pressMaxTemp pressFormItem" value="140">
+                                                    <label for="pressMaxTemp" class="appLabel">Max. Temp.</label>
+                                                    <input name="pressMaxTemp" type="number" class="pressMaxTemp formItem" value="140">
                                                 </div>
                                                 <div>
-                                                    <label for="pressRoomTemp" class="pressLabel">Room Temp.</label>
-                                                    <input name="pressRoomTemp" type="number" class="pressRoomTemp pressFormItem" value="20">
+                                                    <label for="pressRoomTemp" class="appLabel">Room Temp.</label>
+                                                    <input name="pressRoomTemp" type="number" class="pressRoomTemp formItem" value="20">
                                                 </div>
                                             </div>
                                             <div class="inputDims">
                                                 <div>
-                                                    <label for="pressInterfaceFriction" class="pressLabel">CoF</label>
-                                                    <input name="pressInterfaceFriction" type="number" class="pressInterfaceFriction pressFormItem" value="0.25">
+                                                    <label for="pressInterfaceFriction" class="appLabel">CoF</label>
+                                                    <input name="pressInterfaceFriction" type="number" class="pressInterfaceFriction formItem" value="0.25">
                                                 </div>
                                                 <div>
-                                                    <label for="pressInterfaceLength" class="pressLabel">Length</label>
-                                                    <input name="pressInterfaceLength" type="number" class="pressInterfaceLength pressFormItem" value="15">
+                                                    <label for="pressInterfaceLength" class="appLabel">Length</label>
+                                                    <input name="pressInterfaceLength" type="number" class="pressInterfaceLength formItem" value="15">
                                                     <span class="toolUnits">mm</span>
                                                 </div>
                                             </div>

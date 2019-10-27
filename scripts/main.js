@@ -663,21 +663,21 @@ $(function(){
     // ********************************************************** */
     // Press Tool graphs and calcualtions
     // ********************************************************** */
-    // Define variables
-    // var innerInterfaceOD;
-    // var innerInterfaceID;
-    // var innerInterfaceODTolerance;
-    // var innerInterfaceIDTolerance;
-    // var innerModulus;
-    // var innerPoissons;
-
-
+    // Define global variables for the presstool
+    var finalInterfaceDia;
+    var finalInterfaceRad;
+    var pressInnerMaxDef;
+    var pressOuterMaxDef;
+    var pressInterfacePressure;
+    var maxOuterHoopStress;
+    var maxInnerHoopStress;
+    var pressAssemblyForce;
+    var pressTorqueCapacity;
     // Define the main function for doing the press-fit calc
     function pressToolMainCalc(innerODRad, innerIDRad, outerIDRad, outerODRad, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, pressTemp, pressCondition) {
         // Check if user inputs are actually an interference
         var pressDiff = innerODRad - outerIDRad;
-        // var startRadius = innerInterfaceOD * 0.005;
-        // var calcRadius = outerInterfaceID * 0.005;
+        console.log(pressDiff);
         var startRadius = innerODRad * 10;
         var calcRadius = outerIDRad * 10;
         var allowedError = 0.000000000001;
@@ -699,45 +699,44 @@ $(function(){
                 if (pressCounter > 100) {
                     alert("The tool failed to do the calcs bro");
                     break;
-                } else {
-                    var finalInterfaceRad = startRadius * 1000;
-                    var finalInterfaceDia = finalInterfaceRad *2;
-                    // Declare output variables and do necessary simple calcs
-                    // Inner component deflection
-                    var pressInnerMaxDef = (finalInterfaceDia - (outerIDRad * 2 * 1000));
-                    // Outer component max deflection
-                    var pressOuterMaxDef = ((innerODRad * 2 * 1000) - finalInterfaceDia);
-                    // Interface pressure
-                    var pressInterfacePressure = (pressInnerMaxDef + pressOuterMaxDef) / 2 / finalInterfaceRad / mainTerm;
-                    // Hoop stress
-                    var maxOuterHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure / (Math.pow(outerODRad*1000, 2) - Math.pow(finalInterfaceRad, 2)) * (1 + Math.pow(outerODRad*1000, 2) / Math.pow(finalInterfaceRad, 2));
-                    var minOuterHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure / (Math.pow(outerODRad*1000, 2) - Math.pow(finalInterfaceRad, 2)) * 2;
-                    var maxInnerHoopStress = pressInterfacePressure * 2 * Math.pow(finalInterfaceRad, 2) / (Math.pow(finalInterfaceRad, 2) - Math.pow(innerIDRad*1000, 2));
-                    var minInnerHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure * (Math.pow(finalInterfaceRad, 2) + Math.pow(innerIDRad*1000, 2)) / (Math.pow(finalInterfaceRad, 2) - Math.pow(innerIDRad*1000, 2)) / Math.pow(finalInterfaceRad, 2);
-                    // Assembly force
-                    pressAssemblyForce = pressInterfacePressure * 1000 * 2 * Math.PI * finalInterfaceRad * pressInterfaceLength / 1000 * pressInterfaceFriction;
-                    $('.pressAssmForceOut').text(pressAssemblyForce.toFixed(1));
-                    // Torque capacity of press-fit joint
-                    pressTorqueCapacity = pressAssemblyForce * finalInterfaceRad / 1000;
-                    $('.pressTorqCapOut').text(pressTorqueCapacity.toFixed(1));
-                    // Populate the detailed outputs table
-                    $(pressTemp + " .row:nth-child(3) h3:nth-child(" + x + ")").text((innerODRad * 2 * 1000).toFixed(3));
-                    $(pressTemp + " .row:nth-child(4) h3:nth-child(" + x + ")").text((innerIDRad * 2 * 1000).toFixed(3));
-                    $(pressTemp + " .row:nth-child(5) h3:nth-child(" + x + ")").text((outerIDRad * 2 *1000).toFixed(3));
-                    $(pressTemp + " .row:nth-child(6) h3:nth-child(" + x + ")").text((outerODRad *2 * 1000).toFixed(3));
-                    $(pressTemp + " .row:nth-child(7) h3:nth-child(" + x + ")").text(finalInterfaceRad.toFixed(3));
-                    $(pressTemp + " .row:nth-child(8) h3:nth-child(" + x + ")").text(finalInterfaceDia.toFixed(3));
-                    $(pressTemp + " .row:nth-child(9) h3:nth-child(" + x + ")").text(((innerODRad * 2 * 1000) - (outerIDRad * 2 * 1000)).toFixed(4));
-                    $(pressTemp + " .row:nth-child(10) h3:nth-child(" + x + ")").text(pressOuterMaxDef.toFixed(4));
-                    $(pressTemp + " .row:nth-child(11) h3:nth-child(" + x + ")").text(pressInnerMaxDef.toFixed(4));
-                    $(pressTemp + " .row:nth-child(12) h3:nth-child(" + x + ")").text(pressInterfacePressure.toFixed(1));
-                    $(pressTemp + " .row:nth-child(13) h3:nth-child(" + x + ")").text(maxOuterHoopStress.toFixed(1));
-                    $(pressTemp + " .row:nth-child(14) h3:nth-child(" + x + ")").text(minOuterHoopStress.toFixed(1));
-                    $(pressTemp + " .row:nth-child(15) h3:nth-child(" + x + ")").text(maxInnerHoopStress.toFixed(1));
-                    $(pressTemp + " .row:nth-child(16) h3:nth-child(" + x + ")").text(minInnerHoopStress.toFixed(1));
-                    $(pressTemp + " .row:nth-child(17) h3:nth-child(" + x + ")").text(pressAssemblyForce.toFixed(1));
-                    $(pressTemp + " .row:nth-child(18) h3:nth-child(" + x + ")").text(pressTorqueCapacity.toFixed(1));
                 }
+            }
+            if (pressCounter < 101) {
+                finalInterfaceRad = startRadius * 1000;
+                finalInterfaceDia = finalInterfaceRad *2;
+                // Declare output variables and do necessary simple calcs
+                // Inner component deflection
+                pressInnerMaxDef = (finalInterfaceDia - (outerIDRad * 2 * 1000));
+                // Outer component max deflection
+                pressOuterMaxDef = ((innerODRad * 2 * 1000) - finalInterfaceDia);
+                // Interface pressure
+                pressInterfacePressure = (pressInnerMaxDef + pressOuterMaxDef) / 2 / finalInterfaceRad / mainTerm;
+                // Hoop stress
+                maxOuterHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure / (Math.pow(outerODRad*1000, 2) - Math.pow(finalInterfaceRad, 2)) * (1 + Math.pow(outerODRad*1000, 2) / Math.pow(finalInterfaceRad, 2));
+                minOuterHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure / (Math.pow(outerODRad*1000, 2) - Math.pow(finalInterfaceRad, 2)) * 2;
+                maxInnerHoopStress = pressInterfacePressure * 2 * Math.pow(finalInterfaceRad, 2) / (Math.pow(finalInterfaceRad, 2) - Math.pow(innerIDRad*1000, 2));
+                minInnerHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure * (Math.pow(finalInterfaceRad, 2) + Math.pow(innerIDRad*1000, 2)) / (Math.pow(finalInterfaceRad, 2) - Math.pow(innerIDRad*1000, 2)) / Math.pow(finalInterfaceRad, 2);
+                // Assembly force
+                pressAssemblyForce = pressInterfacePressure * 1000 * 2 * Math.PI * finalInterfaceRad * pressInterfaceLength / 1000 * pressInterfaceFriction;
+                // Torque capacity of press-fit joint
+                pressTorqueCapacity = pressAssemblyForce * finalInterfaceRad / 1000;
+                // Populate the detailed outputs table
+                $(pressTemp + " .row:nth-child(3) h3:nth-child(" + x + ")").text((innerODRad * 2 * 1000).toFixed(3));
+                $(pressTemp + " .row:nth-child(4) h3:nth-child(" + x + ")").text((innerIDRad * 2 * 1000).toFixed(3));
+                $(pressTemp + " .row:nth-child(5) h3:nth-child(" + x + ")").text((outerIDRad * 2 *1000).toFixed(3));
+                $(pressTemp + " .row:nth-child(6) h3:nth-child(" + x + ")").text((outerODRad *2 * 1000).toFixed(3));
+                $(pressTemp + " .row:nth-child(7) h3:nth-child(" + x + ")").text(finalInterfaceRad.toFixed(3));
+                $(pressTemp + " .row:nth-child(8) h3:nth-child(" + x + ")").text(finalInterfaceDia.toFixed(3));
+                $(pressTemp + " .row:nth-child(9) h3:nth-child(" + x + ")").text(((innerODRad * 2 * 1000) - (outerIDRad * 2 * 1000)).toFixed(4));
+                $(pressTemp + " .row:nth-child(10) h3:nth-child(" + x + ")").text(pressOuterMaxDef.toFixed(4));
+                $(pressTemp + " .row:nth-child(11) h3:nth-child(" + x + ")").text(pressInnerMaxDef.toFixed(4));
+                $(pressTemp + " .row:nth-child(12) h3:nth-child(" + x + ")").text(pressInterfacePressure.toFixed(1));
+                $(pressTemp + " .row:nth-child(13) h3:nth-child(" + x + ")").text(maxOuterHoopStress.toFixed(1));
+                $(pressTemp + " .row:nth-child(14) h3:nth-child(" + x + ")").text(minOuterHoopStress.toFixed(1));
+                $(pressTemp + " .row:nth-child(15) h3:nth-child(" + x + ")").text(maxInnerHoopStress.toFixed(1));
+                $(pressTemp + " .row:nth-child(16) h3:nth-child(" + x + ")").text(minInnerHoopStress.toFixed(1));
+                $(pressTemp + " .row:nth-child(17) h3:nth-child(" + x + ")").text(pressAssemblyForce.toFixed(1));
+                $(pressTemp + " .row:nth-child(18) h3:nth-child(" + x + ")").text(pressTorqueCapacity.toFixed(1));
             }
         }        
     };
@@ -750,7 +749,7 @@ $(function(){
         var innerInterfaceIDTolerance = parseFloat($('.innerInterfaceIDTolerance').val());
         var innerModulus = parseFloat($('.innerModulus').val());
         var innerPoissons = parseFloat($('.innerPoissons').val());
-        var innerThermalExp = parseFloat($('.innerThermalExp').val());
+        var innerThermExp = parseFloat($('.innerThermExp').val());
         // Outer component inputs
         var outerInterfaceID = parseFloat($('.outerInterfaceID').val());
         var outerInterfaceIDTolernace = parseFloat($('.outerInterfaceIDTolerance').val());
@@ -775,11 +774,15 @@ $(function(){
         // Calcs for room temperature
         pressToolMainCalc(innerODRad, innerIDRad, outerIDRad, outerODRad, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableRoom", 2);
         // Display outputs for the main table
-        // $('.pressFinalDiaOut').text(finalInterfaceDia.toFixed(3));
-        // $('.pressInnerMaxDefOut').text(pressInnerMaxDef.toFixed(3));
-        // $('.pressOuterMaxDefOut').text(pressOuterMaxDef.toFixed(3));
-        // $('.pressInterfacePressureOut').text(pressInterfacePressure.toFixed(1));
-        // $('.pressOuterMaxStressOut').text(maxOuterHoopStress.toFixed(1));
+        $('.pressFinalDiaOut').text(finalInterfaceDia.toFixed(3));
+        $('.pressInnerMaxDefOut').text(pressInnerMaxDef.toFixed(3));
+        $('.pressOuterMaxDefOut').text(pressOuterMaxDef.toFixed(3));
+        $('.pressInnerMaxStressOut').text(maxInnerHoopStress.toFixed(1));
+        $('.pressOuterMaxStressOut').text(maxOuterHoopStress.toFixed(1));
+        $('.pressInterfacePressureOut').text(pressInterfacePressure.toFixed(1));
+        $('.pressAssmForceOut').text(pressAssemblyForce.toFixed(1));
+        $('.pressTorqCapOut').text(pressTorqueCapacity.toFixed(1));
+        // Populate variables for min max calculations in the detailed outputs table
         var innerInterfaceODMax = innerInterfaceOD + (innerInterfaceODTolerance / 2);
         var innerInterfaceIDMax = innerInterfaceID + (innerInterfaceIDTolerance / 2);
         var innerInterfaceODMin = innerInterfaceOD - (innerInterfaceODTolerance / 2);
@@ -799,20 +802,37 @@ $(function(){
         pressToolMainCalc(innerODRadMin, innerIDRadMin, outerIDRadMin, outerODRadMin, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableRoom", 1);
         pressToolMainCalc(innerODRadMax, innerIDRadMax, outerIDRadMax, outerODRadMax, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableRoom", 3);
         // Calcs for min temperature
-        var innerODRadColdMin = innerODRadMin * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var innerODRadCold = innerODRad * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var innerODRadColdMax = innerODRadMax * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var innerIDRadColdMin = innerIDRadMin * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var innerIDRadCold = innerIDRad * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var innerIDRadColdMax = innerIDRadMax * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var outerIDRadColdMin = outerIDRadMin * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var outerIDRadCold = outerIDRad * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var outerIDRadColdMax = outerIDRadMax * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var outerODRadColdMin = outerODRadMin * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var outerODRadCold = outerODRad * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
-        var outerODRadColdMax = outerODRadMax * (1 + innerThermalExp * (pressMinTemp - pressRoomTemp));
+        var innerODRadColdMin = (innerInterfaceODMin * (1 + innerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var innerODRadCold = (innerInterfaceOD * (1 + innerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var innerODRadColdMax = (innerInterfaceODMax * (1 + innerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var innerIDRadColdMin = (innerInterfaceIDMin * (1 + innerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var innerIDRadCold = (innerInterfaceID * (1 + innerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var innerIDRadColdMax = (innerInterfaceIDMax * (1 + innerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var outerIDRadColdMin = (outerInterfaceIDMin * (1 + outerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var outerIDRadCold = (outerInterfaceID * (1 + outerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var outerIDRadColdMax = (outerInterfaceIDMax * (1 + outerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var outerODRadColdMin = (outerInterfaceODMin * (1 + outerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var outerODRadCold = (outerInterfaceOD * (1 + outerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
+        var outerODRadColdMax = (outerInterfaceODMax * (1 + outerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
         pressToolMainCalc(innerODRadColdMax, innerIDRadColdMax, outerIDRadColdMax, outerODRadColdMax, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableCold", 3);
+        pressToolMainCalc(innerODRadCold, innerIDRadCold, outerIDRadCold, outerODRadCold, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableCold", 2);
+        pressToolMainCalc(innerODRadColdMin, innerIDRadColdMin, outerIDRadColdMin, outerODRadColdMin, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableCold", 1);
         // Calcs for max temperature
+        var innerODRadHotMin = (innerInterfaceODMin * (1 + innerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var innerODRadHot = (innerInterfaceOD * (1 + innerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var innerODRadHotMax = (innerInterfaceODMax * (1 + innerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var innerIDRadHotMin = (innerInterfaceIDMin * (1 + innerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var innerIDRadHot = (innerInterfaceID * (1 + innerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var innerIDRadHotMax = (innerInterfaceIDMax * (1 + innerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var outerIDRadHotMin = (outerInterfaceIDMin * (1 + outerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var outerIDRadHot = (outerInterfaceID * (1 + outerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var outerIDRadHotMax = (outerInterfaceIDMax * (1 + outerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var outerODRadHotMin = (outerInterfaceODMin * (1 + outerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var outerODRadHot = (outerInterfaceOD * (1 + outerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        var outerODRadHotMax = (outerInterfaceODMax * (1 + outerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
+        pressToolMainCalc(innerODRadHotMax, innerIDRadHotMax, outerIDRadHotMax, outerODRadHotMax, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableHot", 3);
+        pressToolMainCalc(innerODRadHot, innerIDRadHot, outerIDRadHot, outerODRadHot, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableHot", 2);
+        pressToolMainCalc(innerODRadHotMin, innerIDRadHotMin, outerIDRadHotMin, outerODRadHotMin, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableHot", 1);
     });
     // Initial smoothscrolling for the required containers
     $(".pressInputsContainer").scroll(function(){
