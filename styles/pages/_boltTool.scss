@@ -1,11 +1,5 @@
 #boltToolApp {
-    position: absolute;
-    background: $greyBackground;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
+    @include mainToolContainer();
     display: none;
     // display: block;
     .boltAppMain {
@@ -16,14 +10,7 @@
         align-items: center;
         position: relative;
         .boltAppMainItem {
-            background: white;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 30%;
-            height: 85%;
-            margin: 0 1%;
+            @include toolContainer(32%, orchid);
         }
         .boltToolForm {
             display: flex;

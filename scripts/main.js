@@ -677,7 +677,6 @@ $(function(){
     function pressToolMainCalc(innerODRad, innerIDRad, outerIDRad, outerODRad, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, pressTemp, pressCondition) {
         // Check if user inputs are actually an interference
         var pressDiff = innerODRad - outerIDRad;
-        console.log(pressDiff);
         var startRadius = innerODRad * 10;
         var calcRadius = outerIDRad * 10;
         var allowedError = 0.000000000001;
@@ -701,16 +700,19 @@ $(function(){
                     break;
                 }
             }
+            // console.log(finalInterfaceRad);
             if (pressCounter < 101) {
                 finalInterfaceRad = startRadius * 1000;
                 finalInterfaceDia = finalInterfaceRad *2;
                 // Declare output variables and do necessary simple calcs
-                // Inner component deflection
-                pressInnerMaxDef = (finalInterfaceDia - (outerIDRad * 2 * 1000));
-                // Outer component max deflection
-                pressOuterMaxDef = ((innerODRad * 2 * 1000) - finalInterfaceDia);
+                // Outer component deflection
+                pressOuterMaxDef = (finalInterfaceDia - (outerIDRad * 2 * 1000));
+                // Inner component max deflection
+                pressInnerMaxDef = ((innerODRad * 2 * 1000) - finalInterfaceDia);
                 // Interface pressure
                 pressInterfacePressure = (pressInnerMaxDef + pressOuterMaxDef) / 2 / finalInterfaceRad / mainTerm;
+                console.log(interfacePressure);
+                console.log(pressInterfacePressure);
                 // Hoop stress
                 maxOuterHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure / (Math.pow(outerODRad*1000, 2) - Math.pow(finalInterfaceRad, 2)) * (1 + Math.pow(outerODRad*1000, 2) / Math.pow(finalInterfaceRad, 2));
                 minOuterHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure / (Math.pow(outerODRad*1000, 2) - Math.pow(finalInterfaceRad, 2)) * 2;
@@ -774,6 +776,7 @@ $(function(){
         // Calcs for room temperature
         pressToolMainCalc(innerODRad, innerIDRad, outerIDRad, outerODRad, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableRoom", 2);
         // Display outputs for the main table
+        // console.log(finalInterfaceRad);
         $('.pressFinalDiaOut').text(finalInterfaceDia.toFixed(3));
         $('.pressInnerMaxDefOut').text(pressInnerMaxDef.toFixed(3));
         $('.pressOuterMaxDefOut').text(pressOuterMaxDef.toFixed(3));
@@ -840,13 +843,13 @@ $(function(){
         var y = $(this).scrollTop();
         if (y > 125) {
             // This is for the scroll to the top button
-            $('.pressScrollBro').fadeOut();
+            $('.scrollAid').fadeOut();
             // This is for the secondary header
             // $('.headerAfter').fadeIn();
         // Otherwise hide featyres
         } else {
             //  This is for the scroll to the top button
-            $('.pressScrollBro').fadeIn();
+            $('.scrollAid').fadeIn();
             // This is for the secondary header
             // $('.headerAfter').fadeOut();
         }
