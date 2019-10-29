@@ -653,11 +653,11 @@ $(function(){
     });
     $(".boltSpecs").on("click", function(e){
         e.preventDefault();
-        $( ".boltSpecData" ).fadeIn(300, function() {
+        $( ".boltSpecDataContainer" ).fadeIn(300, function() {
             $(this).focus();
         });
     });
-    $(".boltSpecData").on('blur',function(){
+    $(".boltSpecDataContainer").on('blur',function(){
         $(this).fadeOut(300);
     });
     // ********************************************************** */

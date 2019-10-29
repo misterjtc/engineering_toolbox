@@ -1,61 +1,53 @@
 #tvToolApp {
     @include mainToolContainer();
     display: none;
+    overflow-y: hidden;
     // display: block;
     .tvToolMain {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        h3 {
-            font-size: 1.9rem;
-            margin-bottom: 15px;
-        }
-        .tvToolForm {
-            @include toolContainer(28%, dodgerblue);
-            .numCyls {
-                background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
-                background-repeat: no-repeat;
-                background-position: 95% center;
+        .tvToolInputs {
+            @include toolContainer(28.5%, dodgerblue);
+            .appTitle {
+                @include appTitle(dodgerblue);
             }
-            .inRPM {
-                appearance: none;
-                height: 10px;
-                width: 50%;
-                margin-bottom: 40px;
-                background: $medText;
-                border-radius: 5px;
-                &::-webkit-slider-thumb {
-                    box-shadow: 1px 1px 1px #000000;
-                    border: 1px solid #000000;
-                    height: 25px;
-                    width: 15px;
+            .tvToolForm {
+                .numCyls {
+                    background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+                    background-repeat: no-repeat;
+                    background-position: 95% center;
+                }
+                .inRPM {
+                    appearance: none;
+                    height: 10px;
+                    width: 50%;
+                    margin-bottom: 40px;
+                    background: $medText;
                     border-radius: 5px;
-                    background: #FFFFFF;
-                    cursor: pointer;
-                    -webkit-appearance: none;
+                    &::-webkit-slider-thumb {
+                        box-shadow: 1px 1px 1px #000000;
+                        border: 1px solid #000000;
+                        height: 25px;
+                        width: 15px;
+                        border-radius: 5px;
+                        background: #FFFFFF;
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                    }
                 }
             }
         }
         .tvToolOutput {
-            @include toolContainer(28%, khaki);
-            .tvMaxVel {
-                width: 100%;
-            }
-            .tvMaxAcc {
-                width: 100%;
+            @include toolContainer(28.5%, khaki);
+            .appTitle {
+                @include appTitle(khaki);
             }
         }
         .tvToolGraph {
-            @include toolContainer(38%, crimson);
+            @include toolContainer(38.5%, crimson);
+            .appTitle {
+                @include appTitle(crimson);
+            }
             .tvGraphSizer {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                width: 70%;
-                height: 90%;
+                width: 68%;
             }
         }
     }

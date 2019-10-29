@@ -118,6 +118,9 @@ html {
     justify-content: flex-start;
     align-items: center;
     margin-top: 20px;
+    h3 {
+        font-size: 1.7rem;
+    }
 }
 .calcButton {
     padding: 10px;
@@ -159,6 +162,15 @@ html {
         top: 5px;
         left: 80%;
     }
+}
+.kForceUnits {
+    &:after {
+        text-align: right;
+        content: "kN";
+        position: absolute;
+        top: 5px;
+        left: 80%;
+    }   
 }
 .torqueUnits {
     &:after {

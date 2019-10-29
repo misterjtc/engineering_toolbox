@@ -21,7 +21,7 @@
         // position: relative;
         flex-wrap: wrap;
         .pressToolInputs {
-            @include toolContainer(28%, hotpink);
+            @include toolContainer(28.5%, hotpink);
             position: relative;
             .pressAppTitle {
                 @include appTitle(hotpink);
@@ -54,14 +54,14 @@
             }
         }
         .pressToolOutputs {
-            @include toolContainer(28%, royalblue);
+            @include toolContainer(28.5%, royalblue);
             position: relative;
             .pressAppTitle {
                 @include appTitle(royalblue);
             }
         }
         .pressToolGraph {
-            @include toolContainer(38%, goldenrod);
+            @include toolContainer(38.5%, goldenrod);
             .pressAppTitle {
                 @include appTitle(goldenrod);
             }

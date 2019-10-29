@@ -1,144 +1,50 @@
 #boltToolApp {
     @include mainToolContainer();
     display: none;
+    overflow-y: hidden;
     // display: block;
     .boltAppMain {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: relative;
-        .boltAppMainItem {
-            @include toolContainer(32%, orchid);
-        }
-        .boltToolForm {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.9rem;
-            .boltLabel {
-                margin-bottom: 15px;
-                width: 50%;
+        .boltToolInputs {
+            @include toolContainer(32%, steelblue);
+            .appTitle {
+                @include appTitle(steelblue);
             }
-        }
-        .boltSpecDataContainer {
-            position: absolute;
-            width: 50%;
-            height: 50%;
-            .boltSpecData {
-                width: 100%;
-                height: 100%;
+            .boltSpecDataContainer {
+                position: absolute;
+                width: 50%;
+                height: 50%;
+                left: 25%;
                 display: none;
-                position: relative;
-                z-index: 999;
-                img {
-                    display: block;
+                .boltSpecData {
                     width: 100%;
-                }
-                .closePopup {
-                    display: block;
-                    position: absolute;
-                    top: 5px;
-                    right: 5px;
+                    height: 100%;
+                    position: relative;
+                    z-index: 999;
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                    .closePopup {
+                        display: block;
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                    }
                 }
             }
         }
         .boltToolOutput {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.9rem;
-            .boltOutputContainer {
-                width: 50%;
-                position: relative;
-                h3 {
-                    margin-bottom: 15px;
-                }
-                .boltFormItem {
-                    width: 100%;
-                }
-                .boltUnsettledClampOut {
-                    &:after {
-                        text-align: right;
-                        content: "kN";
-                        position: absolute;
-                        top: 42%;
-                        left: 88%;
-                    }
-                }
-                .boltSettledClampOut {
-                    &:after {
-                        text-align: right;
-                        content: "kN";
-                        position: absolute;
-                        top: 42%;
-                        left: 88%;
-                    }
-                }
-                .boltSurfacePressureOut {
-                    &:after {
-                        text-align: right;
-                        content: "MPa";
-                        position: absolute;
-                        top: 42%;
-                        left: 83%;
-                    }
-                }
-                .boltTorqueYieldOut {
-                    &:after {
-                        text-align: right;
-                        content: "N·m";
-                        position: absolute;
-                        top: 42%;
-                        left: 83%;
-                    }
-                }
+            @include toolContainer(32%, bisque);
+            .appTitle {
+                @include appTitle(bisque)
             }
         }
         .boltToolTorque {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-size: 1.9rem;
-            .boltTorqueForm {
-                width: 100%;
+            @include toolContainer(32%, lightblue);
+            .appTitle {
+                @include appTitle(lightblue);
             }
-            .boltTorqueOutput {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                .torqueOutputContainer {
-                    position: relative;
-                    width: 50%;
-                    h3 {
-                        margin-bottom: 15px;
-                    }
-                    .jointTorqueOut {
-                        width: 100%;
-                        &:after {
-                            text-align: right;
-                            content: "N·m";
-                            position: absolute;
-                            top: 42%;
-                            left: 83%;
-                        }
-                    }
-                }
-            }
-        }
-        .boltFormItem {
-            margin: 0 0;
-            width: 50%;
-            margin-bottom: 20px;
-            height: 35px;
-            border: 1px solid black;
-            border-radius: 5px;
-            padding-left: 15px;
         }
     }
 }

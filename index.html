@@ -16,6 +16,7 @@ Designed and developed by:
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Main Site Font -->
    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/acb50d146b.js" crossorigin="anonymous"></script>
    <!-- Flickity CSS -->
    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
    <!-- Main Site Styles -->
@@ -28,7 +29,7 @@ Designed and developed by:
                 <a href="#"><img src="./assets/jcook_engineering_v2_white_vectorized.png" alt="This is the Litens Logo"></a>
             </div>
             <div class="minify icon">
-                <a href="" onclick="return false"><i class="fas fa-chevron-double-left"></i></a>
+                <a href="" onclick="return false"><i class="fas fa-chevron-left fa-fw"></i></a>
             </div>
         </div>
         <div class="nav">
@@ -43,7 +44,7 @@ Designed and developed by:
                 <div class="mechanical mechExpander mainLink">
                     <a href="#" onclick="return false"><i class="fas fa-cogs fa-fw"></i></a>
                     <a class="linkText" href="#" onclick="return false">Mechanical</a>
-                    <a class="expander" href="#" onclick="return false"><i class="far fa-angle-right fa-fw"></i></a>
+                    <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></a>
                 </div>
                 <div class="mechTools toolList">
                     <ul>
@@ -62,9 +63,9 @@ Designed and developed by:
                     </ul>
                 </div>
                 <div class="vibration vibExpander mainLink">
-                    <a href="#" onclick="return false"><i class="fas fa-monitor-heart-rate fa-fw"></i></a>
+                    <a href="#" onclick="return false"><i class="fas fa-wave-square fa-fw"></i></i></a>
                     <a class="linkText" href="#" onclick="return false">Vibrations</a>
-                    <a class="expander" href="#" onclick="return false"><i class="far fa-angle-right fa-fw"></i></a>
+                    <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></a>
                 </div>
                 <div class="vibTools toolList">
                     <ul>
@@ -84,7 +85,7 @@ Designed and developed by:
                 <div class="erpEng erpEngExpander mainLink">
                     <a href="#" onclick="return false"><i class="fas fa-cogs fa-fw"></i></a>
                     <a class="linkText" href="#" onclick="return false">Engineering</a>
-                    <a class="expander" href="#" onclick="return false"><i class="far fa-angle-right fa-fw"></i></a>
+                    <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></a>
                 </div>
                 <div class="erpEngTools toolList">
                     <ul>
@@ -100,9 +101,9 @@ Designed and developed by:
                     </ul>
                 </div>
                 <div class="erpPur erpPurExpander mainLink">
-                    <a href="#" onclick="return false"><i class="fas fa-sack-dollar fa-fw"></i></a>
+                    <a href="#" onclick="return false"><i class="fas fa-money-check-alt fa-fw"></i></a>
                     <a class="linkText" href="#" onclick="return false">Purchasing</a>
-                    <a class="expander" href="#" onclick="return false"><i class="far fa-angle-right fa-fw"></i></a>
+                    <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></a>
                 </div>
                 <div class="erpPurTools toolList">
                     <ul>
@@ -114,7 +115,7 @@ Designed and developed by:
                 <div class="erpDoc erpDocExpander mainLink">
                     <a href="#" onclick="return false"><i class="fas fa-file-alt fa-fw"></i></a>
                     <a class="linkText" href="#" onclick="return false">Documentation</a>
-                    <a class="expander" href="#" onclick="return false"><i class="far fa-angle-right fa-fw"></i></a>
+                    <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></i></a>
                 </div>
                 <div class="erpDocTools toolList">
                     <ul>
@@ -345,43 +346,56 @@ Designed and developed by:
                     <!--                Torsional Vibration Tool             -->
                     <!-- *************************************************** -->
                     <div id="tvToolApp" class="tvToolApp">
-                        <div class="tvToolMain">
-                            <form class="tvToolForm">
-                                <label for="numCyls" class="appLabel">Number of Cylinders</label>
-                                <select name="numCyls" class="numCyls formItem">
-                                    <option value="3">3</option>
-                                    <option value="4" selected>4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="8">8</option>
-                                </select>
-                                <label for="inRPM" class="appLabel">RPM</label>
-                                <input type="range" id="inRPMId" class="formItem inRPM" name="inRPM" value="800" min="600" max="10000" step="100" oninput="outRPMId.value = inRPMId.value">
-                                <output name="outRPM" class="outRPM" id="outRPMId">800</output>
-                                <label for="tvAmp" class="appLabel">Torsional Ampliture [° pk-pk]</label>
-                                <input name="tvAmp" type="text" class="tvAmp formItem" value="12">
-                                <button type="button" class="calcButton">Calculate!</button>
-                            </form>
+                        <div class="tvToolMain appMain">
+                            <div class="tvToolInputs">
+                                <h3 class="appTitle">
+                                    Inputs
+                                </h3>
+                                <form class="tvToolForm toolContainerBelowTitle">
+                                    <label for="numCyls" class="appLabel">Number of Cylinders</label>
+                                    <select name="numCyls" class="numCyls formItem">
+                                        <option value="3">3</option>
+                                        <option value="4" selected>4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="8">8</option>
+                                    </select>
+                                    <label for="inRPM" class="appLabel">RPM</label>
+                                    <input type="range" id="inRPMId" class="formItem inRPM" name="inRPM" value="800" min="600" max="10000" step="100" oninput="outRPMId.value = inRPMId.value">
+                                    <output name="outRPM" class="outRPM" id="outRPMId">800</output>
+                                    <label for="tvAmp" class="appLabel">Torsional Ampliture [° pk-pk]</label>
+                                    <input name="tvAmp" type="text" class="tvAmp formItem" value="12">
+                                    <button type="button" class="calcButton tvCalc">Calculate!</button>
+                                </form>
+                            </div>
                             <div class="tvToolOutput">
-                                <div class="toolOutputPackage">
-                                    <h3>
-                                        Max Velocity
-                                    </h3>
-                                    <div class="tvMaxVelOut formItem rotVelUnits">
-                                        17.54
+                                <h3 class="appTitle">
+                                    Outputs
+                                </h3>
+                                <div class="toolContainerBelowTitle">
+                                    <div class="toolOutputPackage">
+                                        <h3 class="appLabel">
+                                            Max Velocity
+                                        </h3>
+                                        <div class="tvMaxVelOut formItem rotVelUnits">
+                                            17.54
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="toolOutputPackage">
-                                    <h3>
-                                        Max Acceleration
-                                    </h3>
-                                    <div class="tvMaxAccOut formItem rotAccUnits">
-                                        2837.50
+                                    <div class="toolOutputPackage">
+                                        <h3 class="appLabel">
+                                            Max Acceleration
+                                        </h3>
+                                        <div class="tvMaxAccOut formItem rotAccUnits">
+                                            2837.50
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tvToolGraph">
-                                <div class="tvGraphSizer">
+                                <h3 class="appTitle">
+                                    Graphs
+                                </h3>
+                                <div class="tvGraphSizer toolContainerBelowTitle">
                                     <canvas id="tvDispChart"></canvas>
                                     <canvas id="tvVelChart"></canvas>
                                     <canvas id="tvAccChart"></canvas>
@@ -452,89 +466,108 @@ Designed and developed by:
                     <!--                  Bolted Joint Tool                  -->
                     <!-- *************************************************** -->
                     <div id="boltToolApp">
-                        <div class="boltAppMain">
-                            <form class="boltToolForm boltAppMainItem">
-                                <label for="boltSize" class="boltLabel">Bolt Ø</label>
-                                <input name="boltSize" type="number" class="boltSize boltFormItem" value="12">
-                                <label for="threadPitch" class="boltLabel">Thread Pitch</label>
-                                <input name="threadPitch" type="number" class="threadPitch boltFormItem" value="1.25">
-                                <label for="boltHead" class="boltLabel">Bolt Head Ø</label>
-                                <input name="boltHead" type="number" class="boltHead boltFormItem" value="14.63">
-                                <label for="threadFriction" class="boltLabel">CoF of Threads</label>
-                                <input name="threadFriction" type="number" class="threadFriction boltFormItem" value="0.15">
-                                <label for="bearingFriction" class="boltLabel">CoF of Bearing Surface</label>
-                                <input name="bearingFriction" type="number" class="bearingFriction boltFormItem" value="0.15">
-                                <label for="boltStrength" class="boltLabel">Bolt Grade</label>
-                                <select name="boltStrength" class="boltStrength boltFormItem">
-                                    <option value="4.6">4.6</option>
-                                    <option value="8.8">8.8</option>
-                                    <option value="10.9">10.9</option>
-                                    <option value="12.9" selected>12.9</option>
-                                </select>
-                                <div class="boltDoWork">
-                                    <button type="button" 
-                                    class="boltCalc calcButton">Calculate!</button>
-                                    <button type="button" 
-                                    class="boltSpecs calcButton">Show Data!</button>
-                                </div>
-                            </form>
-                            <div class="boltSpecDataContainer">
-                                <div class="boltSpecData" tabindex="-1">
-                                    <img src="./assets/fastenal_bolt_property_data.PNG" alt="bolt property data from Fastenal">
-                                    <a href="" class="closePopup" onclick="return false"><i class="fas fa-times-circle"></i></a>
+                        <div class="boltAppMain appMain">
+                            <div class="boltToolInputs">
+                                <h3 class="appTitle">
+                                    Inputs
+                                </h3>
+                                <form class="boltToolForm toolContainerBelowTitle">
+                                    <label for="boltSize" class="appLabel">Bolt Ø</label>
+                                    <input name="boltSize" type="number" class="boltSize formItem" value="12">
+                                    <label for="threadPitch" class="appLabel">Thread Pitch</label>
+                                    <input name="threadPitch" type="number" class="threadPitch formItem" value="1.25">
+                                    <label for="boltHead" class="appLabel">Bolt Head Ø</label>
+                                    <input name="boltHead" type="number" class="boltHead formItem" value="14.63">
+                                    <label for="threadFriction" class="appLabel">CoF of Threads</label>
+                                    <input name="threadFriction" type="number" class="threadFriction formItem" value="0.15">
+                                    <label for="bearingFriction" class="appLabel">CoF of Bearing Surface</label>
+                                    <input name="bearingFriction" type="number" class="bearingFriction formItem" value="0.15">
+                                    <label for="boltStrength" class="appLabel">Bolt Grade</label>
+                                    <select name="boltStrength" class="boltStrength formItem">
+                                        <option value="4.6">4.6</option>
+                                        <option value="8.8">8.8</option>
+                                        <option value="10.9">10.9</option>
+                                        <option value="12.9" selected>12.9</option>
+                                    </select>
+                                    <div class="boltDoWork">
+                                        <button type="button" 
+                                        class="boltCalc calcButton">Calculate!</button>
+                                        <button type="button" 
+                                        class="boltSpecs calcButton">Bolt Spec.</button>
+                                    </div>
+                                </form>
+                                <div class="boltSpecDataContainer" tabindex="-1">
+                                    <div class="boltSpecData">
+                                        <img src="./assets/fastenal_bolt_property_data.PNG" alt="bolt property data from Fastenal">
+                                        <a href="" class="closePopup" onclick="return false"><i class="fas fa-times-circle"></i></a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="boltToolOutput boltAppMainItem">
-                                <div class="boltUnsettledClamp boltOutputContainer">
-                                    <h3>
-                                        Unsettled Clamp Load
-                                    </h3>
-                                    <div class="boltUnsettledClampOut boltFormItem">
-
+                                <h3 class="appTitle">
+                                    Outputs
+                                </h3>
+                                <div class="toolContainerBelowTitle">
+                                    <div class="boltUnsettledClamp toolOutputPackage">
+                                        <h3 class="appLabel">
+                                            Unsettled Clamp Load
+                                        </h3>
+                                        <div class="boltUnsettledClampOut formItem kForceUnits">
+    
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="boltSettledClamp boltOutputContainer">
-                                    <h3>
-                                        Settled Clamp Load
-                                    </h3>
-                                    <div class="boltSettledClampOut boltFormItem">
-
+                                    <div class="boltSettledClamp toolOutputPackage">
+                                        <h3 class="appLabel">
+                                            Settled Clamp Load
+                                        </h3>
+                                        <div class="boltSettledClampOut formItem kForceUnits">
+    
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="boltSurfacePressure boltOutputContainer">
-                                    <h3>
-                                        Surface Pressure @ Yield
-                                    </h3>
-                                    <div class="boltSurfacePressureOut boltFormItem">
-
+                                    <div class="boltSurfacePressure toolOutputPackage">
+                                        <h3 class="appLabel">
+                                            Surface Pressure @ Yield
+                                        </h3>
+                                        <div class="boltSurfacePressureOut formItem stressUnits">
+    
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="boltTorqueYield boltOutputContainer">
-                                    <h3>
-                                        Torque to Yield
-                                    </h3>
-                                    <div class="boltTorqueYieldOut boltFormItem">
-
+                                    <div class="boltTorqueYield toolOutputPackage">
+                                        <h3 class="appLabel">
+                                            Torque to Yield
+                                        </h3>
+                                        <div class="boltTorqueYieldOut formItem torqueUnits">
+    
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="boltToolTorque boltAppMainItem">
-                                <div class="boltTorqueForm boltToolForm">
-                                    <label for="interfaceOD" class="boltLabel">Interface Outside Ø</label>
-                                    <input name="interfaceOD" type="number" class="interfaceOD boltFormItem" value="42">
-                                    <label for="interfaceID" class="boltLabel">Interface Outside Ø</label>
-                                    <input name="interfaceID" type="number" class="interfaceID boltFormItem" value="28">
-                                    <label for="interfaceFriction" class="boltLabel">Interface CoF</label>
-                                    <input name="interfaceFriction" type="number" class="interfaceFriction boltFormItem" value="0.3">
-                                    <label for="jointClampLoad" class="boltLabel">Joint Clamp Load</label>
-                                    <input name="jointClampLoad" type="number" class="jointClampLoad boltFormItem" value="81.13">
-                                </div>
-                                <div class="boltTorqueOutput">
-                                    <div class="jointTorque torqueOutputContainer">
-                                        <h3>
+                                <h3 class="appTitle">
+                                    Joint Torque Data
+                                </h3>
+                                <div class="toolContainerBelowTitle">
+                                    <div class="toolOutputPackage">
+                                        <label for="interfaceOD" class="appLabel">Interface Outside Ø</label>
+                                        <input name="interfaceOD" type="number" class="interfaceOD formItem" value="42">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="interfaceID" class="appLabel">Interface Outside Ø</label>
+                                        <input name="interfaceID" type="number" class="interfaceID formItem" value="28">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="interfaceFriction" class="appLabel">Interface CoF</label>
+                                        <input name="interfaceFriction" type="number" class="interfaceFriction formItem" value="0.3">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="jointClampLoad" class="appLabel">Joint Clamp Load</label>
+                                        <input name="jointClampLoad" type="number" class="jointClampLoad formItem" value="81.13">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <h3 class="appLabel">
                                             Joint Torque Capacity
                                         </h3>
-                                        <div class="jointTorqueOut boltFormItem">
+                                        <div class="jointTorqueOut formItem torqueUnits">
     
                                         </div>
                                     </div>
@@ -666,7 +699,7 @@ Designed and developed by:
                                 </h3>
                                 <div class="pressOutput toolContainerBelowTitle">
                                     <div class="pressFinalDia toolOutputPackage">
-                                        <h3>
+                                        <h3 class="appLabel">
                                             Final Ø of Interface
                                         </h3>
                                         <div class="pressFinalDiaOut formItem mmUnits">
@@ -674,7 +707,7 @@ Designed and developed by:
                                         </div>
                                     </div>
                                     <div class="pressInnerMaxDef toolOutputPackage">
-                                        <h3>
+                                        <h3 class="appLabel">
                                             Inner Component δ
                                         </h3>
                                         <div class="pressInnerMaxDefOut formItem mmUnits">
@@ -682,7 +715,7 @@ Designed and developed by:
                                         </div>
                                     </div>
                                     <div class="pressOuterMaxDef toolOutputPackage">
-                                        <h3>
+                                        <h3 class="appLabel">
                                             Outer Component δ
                                         </h3>
                                         <div class="pressOuterMaxDefOut formItem mmUnits">
@@ -690,7 +723,7 @@ Designed and developed by:
                                         </div>
                                     </div>
                                     <div class="pressInnerMaxStress toolOutputPackage">
-                                        <h3>
+                                        <h3 class="appLabel">
                                             Inner Component Max σ
                                         </h3>
                                         <div class="pressInnerMaxStressOut formItem stressUnits">
@@ -698,7 +731,7 @@ Designed and developed by:
                                         </div>
                                     </div>
                                     <div class="pressOuterMaxStress toolOutputPackage">
-                                        <h3>
+                                        <h3 class="appLabel">
                                             Outer Component Max σ
                                         </h3>
                                         <div class="pressOuterMaxStressOut formItem stressUnits">
@@ -706,7 +739,7 @@ Designed and developed by:
                                         </div>
                                     </div>
                                     <div class="pressInterfacePressure toolOutputPackage">
-                                        <h3>
+                                        <h3 class="appLabel">
                                             Interface Pressure
                                         </h3>
                                         <div class="pressInterfacePressureOut formItem stressUnits">
@@ -714,7 +747,7 @@ Designed and developed by:
                                         </div>
                                     </div>
                                     <div class="pressAssemForce toolOutputPackage">
-                                        <h3>
+                                        <h3 class="appLabel">
                                             Assembly Force
                                         </h3>
                                         <div class="pressAssmForceOut formItem forceUnits">
@@ -722,7 +755,7 @@ Designed and developed by:
                                         </div>
                                     </div>
                                     <div class="pressTorqCap toolOutputPackage">
-                                        <h3>
+                                        <h3 class="appLabel">
                                             Torque Capacity
                                         </h3>
                                         <div class="pressTorqCapOut formItem torqueUnits">
@@ -1119,7 +1152,7 @@ Designed and developed by:
     <!-- Load JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Font Awesome Kit -->
-    <script src="https://kit.fontawesome.com/9cc76b9d7b.js"></script>
+
     <!-- Load Flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!-- Main JS Site Script -->

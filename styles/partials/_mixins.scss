@@ -5,7 +5,11 @@
     height: 100%;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     margin: 0 auto;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 @mixin appTitle($borderColor) {
     width: 100%;
@@ -20,12 +24,12 @@
     background: white;
     height: 95%;
     width: $width;
-    margin: 0 1%;
+    margin: 0 0.5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 1.7rem !important;
     border-radius: 10px;
     border: 2px solid $borderColour;
     // position: relative;

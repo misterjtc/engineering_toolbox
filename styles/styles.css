@@ -322,6 +322,8 @@ html {
   -ms-flex-align: center;
   align-items: center;
   margin-top: 20px; }
+  .toolContainerBelowTitle h3 {
+    font-size: 1.7rem; }
 
 .calcButton {
   padding: 10px;
@@ -354,6 +356,13 @@ html {
 .forceUnits:after {
   text-align: right;
   content: "N";
+  position: absolute;
+  top: 5px;
+  left: 80%; }
+
+.kForceUnits:after {
+  text-align: right;
+  content: "kN";
   position: absolute;
   top: 5px;
   left: 80%; }
@@ -1129,144 +1138,18 @@ footer {
   height: 100%;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   margin: 0 auto;
-  display: none; }
-  #tvToolApp .tvToolMain {
-    height: 100%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    #tvToolApp .tvToolMain h3 {
-      font-size: 1.9rem;
-      margin-bottom: 15px; }
-    #tvToolApp .tvToolMain .tvToolForm {
-      background: white;
-      height: 95%;
-      width: 28%;
-      margin: 0 1%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem;
-      border-radius: 10px;
-      border: 2px solid dodgerblue; }
-      #tvToolApp .tvToolMain .tvToolForm .numCyls {
-        background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
-        background-repeat: no-repeat;
-        background-position: 95% center; }
-      #tvToolApp .tvToolMain .tvToolForm .inRPM {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        height: 10px;
-        width: 50%;
-        margin-bottom: 40px;
-        background: #999999;
-        border-radius: 5px; }
-        #tvToolApp .tvToolMain .tvToolForm .inRPM::-webkit-slider-thumb {
-          -webkit-box-shadow: 1px 1px 1px #000000;
-          box-shadow: 1px 1px 1px #000000;
-          border: 1px solid #000000;
-          height: 25px;
-          width: 15px;
-          border-radius: 5px;
-          background: #FFFFFF;
-          cursor: pointer;
-          -webkit-appearance: none; }
-    #tvToolApp .tvToolMain .tvToolOutput {
-      background: white;
-      height: 95%;
-      width: 28%;
-      margin: 0 1%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem;
-      border-radius: 10px;
-      border: 2px solid khaki; }
-      #tvToolApp .tvToolMain .tvToolOutput .tvMaxVel {
-        width: 100%; }
-      #tvToolApp .tvToolMain .tvToolOutput .tvMaxAcc {
-        width: 100%; }
-    #tvToolApp .tvToolMain .tvToolGraph {
-      background: white;
-      height: 95%;
-      width: 38%;
-      margin: 0 1%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem;
-      border-radius: 10px;
-      border: 2px solid crimson; }
-      #tvToolApp .tvToolMain .tvToolGraph .tvGraphSizer {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        width: 70%;
-        height: 90%; }
-
-#stressToolApp {
-  position: absolute;
-  background: #dddddd;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
-  display: none; }
-  #stressToolApp .stressToolForm {
+  overflow: scroll;
+  overflow-x: hidden;
+  display: none;
+  overflow-y: hidden; }
+  #tvToolApp .tvToolMain .tvToolInputs {
     background: white;
     height: 95%;
-    width: 25%;
-    margin: 0 1%;
+    width: 28.5%;
+    margin: 0 0.5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1280,7 +1163,151 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 1.7rem !important;
+    border-radius: 10px;
+    border: 2px solid dodgerblue; }
+    #tvToolApp .tvToolMain .tvToolInputs .appTitle {
+      width: 100%;
+      height: 55px;
+      border-bottom: 2px solid dodgerblue;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-left: 15px; }
+    #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .numCyls {
+      background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+      background-repeat: no-repeat;
+      background-position: 95% center; }
+    #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .inRPM {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 10px;
+      width: 50%;
+      margin-bottom: 40px;
+      background: #999999;
+      border-radius: 5px; }
+      #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .inRPM::-webkit-slider-thumb {
+        -webkit-box-shadow: 1px 1px 1px #000000;
+        box-shadow: 1px 1px 1px #000000;
+        border: 1px solid #000000;
+        height: 25px;
+        width: 15px;
+        border-radius: 5px;
+        background: #FFFFFF;
+        cursor: pointer;
+        -webkit-appearance: none; }
+  #tvToolApp .tvToolMain .tvToolOutput {
+    background: white;
+    height: 95%;
+    width: 28.5%;
+    margin: 0 0.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.7rem !important;
+    border-radius: 10px;
+    border: 2px solid khaki; }
+    #tvToolApp .tvToolMain .tvToolOutput .appTitle {
+      width: 100%;
+      height: 55px;
+      border-bottom: 2px solid khaki;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-left: 15px; }
+  #tvToolApp .tvToolMain .tvToolGraph {
+    background: white;
+    height: 95%;
+    width: 38.5%;
+    margin: 0 0.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.7rem !important;
+    border-radius: 10px;
+    border: 2px solid crimson; }
+    #tvToolApp .tvToolMain .tvToolGraph .appTitle {
+      width: 100%;
+      height: 55px;
+      border-bottom: 2px solid crimson;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-left: 15px; }
+    #tvToolApp .tvToolMain .tvToolGraph .tvGraphSizer {
+      width: 68%; }
+
+#stressToolApp {
+  position: absolute;
+  background: #dddddd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  overflow: scroll;
+  overflow-x: hidden;
+  display: none; }
+  #stressToolApp .stressToolForm {
+    background: white;
+    height: 95%;
+    width: 28.5%;
+    margin: 0 0.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.7rem !important;
     border-radius: 10px;
     border: 2px solid palegoldenrod; }
     #stressToolApp .stressToolForm .stressAdvOptions h3 {
@@ -1298,8 +1325,8 @@ footer {
   #stressToolApp .stressToolGraph {
     background: white;
     height: 95%;
-    width: 35%;
-    margin: 0 1%;
+    width: 38.5%;
+    margin: 0 0.5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1313,7 +1340,7 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 1.7rem !important;
     border-radius: 10px;
     border: 2px solid thistle; }
     #stressToolApp .stressToolGraph #stressGraphSizer {
@@ -1335,8 +1362,8 @@ footer {
   #stressToolApp .stressToolData {
     background: white;
     height: 95%;
-    width: 25%;
-    margin: 0 1%;
+    width: 28.5%;
+    margin: 0 0.5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1350,7 +1377,7 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 1.7rem !important;
     border-radius: 10px;
     border: 2px solid steelBlue;
     -ms-flex-direction: row;
@@ -1401,26 +1428,20 @@ footer {
   height: 100%;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   margin: 0 auto;
-  display: none; }
+  overflow: scroll;
+  overflow-x: hidden;
+  display: none;
+  overflow-y: hidden; }
   #boltToolApp .boltAppMain {
-    height: 100%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     position: relative; }
-    #boltToolApp .boltAppMain .boltAppMainItem {
+    #boltToolApp .boltAppMain .boltToolInputs {
       background: white;
       height: 95%;
       width: 32%;
-      margin: 0 1%;
+      margin: 0 0.5%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1434,140 +1455,112 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1.7rem;
+      font-size: 1.7rem !important;
       border-radius: 10px;
-      border: 2px solid orchid; }
-    #boltToolApp .boltAppMain .boltToolForm {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.9rem; }
-      #boltToolApp .boltAppMain .boltToolForm .boltLabel {
-        margin-bottom: 15px;
-        width: 50%; }
-    #boltToolApp .boltAppMain .boltSpecDataContainer {
-      position: absolute;
-      width: 50%;
-      height: 50%; }
-      #boltToolApp .boltAppMain .boltSpecDataContainer .boltSpecData {
+      border: 2px solid steelblue; }
+      #boltToolApp .boltAppMain .boltToolInputs .appTitle {
         width: 100%;
-        height: 100%;
-        display: none;
-        position: relative;
-        z-index: 999; }
-        #boltToolApp .boltAppMain .boltSpecDataContainer .boltSpecData img {
-          display: block;
-          width: 100%; }
-        #boltToolApp .boltAppMain .boltSpecDataContainer .boltSpecData .closePopup {
-          display: block;
-          position: absolute;
-          top: 5px;
-          right: 5px; }
-    #boltToolApp .boltAppMain .boltToolOutput {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.9rem; }
-      #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer {
-        width: 50%;
-        position: relative; }
-        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer h3 {
-          margin-bottom: 15px; }
-        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltFormItem {
-          width: 100%; }
-        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltUnsettledClampOut:after {
-          text-align: right;
-          content: "kN";
-          position: absolute;
-          top: 42%;
-          left: 88%; }
-        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltSettledClampOut:after {
-          text-align: right;
-          content: "kN";
-          position: absolute;
-          top: 42%;
-          left: 88%; }
-        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltSurfacePressureOut:after {
-          text-align: right;
-          content: "MPa";
-          position: absolute;
-          top: 42%;
-          left: 83%; }
-        #boltToolApp .boltAppMain .boltToolOutput .boltOutputContainer .boltTorqueYieldOut:after {
-          text-align: right;
-          content: "N·m";
-          position: absolute;
-          top: 42%;
-          left: 83%; }
-    #boltToolApp .boltAppMain .boltToolTorque {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      font-size: 1.9rem; }
-      #boltToolApp .boltAppMain .boltToolTorque .boltTorqueForm {
-        width: 100%; }
-      #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput {
+        height: 55px;
+        border-bottom: 2px solid steelblue;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        width: 100%; }
-        #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput .torqueOutputContainer {
+        padding-left: 15px; }
+      #boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        left: 25%;
+        display: none; }
+        #boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer .boltSpecData {
+          width: 100%;
+          height: 100%;
           position: relative;
-          width: 50%; }
-          #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput .torqueOutputContainer h3 {
-            margin-bottom: 15px; }
-          #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput .torqueOutputContainer .jointTorqueOut {
+          z-index: 999; }
+          #boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer .boltSpecData img {
+            display: block;
             width: 100%; }
-            #boltToolApp .boltAppMain .boltToolTorque .boltTorqueOutput .torqueOutputContainer .jointTorqueOut:after {
-              text-align: right;
-              content: "N·m";
-              position: absolute;
-              top: 42%;
-              left: 83%; }
-    #boltToolApp .boltAppMain .boltFormItem {
-      margin: 0 0;
-      width: 50%;
-      margin-bottom: 20px;
-      height: 35px;
-      border: 1px solid black;
-      border-radius: 5px;
-      padding-left: 15px; }
+          #boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer .boltSpecData .closePopup {
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 5px; }
+    #boltToolApp .boltAppMain .boltToolOutput {
+      background: white;
+      height: 95%;
+      width: 32%;
+      margin: 0 0.5%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 1.7rem !important;
+      border-radius: 10px;
+      border: 2px solid bisque; }
+      #boltToolApp .boltAppMain .boltToolOutput .appTitle {
+        width: 100%;
+        height: 55px;
+        border-bottom: 2px solid bisque;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-left: 15px; }
+    #boltToolApp .boltAppMain .boltToolTorque {
+      background: white;
+      height: 95%;
+      width: 32%;
+      margin: 0 0.5%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 1.7rem !important;
+      border-radius: 10px;
+      border: 2px solid lightblue; }
+      #boltToolApp .boltAppMain .boltToolTorque .appTitle {
+        width: 100%;
+        height: 55px;
+        border-bottom: 2px solid lightblue;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-left: 15px; }
 
 #pressToolApp {
   position: absolute;
@@ -1576,7 +1569,11 @@ footer {
   height: 100%;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   margin: 0 auto;
+  overflow: scroll;
+  overflow-x: hidden;
   right: 0;
   bottom: 0;
   display: block;
@@ -1603,8 +1600,8 @@ footer {
     #pressToolApp .pressAppMain .pressToolInputs {
       background: white;
       height: 95%;
-      width: 28%;
-      margin: 0 1%;
+      width: 28.5%;
+      margin: 0 0.5%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1618,7 +1615,7 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1.7rem;
+      font-size: 1.7rem !important;
       border-radius: 10px;
       border: 2px solid hotpink;
       position: relative; }
@@ -1673,8 +1670,8 @@ footer {
     #pressToolApp .pressAppMain .pressToolOutputs {
       background: white;
       height: 95%;
-      width: 28%;
-      margin: 0 1%;
+      width: 28.5%;
+      margin: 0 0.5%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1688,7 +1685,7 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1.7rem;
+      font-size: 1.7rem !important;
       border-radius: 10px;
       border: 2px solid royalblue;
       position: relative; }
@@ -1709,8 +1706,8 @@ footer {
     #pressToolApp .pressAppMain .pressToolGraph {
       background: white;
       height: 95%;
-      width: 38%;
-      margin: 0 1%;
+      width: 38.5%;
+      margin: 0 0.5%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1724,7 +1721,7 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1.7rem;
+      font-size: 1.7rem !important;
       border-radius: 10px;
       border: 2px solid goldenrod; }
       #pressToolApp .pressAppMain .pressToolGraph .pressAppTitle {
@@ -1745,7 +1742,7 @@ footer {
       background: white;
       height: 95%;
       width: 97.5%;
-      margin: 0 1%;
+      margin: 0 0.5%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1759,7 +1756,7 @@ footer {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1.7rem;
+      font-size: 1.7rem !important;
       border-radius: 10px;
       border: 2px solid darkslategray;
       margin: 1.25% 0% 1.25% 0%;
