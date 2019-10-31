@@ -1204,28 +1204,35 @@ footer {
       align-items: center;
       padding-left: 15px; }
     #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .numCyls {
-      background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
-      background-repeat: no-repeat;
-      background-position: 95% center; }
-    #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .inRPM {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      height: 10px;
-      width: 50%;
-      margin-bottom: 40px;
-      background: #999999;
-      border-radius: 5px; }
-      #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .inRPM::-webkit-slider-thumb {
-        -webkit-box-shadow: 1px 1px 1px #000000;
-        box-shadow: 1px 1px 1px #000000;
-        border: 1px solid #000000;
-        height: 25px;
-        width: 15px;
+      background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+      background-repeat: no-repeat;
+      background-position: 95% center; }
+    #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper {
+      margin-bottom: 20px; }
+      #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper .inRPM {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 10px;
+        width: 100%;
+        background: #999999;
         border-radius: 5px;
-        background: #FFFFFF;
-        cursor: pointer;
-        -webkit-appearance: none; }
+        display: block; }
+        #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper .inRPM::-webkit-slider-thumb {
+          -webkit-box-shadow: 1px 1px 1px #000000;
+          box-shadow: 1px 1px 1px #000000;
+          border: 1px solid #000000;
+          height: 25px;
+          width: 15px;
+          border-radius: 5px;
+          background: #FFFFFF;
+          cursor: pointer;
+          -webkit-appearance: none; }
+      #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper .outRPM {
+        margin-left: 15px; }
   #tvToolApp .tvToolMain .tvToolOutput {
     background: white;
     height: 95%;
@@ -1347,8 +1354,16 @@ footer {
       -ms-flex-align: center;
       align-items: center;
       padding-left: 15px; }
-    #stressToolApp .stressToolInputs .stressAdvOptions h3 {
-      margin-bottom: 10px; }
+    #stressToolApp .stressToolInputs .stressAdvOptions {
+      width: 50%; }
+      #stressToolApp .stressToolInputs .stressAdvOptions h3 {
+        margin-bottom: 10px; }
+      #stressToolApp .stressToolInputs .stressAdvOptions .stressAdvContainer {
+        width: 100%; }
+        #stressToolApp .stressToolInputs .stressAdvOptions .stressAdvContainer .toolOutputPackage {
+          width: 50%;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
   #stressToolApp .stressToolGraph {
     background: white;
     height: 95%;
@@ -1384,6 +1399,8 @@ footer {
       -ms-flex-align: center;
       align-items: center;
       padding-left: 15px; }
+    #stressToolApp .stressToolGraph #stressGraphSizer {
+      width: 90%; }
   #stressToolApp .stressToolData {
     background: white;
     height: 95%;
@@ -1428,7 +1445,11 @@ footer {
       -ms-flex-pack: center;
       justify-content: center; }
       #stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult {
-        width: 100%; }
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
         #stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult .stressDataContainer {
           width: 40%;
           font-size: 1rem;
@@ -1461,7 +1482,7 @@ footer {
             -ms-flex-align: center;
             align-items: center;
             border-top: 1px solid lightgrey;
-            padding: 6px 5px; }
+            padding: 8px 5px; }
 
 #boltToolApp {
   position: absolute;

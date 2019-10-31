@@ -356,19 +356,28 @@ Designed and developed by:
                                     Inputs
                                 </h3>
                                 <form class="tvToolForm toolContainerBelowTitle">
-                                    <label for="numCyls" class="appLabel">Number of Cylinders</label>
-                                    <select name="numCyls" class="numCyls formItem">
-                                        <option value="3">3</option>
-                                        <option value="4" selected>4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                    <label for="inRPM" class="appLabel">RPM</label>
-                                    <input type="range" id="inRPMId" class="formItem inRPM" name="inRPM" value="800" min="600" max="10000" step="100" oninput="outRPMId.value = inRPMId.value">
-                                    <output name="outRPM" class="outRPM" id="outRPMId">800</output>
-                                    <label for="tvAmp" class="appLabel">Torsional Ampliture [° pk-pk]</label>
-                                    <input name="tvAmp" type="text" class="tvAmp formItem" value="12">
+                                    <div class="toolOutputPackage">
+                                        <label for="numCyls" class="appLabel">Number of Cylinders</label>
+                                        <select name="numCyls" class="numCyls formItem">
+                                            <option value="3">3</option>
+                                            <option value="4" selected>4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="inRPM" class="appLabel">RPM</label>
+                                        <div class="centerFlex rpmWrapper">
+                                            <input type="range" id="inRPMId" class="inRPM" name="inRPM" value="800" min="600" max="10000" step="100" oninput="outRPMId.value = inRPMId.value">
+                                            <output name="outRPM" class="outRPM" id="outRPMId">800</output>
+                                        </div> 
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="tvAmp" class="appLabel">Torsional Amplitude</label>
+                                        <input name="tvAmp" type="text" class="tvAmp formItem" value="12">
+                                        <span class="wideToolUnits">° pk-pk</span>
+                                    </div>
                                     <button type="button" class="calcButton tvCalc">Calculate!</button>
                                 </form>
                             </div>
@@ -418,16 +427,19 @@ Designed and developed by:
                                 </h3>
                                 <form action="" class="toolContainerBelowTitle">
                                     <div class="toolOutputPackage">
-                                        <label for="stressModulus" class="appLabel">Young's Modulus [MPa]</label>
+                                        <label for="stressModulus" class="appLabel">Young's Modulus</label>
                                         <input name="stressModulus" type="number" class="stressModulus formItem" value="210000">
+                                        <span class="wideToolUnits">MPa</span>
                                     </div>
                                     <div class="toolOutputPackage">
-                                        <label for="stressYield" class="appLabel">Engineering Yield Strength [MPa]</label>
+                                        <label for="stressYield" class="appLabel">Engineering Yield Strength</label>
                                         <input name="stressYield" type="number" class="stressYield formItem" value="1280">
+                                        <span class="wideToolUnits">MPa</span>
                                     </div>
                                     <div class="toolOutputPackage">
-                                        <label for="stressUltimate" class="appLabel">Engineering Ultimate Strength [MPa]</label>
+                                        <label for="stressUltimate" class="appLabel">Engineering Ultimate Strength</label>
                                         <input name="stressUltimate" type="number" class="stressUltimate formItem" value="1420">
+                                        <span class="wideToolUnits">MPa</span>
                                     </div>
                                     <div class="toolOutputPackage">
                                         <label for="stressStrain" class="appLabel">Engineering Strain</label>
@@ -437,7 +449,7 @@ Designed and developed by:
                                         <h3>
                                             Advanced Options
                                         </h3>
-                                        <div class="toolOutputPackage">
+                                        <div class="stressAdvContainer centerFlex">
                                             <div class="toolOutputPackage">
                                                 <label for="stressPower" class="appLabel">Power</label>
                                                 <input name="stressPower" type="number" class="stressPower formItem" value="0.5">
@@ -461,17 +473,17 @@ Designed and developed by:
                                     Outputs
                                 </h3>
                                 <div class="toolContainerBelowTitle">
-                                    <div class="stressToolResult">
+                                    <div class="stressToolResult centerFlex">
                                         <h3>
-                                            Strain [e]
+                                            Strain [ε]
                                         </h3>
                                         <div id="strainDataContainer" class="stressDataContainer">
                                     
                                         </div>
                                     </div>
-                                    <div class="stressToolResult">
+                                    <div class="stressToolResult centerFlex">
                                         <h3>
-                                            Stress [s]
+                                            Stress [σ]
                                         </h3>
                                         <div id="stressDataContainer" class="stressDataContainer">
                                     
@@ -499,23 +511,37 @@ Designed and developed by:
                                     Inputs
                                 </h3>
                                 <form class="boltToolForm toolContainerBelowTitle">
-                                    <label for="boltSize" class="appLabel">Bolt Ø</label>
-                                    <input name="boltSize" type="number" class="boltSize formItem" value="12">
-                                    <label for="threadPitch" class="appLabel">Thread Pitch</label>
-                                    <input name="threadPitch" type="number" class="threadPitch formItem" value="1.25">
-                                    <label for="boltHead" class="appLabel">Bolt Head Ø</label>
-                                    <input name="boltHead" type="number" class="boltHead formItem" value="14.63">
-                                    <label for="threadFriction" class="appLabel">CoF of Threads</label>
-                                    <input name="threadFriction" type="number" class="threadFriction formItem" value="0.15">
-                                    <label for="bearingFriction" class="appLabel">CoF of Bearing Surface</label>
-                                    <input name="bearingFriction" type="number" class="bearingFriction formItem" value="0.15">
-                                    <label for="boltStrength" class="appLabel">Bolt Grade</label>
-                                    <select name="boltStrength" class="boltStrength formItem">
-                                        <option value="4.6">4.6</option>
-                                        <option value="8.8">8.8</option>
-                                        <option value="10.9">10.9</option>
-                                        <option value="12.9" selected>12.9</option>
-                                    </select>
+                                    <div class="toolOutputPackage">
+                                        <label for="boltSize" class="appLabel">Bolt Ø</label>
+                                        <input name="boltSize" type="number" class="boltSize formItem" value="12">
+                                        <span class="wideToolUnits">mm</span>
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="threadPitch" class="appLabel">Thread Pitch</label>
+                                        <input name="threadPitch" type="number" class="threadPitch formItem" value="1.25">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="boltHead" class="appLabel">Bolt Head Ø</label>
+                                        <input name="boltHead" type="number" class="boltHead formItem" value="14.63">
+                                        <span class="wideToolUnits">mm</span>
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="threadFriction" class="appLabel">CoF of Threads</label>
+                                        <input name="threadFriction" type="number" class="threadFriction formItem" value="0.15">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="bearingFriction" class="appLabel">CoF of Bearing Surface</label>
+                                        <input name="bearingFriction" type="number" class="bearingFriction formItem" value="0.15">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="boltStrength" class="appLabel">Bolt Grade</label>
+                                        <select name="boltStrength" class="boltStrength formItem">
+                                            <option value="4.6">4.6</option>
+                                            <option value="8.8">8.8</option>
+                                            <option value="10.9">10.9</option>
+                                            <option value="12.9" selected>12.9</option>
+                                        </select>
+                                    </div>
                                     <div class="boltDoWork">
                                         <button type="button" 
                                         class="boltCalc calcButton">Calculate!</button>
@@ -577,10 +603,12 @@ Designed and developed by:
                                     <div class="toolOutputPackage">
                                         <label for="interfaceOD" class="appLabel">Interface Outside Ø</label>
                                         <input name="interfaceOD" type="number" class="interfaceOD formItem" value="42">
+                                        <span class="wideToolUnits">mm</span>
                                     </div>
                                     <div class="toolOutputPackage">
                                         <label for="interfaceID" class="appLabel">Interface Outside Ø</label>
                                         <input name="interfaceID" type="number" class="interfaceID formItem" value="28">
+                                        <span class="wideToolUnits">mm</span>
                                     </div>
                                     <div class="toolOutputPackage">
                                         <label for="interfaceFriction" class="appLabel">Interface CoF</label>
@@ -589,6 +617,7 @@ Designed and developed by:
                                     <div class="toolOutputPackage">
                                         <label for="jointClampLoad" class="appLabel">Joint Clamp Load</label>
                                         <input name="jointClampLoad" type="number" class="jointClampLoad formItem" value="81.13">
+                                        <span class="wideToolUnits">kN</span>
                                     </div>
                                     <div class="toolOutputPackage">
                                         <h3 class="appLabel">
