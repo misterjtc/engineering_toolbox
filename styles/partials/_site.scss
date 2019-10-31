@@ -59,6 +59,11 @@ html {
         border-radius: 10px;
     }
 }
+.centerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .scrollAid {
     position: absolute;
     bottom: 25px;
@@ -66,6 +71,7 @@ html {
     background: rgba(153, 153, 153, 0.3);
     border-radius: 20px;
     padding-top: 3px;
+    z-index: 999999;
     a { 
         color: $medText;
         text-decoration: none;
@@ -94,7 +100,7 @@ html {
 }
 .formItem {
     margin: 0 0;
-    width: 60%;
+    width: 50%;
     margin-bottom: 20px;
     height: 30px;
     border: 1px solid black;
@@ -103,12 +109,23 @@ html {
     position: relative;
     background: rgba(255, 255, 255, 0)
 }
+.toolUnits {
+    position: absolute;
+    top: 43%;
+    right: 23%;
+}
+.wideToolUnits {
+    position: absolute;
+    top: 43%;
+    right: 30%;
+}
 .toolOutputPackage {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 .toolContainerBelowTitle {
     width: 100%;

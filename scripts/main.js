@@ -37,7 +37,8 @@ $(function(){
             // $("#main .imported").animate({left: "16%"}, 400, "linear");
             $('aside').removeClass('navMinify');
             $('aside').removeClass('navCheck');
-            $(".toolboxBreak").html('<h3 class="uppercase sectionBreak toolboxSection">Toolbox</h3>');
+            $(".engToolsSection").html('<h3 class="uppercase sectionBreak toolboxSection">Engineering Toolbox</h3>');
+            $(".erpToolsSection").html('<h3 class="uppercase sectionBreak toolboxSection">erp toolbox</h3>');
         // Else if the nav bar is expanded shrink it and do some formatting
         } else {
             $('aside').animate({width: "5%"}, 400, "linear");
@@ -46,7 +47,7 @@ $(function(){
             $(".centralContent").animate({marginLeft: "5%"}, 400, "linear");
             $('aside').addClass('navMinify');
             $('aside').addClass('navCheck');
-            $(".toolboxBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
+            $(".toolboxBreak").html('<i class="fas fa-ellipsis-h"></i>');
         }
     });
     // ********************************************************** */
@@ -59,7 +60,8 @@ $(function(){
         if ( $asideWidth < 110 && $('aside').hasClass("navCheck") ) {
             $('aside').animate({width: "16%"}, 400, "linear");
             $('aside').removeClass('navMinify');
-            $(".toolboxBreak").html('<h3 class="uppercase sectionBreak toolboxSection">Toolbox</h3>');
+            $(".engToolsSection").html('<h3 class="uppercase sectionBreak toolboxSection">Engineering Toolbox</h3>');
+            $(".erpToolsSection").html('<h3 class="uppercase sectionBreak toolboxSection">erp toolbox</h3>');
         } else {
             // just do nothing bro
         }
@@ -69,7 +71,7 @@ $(function(){
         if ( $('aside').hasClass("navCheck") ) {
             $('aside').animate({width: "5%"}, 400, "linear");
             $('aside').addClass('navMinify');
-            $(".toolboxBreak").html('<i class="dotHolder far fa-ellipsis-h"></i>');
+            $(".toolboxBreak").html('<i class="fas fa-ellipsis-h"></i>');
         }
     });
     // ********************************************************** */
@@ -138,11 +140,9 @@ $(function(){
         $(".headToolSwitch").html('Dashboard');
         $( "#dashboard" ).fadeIn( "slow", function() {
             // Animation complete
-            console.log("dash fade in ran")
         });
         $( "#tvToolApp, #stressToolApp, #boltToolApp, #pressToolApp" ).fadeOut( "slow", function() {
             // Animation complete
-            console.log("tvtool fade out ran")
         });
     });
     $("#tvTool").on("click", function(){
@@ -155,7 +155,7 @@ $(function(){
         });
     });
     $("#stressGen").on("click", function(){
-        $(".headToolSwitch").html('Frank\'s Stress Strain Generator');
+        $(".headToolSwitch").html('Stress Strain Generator');
         $( "#dashboard, #tvToolApp, #boltToolApp, #pressToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
@@ -465,12 +465,11 @@ $(function(){
         ssChart = new Chart(ctx, {
             type: 'scatter',
             data: {
-                // labels: strainLabels,
                 datasets: [{
                     backgroundColor: 'rgba(62,77,84,0.3)',
                     borderColor: 'rgba(15,34,65,0.3)',
                     borderWidth: '3',
-                    label: 'Stress-Strain',
+                    label: 'True Stress-Strain',
                     data: stressStrainData,
                 }]
             },
@@ -486,7 +485,7 @@ $(function(){
                 },
                 title: {
                     display: true,
-                    text: 'Stress-Strain Curve',
+                    text: 'True Stress-Strain Curve',
                     fontSize: '18',
                 },
                 scales: {
@@ -837,29 +836,56 @@ $(function(){
         pressToolMainCalc(innerODRadHot, innerIDRadHot, outerIDRadHot, outerODRadHot, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableHot", 2);
         pressToolMainCalc(innerODRadHotMin, innerIDRadHotMin, outerIDRadHotMin, outerODRadHotMin, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableHot", 1);
     });
+    // ********************************************************** */
+    // Smooth Scroll
+    // ********************************************************** */
     // Initial smoothscrolling for the required containers
     $(".pressInputsContainer").scroll(function(){
         // Show after the user scrolls 800px
         var y = $(this).scrollTop();
         if (y > 125) {
             // This is for the scroll to the top button
-            $('.scrollAid').fadeOut();
+            $('.pressInputScroll').fadeOut();
             // This is for the secondary header
             // $('.headerAfter').fadeIn();
         // Otherwise hide featyres
         } else {
             //  This is for the scroll to the top button
-            $('.scrollAid').fadeIn();
+            $('.pressInputScroll').fadeIn();
             // This is for the secondary header
             // $('.headerAfter').fadeOut();
         }
     });
-    $('.pressScrollBro a').on('click', function() {
-        console.log('you clicked the div scroll function');
+    $(".pressAppScrollContainer").scroll(function(){
+        // Show after the user scrolls 800px
+        var y = $(this).scrollTop();
+        if (y > 550) {
+            // This is for the scroll to the top button
+            $('.pressMainScroll').fadeOut();
+            // This is for the secondary header
+            // $('.headerAfter').fadeIn();
+        // Otherwise hide featyres
+        } else {
+            //  This is for the scroll to the top button
+            $('.pressMainScroll').fadeIn();
+            // This is for the secondary header
+            // $('.headerAfter').fadeOut();
+        }
+    });
+    $('.pressInputScroll a').on('click', function() {
         // event.preventDefault();
         $.smoothScroll({
           scrollElement: $('.pressInputsContainer'),
-          scrollTarget: '#pressInputsBottom'
+          scrollTarget: '#pressInputsBottom',
+          speed: 800
+        });
+    });
+    $('.pressMainScroll a').on('click', function() {
+        // event.preventDefault();
+        $.smoothScroll({
+          scrollElement: $('.pressAppScrollContainer'),
+          scrollTarget: '.pressToolDetailedOutput',
+          speed: 600
         });
     });
 });

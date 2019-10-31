@@ -16,13 +16,15 @@ Designed and developed by:
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Main Site Font -->
    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-   <script src="https://kit.fontawesome.com/acb50d146b.js" crossorigin="anonymous"></script>
    <!-- Flickity CSS -->
    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
    <!-- Main Site Styles -->
    <link rel="stylesheet" href="./styles/styles.css"/>
 </head>
 <body class="framework">
+    <!-- *************************************************** -->
+    <!--                       Aside Nav                     -->
+    <!-- *************************************************** -->
     <aside class="navPanel">
         <div class="top">
             <div class="logo">
@@ -38,7 +40,7 @@ Designed and developed by:
                 <a class="linkText" href="" onclick="return false">Dashboard</a>
             </div>
             <div class="asideSection">
-                <h3 class="uppercase sectionBreak toolboxBreak">
+                <h3 class="uppercase sectionBreak toolboxBreak engToolsSection">
                     Engineering Toolbox
                 </h3>
                 <div class="mechanical mechExpander mainLink">
@@ -79,7 +81,7 @@ Designed and developed by:
                 </div>
             </div>
             <div class="asideSection">
-                <h3 class="uppercase sectionBreak toolboxBreak">
+                <h3 class="uppercase sectionBreak toolboxBreak erpToolsSection">
                     ERP Toolbox
                 </h3>
                 <div class="erpEng erpEngExpander mainLink">
@@ -129,7 +131,9 @@ Designed and developed by:
     </aside>
     <!-- This section contains the main site sections -->
     <section class="main">
-        <!-- This is the sites fixed header -->
+        <!-- *************************************************** -->
+        <!--                       Main Header                   -->
+        <!-- *************************************************** -->
         <header>
             <div class="headerContent">
                 <ul>
@@ -176,7 +180,7 @@ Designed and developed by:
                         <h4 id="today">
                             June 19
                         </h4>
-                        <a href=""><i class="fal fa-calendar-alt"></i></a>
+                        <a href=""><i class="far fa-calendar-alt"></i></a>
                     </div>
                 </div>
 
@@ -408,55 +412,78 @@ Designed and developed by:
                     <!-- *************************************************** -->
                     <div class="stressToolApp" id="stressToolApp">
                         <div class="appMain">
-                            <form action="" class="stressToolForm">
-                                <div class="toolOutputPackage">
-                                    <label for="stressModulus" class="appLabel">Young's Modulus [MPa]</label>
-                                    <input name="stressModulus" type="number" class="stressModulus formItem" value="210000">
-                                </div>
-                                <div class="toolOutputPackage">
-                                    <label for="stressYield" class="appLabel">Engineering Yield Strength [MPa]</label>
-                                    <input name="stressYield" type="number" class="stressYield formItem" value="1280">
-                                </div>
-                                <div class="toolOutputPackage">
-                                    <label for="stressUltimate" class="appLabel">Engineering Ultimate Strength [MPa]</label>
-                                    <input name="stressUltimate" type="number" class="stressUltimate formItem" value="1420">
-                                </div>
-                                <div class="toolOutputPackage">
-                                    <label for="stressStrain" class="appLabel">Engineering Strain</label>
-                                    <input name="stressStrain" type="number" class="stressStrain formItem" value="0.11">
-                                </div>
-                                <div class="stressAdvOptions">
-                                    <h3>
-                                        Advanced Options
-                                    </h3>
+                            <div class="stressToolInputs">
+                                <h3 class="appTitle">
+                                    Inputs
+                                </h3>
+                                <form action="" class="toolContainerBelowTitle">
                                     <div class="toolOutputPackage">
+                                        <label for="stressModulus" class="appLabel">Young's Modulus [MPa]</label>
+                                        <input name="stressModulus" type="number" class="stressModulus formItem" value="210000">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="stressYield" class="appLabel">Engineering Yield Strength [MPa]</label>
+                                        <input name="stressYield" type="number" class="stressYield formItem" value="1280">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="stressUltimate" class="appLabel">Engineering Ultimate Strength [MPa]</label>
+                                        <input name="stressUltimate" type="number" class="stressUltimate formItem" value="1420">
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="stressStrain" class="appLabel">Engineering Strain</label>
+                                        <input name="stressStrain" type="number" class="stressStrain formItem" value="0.11">
+                                    </div>
+                                    <div class="stressAdvOptions">
+                                        <h3>
+                                            Advanced Options
+                                        </h3>
                                         <div class="toolOutputPackage">
-                                            <label for="stressPower" class="appLabel">Power</label>
-                                            <input name="stressPower" type="number" class="stressPower formItem" value="0.5">
+                                            <div class="toolOutputPackage">
+                                                <label for="stressPower" class="appLabel">Power</label>
+                                                <input name="stressPower" type="number" class="stressPower formItem" value="0.5">
+                                            </div>
+                                            <div class="toolOutputPackage">
+                                                <label for="stressOffset" class="appLabel">Offset</label>
+                                                <input name="stressOffset" type="number" class="stressOffset formItem" value="0">
+                                            </div>
                                         </div>
-                                        <div class="toolOutputPackage">
-                                            <label for="stressOffset" class="appLabel">Offset</label>
-                                            <input name="stressOffset" type="number" class="stressOffset formItem" value="0">
+                                    </div>
+                                    <div class="centerFlex">
+                                        <button type="button" 
+                                        class="stressCalc calcButton">Generate!</button>
+                                        <button type="button" 
+                                        class="stressShowDat calcButton">Show Data!</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="stressToolData">
+                                <h3 class="appTitle">
+                                    Outputs
+                                </h3>
+                                <div class="toolContainerBelowTitle">
+                                    <div class="stressToolResult">
+                                        <h3>
+                                            Strain [e]
+                                        </h3>
+                                        <div id="strainDataContainer" class="stressDataContainer">
+                                    
+                                        </div>
+                                    </div>
+                                    <div class="stressToolResult">
+                                        <h3>
+                                            Stress [s]
+                                        </h3>
+                                        <div id="stressDataContainer" class="stressDataContainer">
+                                    
                                         </div>
                                     </div>
                                 </div>
-                                <div class="stressDoWork">
-                                    <button type="button" 
-                                    class="stressCalc calcButton">Generate!</button>
-                                    <button type="button" 
-                                    class="stressShowDat calcButton">Show Data!</button>
-                                </div>
-                            </form>
-                            <div class="stressToolData">
-                                <div id="strainDataContainer">
-                                    
-                                </div>
-                                <div id="stressDataContainer">
-                                    
-                                </div>
                             </div>  
                             <div class="stressToolGraph">
-                                <div id="stressGraphSizer">
+                                <h3 class="appTitle">
+                                    Graph
+                                </h3>
+                                <div id="stressGraphSizer" class="toolContainerBelowTitle">
                                     <canvas id="stressStrainChart"></canvas>
                                 </div>    
                             </div>
@@ -579,530 +606,562 @@ Designed and developed by:
                     <!--             Cylindrical Press-fit Tool              -->
                     <!-- *************************************************** -->
                     <div id="pressToolApp">
-                        <div class="pressAppMain">
-                            <div class="pressToolInputs">
-                                <div class="scrollAid">
-                                    <a href="" onclick="return false"><i class="fas fa-angle-down"></i></a>
-                                </div>
-                                <h3 class="pressAppTitle">
-                                    Inputs
-                                </h3>
-                                <div class="pressInputsContainer toolContainerBelowTitle">
-                                    <div class="pressInputs">
-                                        <h3>
-                                            Inner Component Definition
-                                        </h3>
-                                        <form class="pressForm">
-                                            <div class="inputDims">
-                                                <div class="toolOutputPackage">
-                                                    <label for="innerInterfaceOD" class="appLabel">Outside Ø</label>
-                                                    <input name="innerInterfaceOD" type="number" class="innerInterfaceOD formItem mmDim" value="20.1975">
-                                                </div>
-                                                <div class="toolOutputPackage">
-                                                    <label for="innerInterfaceODTolerance" class="appLabel">Tolerance (±)</label>
-                                                    <input name="innerInterfaceODTolerance" type="number" class="innerInterfaceODTolerance formItem mmDim" value="0.025">
-                                                </div>
-                                            </div>
-                                            <div class="inputDims">
-                                                <div class="toolOutputPackage">
-                                                    <label for="innerInterfaceID" class="appLabel">Inside Ø</label>
-                                                    <input name="innerInterfaceID" type="number" class="innerInterfaceID formItem" value="14.5">
-                                                </div>
-                                                <div class="toolOutputPackage">
-                                                    <label for="innerInterfaceIDTolerance" class="appLabel">Tolerance (±)</label>
-                                                    <input name="innerInterfaceIDTolerance" type="number" class="innerInterfaceIDTolerance formItem" value="0.5">
-                                                </div>
-                                            </div>
-                                            <label for="innerModulus" class="appLabel">Young's Modulus</label>
-                                            <input name="innerModulus" type="number" class="innerModulus formItem" value="205000">
-                                            <label for="innerPoissons" class="appLabel">Poisson's Ratio</label>
-                                            <input name="innerPoissons" type="number" class="innerPoissons formItem" value="0.28">
-                                            <label for="innerThermExp" class="appLabel">Thermal Expansion Coeff.</label>
-                                            <input name="innerThermExp" type="number" class="innerThermExp formItem" value="0.0000115">
-                                        </form>
+                        <div class="scrollAid pressMainScroll">
+                            <a href="" onclick="return false"><i class="fas fa-angle-down"></i></a>
+                        </div>
+                        <div class="pressAppScrollContainer">
+                            <div class="pressAppMain">
+                                <div class="pressToolInputs">
+                                    <div class="scrollAid pressInputScroll">
+                                        <a href="" onclick="return false"><i class="fas fa-angle-down"></i></a>
                                     </div>
-                                    <div class="pressInputs">
-                                        <h3>
-                                            Outer Component Definition
-                                        </h3>
-                                        <form class="pressForm">
-                                            <div class="inputDims">
-                                                <div class="toolOutputPackage">
-                                                    <label for="outerInterfaceID" class="appLabel">Inside Ø</label>
-                                                    <input name="outerInterfaceID" type="number" class="outerInterfaceID formItem" value="20.135">
+                                    <h3 class="pressAppTitle">
+                                        Inputs
+                                    </h3>
+                                    <div class="pressInputsContainer toolContainerBelowTitle">
+                                        <div class="pressInputs">
+                                            <h3>
+                                                Inner Component Definition
+                                            </h3>
+                                            <form class="pressForm">
+                                                <div class="inputDims widenSelector">
+                                                    <div class="toolOutputPackage">
+                                                        <label for="innerInterfaceOD" class="appLabel">Outside Ø</label>
+                                                        <input name="innerInterfaceOD" type="number" class="innerInterfaceOD formItem mmDim" value="20.1975">
+                                                        <span class="toolUnits">mm</span>
+                                                    </div>
+                                                    <div class="toolOutputPackage">
+                                                        <label for="innerInterfaceODTolerance" class="appLabel">Tolerance (±)</label>
+                                                        <input name="innerInterfaceODTolerance" type="number" class="innerInterfaceODTolerance formItem mmDim" value="0.025">
+                                                        <span class="toolUnits">mm</span>
+                                                    </div>
+                                                </div>
+                                                <div class="inputDims widenSelector">
+                                                    <div class="toolOutputPackage">
+                                                        <label for="innerInterfaceID" class="appLabel">Inside Ø</label>
+                                                        <input name="innerInterfaceID" type="number" class="innerInterfaceID formItem" value="14.5">
+                                                        <span class="toolUnits">mm</span>
+                                                    </div>
+                                                    <div class="toolOutputPackage">
+                                                        <label for="innerInterfaceIDTolerance" class="appLabel">Tolerance (±)</label>
+                                                        <input name="innerInterfaceIDTolerance" type="number" class="innerInterfaceIDTolerance formItem" value="0.5">
+                                                        <span class="toolUnits">mm</span>
+                                                    </div>
                                                 </div>
                                                 <div class="toolOutputPackage">
-                                                    <label for="outerInterfaceIDTolerance" class="appLabel">Tolerance (±)</label>
-                                                    <input name="outerInterfaceIDTolerance" type="number" class="outerInterfaceIDTolerance formItem" value="0.05">
-                                                </div>
-                                            </div>
-                                            <div class="inputDims">
-                                                <div class="toolOutputPackage">
-                                                    <label for="outerInterfaceOD" class="appLabel">Outside Ø</label>
-                                                    <input name="outerInterfaceOD" type="number" class="outerInterfaceOD formItem" value="59.935">
+                                                    <label for="innerModulus" class="appLabel">Young's Modulus</label>
+                                                    <input name="innerModulus" type="number" class="innerModulus formItem" value="205000">
+                                                    <span class="wideToolUnits">MPa</span>
                                                 </div>
                                                 <div class="toolOutputPackage">
-                                                    <label for="outerInterfaceODTolerance" class="appLabel">Tolerance (±)</label>
-                                                    <input name="outerInterfaceODTolerance" type="number" class="outerInterfaceODTolerance formItem" value="0.3">
-                                                </div>
-                                            </div>
-                                            <label for="outerModulus" class="appLabel">Young's Modulus</label>
-                                            <input name="outerModulus" type="number" class="outerModulus formItem" value="205000">
-                                            <label for="outerPoissons" class="appLabel">Poisson's Ratio</label>
-                                            <input name="outerPoissons" type="number" class="outerPoissons formItem" value="0.28">
-                                            <label for="outerThermExp" class="appLabel">Thermal Expansion Coeff.</label>
-                                            <input name="outerThermExp" type="number" class="outerThermExp formItem" value="0.0000117">
-                                        </form>
-                                    </div>
-                                    <div class="pressInputs">
-                                        <h3>
-                                            Other Inputs
-                                        </h3>
-                                        <form id="pressInputsBottom" class="pressForm">
-                                            <div class="inputDims">
-                                                <div class="toolOutputPackage">
-                                                    <label for="pressMinTemp" class="appLabel">Min. Temp.</label>
-                                                    <input name="pressMinTemp" type="number" class="pressMinTemp formItem" value="-40">
+                                                    <label for="innerPoissons" class="appLabel">Poisson's Ratio</label>
+                                                    <input name="innerPoissons" type="number" class="innerPoissons formItem" value="0.28">
                                                 </div>
                                                 <div class="toolOutputPackage">
-                                                    <label for="pressMaxTemp" class="appLabel">Max. Temp.</label>
-                                                    <input name="pressMaxTemp" type="number" class="pressMaxTemp formItem" value="140">
+                                                    <label for="innerThermExp" class="appLabel">Thermal Expansion Coeff.</label>
+                                                    <input name="innerThermExp" type="number" class="innerThermExp formItem" value="0.0000115">
+                                                    <span class="wideToolUnits">°C⁻¹</span>
                                                 </div>
-                                                <div class="toolOutputPackage">
-                                                    <label for="pressRoomTemp" class="appLabel">Room Temp.</label>
-                                                    <input name="pressRoomTemp" type="number" class="pressRoomTemp formItem" value="20">
-                                                </div>
-                                            </div>
-                                            <div class="inputDims">
-                                                <div class="toolOutputPackage">
-                                                    <label for="pressInterfaceFriction" class="appLabel">CoF</label>
-                                                    <input name="pressInterfaceFriction" type="number" class="pressInterfaceFriction formItem" value="0.25">
-                                                </div>
-                                                <div class="toolOutputPackage">
-                                                    <label for="pressInterfaceLength" class="appLabel">Length</label>
-                                                    <input name="pressInterfaceLength" type="number" class="pressInterfaceLength formItem" value="15">
-                                                    <!-- <span class="toolUnits">mm</span> -->
-                                                </div>
-                                            </div>
-                                            <div class="toolDoWork">
-                                                <button type="button" 
-                                                class="calcButton pressButton">Calculate!</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Press Tool Outputs -->
-                            <div class="pressToolOutputs">
-                                <h3 class="pressAppTitle">
-                                    Outputs
-                                </h3>
-                                <div class="pressOutput toolContainerBelowTitle">
-                                    <div class="pressFinalDia toolOutputPackage">
-                                        <h3 class="appLabel">
-                                            Final Ø of Interface
-                                        </h3>
-                                        <div class="pressFinalDiaOut formItem mmUnits">
-    
+                                            </form>
                                         </div>
-                                    </div>
-                                    <div class="pressInnerMaxDef toolOutputPackage">
-                                        <h3 class="appLabel">
-                                            Inner Component δ
-                                        </h3>
-                                        <div class="pressInnerMaxDefOut formItem mmUnits">
-    
+                                        <div class="pressInputs">
+                                            <h3>
+                                                Outer Component Definition
+                                            </h3>
+                                            <form class="pressForm">
+                                                <div class="inputDims widenSelector">
+                                                    <div class="toolOutputPackage">
+                                                        <label for="outerInterfaceID" class="appLabel">Inside Ø</label>
+                                                        <input name="outerInterfaceID" type="number" class="outerInterfaceID formItem" value="20.135">
+                                                        <span class="toolUnits">mm</span>
+                                                    </div>
+                                                    <div class="toolOutputPackage">
+                                                        <label for="outerInterfaceIDTolerance" class="appLabel">Tolerance (±)</label>
+                                                        <input name="outerInterfaceIDTolerance" type="number" class="outerInterfaceIDTolerance formItem" value="0.05">
+                                                        <span class="toolUnits">mm</span>
+                                                    </div>
+                                                </div>
+                                                <div class="inputDims widenSelector">
+                                                    <div class="toolOutputPackage">
+                                                        <label for="outerInterfaceOD" class="appLabel">Outside Ø</label>
+                                                        <input name="outerInterfaceOD" type="number" class="outerInterfaceOD formItem" value="59.935">
+                                                        <span class="toolUnits">mm</span>
+                                                    </div>
+                                                    <div class="toolOutputPackage">
+                                                        <label for="outerInterfaceODTolerance" class="appLabel">Tolerance (±)</label>
+                                                        <input name="outerInterfaceODTolerance" type="number" class="outerInterfaceODTolerance formItem" value="0.3">
+                                                        <span class="toolUnits">mm</span>
+                                                    </div>
+                                                </div>
+                                                <div class="toolOutputPackage">
+                                                    <label for="outerModulus" class="appLabel">Young's Modulus</label>
+                                                    <input name="outerModulus" type="number" class="outerModulus formItem" value="205000">
+                                                    <span class="wideToolUnits">MPa</span>
+                                                </div>
+                                                <div class="toolOutputPackage">
+                                                    <label for="outerPoissons" class="appLabel">Poisson's Ratio</label>
+                                                    <input name="outerPoissons" type="number" class="outerPoissons formItem" value="0.28">
+                                                </div>
+                                                <div class="toolOutputPackage">
+                                                    <label for="outerThermExp" class="appLabel">Thermal Expansion Coeff.</label>
+                                                    <input name="outerThermExp" type="number" class="outerThermExp formItem" value="0.0000117">
+                                                    <span class="wideToolUnits">°C⁻¹</span>
+                                                </div>
+                                            </form>
                                         </div>
-                                    </div>
-                                    <div class="pressOuterMaxDef toolOutputPackage">
-                                        <h3 class="appLabel">
-                                            Outer Component δ
-                                        </h3>
-                                        <div class="pressOuterMaxDefOut formItem mmUnits">
-    
-                                        </div>
-                                    </div>
-                                    <div class="pressInnerMaxStress toolOutputPackage">
-                                        <h3 class="appLabel">
-                                            Inner Component Max σ
-                                        </h3>
-                                        <div class="pressInnerMaxStressOut formItem stressUnits">
-    
-                                        </div>
-                                    </div>
-                                    <div class="pressOuterMaxStress toolOutputPackage">
-                                        <h3 class="appLabel">
-                                            Outer Component Max σ
-                                        </h3>
-                                        <div class="pressOuterMaxStressOut formItem stressUnits">
-    
-                                        </div>
-                                    </div>
-                                    <div class="pressInterfacePressure toolOutputPackage">
-                                        <h3 class="appLabel">
-                                            Interface Pressure
-                                        </h3>
-                                        <div class="pressInterfacePressureOut formItem stressUnits">
-    
-                                        </div>
-                                    </div>
-                                    <div class="pressAssemForce toolOutputPackage">
-                                        <h3 class="appLabel">
-                                            Assembly Force
-                                        </h3>
-                                        <div class="pressAssmForceOut formItem forceUnits">
-    
-                                        </div>
-                                    </div>
-                                    <div class="pressTorqCap toolOutputPackage">
-                                        <h3 class="appLabel">
-                                            Torque Capacity
-                                        </h3>
-                                        <div class="pressTorqCapOut formItem torqueUnits">
-    
+                                        <div class="pressInputs">
+                                            <h3>
+                                                Other Inputs
+                                            </h3>
+                                            <form id="pressInputsBottom" class="pressForm">
+                                                <div class="inputDims widenSelector">
+                                                    <div class="toolOutputPackage">
+                                                        <label for="pressMinTemp" class="appLabel">Min. Temp.</label>
+                                                        <input name="pressMinTemp" type="number" class="pressMinTemp formItem" value="-40">
+                                                        <span class="toolUnits">°C</span>
+                                                    </div>
+                                                    <div class="toolOutputPackage">
+                                                        <label for="pressMaxTemp" class="appLabel">Max. Temp.</label>
+                                                        <input name="pressMaxTemp" type="number" class="pressMaxTemp formItem" value="140">
+                                                        <span class="toolUnits">°C</span>
+                                                    </div>
+                                                    <div class="toolOutputPackage">
+                                                        <label for="pressRoomTemp" class="appLabel">Room Temp.</label>
+                                                        <input name="pressRoomTemp" type="number" class="pressRoomTemp formItem" value="20"></input>
+                                                        <span class="toolUnits">°C</span>
+                                                    </div>
+                                                </div>
+                                                <div class="inputDims widenSelector">
+                                                    <div class="toolOutputPackage">
+                                                        <label for="pressInterfaceFriction" class="appLabel">CoF</label>
+                                                        <input name="pressInterfaceFriction" type="number" class="pressInterfaceFriction formItem" value="0.25">
+                                                    </div>
+                                                    <div class="toolOutputPackage">
+                                                        <label for="pressInterfaceLength" class="appLabel">Length</label>
+                                                        <input name="pressInterfaceLength" type="number" class="pressInterfaceLength formItem" value="15"></input>
+                                                        <span class="toolUnits">mm</span>
+                                                    </div>
+                                                </div>
+                                                <div class="toolDoWork">
+                                                    <button type="button" 
+                                                    class="calcButton pressButton">Calculate!</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="pressToolGraph">
-                                <h3 class="pressAppTitle">
-                                    Graph
-                                </h3>
-                                <div class="pressGraph toolContainerBelowTitle">
-
-                                </div>
-                            </div>
-                            <div class="pressToolDetailedOutput">
-                                <h3 class="pressAppTitle">
-                                    Detailed Outputs
-                                </h3>
-                                <div class="pressDetailedOutput toolContainerBelowTitle">
-                                    <div class="subTable pressTableLabels">
-                                        <div class=" row cellHeader">
-                                            <h3>Items</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Inner OD</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Inner ID</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Outer ID</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Outer OD</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Final Radius of Interface</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Final Ø of Interface</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Total δ</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Outer δ</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Inner δ</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Interface Pressure</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Max Outer Hoop σ</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Min Outer Hoop σ</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Max Inner Hoop σ</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Min Inner Hoop σ</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Assembly Force</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>Torque Capacity</h3>
-                                        </div>
-                                    </div>
-                                    <div class="subTable pressTableRoom">
-                                        <div class="row cellHeader">
-                                            <h3>Room Temperature (20°C)</h3>
-                                        </div>
-                                        <div class="row cellHeader">
-                                            <h3>Min.</h3>
-                                            <h3>Nom.</h3>
-                                            <h3>Max.</h3>
-                                        </div>
-                                        <div class="row otherTest">
-                                            <h3>1</h3>
-                                            <h3 class="pressTest">2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                    </div>
-                                    <div class="subTable pressTableCold">
-                                        <div class="row cellHeader">
-                                            <h3>Min. Temperature (-40°C)</h3>
-                                        </div>
-                                        <div class="row cellHeader">
-                                            <h3>Min.</h3>
-                                            <h3>Nom.</h3>
-                                            <h3>Max.</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                    </div>
-                                    <div class="subTable pressTableHot">
-                                        <div class="row cellHeader">
-                                            <h3>Max Temperature (120°C)</h3>
-                                        </div>
-                                        <div class="row cellHeader">
-                                            <h3>Min.</h3>
-                                            <h3>Nom.</h3>
-                                            <h3>Max.</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="row">
-                                            <h3>1</h3>
-                                            <h3>2</h3>
-                                            <h3>3</h3>
+                                <!-- Press Tool Outputs -->
+                                <div class="pressToolOutputs">
+                                    <h3 class="pressAppTitle">
+                                        Outputs
+                                    </h3>
+                                    <div class="pressOutput toolContainerBelowTitle">
+                                        <div class="pressFinalDia toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Final Ø of Interface
+                                            </h3>
+                                            <div class="pressFinalDiaOut formItem mmUnits">
+        
+                                            </div>
+                                        </div>
+                                        <div class="pressInnerMaxDef toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Inner Component δ
+                                            </h3>
+                                            <div class="pressInnerMaxDefOut formItem mmUnits">
+        
+                                            </div>
+                                        </div>
+                                        <div class="pressOuterMaxDef toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Outer Component δ
+                                            </h3>
+                                            <div class="pressOuterMaxDefOut formItem mmUnits">
+        
+                                            </div>
+                                        </div>
+                                        <div class="pressInnerMaxStress toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Inner Component Max σ
+                                            </h3>
+                                            <div class="pressInnerMaxStressOut formItem stressUnits">
+        
+                                            </div>
+                                        </div>
+                                        <div class="pressOuterMaxStress toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Outer Component Max σ
+                                            </h3>
+                                            <div class="pressOuterMaxStressOut formItem stressUnits">
+        
+                                            </div>
+                                        </div>
+                                        <div class="pressInterfacePressure toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Interface Pressure
+                                            </h3>
+                                            <div class="pressInterfacePressureOut formItem stressUnits">
+        
+                                            </div>
+                                        </div>
+                                        <div class="pressAssemForce toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Assembly Force
+                                            </h3>
+                                            <div class="pressAssmForceOut formItem forceUnits">
+        
+                                            </div>
+                                        </div>
+                                        <div class="pressTorqCap toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Torque Capacity
+                                            </h3>
+                                            <div class="pressTorqCapOut formItem torqueUnits">
+        
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="pressEndNote">
-                                    <p>Note: Min. and max. refer to the cases of minimum and maximum interference, respectively.</p>
+                                <div class="pressToolGraph">
+                                    <h3 class="pressAppTitle">
+                                        Graph
+                                    </h3>
+                                    <div class="pressGraph toolContainerBelowTitle">
+    
+                                    </div>
+                                </div>
+                                <div class="pressToolDetailedOutput">
+                                    <h3 class="pressAppTitle">
+                                        Detailed Outputs
+                                    </h3>
+                                    <div class="pressDetailedOutput toolContainerBelowTitle">
+                                        <div class="subTable pressTableLabels">
+                                            <div class=" row cellHeader">
+                                                <h3>Items</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Inner OD</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Inner ID</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Outer ID</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Outer OD</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Final Radius of Interface</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Final Ø of Interface</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Total δ</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Outer δ</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Inner δ</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Interface Pressure</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Max Outer Hoop σ</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Min Outer Hoop σ</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Max Inner Hoop σ</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Min Inner Hoop σ</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Assembly Force</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>Torque Capacity</h3>
+                                            </div>
+                                        </div>
+                                        <div class="subTable pressTableRoom">
+                                            <div class="row cellHeader">
+                                                <h3>Room Temperature (20°C)</h3>
+                                            </div>
+                                            <div class="row cellHeader">
+                                                <h3>Min.</h3>
+                                                <h3>Nom.</h3>
+                                                <h3>Max.</h3>
+                                            </div>
+                                            <div class="row otherTest">
+                                                <h3>1</h3>
+                                                <h3 class="pressTest">2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                        </div>
+                                        <div class="subTable pressTableCold">
+                                            <div class="row cellHeader">
+                                                <h3>Min. Temperature (-40°C)</h3>
+                                            </div>
+                                            <div class="row cellHeader">
+                                                <h3>Min.</h3>
+                                                <h3>Nom.</h3>
+                                                <h3>Max.</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                        </div>
+                                        <div class="subTable pressTableHot">
+                                            <div class="row cellHeader">
+                                                <h3>Max Temperature (120°C)</h3>
+                                            </div>
+                                            <div class="row cellHeader">
+                                                <h3>Min.</h3>
+                                                <h3>Nom.</h3>
+                                                <h3>Max.</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                            <div class="row">
+                                                <h3>1</h3>
+                                                <h3>2</h3>
+                                                <h3>3</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pressEndNote">
+                                        <p>Note: Min. and max. refer to the cases of minimum and maximum interference, respectively.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1152,7 +1211,7 @@ Designed and developed by:
     <!-- Load JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Font Awesome Kit -->
-
+    <script src="https://kit.fontawesome.com/acb50d146b.js" crossorigin="anonymous"></script>
     <!-- Load Flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!-- Main JS Site Script -->

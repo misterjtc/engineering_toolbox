@@ -3,13 +3,15 @@
     right: 0;
     bottom: 0;
     // display: none;
-    display: block;
-    overflow: scroll;
-    overflow-x: hidden;
-    .toolUnits {
-        // display: inline-block;
-        margin-left: -45px;
-        z-index: 9999999999;
+    // display: block;
+    // overflow: scroll;
+    // overflow-x: hidden;
+    .pressAppScrollContainer {
+        @include mainToolContainer();
+        right: 0;
+        bottom: 0;
+        overflow: scroll;
+        overflow-x: hidden;
     }
     .pressAppMain {
         height: 100%;
@@ -46,6 +48,14 @@
                             align-items: center;
                             // flex-wrap: wrap;
                         }
+                        .widenSelector {
+                            .appLabel {
+                                width: 68%;
+                            }
+                            .formItem {
+                                width: 70%;
+                            }
+                        }
                     }
                 }
             }
@@ -70,6 +80,7 @@
             @include toolContainer(97.5%, darkslategray);
             margin: 1.25% 0% 1.25% 0%;
             position: relative;
+            height: 90%;
             .pressAppTitle {
                 @include appTitle(darkslategray);
             }

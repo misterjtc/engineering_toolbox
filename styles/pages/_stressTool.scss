@@ -2,56 +2,54 @@
     @include mainToolContainer();
     display: none;
     // display: block;
-    .stressToolForm {
+    .stressToolInputs {
         @include toolContainer(28.5%, palegoldenrod);
+        .appTitle {
+            @include appTitle(palegoldenrod);
+        }
         .stressAdvOptions {
             h3 {
                 margin-bottom: 10px;
             }
         }
-        .stressDoWork {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
     }
     .stressToolGraph {
         @include toolContainer(38.5%, thistle);
-        #stressGraphSizer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 85%;
-            height: 45%;
+        .appTitle {
+            @include appTitle(thistle);
         }
     }
     .stressToolData {
         @include toolContainer(28.5%, steelBlue);
-        flex-direction: row;
-        #stressDataContainer {
-            width: 30%;
-            font-size: 1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 25px 0;
-            h4 {
-                // border-top: 1px solid grey;
-                margin: 5px 5px;
-            }
+        .appTitle {
+            @include appTitle(steelBlue);
         }
-        #strainDataContainer {
-            width: 30%;
-            font-size: 1rem;
-            display: flex;
-            flex-direction: column;
+        .toolContainerBelowTitle {
+            flex-direction: row;
             justify-content: center;
-            align-items: center;
-            margin: 25px 0;
-            h4 {
-                margin: 5px 5px;
+            .stressToolResult {
+                width: 100%;
+                .stressDataContainer {
+                    width: 40%;
+                    font-size: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 25px 15px;
+                    h4:last-child {
+                        border-bottom: 1px solid lightgrey;
+                    }
+                    h4 {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-top: 1px solid lightgrey;
+                        padding: 6px 5px;
+                    }
+                }
             }
         }
     }
