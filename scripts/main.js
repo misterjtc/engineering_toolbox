@@ -14,12 +14,12 @@ $(function(){
     // Trying the loader config
     // ********************************************************* */
     // This code display an image shortly while the page loads and then displays the dashbaord
-    // function showPage() {
-    //     document.getElementById("loader").style.display = "none";
-    //     document.getElementById("dashboard").style.opacity = "1";
-    //     $('#dashboard').fadeIn("slow");
-    // }
-    // setTimeout(showPage, 1500);
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("dashboard").style.opacity = "1";
+        $('#dashboard').fadeIn("slow");
+    }
+    setTimeout(showPage, 1500);
     // ********************************************************** */
     // JS for collapsing/expanding the nav bar when the user clicks the button
     // ********************************************************** */
@@ -710,8 +710,6 @@ $(function(){
                 pressInnerMaxDef = ((innerODRad * 2 * 1000) - finalInterfaceDia);
                 // Interface pressure
                 pressInterfacePressure = (pressInnerMaxDef + pressOuterMaxDef) / 2 / finalInterfaceRad / mainTerm;
-                console.log(interfacePressure);
-                console.log(pressInterfacePressure);
                 // Hoop stress
                 maxOuterHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure / (Math.pow(outerODRad*1000, 2) - Math.pow(finalInterfaceRad, 2)) * (1 + Math.pow(outerODRad*1000, 2) / Math.pow(finalInterfaceRad, 2));
                 minOuterHoopStress = Math.pow(finalInterfaceRad, 2) * pressInterfacePressure / (Math.pow(outerODRad*1000, 2) - Math.pow(finalInterfaceRad, 2)) * 2;
@@ -741,6 +739,131 @@ $(function(){
             }
         }        
     };
+    // Define graphing functions
+    function pressToolForceChart(pressMinAssemblyForce,pressNomAssemblyForce,pressMaxAssemblyForce,pressTempLabels) {
+        var ctx = document.getElementById('pressAssemblyForceChart');
+        var pressAssemblyForceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: pressTempLabels,
+                datasets: [{
+                    label: 'Min Stress',
+                    borderColor: 'rgba(25,60,130,0.3)',
+                    borderWidth: '3',
+                    data: pressMinAssemblyForce,
+                    fill: false,
+                }, {
+                    label: 'Nom Stress',
+                    borderColor: 'rgba(42,203,52,0.3)',
+                    borderWidth: '3',
+                    data: pressNomAssemblyForce,
+                    fill: false,
+                }, {
+                    label: 'Max Stress',
+                    borderColor: 'rgba(15,34,65,0.3)',
+                    borderWidth: '3',
+                    data: pressMaxAssemblyForce,
+                    fill: false,
+                }]
+            },
+            options: {
+                // responsive: true,
+                // maintainAspectRatio: false,
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        // fontColor: 'rgb(255,99,132)',
+                        boxWidth: 50,
+                        fontSize: 14,
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Assembly Force',
+                    fontSize: '18',
+                },
+                scales: {
+                    xAxes: [{
+                        // type: 'linear',
+                        position: 'bottom',
+                        scaleLabel: {
+                            display: 'true',
+                            labelString: 'Temperature [°C]'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: 'true',
+                            labelString: 'Assembly Force [N]'
+                        }
+                    }],
+                }
+            }
+        });
+    }
+    function pressToolTorqueChart(pressMinAssemblyTorque,pressNomAssemblyTorque,pressMaxAssemblyTorque,pressTempLabels) {
+        var ctx = document.getElementById('pressAssemblyTorqueChart');
+        var pressTorqueChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: pressTempLabels,
+                datasets: [{
+                    label: 'Min Stress',
+                    borderColor: 'rgba(25,60,130,0.3)',
+                    borderWidth: '3',
+                    data: pressMinAssemblyTorque,
+                    fill: false,
+                }, {
+                    label: 'Nom Stress',
+                    borderColor: 'rgba(42,203,52,0.3)',
+                    borderWidth: '3',
+                    data: pressNomAssemblyTorque,
+                    fill: false,
+                }, {
+                    label: 'Max Stress',
+                    borderColor: 'rgba(15,34,65,0.3)',
+                    borderWidth: '3',
+                    data: pressMaxAssemblyTorque,
+                    fill: false,
+                }]
+            },
+            options: {
+                // responsive: true,
+                // maintainAspectRatio: false,
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        // fontColor: 'rgb(255,99,132)',
+                        boxWidth: 50,
+                        fontSize: 14,
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Assembly Torque Capacity',
+                    fontSize: '18',
+                },
+                scales: {
+                    xAxes: [{
+                        // type: 'linear',
+                        position: 'bottom',
+                        scaleLabel: {
+                            display: 'true',
+                            labelString: 'Temperature [°C]'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: 'true',
+                            labelString: 'Torque [N·m]'
+                        }
+                    }],
+                }
+            }
+        });
+    }
     $(".pressButton").on("click", function(){
         // Define variables for storing user inputs
         // Inner component inputs
@@ -771,11 +894,20 @@ $(function(){
         var innerIDRad = innerInterfaceID / 2000;
         var outerODRad = outerInterfaceOD / 2000;
         var outerIDRad = outerInterfaceID / 2000;
+        // Define arrays for storing data for graphs
+        var pressTempLabels = [pressMinTemp,pressRoomTemp,pressMaxTemp];
+        var pressMinAssemblyForce = [];
+        var pressNomAssemblyForce = [];
+        var pressMaxAssemblyForce = [];
+        var pressMinAssemblyTorque = [];
+        var pressNomAssemblyTorque = [];
+        var pressMaxAssemblyTorque = [];
         // Do the main press tool calcs 
         // Calcs for room temperature
         pressToolMainCalc(innerODRad, innerIDRad, outerIDRad, outerODRad, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableRoom", 2);
+        pressNomAssemblyForce[1] = pressAssemblyForce;
+        pressNomAssemblyTorque[1] = pressTorqueCapacity;
         // Display outputs for the main table
-        // console.log(finalInterfaceRad);
         $('.pressFinalDiaOut').text(finalInterfaceDia.toFixed(3));
         $('.pressInnerMaxDefOut').text(pressInnerMaxDef.toFixed(3));
         $('.pressOuterMaxDefOut').text(pressOuterMaxDef.toFixed(3));
@@ -802,7 +934,11 @@ $(function(){
         var outerIDRadMin = outerInterfaceIDMin / 2000;
         var outerODRadMin = outerInterfaceODMin / 2000;
         pressToolMainCalc(innerODRadMin, innerIDRadMin, outerIDRadMin, outerODRadMin, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableRoom", 1);
+        pressMinAssemblyForce[1] = pressAssemblyForce;
+        pressMinAssemblyTorque[1] = pressTorqueCapacity;
         pressToolMainCalc(innerODRadMax, innerIDRadMax, outerIDRadMax, outerODRadMax, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableRoom", 3);
+        pressMaxAssemblyForce[1] = pressAssemblyForce;
+        pressMaxAssemblyTorque[1] = pressTorqueCapacity;
         // Calcs for min temperature
         var innerODRadColdMin = (innerInterfaceODMin * (1 + innerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
         var innerODRadCold = (innerInterfaceOD * (1 + innerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
@@ -817,8 +953,14 @@ $(function(){
         var outerODRadCold = (outerInterfaceOD * (1 + outerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
         var outerODRadColdMax = (outerInterfaceODMax * (1 + outerThermExp * (pressMinTemp - pressRoomTemp)) / 2000);
         pressToolMainCalc(innerODRadColdMax, innerIDRadColdMax, outerIDRadColdMax, outerODRadColdMax, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableCold", 3);
+        pressMaxAssemblyForce[0] = pressAssemblyForce;
+        pressMaxAssemblyTorque[0] = pressTorqueCapacity;
         pressToolMainCalc(innerODRadCold, innerIDRadCold, outerIDRadCold, outerODRadCold, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableCold", 2);
+        pressNomAssemblyForce[0] = pressAssemblyForce;
+        pressNomAssemblyTorque[0] = pressTorqueCapacity;
         pressToolMainCalc(innerODRadColdMin, innerIDRadColdMin, outerIDRadColdMin, outerODRadColdMin, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableCold", 1);
+        pressMinAssemblyForce[0] = pressAssemblyForce;
+        pressMinAssemblyTorque[0] = pressTorqueCapacity;
         // Calcs for max temperature
         var innerODRadHotMin = (innerInterfaceODMin * (1 + innerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
         var innerODRadHot = (innerInterfaceOD * (1 + innerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
@@ -833,9 +975,17 @@ $(function(){
         var outerODRadHot = (outerInterfaceOD * (1 + outerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
         var outerODRadHotMax = (outerInterfaceODMax * (1 + outerThermExp * (pressMaxTemp - pressRoomTemp)) / 2000);
         pressToolMainCalc(innerODRadHotMax, innerIDRadHotMax, outerIDRadHotMax, outerODRadHotMax, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableHot", 3);
-        pressToolMainCalc(innerODRadHot, innerIDRadHot, outerIDRadHot, outerODRadHot, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableHot", 2);
+        pressMaxAssemblyForce[2] = pressAssemblyForce;
+        pressMaxAssemblyTorque[2] = pressTorqueCapacity;
+        pressToolMainCalc(innerODRadHot, innerIDRadHot, outerIDRadHot, outerODRadHot, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength,pressInterfaceFriction, ".pressTableHot", 2);
+        pressNomAssemblyForce[2] = pressAssemblyForce;
+        pressNomAssemblyTorque[2] = pressTorqueCapacity;
         pressToolMainCalc(innerODRadHotMin, innerIDRadHotMin, outerIDRadHotMin, outerODRadHotMin, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, ".pressTableHot", 1);
-    });
+        pressMinAssemblyForce[2] = pressAssemblyForce;
+        pressMinAssemblyTorque[2] = pressTorqueCapacity;
+        // graph the data
+        pressToolForceChart(pressMinAssemblyForce, pressNomAssemblyForce, pressMaxAssemblyForce, pressTempLabels);
+        pressToolTorqueChart(pressMinAssemblyTorque,pressNomAssemblyTorque,pressMaxAssemblyTorque,pressTempLabels)
     // ********************************************************** */
     // Smooth Scroll
     // ********************************************************** */
@@ -888,5 +1038,5 @@ $(function(){
           speed: 600
         });
     });
+    });
 });
-

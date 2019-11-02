@@ -2,10 +2,7 @@
     @include mainToolContainer();
     right: 0;
     bottom: 0;
-    // display: none;
-    // display: block;
-    // overflow: scroll;
-    // overflow-x: hidden;
+    display: none;
     .pressAppScrollContainer {
         @include mainToolContainer();
         right: 0;
@@ -75,6 +72,9 @@
             .pressAppTitle {
                 @include appTitle(goldenrod);
             }
+            .pressGraph {
+                width: 90%;
+            }
         }
         .pressToolDetailedOutput {
             @include toolContainer(97.5%, darkslategray);
@@ -86,8 +86,8 @@
             }
             .pressDetailedOutput {
                 flex-direction: row;
-                align-items: flex-end;
-                margin-bottom: 50px;
+                justify-content: space-evenly;
+                align-items: center;
                 .subTable {
                     display: flex;
                     justify-content: center;

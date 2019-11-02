@@ -641,7 +641,6 @@ aside::-webkit-scrollbar {
       align-items: center;
       position: relative; }
       .centralContent .contentSwitch .mainContent .loader {
-        display: none;
         width: 250px; }
         .centralContent .contentSwitch .mainContent .loader img {
           width: 100%; }
@@ -1638,7 +1637,8 @@ footer {
   overflow: scroll;
   overflow-x: hidden;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+  display: none; }
   #pressToolApp .pressAppScrollContainer {
     position: absolute;
     background: #dddddd;
@@ -1815,6 +1815,8 @@ footer {
         -ms-flex-align: center;
         align-items: center;
         padding-left: 15px; }
+      #pressToolApp .pressAppMain .pressToolGraph .pressGraph {
+        width: 90%; }
     #pressToolApp .pressAppMain .pressToolDetailedOutput {
       background: white;
       height: 95%;
@@ -1858,10 +1860,12 @@ footer {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
-        margin-bottom: 50px; }
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
         #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable {
           display: -webkit-box;
           display: -ms-flexbox;
