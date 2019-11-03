@@ -198,14 +198,12 @@ Designed and developed by:
                     <!--            The Main Dashboard Starts here           -->
                     <!-- *************************************************** -->
                     <div id="dashboard" class="dashboard grid">
-                        <div class="contentItem1 dashBox item size1">
-                            <div class="item-content ronsQuotes">
-                                <div class="contentHeader">
-                                    <h3>
-                                        Inspirational Quotes
-                                    </h3>
-                                </div>
-                                <div class="quoteMain">
+                        <div class="mainDashboard">
+                            <div class="contentItem1 dashBox inspoQuotes">
+                                <h3 class="appTitle">
+                                    Inspirational Quotes
+                                </h3>
+                                <div class="toolContainerBelowTitle">
                                     <div class="quotePic">
                                         <img src="./assets/ronsvibes.jpg" alt="These are random inspiration images from unsplash">
                                     </div>
@@ -219,15 +217,11 @@ Designed and developed by:
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="contentItem2 dashBox item size1">
-                            <div class="item-content popularApps">
-                                <div class="contentHeader">
-                                    <h3>
-                                        Engineering Apps
-                                    </h3>
-                                </div>
-                                <div class="popularApps">
+                            <div class="contentItem2 dashBox bestTools">
+                                <h3 class="appTitle">
+                                    Engineering Apps
+                                </h3>
+                                <div class="toolContainerBelowTitle">
                                     <a href="" class="popApp popApp1" onclick="return false">
                                         <i class="fas fa-wave-sine"></i>
                                         <p>
@@ -260,26 +254,18 @@ Designed and developed by:
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="contentItem3 dashBox autoFeed item size5">
-                            <div class="item-content">
-                                <div class="contentHeader">
-                                    <h3>
-                                        Twitter Feed
-                                    </h3>
-                                </div>
-                                <div class="feedContent">
+                            <div class="contentItem3 dashBox autoFeed">
+                                <h3 class="appTitle">
+                                    Twitter Feed
+                                </h3>
+                                <div class="toolContainerBelowTitle feedContent">
                                     <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw">Tweets by realDonaldTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                                 </div>
                             </div>
-                        </div>
-                        <div class="contentItem4 dashBox item size1 katsPics">
-                            <div class="item-content">
-                                <div class="contentHeader">
-                                    <h3>
-                                        Kool Pics
-                                    </h3>
-                                </div>
+                            <div class="contentItem4 dashBox dashHero">
+                                <h3 class="appTitle">
+                                    Kool Pics
+                                </h3>
                                 <div class="koolHero">
                                     <img src="./assets/test1.jpg" alt="" class="koolCell">
                                     <img src="./assets/test2.jpg" alt="" class="koolCell">
@@ -288,60 +274,24 @@ Designed and developed by:
                                     <img src="/assets/test5.jpg" alt="" class="koolCell">
                                 </div>
                             </div>
-                        </div>
-                        <div class="contentItem5 dashBox item size1 eventList">
-                            <div class="item-content">
-                                <div class="contentHeader">
-                                    <h3>
-                                        Magnificent Events
-                                    </h3>
-                                </div>
+                            <div class="contentItem5 dashBox dashCalendar">
+                                <h3 class="appTitle">
+                                    Magnificent Events
+                                </h3>
                                 <div class="cooksCalendar">
                                     <iframe src="https://outlook.office365.com/calendar/group/litens.onmicrosoft.com/team_global_pe_hybrid_systems/view/day" frameborder="0"></iframe>
                                 </div>
                             </div>
-                        </div>
-                        <div class="contentItem6 dashBox item size2">
-                            <div class="item-content">
-                                <div class="contentHeader">
-                                    <h3>
-                                        Important Forms
-                                    </h3>
-                                </div>
-                                <div class="anotherApp">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contentItem7 dashBox item size1">
-                            <div class="item-content">
-                                <div class="contentHeader">
-                                    <h3>
-                                        Another Important Tool 4
-                                    </h3>
-                                </div>
-                                <div class="anotherApp">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contentItem8 dashBox item size4">
-                            <div class="item-content">
-                                <div class="contentHeader">
-                                    <h3>
-                                        Another Important Tool 5
-                                    </h3>
-                                </div>
-                                <div class="anotherApp">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contentItem9 dashBox item size4">
-                            <div class="item-content">
-                                <div class="contentHeader">
-                                    <h3>
-                                        Another Important Tool 6
-                                    </h3>
-                                </div>
-                                <div class="anotherApp">
+                            <div class="contentItem6 dashBox importantForms">
+                                <h3 class="appTitle">
+                                    Important Forms
+                                </h3>
+                                <div class="toolContainerBelowTitle">
+                                    <div>
+                                        <h3>
+                                            Some Text
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1240,16 +1190,12 @@ Designed and developed by:
 <!-- *************************************************** -->
     <!-- Load JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Main JS Site Script -->
+    <script src="./scripts/main.js"></script>
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/acb50d146b.js" crossorigin="anonymous"></script>
     <!-- Load Flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <!-- Main JS Site Script -->
-    <script src="./scripts/main.js"></script>
-    <!-- Load Muuri and Dependencies -->
-    <script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
-    <script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
-    <script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
     <!-- Load chart.js dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"></script>

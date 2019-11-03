@@ -33,3 +33,17 @@
     border-radius: 10px;
     border: 2px solid $borderColour;
 }
+@mixin dashContainer($width, $height, $borderColour) {
+    background: white;
+    height: 95%;
+    width: $width;
+    height: $height;
+    margin: 0 0.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem !important;
+    border-radius: 10px;
+    border: 2px solid $borderColour;
+}

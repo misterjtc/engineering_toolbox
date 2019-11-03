@@ -7,7 +7,7 @@ $(function(){
     var $headerHeight = $('header').css('height');
     var $footerHeight = $("footer").height();
     $('.centralContent').css('margin-top', $headerHeight);
-    $('.grid').css('margin-bottom', $footerHeight);
+    // $('.grid').css('margin-bottom', $footerHeight);
     // Show dashboard as selected on site load
     $(".dashSelector").addClass("litLink");
     //********************************************************** */
@@ -114,14 +114,6 @@ $(function(){
     // ********************************************************** */
     // Loading for various tools
     // ********************************************************** */
-    // $(".tvTool").on("click", function(){
-    //     $("#main").load("tvTool.html");
-    //     $(".headToolSwitch").html('Torsional Vibration Calculator');
-    // });
-    $(".purReq").on("click", function(){
-        $("#main").load("purReq.html");
-        $(".headToolSwitch").html('Purchase Requisitions');
-    });
     // JS for styling tool items when they are selected
     $(".subLink").on("click", function(){
         $(".subLink").removeClass("litLink");
@@ -248,13 +240,6 @@ $(function(){
     });
     }
     getQuote();
-    // ********************************************************** */
-    // Muuri draggable dashboard content
-    // ********************************************************** */
-    var grid = new Muuri('.grid', {dragEnabled: true});
-    window.addEventListener('load', function () {
-        grid.refreshItems().layout();
-      });
     // ********************************************************** */
     // Flickity config for Kathys Kool Pics
     // ********************************************************** */

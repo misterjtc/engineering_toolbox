@@ -3,6 +3,7 @@
     width: calc(100% - $asideWidth);
     margin-left: $asideWidth;
     margin-top: 125.5px;
+    overflow: hidden;
     .contentSwitch {
         height: 100%;
         background: $powerApps;
