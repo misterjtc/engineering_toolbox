@@ -899,16 +899,18 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     #dashboard .mainDashboard .dashBox {
-      margin: 1% 0 !important; }
+      margin: 1% 0.5% !important; }
+    #dashboard .mainDashboard .dashBox:nth-child(n+4) {
+      margin-top: 0 !important; }
     #dashboard .mainDashboard .inspoQuotes {
       background: white;
       height: 95%;
@@ -1026,8 +1028,12 @@ footer {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
-        flex-flow: row wrap; }
+        flex-flow: row wrap;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly; }
         #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp {
+          width: 33.33%;
           cursor: pointer;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -1064,8 +1070,8 @@ footer {
     #dashboard .mainDashboard .autoFeed {
       background: white;
       height: 95%;
-      width: 32%;
-      height: 400px;
+      width: 32.5%;
+      height: 600px;
       margin: 0 0.5%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1170,8 +1176,8 @@ footer {
     #dashboard .mainDashboard .dashCalendar {
       background: white;
       height: 95%;
-      width: 32%;
-      height: 400px;
+      width: 64.5%;
+      height: 600px;
       margin: 0 0.5%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1204,17 +1210,6 @@ footer {
         align-items: center;
         padding-left: 15px; }
       #dashboard .mainDashboard .dashCalendar .cooksCalendar {
-        width: 100%;
-        height: 85%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
         margin: 15px 0 0 0;
         padding: 0 15px 15px 15px; }
         #dashboard .mainDashboard .dashCalendar .cooksCalendar iframe {
@@ -1921,6 +1916,10 @@ footer {
         align-items: center;
         padding-left: 15px; }
       #pressToolApp .pressAppMain .pressToolGraph .pressGraph {
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        margin: 0;
         width: 90%; }
     #pressToolApp .pressAppMain .pressToolDetailedOutput {
       background: white;
@@ -2013,3 +2012,92 @@ footer {
         bottom: -10px; }
         #pressToolApp .pressAppMain .pressToolDetailedOutput .pressEndNote p {
           font-size: 1.2rem; }
+
+#arcToolApp {
+  position: absolute;
+  background: #dddddd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  overflow: scroll;
+  overflow-x: hidden;
+  display: none; }
+  #arcToolApp .arcAppMain .arcAppInputs {
+    background: white;
+    height: 95%;
+    width: 48%;
+    margin: 0 0.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.7rem !important;
+    border-radius: 10px;
+    border: 2px solid lemonchiffon; }
+    #arcToolApp .arcAppMain .arcAppInputs .appTitle {
+      width: 100%;
+      height: 55px;
+      border-bottom: 2px solid lemonchiffon;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-left: 15px; }
+  #arcToolApp .arcAppMain .arcAppOutputs {
+    background: white;
+    height: 95%;
+    width: 48%;
+    margin: 0 0.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.7rem !important;
+    border-radius: 10px;
+    border: 2px solid deepskyblue; }
+    #arcToolApp .arcAppMain .arcAppOutputs .appTitle {
+      width: 100%;
+      height: 55px;
+      border-bottom: 2px solid deepskyblue;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-left: 15px; }
+    #arcToolApp .arcAppMain .arcAppOutputs .arcToolOutput {
+      height: 25%;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; }

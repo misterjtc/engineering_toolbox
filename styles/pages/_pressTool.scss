@@ -73,6 +73,8 @@
                 @include appTitle(goldenrod);
             }
             .pressGraph {
+                justify-content: space-evenly;
+                margin: 0;
                 width: 90%;
             }
         }

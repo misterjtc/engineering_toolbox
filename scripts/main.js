@@ -139,7 +139,7 @@ $(function(){
     });
     $("#tvTool").on("click", function(){
         $(".headToolSwitch").html('Torsional Vibration Calculator');
-        $( "#dashboard, #stressToolApp , #boltToolApp, #pressToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #stressToolApp , #boltToolApp, #pressToolApp, #arcToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#tvToolApp" ).fadeIn( "slow", function() {
@@ -148,7 +148,7 @@ $(function(){
     });
     $("#stressGen").on("click", function(){
         $(".headToolSwitch").html('Stress Strain Generator');
-        $( "#dashboard, #tvToolApp, #boltToolApp, #pressToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #boltToolApp, #pressToolApp, #arcToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#stressToolApp" ).fadeIn( "slow", function() {
@@ -157,25 +157,25 @@ $(function(){
     });
     $("#jointTool").on("click", function(){
         $(".headToolSwitch").html('Bolted Joint Calculator');
-        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #arcToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#boltToolApp" ).fadeIn( "slow", function() {
             // Animation complete
         });
     });
-    $("#jointTool").on("click", function(){
-        $(".headToolSwitch").html('Bolted Joint Calculator');
-        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp" ).fadeOut( "slow", function() {
+    $("#arcTool").on("click", function(){
+        $(".headToolSwitch").html('Arc Length Calculator');
+        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #boltToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
-        $( "#boltToolApp" ).fadeIn( "slow", function() {
+        $( "#arcToolApp" ).fadeIn( "slow", function() {
             // Animation complete
         });
     });
     $("#pressTool").on("click", function(){
         $(".headToolSwitch").html('Press-Fit Calculator');
-        $( "#dashboard, #tvToolApp, #stressToolApp, #jointToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #stressToolApp, #jointToolApp, #arcToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#pressToolApp" ).fadeIn( "slow", function() {
@@ -645,6 +645,65 @@ $(function(){
         $(this).fadeOut(300);
     });
     // ********************************************************** */
+    // Arc legnth tool graphs and calculations
+    // ********************************************************** */
+    var arcGraphData = [];
+    function arcToolDonut(arcGraphData) {
+        var ctx = document.getElementById('arcToolDonut');
+        var myDoughnutChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: arcGraphData,
+                    backgroundColor: [
+                        'rgba(25,60,130,0.5)', 
+                        'rgba(62,77,84,0.1)'
+                    ],
+                    borderColor: [
+                        'rgba(25,60,130,0.5)', 
+                        'rgba(62,77,84,0.1)'
+                    ],
+                    borderWidth: [
+                        '1',
+                        '1',
+                    ],
+                    label: 'Arc Data'
+                }],
+                labels: [
+                    'Arc Length',
+                    'Remaining',
+                ],
+            },
+            options: {
+                legend: {
+                    display: false,
+                    position: 'top',
+                },
+                title: {
+                    display: false,
+                    text: 'Arc Length'
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                },
+                cutoutPercentage: 90, 
+            }
+        });
+    };
+    $(".arcCalc").on("click", function(){
+        arcGraphData = [];
+        var arcToolRadius = parseFloat($('.arcRadius').val());
+        var arcToolAngle = parseFloat($('.arcAngle').val());
+        var arcLength = (arcToolAngle / 360) * (2 * Math.PI * arcToolRadius);
+        var totalArcLength = 2 * Math.PI * arcToolRadius;
+        var remainingArcLength = totalArcLength - arcLength;
+        arcGraphData.push(arcLength.toFixed(2), remainingArcLength.toFixed(2));
+        $('.arcLengthOut').text(arcLength.toFixed(2));
+        console.log(arcGraphData);
+        arcToolDonut(arcGraphData);
+    });
+    // ********************************************************** */
     // Press Tool graphs and calcualtions
     // ********************************************************** */
     // Define global variables for the presstool
@@ -971,6 +1030,7 @@ $(function(){
         // graph the data
         pressToolForceChart(pressMinAssemblyForce, pressNomAssemblyForce, pressMaxAssemblyForce, pressTempLabels);
         pressToolTorqueChart(pressMinAssemblyTorque,pressNomAssemblyTorque,pressMaxAssemblyTorque,pressTempLabels)
+    });
     // ********************************************************** */
     // Smooth Scroll
     // ********************************************************** */
@@ -1023,5 +1083,12 @@ $(function(){
           speed: 600
         });
     });
+    $('.dashboardMainScroll a').on('click', function() {
+        // event.preventDefault();
+        $.smoothScroll({
+          scrollElement: $('.mainDashboard'),
+          scrollTarget: '.autoFeed',
+          speed: 600
+        });
     });
 });

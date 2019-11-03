@@ -60,6 +60,9 @@ Designed and developed by:
                             <a  id="jointTool" class="jointTool subLink" href="#" onclick="return false">Bolted Joint Calculator</a>
                         </li>
                         <li>
+                            <a id="arcTool" class="arcLengthTool subLink" href="#" onclick="return false">Arc Length Calculator</a>
+                        </li>
+                        <li>
                             <a class="basSpringTool subLink" href="#" onclick="return false">Arc Spring Designer</a>
                         </li>
                     </ul>
@@ -198,6 +201,9 @@ Designed and developed by:
                     <!--            The Main Dashboard Starts here           -->
                     <!-- *************************************************** -->
                     <div id="dashboard" class="dashboard grid">
+                        <div class="scrollAid dashboardMainScroll">
+                            <a href="" onclick="return false"><i class="fas fa-angle-down"></i></a>
+                        </div>
                         <div class="mainDashboard">
                             <div class="contentItem1 dashBox inspoQuotes">
                                 <h3 class="appTitle">
@@ -223,7 +229,7 @@ Designed and developed by:
                                 </h3>
                                 <div class="toolContainerBelowTitle">
                                     <a href="" class="popApp popApp1" onclick="return false">
-                                        <i class="fas fa-wave-sine"></i>
+                                        <i class="fas fa-wave-square"></i>
                                         <p>
                                             Torsional Vibration
                                         </p>
@@ -247,39 +253,11 @@ Designed and developed by:
                                         </p>
                                     </a>
                                     <a href="" class="popApp popApp5" onclick="return false">
-                                        <i class="far fa-scrubber"></i>
+                                        <i class="fas fa-ring"></i>
                                         <p>
                                             Press-fits
                                         </p>
                                     </a>
-                                </div>
-                            </div>
-                            <div class="contentItem3 dashBox autoFeed">
-                                <h3 class="appTitle">
-                                    Twitter Feed
-                                </h3>
-                                <div class="toolContainerBelowTitle feedContent">
-                                    <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw">Tweets by realDonaldTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                </div>
-                            </div>
-                            <div class="contentItem4 dashBox dashHero">
-                                <h3 class="appTitle">
-                                    Kool Pics
-                                </h3>
-                                <div class="koolHero">
-                                    <img src="./assets/test1.jpg" alt="" class="koolCell">
-                                    <img src="./assets/test2.jpg" alt="" class="koolCell">
-                                    <img src="./assets/test3.jpg" alt="" class="koolCell">
-                                    <img src="./assets/test4.jpg" alt="" class="koolCell">
-                                    <img src="/assets/test5.jpg" alt="" class="koolCell">
-                                </div>
-                            </div>
-                            <div class="contentItem5 dashBox dashCalendar">
-                                <h3 class="appTitle">
-                                    Magnificent Events
-                                </h3>
-                                <div class="cooksCalendar">
-                                    <iframe src="https://outlook.office365.com/calendar/group/litens.onmicrosoft.com/team_global_pe_hybrid_systems/view/day" frameborder="0"></iframe>
                                 </div>
                             </div>
                             <div class="contentItem6 dashBox importantForms">
@@ -292,6 +270,34 @@ Designed and developed by:
                                             Some Text
                                         </h3>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="contentItem3 dashBox autoFeed">
+                                <h3 class="appTitle">
+                                    Twitter Feed
+                                </h3>
+                                <div class="toolContainerBelowTitle feedContent">
+                                    <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw">Tweets by realDonaldTrump</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </div>
+                            </div>
+                            <div class="contentItem5 dashBox dashCalendar">
+                                <h3 class="appTitle">
+                                    Day At-a-Glance
+                                </h3>
+                                <div class="cooksCalendar toolContainerBelowTitle">
+                                    <iframe src="https://outlook.office365.com/calendar/group/litens.onmicrosoft.com/team_global_pe_hybrid_systems/view/day" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="contentItem4 dashBox dashHero">
+                                <h3 class="appTitle">
+                                    Kool Pics
+                                </h3>
+                                <div class="koolHero">
+                                    <img src="./assets/test1.jpg" alt="" class="koolCell">
+                                    <img src="./assets/test2.jpg" alt="" class="koolCell">
+                                    <img src="./assets/test3.jpg" alt="" class="koolCell">
+                                    <img src="./assets/test4.jpg" alt="" class="koolCell">
+                                    <img src="/assets/test5.jpg" alt="" class="koolCell">
                                 </div>
                             </div>
                         </div>
@@ -1141,6 +1147,51 @@ Designed and developed by:
                                     </div>
                                     <div class="pressEndNote">
                                         <p>Note: Min. and max. refer to the cases of minimum and maximum interference, respectively.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- *************************************************** -->
+                    <!--             Cylindrical Press-fit Tool              -->
+                    <!-- *************************************************** -->
+                    <div id="arcToolApp">
+                        <div class="arcAppMain appMain">
+                            <div class="arcAppInputs">
+                                <h3 class="appTitle">
+                                    Inputs
+                                </h3>
+                                <form class="toolContainerBelowTitle">
+                                    <div class="toolOutputPackage">
+                                        <label for="arcAngle" class="appLabel">Arc Angle</label>
+                                        <input name="arcAngle" type="number" class="arcAngle formItem" value="30">
+                                        <span class="wideToolUnits">°</span>
+                                    </div>
+                                    <div class="toolOutputPackage">
+                                        <label for="arcRadius" class="appLabel">Arc Radius</label>
+                                        <input name="arcAngle" type="number" class="arcRadius formItem" value="58">
+                                        <span class="wideToolUnits">mm</span>
+                                    </div>
+                                    <button type="button" class="calcButton arcCalc">Calculate!</button>
+                                </form>
+                            </div>
+                            <div class="arcAppOutputs">
+                                <h3 class="appTitle">
+                                    Outputs
+                                </h3>
+                                <div class="toolContainerBelowTitle">
+                                    <div class="arcToolOutput toolOutputPackage">
+                                        <div class="toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Arc Length
+                                            </h3>
+                                            <div class="arcLengthOut formItem mmUnits">
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="arcToolGraph toolOutputPackage">
+                                        <canvas id="arcToolDonut"></canvas>
                                     </div>
                                 </div>
                             </div>

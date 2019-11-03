@@ -1,0 +1,22 @@
+#arcToolApp {
+    @include mainToolContainer();
+    display: none;
+    .arcAppMain {
+        .arcAppInputs {
+            @include toolContainer(48%, lemonchiffon);
+            .appTitle {
+                @include appTitle(lemonchiffon);
+            }
+        }
+        .arcAppOutputs {
+            @include toolContainer(48%, deepskyblue);
+            .appTitle {
+                @include appTitle(deepskyblue);
+            }
+            .arcToolOutput {
+                height: 25%;
+                justify-content: flex-start;
+            }
+        }
+    }
+}

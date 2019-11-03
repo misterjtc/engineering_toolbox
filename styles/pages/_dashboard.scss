@@ -9,11 +9,14 @@
     // display: none;
     .mainDashboard {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         .dashBox {
-            margin: 1% 0 !important;
+            margin: 1% 0.5% !important;
+        }
+        .dashBox:nth-child(n+4) {
+            margin-top: 0 !important;
         }
         .inspoQuotes {
             @include dashContainer(32%, 400px, royalBlue);
@@ -62,7 +65,9 @@
             }
             .toolContainerBelowTitle {
                 flex-flow: row wrap;
+                justify-content: space-evenly;
                 .popApp {
+                    width: 33.33%;
                     cursor: pointer;
                     display: flex;
                     flex-direction: column;
@@ -102,7 +107,7 @@
             }
         }
         .autoFeed {
-            @include dashContainer(32%, 400px, salmon);
+            @include dashContainer(32.5%, 600px, salmon);
             .appTitle {
                 @include appTitle(salmon);
             }
@@ -160,22 +165,19 @@
             }
         }
         .dashCalendar {
-            @include dashContainer(32%, 400px, aliceblue);
+            @include dashContainer(64.5%, 600px, aliceblue);
             .appTitle {
                 @include appTitle(aliceblue);
             }
             .cooksCalendar {
-                width: 100%;
-                height: 85%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 margin: 15px 0 0 0;
                 padding: 0 15px 15px 15px;
+                // overflow: scroll;
                 iframe {
                     width: 100%;
                     height: 100%;
                     border-radius: 10px;
+                    // margin-top: 25px;
                 }
             }
         }
