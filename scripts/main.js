@@ -1086,7 +1086,7 @@ $(function(){
     $('.dashboardMainScroll a').on('click', function() {
         // event.preventDefault();
         $.smoothScroll({
-          scrollElement: $('.mainDashboard'),
+          scrollElement: $('.dashScrollContainer'),
           scrollTarget: '.autoFeed',
           speed: 600
         });

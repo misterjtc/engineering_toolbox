@@ -888,13 +888,23 @@ footer {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  overflow: scroll;
-  overflow-x: hidden;
   right: 0;
   bottom: 0;
-  overflow: scroll;
-  overflow-x: hidden;
   opacity: 0; }
+  #dashboard .dashScrollContainer {
+    position: absolute;
+    background: #dddddd;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    overflow-x: hidden; }
   #dashboard .mainDashboard {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1263,8 +1273,6 @@ footer {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  overflow: scroll;
-  overflow-x: hidden;
   display: none;
   overflow-y: hidden; }
   #tvToolApp .tvToolMain .tvToolInputs {
@@ -1415,8 +1423,6 @@ footer {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  overflow: scroll;
-  overflow-x: hidden;
   display: none; }
   #stressToolApp .stressToolInputs {
     background: white;
@@ -1593,8 +1599,6 @@ footer {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  overflow: scroll;
-  overflow-x: hidden;
   display: none;
   overflow-y: hidden; }
   #boltToolApp .boltAppMain {
@@ -1734,8 +1738,6 @@ footer {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  overflow: scroll;
-  overflow-x: hidden;
   right: 0;
   bottom: 0;
   display: none; }
@@ -1749,8 +1751,6 @@ footer {
     right: 0;
     bottom: 0;
     margin: 0 auto;
-    overflow: scroll;
-    overflow-x: hidden;
     right: 0;
     bottom: 0;
     overflow: scroll;
@@ -2023,8 +2023,6 @@ footer {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  overflow: scroll;
-  overflow-x: hidden;
   display: none; }
   #arcToolApp .arcAppMain .arcAppInputs {
     background: white;

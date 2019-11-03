@@ -3,10 +3,15 @@
     @include mainToolContainer();
     right: 0;
     bottom: 0;
-    overflow: scroll;
-    overflow-x: hidden;
     opacity: 0;
     // display: none;
+    .dashScrollContainer {
+        @include mainToolContainer();
+        right: 0;
+        bottom: 0;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
     .mainDashboard {
         display: flex;
         justify-content: center;
