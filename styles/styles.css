@@ -2099,3 +2099,115 @@ footer {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start; }
+
+#stackupToolApp {
+  position: absolute;
+  background: #dddddd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  right: 0;
+  bottom: 0;
+  display: none; }
+  #stackupToolApp .stackupScrollContainer {
+    position: absolute;
+    background: #dddddd;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    overflow-x: hidden; }
+    #stackupToolApp .stackupScrollContainer .stackupAppMain {
+      height: 100%;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppInputs {
+        background: white;
+        height: 95%;
+        width: 64%;
+        margin: 0 0.5%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 1.7rem !important;
+        border-radius: 10px;
+        border: 2px solid tomato; }
+        #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppInputs .appTitle {
+          width: 100%;
+          height: 55px;
+          border-bottom: 2px solid tomato;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          padding-left: 15px; }
+        #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppInputs .stackupPack {
+          width: 100%; }
+      #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppOutputs {
+        background: white;
+        height: 95%;
+        width: 32%;
+        margin: 0 0.5%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 1.7rem !important;
+        border-radius: 10px;
+        border: 2px solid springgreen; }
+        #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppOutputs .appTitle {
+          width: 100%;
+          height: 55px;
+          border-bottom: 2px solid springgreen;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          padding-left: 15px; }

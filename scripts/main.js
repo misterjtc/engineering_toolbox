@@ -133,13 +133,13 @@ $(function(){
         $( "#dashboard" ).fadeIn( "slow", function() {
             // Animation complete
         });
-        $( "#tvToolApp, #stressToolApp, #boltToolApp, #pressToolApp" ).fadeOut( "slow", function() {
+        $( "#tvToolApp, #stressToolApp, #boltToolApp, #pressToolApp, #arcToolApp, #stackupToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
     });
     $("#tvTool").on("click", function(){
         $(".headToolSwitch").html('Torsional Vibration Calculator');
-        $( "#dashboard, #stressToolApp , #boltToolApp, #pressToolApp, #arcToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #stressToolApp , #boltToolApp, #pressToolApp, #arcToolApp , #stackupToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#tvToolApp" ).fadeIn( "slow", function() {
@@ -148,7 +148,7 @@ $(function(){
     });
     $("#stressGen").on("click", function(){
         $(".headToolSwitch").html('Stress Strain Generator');
-        $( "#dashboard, #tvToolApp, #boltToolApp, #pressToolApp, #arcToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #boltToolApp, #pressToolApp, #arcToolApp, #stackupToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#stressToolApp" ).fadeIn( "slow", function() {
@@ -157,7 +157,7 @@ $(function(){
     });
     $("#jointTool").on("click", function(){
         $(".headToolSwitch").html('Bolted Joint Calculator');
-        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #arcToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #arcToolApp #stackupToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#boltToolApp" ).fadeIn( "slow", function() {
@@ -166,7 +166,7 @@ $(function(){
     });
     $("#arcTool").on("click", function(){
         $(".headToolSwitch").html('Arc Length Calculator');
-        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #boltToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #boltToolApp, #stackupToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#arcToolApp" ).fadeIn( "slow", function() {
@@ -175,10 +175,19 @@ $(function(){
     });
     $("#pressTool").on("click", function(){
         $(".headToolSwitch").html('Press-Fit Calculator');
-        $( "#dashboard, #tvToolApp, #stressToolApp, #jointToolApp, #arcToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #stressToolApp, #jointToolApp, #arcToolApp, #stackupToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#pressToolApp" ).fadeIn( "slow", function() {
+            // Animation complete
+        });
+    });
+    $("#stackupTool").on("click", function(){
+        $(".headToolSwitch").html('Stack-up Calculator');
+        $( "#dashboard, #tvToolApp, #stressToolApp, #jointToolApp, #arcToolApp, #pressToolApp" ).fadeOut( "slow", function() {
+            // Animation complete
+        });
+        $( "#stackupToolApp" ).fadeIn( "slow", function() {
             // Animation complete
         });
     });
@@ -572,8 +581,6 @@ $(function(){
     });
     // Show data when user clicks
     $(".stressShowDat").on("click", function(){
-        console.log(trueStress);
-        console.log(trueStrain);
         trueStressCat = [];
         trueStrainCat = [];
         trueStressDisplay = [];

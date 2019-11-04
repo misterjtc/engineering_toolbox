@@ -63,6 +63,9 @@ Designed and developed by:
                             <a id="arcTool" class="arcLengthTool subLink" href="#" onclick="return false">Arc Length Calculator</a>
                         </li>
                         <li>
+                            <a id="stackupTool" class="stackupTool subLink" href="#" onclick="return false">Stack-up Calculator</a>
+                        </li>
+                        <li>
                             <a class="basSpringTool subLink" href="#" onclick="return false">Arc Spring Designer</a>
                         </li>
                     </ul>
@@ -1155,7 +1158,7 @@ Designed and developed by:
                         </div>
                     </div>
                     <!-- *************************************************** -->
-                    <!--             Cylindrical Press-fit Tool              -->
+                    <!--                 Arc length calculator               -->
                     <!-- *************************************************** -->
                     <div id="arcToolApp">
                         <div class="arcAppMain appMain">
@@ -1199,6 +1202,53 @@ Designed and developed by:
                             </div>
                         </div>
                     </div>
+                    <div id="stackupToolApp">
+                        <div class="stackupScrollContainer">
+                            <div class="stackupAppMain appMain">
+                                <div class="stackupAppInputs">
+                                    <h3 class="appTitle">
+                                        Generate Yo Stack-up!
+                                    </h3>
+                                    <form class="toolContainerBelowTitle">
+                                        <div class="centerFlex stackupPack">
+                                            <div class="toolOutputPackage">
+                                                <label for="stackupItem" class="appLabel">Stack-up</label>
+                                                <input name="stackupItem" type="number" class="stackupItem formItem" value="15">
+                                                <span class="wideToolUnits">mm</span>
+                                            </div>
+                                            <div class="toolOutputPackage">
+                                                <label for="stackupNeg">-ve?</label> 
+                                                <input type="checkbox" id="stackupItem" name="stackupNeg" value="test">
+                                            </div>
+                                        </div>    
+                                    </form>
+                                </div>
+                                <div class="stackupAppOutputs">
+                                    <h3 class="appTitle">
+                                        Proof of 1 Cpk
+                                    </h3>
+                                    <div class="toolContainerBelowTitle">
+                                        <div class="toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Worst Case
+                                            </h3>
+                                            <div class="arcLengthOut formItem mmUnits">
+        
+                                            </div>
+                                        </div>
+                                        <div class="toolOutputPackage">
+                                            <h3 class="appLabel">
+                                                Best Case
+                                            </h3>
+                                            <div class="arcLengthOut formItem mmUnits">
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -1207,7 +1257,7 @@ Designed and developed by:
         <!-- *************************************************** -->
         <footer>
             <h3>
-                Designed and Coded with ❤️ by J. Cook.
+                Designed and Coded with ❤️ and ☕ by J. Cook.
             </h3>
             <div class="contact">
                 <ul>
