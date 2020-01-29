@@ -111,8 +111,8 @@
                 }
             }
         }
-        .autoFeed {
-            @include dashContainer(32.5%, 600px, salmon);
+        .twitterFeed {
+            @include dashContainer(32%, 600px, salmon);
             .appTitle {
                 @include appTitle(salmon);
             }
@@ -170,7 +170,7 @@
             }
         }
         .dashCalendar {
-            @include dashContainer(64.5%, 600px, aliceblue);
+            @include dashContainer(32%, 600px, aliceblue);
             .appTitle {
                 @include appTitle(aliceblue);
             }

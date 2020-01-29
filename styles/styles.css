@@ -2,168 +2,211 @@
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+}
 
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 article, aside, footer, header, nav, section {
-  display: block; }
+  display: block;
+}
 
 h1 {
   font-size: 2em;
-  margin: .67em 0; }
+  margin: 0.67em 0;
+}
 
 figcaption, figure, main {
-  display: block; }
+  display: block;
+}
 
 figure {
-  margin: 1em 40px; }
+  margin: 1em 40px;
+}
 
 hr {
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
-  overflow: visible; }
+  overflow: visible;
+}
 
 pre {
-  font-family: monospace,monospace;
-  font-size: 1em; }
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
 
 a {
   background-color: transparent;
-  -webkit-text-decoration-skip: objects; }
+  -webkit-text-decoration-skip: objects;
+}
 
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted; }
+          text-decoration: underline dotted;
+}
 
 b, strong {
-  font-weight: inherit; }
+  font-weight: inherit;
+}
 
 b, strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 code, kbd, samp {
-  font-family: monospace,monospace;
-  font-size: 1em; }
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
 
 dfn {
-  font-style: italic; }
+  font-style: italic;
+}
 
 mark {
   background-color: #ff0;
-  color: #000; }
+  color: #000;
+}
 
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sub {
-  bottom: -.25em; }
+  bottom: -0.25em;
+}
 
 sup {
-  top: -.5em; }
+  top: -0.5em;
+}
 
 audio, video {
-  display: inline-block; }
+  display: inline-block;
+}
 
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 img {
-  border-style: none; }
+  border-style: none;
+}
 
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 button, input, optgroup, select, textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
-  margin: 0; }
+  margin: 0;
+}
 
 button, input {
-  overflow: visible; }
+  overflow: visible;
+}
 
 button, select {
-  text-transform: none; }
+  text-transform: none;
+}
 
 button, html [type=button], [type=reset], [type=submit] {
-  -webkit-appearance: button; }
+  -webkit-appearance: button;
+}
 
 button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
   border-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
+  outline: 1px dotted ButtonText;
+}
 
 fieldset {
-  padding: .35em .75em .625em; }
+  padding: 0.35em 0.75em 0.625em;
+}
 
 legend {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
   padding: 0;
-  white-space: normal; }
+  white-space: normal;
+}
 
 progress {
   display: inline-block;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 [type=checkbox], [type=radio] {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0; }
+          box-sizing: border-box;
+  padding: 0;
+}
 
 [type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
-  height: auto; }
+  height: auto;
+}
 
 [type=search] {
   -webkit-appearance: textfield;
-  outline-offset: -2px; }
+  outline-offset: -2px;
+}
 
 [type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  font: inherit; }
+  font: inherit;
+}
 
 details, menu {
-  display: block; }
+  display: block;
+}
 
 summary {
-  display: list-item; }
+  display: list-item;
+}
 
 canvas {
-  display: inline-block; }
+  display: inline-block;
+}
 
 template {
-  display: none; }
+  display: none;
+}
 
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .clearfix:after {
   visibility: hidden;
@@ -171,7 +214,8 @@ template {
   font-size: 0;
   content: \" \";
   clear: both;
-  height: 0; }
+  height: 0;
+}
 
 .visually-hidden {
   position: absolute !important;
@@ -182,71 +226,85 @@ template {
   border: 0 !important;
   height: 1px !important;
   width: 1px !important;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 html {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 62.5%;
   font-weight: 400;
-  position: relative; }
-  html h1 {
-    font-size: 4.2rem;
-    margin: 0;
-    padding: 0; }
-  html h2 {
-    font-size: 3.3rem;
-    font-weight: 400;
-    margin: 0;
-    padding: 0; }
-  html h3 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin: 0;
-    padding: 0; }
-  html h4 {
-    font-size: 1.7rem;
-    font-weight: 400;
-    margin: 0;
-    padding: 0; }
-  html p {
-    font-size: 1.8rem; }
-  html a {
-    font-size: 1.5rem; }
-  html i {
-    font-size: 1.5rem; }
+  position: relative;
+}
+html h1 {
+  font-size: 4.2rem;
+  margin: 0;
+  padding: 0;
+}
+html h2 {
+  font-size: 3.3rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+html h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+html h4 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+html p {
+  font-size: 1.8rem;
+}
+html a {
+  font-size: 1.5rem;
+}
+html i {
+  font-size: 1.5rem;
+}
 
 .uppercase {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .framework {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+}
 
 .main {
   width: 100%;
-  height: 100vh; }
-  .main .footerPopup {
-    display: none;
-    position: absolute;
-    left: 5%;
-    top: 5%;
-    right: 5%;
-    bottom: 5%;
-    z-index: 99999;
-    background: white;
-    border-radius: 10px; }
+  height: 100vh;
+}
+.main .footerPopup {
+  display: none;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  z-index: 99999;
+  background: white;
+  border-radius: 10px;
+}
 
 .centerFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .scrollAid {
   position: absolute;
@@ -255,23 +313,26 @@ html {
   background: rgba(153, 153, 153, 0.3);
   border-radius: 20px;
   padding-top: 3px;
-  z-index: 999999; }
-  .scrollAid a {
-    color: #999999;
-    text-decoration: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 5px 12px; }
-  .scrollAid i {
-    font-size: 2.5rem;
-    line-height: inherit; }
+  z-index: 999999;
+}
+.scrollAid a {
+  color: #999999;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 12px;
+}
+.scrollAid i {
+  font-size: 2.5rem;
+  line-height: inherit;
+}
 
 .appMain {
   height: 100%;
@@ -280,15 +341,17 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .appLabel {
   margin-bottom: 10px;
-  width: 50%; }
+  width: 50%;
+}
 
 .formItem {
   margin: 0 0;
@@ -299,17 +362,20 @@ html {
   border-radius: 5px;
   padding-left: 15px;
   position: relative;
-  background: rgba(255, 255, 255, 0); }
+  background: rgba(255, 255, 255, 0);
+}
 
 .toolUnits {
   position: absolute;
   top: 43%;
-  right: 23%; }
+  right: 23%;
+}
 
 .wideToolUnits {
   position: absolute;
   top: 43%;
-  right: 30%; }
+  right: 30%;
+}
 
 .toolOutputPackage {
   width: 100%;
@@ -317,16 +383,17 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative; }
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
 
 .toolContainerBelowTitle {
   width: 100%;
@@ -336,17 +403,19 @@ html {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 20px; }
-  .toolContainerBelowTitle h3 {
-    font-size: 1.7rem; }
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+.toolContainerBelowTitle h3 {
+  font-size: 1.7rem;
+}
 
 .calcButton {
   padding: 10px;
@@ -358,58 +427,67 @@ html {
   border-radius: 10px;
   -webkit-transition: background 0.3s linear;
   -o-transition: background 0.3s linear;
-  transition: background 0.3s linear; }
-  .calcButton:hover {
-    background: #224d94; }
+  transition: background 0.3s linear;
+}
+.calcButton:hover {
+  background: #224d94;
+}
 
 .mmUnits:after {
   text-align: right;
   content: "mm";
   position: absolute;
   top: 5px;
-  left: 80%; }
+  left: 80%;
+}
 
 .stressUnits:after {
   text-align: right;
   content: "MPa";
   position: absolute;
   top: 5px;
-  left: 80%; }
+  left: 80%;
+}
 
 .forceUnits:after {
   text-align: right;
   content: "N";
   position: absolute;
   top: 5px;
-  left: 80%; }
+  left: 80%;
+}
 
 .kForceUnits:after {
   text-align: right;
   content: "kN";
   position: absolute;
   top: 5px;
-  left: 80%; }
+  left: 80%;
+}
 
 .torqueUnits:after {
   text-align: right;
   content: "N·m";
   position: absolute;
   top: 5px;
-  left: 80%; }
+  left: 80%;
+}
 
 .rotVelUnits:after {
   text-align: right;
   content: "rad/s";
   position: absolute;
   top: 5px;
-  left: 80%; }
+  left: 80%;
+}
 
 .rotAccUnits:after {
   text-align: right;
   content: "rad/s²";
   position: absolute;
   top: 5px;
-  left: 80%; }
+  left: 80%;
+}
 
 aside {
   position: fixed;
@@ -421,230 +499,281 @@ aside {
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: none; }
-  aside .top {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 10%; }
-    aside .top .logo {
-      width: 150px;
-      margin-left: 25px; }
-      aside .top .logo img {
-        width: 100%; }
-    aside .top .minify {
-      margin-right: 15px;
-      color: #4187a5; }
-      aside .top .minify i {
-        -webkit-transition: all 0.3s linear;
-        -o-transition: all 0.3s linear;
-        transition: all 0.3s linear; }
-      aside .top .minify:hover i {
-        color: #a4cbdb; }
-  aside .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 85%;
-    margin-bottom: 25px; }
-    aside .nav .dashSelector {
-      margin: 50px 0 50px 0;
-      width: 100%; }
-    aside .nav .asideSection {
-      width: 100%;
-      margin-bottom: 15px; }
-      aside .nav .asideSection h3 {
-        margin: 15px 0 30px 0; }
-    aside .nav .toolList {
-      display: none;
-      width: 85%; }
-      aside .nav .toolList ul {
-        margin: 0; }
-      aside .nav .toolList a {
-        padding: 8px 8px; }
-    aside .nav .toolList.expanded {
-      display: block; }
-    aside .nav .subLink, aside .nav .subLinkExt {
-      -webkit-transition: color 0.3s linear;
-      -o-transition: color 0.3s linear;
-      transition: color 0.3s linear; }
-      aside .nav .subLink:hover, aside .nav .subLinkExt:hover {
-        color: #e6e6e6; }
-    aside .nav .subLink.litLink {
-      color: #e6e6e6; }
-    aside .nav .dotHolder {
-      color: #999999; }
-  aside .icon {
-    width: 2rem;
-    height: auto;
-    fill: #193c82; }
-  aside .linkText {
-    padding-left: 20px; }
-  aside .mainLink {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    padding: 10px 0;
-    margin: 10px 0;
-    width: 100%;
-    position: relative;
-    cursor: pointer; }
-    aside .mainLink a, aside .mainLink i, aside .mainLink .expander {
-      -webkit-transition: color 0.3s linear;
-      -o-transition: color 0.3s linear;
-      transition: color 0.3s linear; }
-    aside .mainLink svg {
-      -webkit-transition: fill 0.3s linear;
-      -o-transition: fill 0.3s linear;
-      transition: fill 0.3s linear; }
-    aside .mainLink:hover a {
-      color: #e6e6e6; }
-    aside .mainLink:hover .expander i {
-      color: #e6e6e6; }
-    aside .mainLink:hover i {
-      color: #5683de; }
-    aside .mainLink:hover svg {
-      fill: #5683de; }
-    aside .mainLink .expander {
-      position: absolute;
-      right: 0;
-      -webkit-transition: all 0.3s linear;
-      -o-transition: all 0.3s linear;
-      transition: all 0.3s linear; }
-      aside .mainLink .expander i {
-        color: #999999; }
-    aside .mainLink .expander.expanderDown {
-      -webkit-transform: rotate(90deg);
+  scrollbar-width: none;
+}
+aside .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10%;
+}
+aside .top .logo {
+  width: 150px;
+  margin-left: 25px;
+}
+aside .top .logo img {
+  width: 100%;
+}
+aside .top .minify {
+  margin-right: 15px;
+  color: #4187a5;
+}
+aside .top .minify i {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+aside .top .minify:hover i {
+  color: #a4cbdb;
+}
+aside .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: 85%;
+  margin-bottom: 25px;
+}
+aside .nav .dashSelector {
+  margin: 50px 0 50px 0;
+  width: 100%;
+}
+aside .nav .asideSection {
+  width: 100%;
+  margin-bottom: 15px;
+}
+aside .nav .asideSection h3 {
+  margin: 15px 0 30px 0;
+}
+aside .nav .toolList {
+  display: none;
+  width: 85%;
+}
+aside .nav .toolList ul {
+  margin: 0;
+}
+aside .nav .toolList a {
+  padding: 8px 8px;
+}
+aside .nav .toolList.expanded {
+  display: block;
+}
+aside .nav .subLink, aside .nav .subLinkExt {
+  -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+aside .nav .subLink:hover, aside .nav .subLinkExt:hover {
+  color: #e6e6e6;
+}
+aside .nav .subLink.litLink {
+  color: #e6e6e6;
+}
+aside .nav .dotHolder {
+  color: #999999;
+}
+aside .icon {
+  width: 2rem;
+  height: auto;
+  fill: #193c82;
+}
+aside .linkText {
+  padding-left: 20px;
+}
+aside .mainLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+aside .mainLink a, aside .mainLink i, aside .mainLink .expander {
+  -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+aside .mainLink svg {
+  -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
+}
+aside .mainLink:hover a {
+  color: #e6e6e6;
+}
+aside .mainLink:hover .expander i {
+  color: #e6e6e6;
+}
+aside .mainLink:hover i {
+  color: #5683de;
+}
+aside .mainLink:hover svg {
+  fill: #5683de;
+}
+aside .mainLink .expander {
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+aside .mainLink .expander i {
+  color: #999999;
+}
+aside .mainLink .expander.expanderDown {
+  -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
-      transform: rotate(90deg); }
-  aside .rootLink.litLink a {
-    color: #e6e6e6; }
-  aside .rootLink.litLink i {
-    color: #5683de; }
-  aside .rootLink.litLink svg {
-    color: #5683de; }
-  aside .mainLink.lit a {
-    color: #e6e6e6; }
-  aside .mainLink.lit .expander i {
-    color: #e6e6e6; }
-  aside .mainLink.lit i {
-    color: #5683de; }
-  aside .mainLink.lit svg {
-    fill: #5683de; }
-  aside a {
-    text-decoration: none;
-    font-size: 1.9rem;
-    display: block;
-    color: #999999; }
-  aside i {
-    font-size: 2rem;
-    color: #193c82; }
-  aside button {
-    background: none;
-    border: none; }
+          transform: rotate(90deg);
+}
+aside .rootLink.litLink a {
+  color: #e6e6e6;
+}
+aside .rootLink.litLink i {
+  color: #5683de;
+}
+aside .rootLink.litLink svg {
+  color: #5683de;
+}
+aside .mainLink.lit a {
+  color: #e6e6e6;
+}
+aside .mainLink.lit .expander i {
+  color: #e6e6e6;
+}
+aside .mainLink.lit i {
+  color: #5683de;
+}
+aside .mainLink.lit svg {
+  fill: #5683de;
+}
+aside a {
+  text-decoration: none;
+  font-size: 1.9rem;
+  display: block;
+  color: #999999;
+}
+aside i {
+  font-size: 2rem;
+  color: #193c82;
+}
+aside button {
+  background: none;
+  border: none;
+}
 
 .navPanel.navMinify .main {
-  width: 95%; }
-
+  width: 95%;
+}
 .navPanel.navMinify .top {
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  .navPanel.navMinify .top .logo {
-    display: none; }
-  .navPanel.navMinify .top .minify {
-    margin: 0; }
-  .navPanel.navMinify .top .minify a i {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg); }
-
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.navPanel.navMinify .top .logo {
+  display: none;
+}
+.navPanel.navMinify .top .minify {
+  margin: 0;
+}
+.navPanel.navMinify .top .minify a i {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .navPanel.navMinify .toolList {
-  display: none !important; }
-
+  display: none !important;
+}
 .navPanel.navMinify .sectionBreak {
-  text-align: center; }
-
+  text-align: center;
+}
 .navPanel.navMinify .mainLink {
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .navPanel.navMinify .mainLink .linkText {
   -webkit-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
   transition: all 0.4s linear;
-  display: none; }
-
+  display: none;
+}
 .navPanel.navMinify .expander {
   -webkit-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
   transition: all 0.4s linear;
-  display: none; }
+  display: none;
+}
 
 aside::-webkit-scrollbar {
   width: 0px;
-  /* Remove scrollbar space */ }
+  /* Remove scrollbar space */
+}
 
 .centralContent {
   height: 80%;
   width: calc(100% - $asideWidth);
   margin-left: 16%;
   margin-top: 125.5px;
-  overflow: hidden; }
-  .centralContent .contentSwitch {
-    height: 100%;
-    background: #505050;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .centralContent .contentSwitch .mainContent {
-      color: #999999;
-      width: 100%;
-      height: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
+  overflow: hidden;
+}
+.centralContent .contentSwitch {
+  height: 100%;
+  background: #505050;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      position: relative; }
-      .centralContent .contentSwitch .mainContent .loader {
-        width: 250px; }
-        .centralContent .contentSwitch .mainContent .loader img {
-          width: 100%; }
+          align-items: center;
+}
+.centralContent .contentSwitch .mainContent {
+  color: #999999;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.centralContent .contentSwitch .mainContent .loader {
+  width: 250px;
+}
+.centralContent .contentSwitch .mainContent .loader img {
+  width: 100%;
+}
 
 header {
   position: fixed;
@@ -652,99 +781,118 @@ header {
   width: calc(100% - 16%);
   background: white;
   margin-left: 16%;
-  z-index: 10; }
-  header .headerContent {
-    height: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 10px 15px; }
-    header .headerContent ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      header .headerContent ul li {
-        list-style: none; }
-        header .headerContent ul li a {
-          text-decoration: none;
-          padding: 0 5px;
-          margin: 0 5px; }
-          header .headerContent ul li a i {
-            font-size: 2rem;
-            color: #4187a5; }
-    header .headerContent h3 {
-      margin: 0 15px; }
-    header .headerContent h1 {
-      background: #4187a5;
-      border-radius: 5px;
-      color: #193c82;
-      padding: 5px 20px;
-      margin-left: 10px; }
-  header .headerInfo {
-    height: 40%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    border-top: 1px solid #999999; }
-    header .headerInfo .headInfo {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-      header .headerInfo .headInfo h3 {
-        color: #193c82;
-        padding: 5px 35px; }
-      header .headerInfo .headInfo h4 {
-        color: #999999;
-        padding: 5px 35px;
-        border-left: 1px solid #999999; }
-    header .headerInfo .calendar {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: end;
+  z-index: 10;
+}
+header .headerContent {
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
       -ms-flex-pack: end;
-      justify-content: flex-end;
-      -webkit-box-align: center;
+          justify-content: flex-end;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
-      header .headerInfo .calendar h4 {
-        color: #999999;
-        padding: 0 15px; }
-      header .headerInfo .calendar .calendarSelector {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        background: #dddddd;
-        padding: 7px 10px;
-        border-radius: 5px;
-        margin: 0 15px 0 25px; }
-        header .headerInfo .calendar .calendarSelector h4 {
-          padding: 0 5px; }
-        header .headerInfo .calendar .calendarSelector #today {
-          color: #193c82; }
-        header .headerInfo .calendar .calendarSelector a {
-          color: #193c82;
-          padding: 0 10px; }
-          header .headerInfo .calendar .calendarSelector a i {
-            font-size: 2rem; }
+          align-items: center;
+  padding: 10px 15px;
+}
+header .headerContent ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .headerContent ul li {
+  list-style: none;
+}
+header .headerContent ul li a {
+  text-decoration: none;
+  padding: 0 5px;
+  margin: 0 5px;
+}
+header .headerContent ul li a i {
+  font-size: 2rem;
+  color: #4187a5;
+}
+header .headerContent h3 {
+  margin: 0 15px;
+}
+header .headerContent h1 {
+  background: #4187a5;
+  border-radius: 5px;
+  color: #193c82;
+  padding: 5px 20px;
+  margin-left: 10px;
+}
+header .headerInfo {
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #999999;
+}
+header .headerInfo .headInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .headerInfo .headInfo h3 {
+  color: #193c82;
+  padding: 5px 35px;
+}
+header .headerInfo .headInfo h4 {
+  color: #999999;
+  padding: 5px 35px;
+  border-left: 1px solid #999999;
+}
+header .headerInfo .calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .headerInfo .calendar h4 {
+  color: #999999;
+  padding: 0 15px;
+}
+header .headerInfo .calendar .calendarSelector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #dddddd;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin: 0 15px 0 25px;
+}
+header .headerInfo .calendar .calendarSelector h4 {
+  padding: 0 5px;
+}
+header .headerInfo .calendar .calendarSelector #today {
+  color: #193c82;
+}
+header .headerInfo .calendar .calendarSelector a {
+  color: #193c82;
+  padding: 0 10px;
+}
+header .headerInfo .calendar .calendarSelector a i {
+  font-size: 2rem;
+}
 
 footer {
   position: fixed;
@@ -757,40 +905,45 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: white;
-  z-index: 10; }
-  footer h3 {
-    margin-left: 25px;
-    font-size: 1.5rem;
-    color: black;
-    font-weight: 500; }
-  footer .contact ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    list-style: none;
-    padding: 0;
-    margin-right: 15px; }
-    footer .contact ul li a {
-      text-decoration: none;
-      color: black;
-      padding: 2px 5px;
-      margin: 0 10px;
-      font-weight: 500;
-      border-bottom: 1px solid transparent;
-      -webkit-transition: border-bottom 0.3s linear;
-      -o-transition: border-bottom 0.3s linear;
-      transition: border-bottom 0.3s linear; }
-      footer .contact ul li a:hover {
-        border-bottom: 1px solid black; }
+  z-index: 10;
+}
+footer h3 {
+  margin-left: 25px;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 500;
+}
+footer .contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin-right: 15px;
+}
+footer .contact ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 2px 5px;
+  margin: 0 10px;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: border-bottom 0.3s linear;
+  -o-transition: border-bottom 0.3s linear;
+  transition: border-bottom 0.3s linear;
+}
+footer .contact ul li a:hover {
+  border-bottom: 1px solid black;
+}
 
 .wrapper {
   height: 100vh;
@@ -799,16 +952,17 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 @font-face {
-  font-family: 'NeoSansPro-Regular';
-  src: url(..//..//fonts/NeoSansPro-Regular.otf) format("opentype"); }
-
+  font-family: "NeoSansPro-Regular";
+  src: url(..//..//fonts/NeoSansPro-Regular.otf) format("opentype");
+}
 .splash {
   width: 100%;
   height: 100vh;
@@ -819,64 +973,72 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  z-index: 2; }
-  .splash .splashContent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .splash .splashContent .splashLogo {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      height: 20vh; }
-      .splash .splashContent .splashLogo img {
-        display: block;
-        -o-object-fit: cover;
-        object-fit: cover;
-        height: auto;
-        width: 200px; }
-      .splash .splashContent .splashLogo h1 {
-        font-family: 'NeoSansPro-Regular';
-        font-size: 6rem; }
-    .splash .splashContent .splashApp {
-      margin: 0 0 35px 60px; }
-      .splash .splashContent .splashApp h2 {
-        font-family: 'Press Start 2P', cursive;
-        font-size: 2.5rem; }
-    .splash .splashContent .login a {
-      text-decoration: none;
-      text-align: center;
-      background: #193c82;
-      color: black;
-      width: 200px;
-      border: none;
-      font-size: 3rem;
-      border-radius: 10px;
-      padding: 10px 15px;
-      font-weight: 700;
-      display: block;
-      margin-left: 60px; }
+          align-items: center;
+  z-index: 2;
+}
+.splash .splashContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.splash .splashContent .splashLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20vh;
+}
+.splash .splashContent .splashLogo img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+  width: 200px;
+}
+.splash .splashContent .splashLogo h1 {
+  font-family: "NeoSansPro-Regular";
+  font-size: 6rem;
+}
+.splash .splashContent .splashApp {
+  margin: 0 0 35px 60px;
+}
+.splash .splashContent .splashApp h2 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2.5rem;
+}
+.splash .splashContent .login a {
+  text-decoration: none;
+  text-align: center;
+  background: #193c82;
+  color: black;
+  width: 200px;
+  border: none;
+  font-size: 3rem;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: 700;
+  display: block;
+  margin-left: 60px;
+}
 
 #dashboard {
   position: absolute;
@@ -890,378 +1052,421 @@ footer {
   margin: 0 auto;
   right: 0;
   bottom: 0;
-  opacity: 0; }
-  #dashboard .dashScrollContainer {
-    position: absolute;
-    background: #dddddd;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    right: 0;
-    bottom: 0;
-    overflow: scroll;
-    overflow-x: hidden; }
-  #dashboard .mainDashboard {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    #dashboard .mainDashboard .dashBox {
-      margin: 1% 0.5% !important; }
-    #dashboard .mainDashboard .dashBox:nth-child(n+4) {
-      margin-top: 0 !important; }
-    #dashboard .mainDashboard .inspoQuotes {
-      background: white;
-      height: 95%;
-      width: 32%;
-      height: 400px;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
+  opacity: 0;
+}
+#dashboard .dashScrollContainer {
+  position: absolute;
+  background: #dddddd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#dashboard .mainDashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid royalBlue; }
-      #dashboard .mainDashboard .inspoQuotes .appTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid royalblue;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-      #dashboard .mainDashboard .inspoQuotes .toolContainerBelowTitle {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row; }
-      #dashboard .mainDashboard .inspoQuotes .quotePic {
-        width: 45%;
-        height: 100%;
-        padding: 0 0 10px 10px; }
-        #dashboard .mainDashboard .inspoQuotes .quotePic img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          -o-object-fit: cover;
-          object-fit: cover;
-          border-radius: 10px; }
-      #dashboard .mainDashboard .inspoQuotes .quoteText {
-        width: 45%;
-        height: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-        #dashboard .mainDashboard .inspoQuotes .quoteText .quoteBox {
-          width: 100%;
-          font-size: 1.9rem; }
-        #dashboard .mainDashboard .inspoQuotes .quoteText .quoteAuthor {
-          width: 100%;
-          text-align: right;
-          font-size: 1.5rem;
-          padding-right: 25px; }
-    #dashboard .mainDashboard .bestTools {
-      background: white;
-      height: 95%;
-      width: 32%;
-      height: 400px;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid cadetblue; }
-      #dashboard .mainDashboard .bestTools .appTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid cadetblue;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-      #dashboard .mainDashboard .bestTools .toolContainerBelowTitle {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly; }
-        #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp {
-          width: 33.33%;
-          cursor: pointer;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
           justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
           align-items: center;
-          text-decoration: none;
-          color: #999999; }
-          #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp i {
-            font-size: 5rem; }
-          #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp p {
-            width: 85%;
-            text-align: center; }
-        #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp1 i {
-          color: #0f2241; }
-        #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp2 i {
-          color: #3e4d54; }
-        #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp3 i {
-          color: #1e6932; }
-        #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp4 i {
-          color: #32a550; }
-        #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp5 i {
-          color: #193c82; }
-        #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp6 i {
-          color: #4187a5; }
-    #dashboard .mainDashboard .autoFeed {
-      background: white;
-      height: 95%;
-      width: 32.5%;
-      height: 600px;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#dashboard .mainDashboard .dashBox {
+  margin: 1% 0.5% !important;
+}
+#dashboard .mainDashboard .dashBox:nth-child(n+4) {
+  margin-top: 0 !important;
+}
+#dashboard .mainDashboard .inspoQuotes {
+  background: white;
+  height: 95%;
+  width: 32%;
+  height: 400px;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
+          flex-direction: column;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid salmon; }
-      #dashboard .mainDashboard .autoFeed .appTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid salmon;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-      #dashboard .mainDashboard .autoFeed .feedContent {
-        overflow: scroll !important;
-        overflow-x: hidden !important;
-        position: relative;
-        margin-bottom: 5px; }
-        #dashboard .mainDashboard .autoFeed .feedContent iframe {
-          position: absolute !important;
-          top: 5px !important;
-          width: 90% !important; }
-      #dashboard .mainDashboard .autoFeed .feedContent::-webkit-scrollbar {
-        width: 0; }
-    #dashboard .mainDashboard .dashHero {
-      background: white;
-      height: 95%;
-      width: 32%;
-      height: 400px;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid royalBlue;
+}
+#dashboard .mainDashboard .inspoQuotes .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid royalblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#dashboard .mainDashboard .inspoQuotes .toolContainerBelowTitle {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#dashboard .mainDashboard .inspoQuotes .quotePic {
+  width: 45%;
+  height: 100%;
+  padding: 0 0 10px 10px;
+}
+#dashboard .mainDashboard .inspoQuotes .quotePic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+#dashboard .mainDashboard .inspoQuotes .quoteText {
+  width: 45%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
+          flex-direction: column;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid lightgoldenrodyellow; }
-      #dashboard .mainDashboard .dashHero .appTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid lightgoldenrodyellow;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-      #dashboard .mainDashboard .dashHero .koolHero {
-        width: 100%;
-        height: 100%; }
-        #dashboard .mainDashboard .dashHero .koolHero .flickity-viewport {
-          height: 100%;
-          width: 100%;
-          position: relative;
-          border-bottom-left-radius: 10px;
-          border-bottom-right-radius: 10px; }
-        #dashboard .mainDashboard .dashHero .koolHero img {
-          width: 100%;
-          -o-object-fit: fill;
-          object-fit: fill;
-          display: block;
-          height: 100%; }
-        #dashboard .mainDashboard .dashHero .koolHero .flickity-page-dots {
-          position: absolute;
-          z-index: 3;
-          right: 0px;
-          bottom: 10px; }
-          #dashboard .mainDashboard .dashHero .koolHero .flickity-page-dots .dot {
-            background: white;
-            border: 1px solid white; }
-    #dashboard .mainDashboard .dashCalendar {
-      background: white;
-      height: 95%;
-      width: 64.5%;
-      height: 600px;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
+          align-items: center;
+  padding-left: 15px;
+}
+#dashboard .mainDashboard .inspoQuotes .quoteText .quoteBox {
+  width: 100%;
+  font-size: 1.9rem;
+}
+#dashboard .mainDashboard .inspoQuotes .quoteText .quoteAuthor {
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  padding-right: 25px;
+}
+#dashboard .mainDashboard .bestTools {
+  background: white;
+  height: 95%;
+  width: 32%;
+  height: 400px;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
+          flex-direction: column;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid aliceblue; }
-      #dashboard .mainDashboard .dashCalendar .appTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid aliceblue;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-      #dashboard .mainDashboard .dashCalendar .cooksCalendar {
-        margin: 15px 0 0 0;
-        padding: 0 15px 15px 15px; }
-        #dashboard .mainDashboard .dashCalendar .cooksCalendar iframe {
-          width: 100%;
-          height: 100%;
-          border-radius: 10px; }
-    #dashboard .mainDashboard .importantForms {
-      background: white;
-      height: 95%;
-      width: 32%;
-      height: 400px;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid cadetblue;
+}
+#dashboard .mainDashboard .bestTools .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid cadetblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp {
+  width: 33.33%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
+          flex-direction: column;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid darkturquoise; }
-      #dashboard .mainDashboard .importantForms .appTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid darkturquoise;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
+          align-items: center;
+  text-decoration: none;
+  color: #999999;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp i {
+  font-size: 5rem;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp p {
+  width: 85%;
+  text-align: center;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp1 i {
+  color: #0f2241;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp2 i {
+  color: #3e4d54;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp3 i {
+  color: #1e6932;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp4 i {
+  color: #32a550;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp5 i {
+  color: #193c82;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp6 i {
+  color: #4187a5;
+}
+#dashboard .mainDashboard .twitterFeed {
+  background: white;
+  height: 95%;
+  width: 32%;
+  height: 600px;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid salmon;
+}
+#dashboard .mainDashboard .twitterFeed .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid salmon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#dashboard .mainDashboard .twitterFeed .feedContent {
+  overflow: scroll !important;
+  overflow-x: hidden !important;
+  position: relative;
+  margin-bottom: 5px;
+}
+#dashboard .mainDashboard .twitterFeed .feedContent iframe {
+  position: absolute !important;
+  top: 5px !important;
+  width: 90% !important;
+}
+#dashboard .mainDashboard .twitterFeed .feedContent::-webkit-scrollbar {
+  width: 0;
+}
+#dashboard .mainDashboard .dashHero {
+  background: white;
+  height: 95%;
+  width: 32%;
+  height: 400px;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid lightgoldenrodyellow;
+}
+#dashboard .mainDashboard .dashHero .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid lightgoldenrodyellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#dashboard .mainDashboard .dashHero .koolHero {
+  width: 100%;
+  height: 100%;
+}
+#dashboard .mainDashboard .dashHero .koolHero .flickity-viewport {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#dashboard .mainDashboard .dashHero .koolHero img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  display: block;
+  height: 100%;
+}
+#dashboard .mainDashboard .dashHero .koolHero .flickity-page-dots {
+  position: absolute;
+  z-index: 3;
+  right: 0px;
+  bottom: 10px;
+}
+#dashboard .mainDashboard .dashHero .koolHero .flickity-page-dots .dot {
+  background: white;
+  border: 1px solid white;
+}
+#dashboard .mainDashboard .dashCalendar {
+  background: white;
+  height: 95%;
+  width: 32%;
+  height: 600px;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid aliceblue;
+}
+#dashboard .mainDashboard .dashCalendar .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#dashboard .mainDashboard .dashCalendar .cooksCalendar {
+  margin: 15px 0 0 0;
+  padding: 0 15px 15px 15px;
+}
+#dashboard .mainDashboard .dashCalendar .cooksCalendar iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+#dashboard .mainDashboard .importantForms {
+  background: white;
+  height: 95%;
+  width: 32%;
+  height: 400px;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid darkturquoise;
+}
+#dashboard .mainDashboard .importantForms .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid darkturquoise;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
 
 #tvToolApp {
   position: absolute;
@@ -1274,144 +1479,157 @@ footer {
   bottom: 0;
   margin: 0 auto;
   display: none;
-  overflow-y: hidden; }
-  #tvToolApp .tvToolMain .tvToolInputs {
-    background: white;
-    height: 95%;
-    width: 28.5%;
-    margin: 0 0.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.7rem !important;
-    border-radius: 10px;
-    border: 2px solid dodgerblue; }
-    #tvToolApp .tvToolMain .tvToolInputs .appTitle {
-      width: 100%;
-      height: 55px;
-      border-bottom: 2px solid dodgerblue;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
+  overflow-y: hidden;
+}
+#tvToolApp .tvToolMain .tvToolInputs {
+  background: white;
+  height: 95%;
+  width: 28.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      padding-left: 15px; }
-    #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .numCyls {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
-      background-repeat: no-repeat;
-      background-position: 95% center; }
-    #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper {
-      margin-bottom: 20px; }
-      #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper .inRPM {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        height: 10px;
-        width: 100%;
-        background: #999999;
-        border-radius: 5px;
-        display: block; }
-        #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper .inRPM::-webkit-slider-thumb {
-          -webkit-box-shadow: 1px 1px 1px #000000;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid dodgerblue;
+}
+#tvToolApp .tvToolMain .tvToolInputs .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid dodgerblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#tvToolApp .tvToolMain .tvToolInputs .tvToolForm .numCyls {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+#tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper {
+  margin-bottom: 20px;
+}
+#tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper .inRPM {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 10px;
+  width: 100%;
+  background: #999999;
+  border-radius: 5px;
+  display: block;
+}
+#tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper .inRPM::-webkit-slider-thumb {
+  -webkit-box-shadow: 1px 1px 1px #000000;
           box-shadow: 1px 1px 1px #000000;
-          border: 1px solid #000000;
-          height: 25px;
-          width: 15px;
-          border-radius: 5px;
-          background: #FFFFFF;
-          cursor: pointer;
-          -webkit-appearance: none; }
-      #tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper .outRPM {
-        margin-left: 15px; }
-  #tvToolApp .tvToolMain .tvToolOutput {
-    background: white;
-    height: 95%;
-    width: 28.5%;
-    margin: 0 0.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.7rem !important;
-    border-radius: 10px;
-    border: 2px solid khaki; }
-    #tvToolApp .tvToolMain .tvToolOutput .appTitle {
-      width: 100%;
-      height: 55px;
-      border-bottom: 2px solid khaki;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
+  border: 1px solid #000000;
+  height: 25px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+#tvToolApp .tvToolMain .tvToolInputs .tvToolForm .rpmWrapper .outRPM {
+  margin-left: 15px;
+}
+#tvToolApp .tvToolMain .tvToolOutput {
+  background: white;
+  height: 95%;
+  width: 28.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      padding-left: 15px; }
-  #tvToolApp .tvToolMain .tvToolGraph {
-    background: white;
-    height: 95%;
-    width: 38.5%;
-    margin: 0 0.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.7rem !important;
-    border-radius: 10px;
-    border: 2px solid crimson; }
-    #tvToolApp .tvToolMain .tvToolGraph .appTitle {
-      width: 100%;
-      height: 55px;
-      border-bottom: 2px solid crimson;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid khaki;
+}
+#tvToolApp .tvToolMain .tvToolOutput .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid khaki;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
       -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
+          justify-content: flex-start;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      padding-left: 15px; }
-    #tvToolApp .tvToolMain .tvToolGraph .tvGraphSizer {
-      width: 68%; }
+          align-items: center;
+  padding-left: 15px;
+}
+#tvToolApp .tvToolMain .tvToolGraph {
+  background: white;
+  height: 95%;
+  width: 38.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid crimson;
+}
+#tvToolApp .tvToolMain .tvToolGraph .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid crimson;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#tvToolApp .tvToolMain .tvToolGraph .tvGraphSizer {
+  width: 68%;
+}
 
 #stressToolApp {
   position: absolute;
@@ -1423,171 +1641,188 @@ footer {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  display: none; }
-  #stressToolApp .stressToolInputs {
-    background: white;
-    height: 95%;
-    width: 28.5%;
-    margin: 0 0.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.7rem !important;
-    border-radius: 10px;
-    border: 2px solid palegoldenrod; }
-    #stressToolApp .stressToolInputs .appTitle {
-      width: 100%;
-      height: 55px;
-      border-bottom: 2px solid palegoldenrod;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding-left: 15px; }
-    #stressToolApp .stressToolInputs .stressAdvOptions {
-      width: 50%; }
-      #stressToolApp .stressToolInputs .stressAdvOptions h3 {
-        margin-bottom: 10px; }
-      #stressToolApp .stressToolInputs .stressAdvOptions .stressAdvContainer {
-        width: 100%; }
-        #stressToolApp .stressToolInputs .stressAdvOptions .stressAdvContainer .toolOutputPackage {
-          width: 50%;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-  #stressToolApp .stressToolGraph {
-    background: white;
-    height: 95%;
-    width: 38.5%;
-    margin: 0 0.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.7rem !important;
-    border-radius: 10px;
-    border: 2px solid thistle; }
-    #stressToolApp .stressToolGraph .appTitle {
-      width: 100%;
-      height: 55px;
-      border-bottom: 2px solid thistle;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding-left: 15px; }
-    #stressToolApp .stressToolGraph #stressGraphSizer {
-      width: 90%; }
-  #stressToolApp .stressToolData {
-    background: white;
-    height: 95%;
-    width: 28.5%;
-    margin: 0 0.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.7rem !important;
-    border-radius: 10px;
-    border: 2px solid steelBlue; }
-    #stressToolApp .stressToolData .appTitle {
-      width: 100%;
-      height: 55px;
-      border-bottom: 2px solid steelBlue;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding-left: 15px; }
-    #stressToolApp .stressToolData .toolContainerBelowTitle {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
-      #stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult {
-        width: 100%;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column; }
-        #stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult .stressDataContainer {
-          width: 40%;
-          font-size: 1rem;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
+  display: none;
+}
+#stressToolApp .stressToolInputs {
+  background: white;
+  height: 95%;
+  width: 28.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
           flex-direction: column;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
           justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
           align-items: center;
-          margin: 25px 15px; }
-          #stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult .stressDataContainer h4:last-child {
-            border-bottom: 1px solid lightgrey; }
-          #stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult .stressDataContainer h4 {
-            width: 100%;
-            height: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            border-top: 1px solid lightgrey;
-            padding: 8px 5px; }
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid palegoldenrod;
+}
+#stressToolApp .stressToolInputs .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid palegoldenrod;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#stressToolApp .stressToolInputs .stressAdvOptions {
+  width: 50%;
+}
+#stressToolApp .stressToolInputs .stressAdvOptions h3 {
+  margin-bottom: 10px;
+}
+#stressToolApp .stressToolInputs .stressAdvOptions .stressAdvContainer {
+  width: 100%;
+}
+#stressToolApp .stressToolInputs .stressAdvOptions .stressAdvContainer .toolOutputPackage {
+  width: 50%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#stressToolApp .stressToolGraph {
+  background: white;
+  height: 95%;
+  width: 38.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid thistle;
+}
+#stressToolApp .stressToolGraph .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid thistle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#stressToolApp .stressToolGraph #stressGraphSizer {
+  width: 90%;
+}
+#stressToolApp .stressToolData {
+  background: white;
+  height: 95%;
+  width: 28.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid steelBlue;
+}
+#stressToolApp .stressToolData .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid steelBlue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#stressToolApp .stressToolData .toolContainerBelowTitle {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult .stressDataContainer {
+  width: 40%;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px 15px;
+}
+#stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult .stressDataContainer h4:last-child {
+  border-bottom: 1px solid lightgrey;
+}
+#stressToolApp .stressToolData .toolContainerBelowTitle .stressToolResult .stressDataContainer h4 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid lightgrey;
+  padding: 8px 5px;
+}
 
 #boltToolApp {
   position: absolute;
@@ -1600,133 +1835,145 @@ footer {
   bottom: 0;
   margin: 0 auto;
   display: none;
-  overflow-y: hidden; }
-  #boltToolApp .boltAppMain {
-    position: relative; }
-    #boltToolApp .boltAppMain .boltToolInputs {
-      background: white;
-      height: 95%;
-      width: 32%;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
+  overflow-y: hidden;
+}
+#boltToolApp .boltAppMain {
+  position: relative;
+}
+#boltToolApp .boltAppMain .boltToolInputs {
+  background: white;
+  height: 95%;
+  width: 32%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
+          flex-direction: column;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid steelblue; }
-      #boltToolApp .boltAppMain .boltToolInputs .appTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid steelblue;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-      #boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer {
-        position: absolute;
-        width: 50%;
-        height: 50%;
-        left: 25%;
-        display: none; }
-        #boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer .boltSpecData {
-          width: 100%;
-          height: 100%;
-          position: relative;
-          z-index: 999; }
-          #boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer .boltSpecData img {
-            display: block;
-            width: 100%; }
-          #boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer .boltSpecData .closePopup {
-            display: block;
-            position: absolute;
-            top: 5px;
-            right: 5px; }
-    #boltToolApp .boltAppMain .boltToolOutput {
-      background: white;
-      height: 95%;
-      width: 32%;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid steelblue;
+}
+#boltToolApp .boltAppMain .boltToolInputs .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid steelblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  display: none;
+}
+#boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer .boltSpecData {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 999;
+}
+#boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer .boltSpecData img {
+  display: block;
+  width: 100%;
+}
+#boltToolApp .boltAppMain .boltToolInputs .boltSpecDataContainer .boltSpecData .closePopup {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#boltToolApp .boltAppMain .boltToolOutput {
+  background: white;
+  height: 95%;
+  width: 32%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
+          flex-direction: column;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid bisque; }
-      #boltToolApp .boltAppMain .boltToolOutput .appTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid bisque;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-    #boltToolApp .boltAppMain .boltToolTorque {
-      background: white;
-      height: 95%;
-      width: 32%;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid bisque;
+}
+#boltToolApp .boltAppMain .boltToolOutput .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid bisque;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#boltToolApp .boltAppMain .boltToolTorque {
+  background: white;
+  height: 95%;
+  width: 32%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
+          flex-direction: column;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid lightblue; }
-      #boltToolApp .boltAppMain .boltToolTorque .appTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid lightblue;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid lightblue;
+}
+#boltToolApp .boltAppMain .boltToolTorque .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
 
 #pressToolApp {
   position: absolute;
@@ -1740,278 +1987,307 @@ footer {
   margin: 0 auto;
   right: 0;
   bottom: 0;
-  display: none; }
-  #pressToolApp .pressAppScrollContainer {
-    position: absolute;
-    background: #dddddd;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    right: 0;
-    bottom: 0;
-    overflow: scroll;
-    overflow-x: hidden; }
-  #pressToolApp .pressAppMain {
-    height: 100%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: 1.25%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    #pressToolApp .pressAppMain .pressToolInputs {
-      background: white;
-      height: 95%;
-      width: 28.5%;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
+  display: none;
+}
+#pressToolApp .pressAppScrollContainer {
+  position: absolute;
+  background: #dddddd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#pressToolApp .pressAppMain {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.25%;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid hotpink;
-      position: relative; }
-      #pressToolApp .pressAppMain .pressToolInputs .pressAppTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid hotpink;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-      #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer {
-        overflow: scroll;
-        overflow-x: hidden; }
-        #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs {
-          width: 90%;
-          margin-bottom: 10px; }
-          #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs h3 {
-            margin: 0 0 20px 0; }
-          #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs .pressForm {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center; }
-            #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs .pressForm .inputDims {
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              -webkit-box-pack: center;
-              -ms-flex-pack: center;
-              justify-content: center;
-              -webkit-box-align: center;
-              -ms-flex-align: center;
-              align-items: center; }
-            #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs .pressForm .widenSelector .appLabel {
-              width: 68%; }
-            #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs .pressForm .widenSelector .formItem {
-              width: 70%; }
-      #pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer::-webkit-scrollbar {
-        width: 0; }
-    #pressToolApp .pressAppMain .pressToolOutputs {
-      background: white;
-      height: 95%;
-      width: 28.5%;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid royalblue;
-      position: relative; }
-      #pressToolApp .pressAppMain .pressToolOutputs .pressAppTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid royalblue;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-    #pressToolApp .pressAppMain .pressToolGraph {
-      background: white;
-      height: 95%;
-      width: 38.5%;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid goldenrod; }
-      #pressToolApp .pressAppMain .pressToolGraph .pressAppTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid goldenrod;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-      #pressToolApp .pressAppMain .pressToolGraph .pressGraph {
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
-        margin: 0;
-        width: 90%; }
-    #pressToolApp .pressAppMain .pressToolDetailedOutput {
-      background: white;
-      height: 95%;
-      width: 97.5%;
-      margin: 0 0.5%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1.7rem !important;
-      border-radius: 10px;
-      border: 2px solid darkslategray;
-      margin: 1.25% 0% 1.25% 0%;
-      position: relative;
-      height: 90%; }
-      #pressToolApp .pressAppMain .pressToolDetailedOutput .pressAppTitle {
-        width: 100%;
-        height: 55px;
-        border-bottom: 2px solid darkslategray;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-left: 15px; }
-      #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center; }
-        #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
           justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
           align-items: center;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column; }
-          #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .cellHeader h3 {
-            font-weight: 700; }
-          #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .row {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            width: 300px; }
-            #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .row h3 {
-              margin: 7px 15px;
-              text-align: center;
-              width: 50px; }
-          #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .row.cellHeader h3 {
-            width: 100%; }
-        #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable.pressTableLabels h3 {
-          width: 100%;
-          text-align: right; }
-      #pressToolApp .pressAppMain .pressToolDetailedOutput .pressEndNote {
-        position: absolute;
-        left: 10px;
-        bottom: -10px; }
-        #pressToolApp .pressAppMain .pressToolDetailedOutput .pressEndNote p {
-          font-size: 1.2rem; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#pressToolApp .pressAppMain .pressToolInputs {
+  background: white;
+  height: 95%;
+  width: 28.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid hotpink;
+  position: relative;
+}
+#pressToolApp .pressAppMain .pressToolInputs .pressAppTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid hotpink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs {
+  width: 90%;
+  margin-bottom: 10px;
+}
+#pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs h3 {
+  margin: 0 0 20px 0;
+}
+#pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs .pressForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs .pressForm .inputDims {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs .pressForm .widenSelector .appLabel {
+  width: 68%;
+}
+#pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer .pressInputs .pressForm .widenSelector .formItem {
+  width: 70%;
+}
+#pressToolApp .pressAppMain .pressToolInputs .pressInputsContainer::-webkit-scrollbar {
+  width: 0;
+}
+#pressToolApp .pressAppMain .pressToolOutputs {
+  background: white;
+  height: 95%;
+  width: 28.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid royalblue;
+  position: relative;
+}
+#pressToolApp .pressAppMain .pressToolOutputs .pressAppTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid royalblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#pressToolApp .pressAppMain .pressToolGraph {
+  background: white;
+  height: 95%;
+  width: 38.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid goldenrod;
+}
+#pressToolApp .pressAppMain .pressToolGraph .pressAppTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid goldenrod;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#pressToolApp .pressAppMain .pressToolGraph .pressGraph {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0;
+  width: 90%;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput {
+  background: white;
+  height: 95%;
+  width: 97.5%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid darkslategray;
+  margin: 1.25% 0% 1.25% 0%;
+  position: relative;
+  height: 90%;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressAppTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid darkslategray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .cellHeader h3 {
+  font-weight: 700;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .row h3 {
+  margin: 7px 15px;
+  text-align: center;
+  width: 50px;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .row.cellHeader h3 {
+  width: 100%;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable.pressTableLabels h3 {
+  width: 100%;
+  text-align: right;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressEndNote {
+  position: absolute;
+  left: 10px;
+  bottom: -10px;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressEndNote p {
+  font-size: 1.2rem;
+}
 
 #arcToolApp {
   position: absolute;
@@ -2023,82 +2299,88 @@ footer {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  display: none; }
-  #arcToolApp .arcAppMain .arcAppInputs {
-    background: white;
-    height: 95%;
-    width: 48%;
-    margin: 0 0.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.7rem !important;
-    border-radius: 10px;
-    border: 2px solid lemonchiffon; }
-    #arcToolApp .arcAppMain .arcAppInputs .appTitle {
-      width: 100%;
-      height: 55px;
-      border-bottom: 2px solid lemonchiffon;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
+  display: none;
+}
+#arcToolApp .arcAppMain .arcAppInputs {
+  background: white;
+  height: 95%;
+  width: 48%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      padding-left: 15px; }
-  #arcToolApp .arcAppMain .arcAppOutputs {
-    background: white;
-    height: 95%;
-    width: 48%;
-    margin: 0 0.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 1.7rem !important;
-    border-radius: 10px;
-    border: 2px solid deepskyblue; }
-    #arcToolApp .arcAppMain .arcAppOutputs .appTitle {
-      width: 100%;
-      height: 55px;
-      border-bottom: 2px solid deepskyblue;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid lemonchiffon;
+}
+#arcToolApp .arcAppMain .arcAppInputs .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid lemonchiffon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
       -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
+          justify-content: flex-start;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      padding-left: 15px; }
-    #arcToolApp .arcAppMain .arcAppOutputs .arcToolOutput {
-      height: 25%;
-      -webkit-box-pack: start;
+          align-items: center;
+  padding-left: 15px;
+}
+#arcToolApp .arcAppMain .arcAppOutputs {
+  background: white;
+  height: 95%;
+  width: 48%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid deepskyblue;
+}
+#arcToolApp .arcAppMain .arcAppOutputs .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid deepskyblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
       -ms-flex-pack: start;
-      justify-content: flex-start; }
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#arcToolApp .arcAppMain .arcAppOutputs .arcToolOutput {
+  height: 25%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
 
 #stackupToolApp {
   position: absolute;
@@ -2112,102 +2394,110 @@ footer {
   margin: 0 auto;
   right: 0;
   bottom: 0;
-  display: none; }
-  #stackupToolApp .stackupScrollContainer {
-    position: absolute;
-    background: #dddddd;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    right: 0;
-    bottom: 0;
-    overflow: auto;
-    overflow-x: hidden; }
-    #stackupToolApp .stackupScrollContainer .stackupAppMain {
-      height: 100%;
-      width: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
+  display: none;
+}
+#stackupToolApp .stackupScrollContainer {
+  position: absolute;
+  background: #dddddd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  overflow-x: hidden;
+}
+#stackupToolApp .stackupScrollContainer .stackupAppMain {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
+          justify-content: center;
+  -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
-      #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppInputs {
-        background: white;
-        height: 95%;
-        width: 64%;
-        margin: 0 0.5%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        font-size: 1.7rem !important;
-        border-radius: 10px;
-        border: 2px solid tomato; }
-        #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppInputs .appTitle {
-          width: 100%;
-          height: 55px;
-          border-bottom: 2px solid tomato;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
-          justify-content: flex-start;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
           align-items: center;
-          padding-left: 15px; }
-        #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppInputs .stackupPack {
-          width: 100%; }
-      #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppOutputs {
-        background: white;
-        height: 95%;
-        width: 32%;
-        margin: 0 0.5%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        font-size: 1.7rem !important;
-        border-radius: 10px;
-        border: 2px solid springgreen; }
-        #stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppOutputs .appTitle {
-          width: 100%;
-          height: 55px;
-          border-bottom: 2px solid springgreen;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
-          justify-content: flex-start;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
+}
+#stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppInputs {
+  background: white;
+  height: 95%;
+  width: 64%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
           align-items: center;
-          padding-left: 15px; }
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid tomato;
+}
+#stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppInputs .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid tomato;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+#stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppInputs .stackupPack {
+  width: 100%;
+}
+#stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppOutputs {
+  background: white;
+  height: 95%;
+  width: 32%;
+  margin: 0 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem !important;
+  border-radius: 10px;
+  border: 2px solid springgreen;
+}
+#stackupToolApp .stackupScrollContainer .stackupAppMain .stackupAppOutputs .appTitle {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid springgreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
