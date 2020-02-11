@@ -157,7 +157,7 @@ $(function(){
     });
     $("#jointTool").on("click", function(){
         $(".headToolSwitch").html('Bolted Joint Calculator');
-        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #arcToolApp #stackupToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #arcToolApp #stackupToolApp, #arcToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#boltToolApp" ).fadeIn( "slow", function() {
@@ -166,7 +166,7 @@ $(function(){
     });
     $("#arcTool").on("click", function(){
         $(".headToolSwitch").html('Arc Length Calculator');
-        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #boltToolApp, #stackupToolApp" ).fadeOut( "slow", function() {
+        $( "#dashboard, #tvToolApp, #stressToolApp, #pressToolApp, #boltToolApp, #stackupToolApp, #boltToolApp" ).fadeOut( "slow", function() {
             // Animation complete
         });
         $( "#arcToolApp" ).fadeIn( "slow", function() {
@@ -250,19 +250,7 @@ $(function(){
     }
     getQuote();
     // ********************************************************** */
-    // Flickity config for Kathys Kool Pics
-    // ********************************************************** */
-    $('.koolHero').flickity({
-        pageDots: true,
-        draggable: false,
-        contain: true,
-        autoPlay: 4000,
-        cellSelector: '.koolCell',
-        prevNextButtons: false,
-        wrapAround: true,
-    });
-    // ********************************************************** */
-    // TVTool graphcs and calcualtions
+    // TVTool graphics and calculations
     // ********************************************************** */
     // Set data for inital graphs on load
     tvCyc = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];

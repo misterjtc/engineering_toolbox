@@ -1133,8 +1133,7 @@ footer .contact ul li a:hover {
           flex-direction: row;
 }
 #dashboard .mainDashboard .inspoQuotes .quotePic {
-  width: 45%;
-  height: 100%;
+  width: 40%;
   padding: 0 0 10px 10px;
 }
 #dashboard .mainDashboard .inspoQuotes .quotePic img {
@@ -1219,9 +1218,12 @@ footer .contact ul li a:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp {
-  width: 33.33%;
+  width: 33%;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1230,9 +1232,9 @@ footer .contact ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1240,10 +1242,11 @@ footer .contact ul li a:hover {
   color: #999999;
 }
 #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp i {
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp p {
-  width: 85%;
+  font-size: 1.5rem;
+  width: 75%;
   text-align: center;
 }
 #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp1 i {
@@ -1263,6 +1266,15 @@ footer .contact ul li a:hover {
 }
 #dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp6 i {
   color: #4187a5;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp7 i {
+  color: #f59119;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp8 i {
+  color: #2acb34;
+}
+#dashboard .mainDashboard .bestTools .toolContainerBelowTitle .popApp9 i {
+  color: #787d87;
 }
 #dashboard .mainDashboard .twitterFeed {
   background: white;
@@ -1302,11 +1314,13 @@ footer .contact ul li a:hover {
           align-items: center;
   padding-left: 15px;
 }
+#dashboard .mainDashboard .twitterFeed .toolContainerBelowTitle {
+  margin-top: 0px;
+}
 #dashboard .mainDashboard .twitterFeed .feedContent {
   overflow: scroll !important;
   overflow-x: hidden !important;
   position: relative;
-  margin-bottom: 5px;
 }
 #dashboard .mainDashboard .twitterFeed .feedContent iframe {
   position: absolute !important;
@@ -1316,11 +1330,11 @@ footer .contact ul li a:hover {
 #dashboard .mainDashboard .twitterFeed .feedContent::-webkit-scrollbar {
   width: 0;
 }
-#dashboard .mainDashboard .dashHero {
+#dashboard .mainDashboard .autoFeed {
   background: white;
   height: 95%;
   width: 32%;
-  height: 400px;
+  height: 600px;
   margin: 0 0.5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1337,12 +1351,12 @@ footer .contact ul li a:hover {
           align-items: center;
   font-size: 1.7rem !important;
   border-radius: 10px;
-  border: 2px solid lightgoldenrodyellow;
+  border: 2px solid dodgerblue;
 }
-#dashboard .mainDashboard .dashHero .appTitle {
+#dashboard .mainDashboard .autoFeed .appTitle {
   width: 100%;
   height: 55px;
-  border-bottom: 2px solid lightgoldenrodyellow;
+  border-bottom: 2px solid dodgerblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1353,34 +1367,6 @@ footer .contact ul li a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 15px;
-}
-#dashboard .mainDashboard .dashHero .koolHero {
-  width: 100%;
-  height: 100%;
-}
-#dashboard .mainDashboard .dashHero .koolHero .flickity-viewport {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-#dashboard .mainDashboard .dashHero .koolHero img {
-  width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
-  display: block;
-  height: 100%;
-}
-#dashboard .mainDashboard .dashHero .koolHero .flickity-page-dots {
-  position: absolute;
-  z-index: 3;
-  right: 0px;
-  bottom: 10px;
-}
-#dashboard .mainDashboard .dashHero .koolHero .flickity-page-dots .dot {
-  background: white;
-  border: 1px solid white;
 }
 #dashboard .mainDashboard .dashCalendar {
   background: white;
