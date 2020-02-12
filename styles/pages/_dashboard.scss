@@ -11,6 +11,20 @@
         bottom: 0;
         overflow: scroll;
         overflow-x: hidden;
+        // Apple scrollbar
+        &::-webkit-scrollbar {
+            background-color:#fff;
+            width:16px
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color:#fff
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color:#babac0;
+            border-radius:16px;
+            border:4px solid #fff
+        }
     }
     .mainDashboard {
         display: flex;
@@ -32,8 +46,7 @@
                 flex-direction: row;
             }
             .quotePic {
-                width: 40%;
-                // height: 100%;
+                width: 42%;
                 padding: 0 0 10px 10px;
                 img {
                     display: block;
@@ -44,22 +57,22 @@
                 }
             }
             .quoteText {
-                width: 45%;
+                width: 55%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding-left: 15px;
+                padding-left: 20px;
                 .quoteBox {
                     width: 100%;
-                    font-size: 1.9rem;
+                    font-size: 2rem;
                 }
                 .quoteAuthor {
                     width: 100%;
                     text-align: right;
                     font-size: 1.5rem;
-                    padding-right: 25px;
+                    padding-right: 10px;
                 }
             }
         }
@@ -127,9 +140,6 @@
             .appTitle {
                 @include appTitle(salmon);
             }
-            .toolContainerBelowTitle {
-                margin-top: 0px;
-            }
             .feedContent {
                 overflow: scroll !important;
                 overflow-x: hidden !important;
@@ -158,12 +168,10 @@
             .cooksCalendar {
                 margin: 15px 0 0 0;
                 padding: 0 15px 15px 15px;
-                // overflow: scroll;
                 iframe {
                     width: 100%;
                     height: 100%;
                     border-radius: 10px;
-                    // margin-top: 25px;
                 }
             }
         }
@@ -171,6 +179,64 @@
             @include dashContainer(32%, 400px, darkturquoise);
             .appTitle {
                 @include appTitle(darkturquoise);
+            }
+            .toolContainerBelowTitle {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                padding-top: 0;
+                .popForm {
+                    display: flex;
+                    justify-content: flex-start;
+                    text-decoration: none;
+                    margin: 18px;
+                    color: $medText;
+                    p {
+                        font-size: 1.6rem;
+                        margin: 0 10px;
+                    }
+                    i {
+                        font-size: 1.6rem;
+                    }
+                }
+                .popForm1 i {
+                    color: $liDeepBlue;
+                }
+                .popForm2 i {
+                    color: $liPetroleum;
+                }
+                .popForm3 i {
+                    color: $adtGreen;
+                }
+                .popForm4 i {
+                    color: $tbtGreen;
+                }
+                .popForm5 i {
+                    color: $hybBlue;
+                }
+                .popForm6 i {
+                    color: $beltBlue;
+                }
+                .popForm7 i {
+                    color:$thermOrg;
+                }
+                .popForm8 i {
+                    color: $tenGreen;
+                }
+                .popForm9 i {
+                    color: $tvGrey;
+                }
+                .popForm10 i {
+                    color: $tvGrey;
+                }
+                .popForm11 i {
+                    color: $tvGrey;
+                }
+                .popForm12 i {
+                    color: $tvGrey;
+                }
             }
         }
     }

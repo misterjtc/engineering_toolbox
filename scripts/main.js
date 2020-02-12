@@ -640,7 +640,7 @@ $(function(){
         $(this).fadeOut(300);
     });
     // ********************************************************** */
-    // Arc legnth tool graphs and calculations
+    // Arc length tool graphs and calculations
     // ********************************************************** */
     var arcGraphData = [];
     function arcToolDonut(arcGraphData) {

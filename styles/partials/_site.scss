@@ -129,12 +129,13 @@ html {
 }
 .toolContainerBelowTitle {
     width: 100%;
+    max-height: calc(100% - 55px) !important;
     height: calc(100% - 55px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 20px;
+    padding-top: 20px;
     h3 {
         font-size: 1.7rem;
     }
