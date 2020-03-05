@@ -7,13 +7,12 @@ $(function(){
     var $headerHeight = $('header').css('height');
     var $footerHeight = $("footer").height();
     $('.centralContent').css('margin-top', $headerHeight);
-    // $('.grid').css('margin-bottom', $footerHeight);
     // Show dashboard as selected on site load
     $(".dashSelector").addClass("litLink");
     //********************************************************** */
     // Trying the loader config
     // ********************************************************* */
-    // This code display an image shortly while the page loads and then displays the dashbaord
+    // This code display an image shortly while the page loads and then displays the dashboard
     function showPage() {
         document.getElementById("loader").style.display = "none";
         document.getElementById("dashboard").style.opacity = "1";
@@ -615,19 +614,20 @@ $(function(){
         var alphaPrime = Math.atan(Math.tan(30*Math.PI/180)*Math.cos(Math.atan(threadPitch / (Math.PI * boltSize))));
         var jointStressAdjustment = 1 / Math.sqrt(1 + 3 * Math.pow(2 / stressDiameter * (threadPitch / Math.PI + threadFriction * pitchDiameter * (1 / Math.cos(alphaPrime))),2));
         var settledClamp = boltYieldStrength * stressArea * jointStressAdjustment / 1000;
-        var torqueYield = settledClamp*(threadPitch / (2 * Math.PI) + pitchDiameter * threadFriction / (2 * Math.cos(30 * Math.PI / 180)) + (boltSize + boltHeadDia) * bearingFriction / 4);
+        var torqueYield = settledClamp / 2 * (threadPitch / Math.PI + pitchDiameter * threadFriction / (Math.cos(30 * Math.PI / 180)) + (boltSize + boltHeadDia) * bearingFriction / 2);
         var unsettledClamp = stressArea * boltYieldStrength / 1000;
         var boltHeadPressure = 1000 * unsettledClamp / (Math.pow(boltHeadDia, 2) - Math.pow(boltHoleDia, 2)) / Math.PI * 4;
         $('.boltUnsettledClampOut').text(unsettledClamp.toFixed(2));
         $('.boltSettledClampOut').text(settledClamp.toFixed(2));
         $('.boltSurfacePressureOut').text(boltHeadPressure.toFixed(2));
         $('.boltTorqueYieldOut').text(torqueYield.toFixed(2));
+        $('.jointClampLoad').val(settledClamp.toFixed(2));
         // Define variables and do necessary torque transmission calcs
         var interfaceOD = parseFloat($('.interfaceOD').val());
         var interfaceID = parseFloat($('.interfaceID').val());
         var interfaceCOF = parseFloat($('.interfaceFriction').val());
         var jointClampLoad = parseFloat($('.jointClampLoad').val());
-        var jointTorque = 2 * interfaceCOF * jointClampLoad * (Math.pow(interfaceOD, 3) - Math.pow(interfaceID, 3)) / (8 * 0.75 * (Math.pow(interfaceOD, 2) - Math.pow(interfaceID, 2)));
+        var jointTorque = 2 / 3 * interfaceCOF * jointClampLoad * (Math.pow(interfaceOD/2, 3) - Math.pow(interfaceID/2, 3)) / (Math.pow(interfaceOD/2, 2) - Math.pow(interfaceID/2, 2));
         $('.jointTorqueOut').text(jointTorque.toFixed(2));
     });
     $(".boltSpecs").on("click", function(e){
