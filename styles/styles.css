@@ -2277,7 +2277,7 @@ footer .contact ul li a:hover {
   border: 2px solid darkslategray;
   margin: 1.25% 0% 1.25% 0%;
   position: relative;
-  height: 90%;
+  height: 92%;
 }
 #pressToolApp .pressAppMain .pressToolDetailedOutput .pressAppTitle {
   width: 100%;
@@ -2305,6 +2305,8 @@ footer .contact ul li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 0;
+  .subTable: first-child;
 }
 #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable {
   display: -webkit-box;
@@ -2343,6 +2345,9 @@ footer .contact ul li a:hover {
 }
 #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable .row.cellHeader h3 {
   width: 100%;
+}
+#pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .firstColumnItems {
+  margin-top: 30px;
 }
 #pressToolApp .pressAppMain .pressToolDetailedOutput .pressDetailedOutput .subTable.pressTableLabels h3 {
   width: 100%;

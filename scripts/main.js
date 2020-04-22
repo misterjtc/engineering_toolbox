@@ -699,7 +699,7 @@ $(function(){
         arcToolDonut(arcGraphData);
     });
     // ********************************************************** */
-    // Press Tool graphs and calcualtions
+    // Press Tool graphs and calculations
     // ********************************************************** */
     // Define global variables for the presstool
     var finalInterfaceDia;
@@ -956,14 +956,14 @@ $(function(){
         $('.pressAssmForceOut').text(pressAssemblyForce.toFixed(1));
         $('.pressTorqCapOut').text(pressTorqueCapacity.toFixed(1));
         // Populate variables for min max calculations in the detailed outputs table
-        var innerInterfaceODMax = innerInterfaceOD + (innerInterfaceODTolerance / 2);
-        var innerInterfaceIDMax = innerInterfaceID + (innerInterfaceIDTolerance / 2);
-        var innerInterfaceODMin = innerInterfaceOD - (innerInterfaceODTolerance / 2);
-        var innerInterfaceIDMin = innerInterfaceID - (innerInterfaceIDTolerance / 2);
-        var outerInterfaceIDMax = outerInterfaceID - (outerInterfaceIDTolernace / 2);
-        var outerInterfaceODMax = outerInterfaceOD - (outerInterfaceODTolerance / 2);
-        var outerInterfaceIDMin = outerInterfaceID + (outerInterfaceIDTolernace / 2);
-        var outerInterfaceODMin = outerInterfaceOD + (outerInterfaceODTolerance / 2);
+        var innerInterfaceODMax = innerInterfaceOD + (innerInterfaceODTolerance);
+        var innerInterfaceIDMax = innerInterfaceID + (innerInterfaceIDTolerance);
+        var innerInterfaceODMin = innerInterfaceOD - (innerInterfaceODTolerance);
+        var innerInterfaceIDMin = innerInterfaceID - (innerInterfaceIDTolerance);
+        var outerInterfaceIDMax = outerInterfaceID - (outerInterfaceIDTolernace);
+        var outerInterfaceODMax = outerInterfaceOD - (outerInterfaceODTolerance);
+        var outerInterfaceIDMin = outerInterfaceID + (outerInterfaceIDTolernace);
+        var outerInterfaceODMin = outerInterfaceOD + (outerInterfaceODTolerance);
         var innerODRadMax = innerInterfaceODMax / 2000;
         var innerIDRadMax = innerInterfaceIDMax / 2000;
         var innerODRadMin = innerInterfaceODMin / 2000;
