@@ -715,8 +715,8 @@ $(function(){
     function pressToolMainCalc(innerODRad, innerIDRad, outerIDRad, outerODRad, innerModulus, innerPoissons, outerModulus, outerPoissons, pressInterfaceLength, pressInterfaceFriction, pressTemp, pressCondition) {
         // Check if user inputs are actually an interference
         var pressDiff = innerODRad - outerIDRad;
-        var startRadius = innerODRad * 10;
-        var calcRadius = outerIDRad * 10;
+        var startRadius = innerODRad;
+        var calcRadius = outerIDRad;
         var allowedError = 0.000000000001;
         var pressCounter = 0;
         var x = pressCondition;
@@ -728,11 +728,15 @@ $(function(){
         } else {
             while ((startRadius - calcRadius) > allowedError) {
                 var mainTerm = (Math.pow(outerODRad, 2) + Math.pow(startRadius, 2)) / (Math.pow(outerODRad, 2) - Math.pow(startRadius, 2)) / outerModulus + outerPoissons / outerModulus + (Math.pow(startRadius, 2) + Math.pow(innerIDRad, 2)) / (Math.pow(startRadius, 2) - Math.pow(innerIDRad, 2)) / innerModulus - innerPoissons / innerModulus;
-                var interfacePressure = pressDiff * 0.5 / startRadius / mainTerm / 1e6;
-                var outerDelta = startRadius * interfacePressure / outerModulus * ((Math.pow(outerODRad, 2) + Math.pow(startRadius, 2)) / (Math.pow(outerODRad, 2) - Math.pow(startRadius, 2)) + outerPoissons) * 1e6;
+                var interfacePressure = pressDiff / startRadius / mainTerm;
+                console.log(interfacePressure);
+                var outerDelta = startRadius * interfacePressure / outerModulus * ((Math.pow(outerODRad, 2) + Math.pow(startRadius, 2)) / (Math.pow(outerODRad, 2) - Math.pow(startRadius, 2)) + outerPoissons);
+                console.log(outerDelta);
                 calcRadius = outerIDRad + outerDelta;
                 startRadius = (calcRadius + startRadius) * 0.5;
                 pressCounter = pressCounter + 1;
+                console.log(startRadius);
+                console.log(startRadius - calcRadius);
                 if (pressCounter > 100) {
                     alert("The tool failed to do the calcs bro");
                     break;
@@ -740,6 +744,7 @@ $(function(){
             }
             // console.log(finalInterfaceRad);
             if (pressCounter < 101) {
+                console.log(startRadius);
                 finalInterfaceRad = startRadius * 1000;
                 finalInterfaceDia = finalInterfaceRad *2;
                 // Declare output variables and do necessary simple calcs
