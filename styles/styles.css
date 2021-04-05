@@ -822,7 +822,7 @@ footer .contact ul li a:hover {
 }
 
 .wrapper {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -9,7 +9,9 @@ engApp.engTools = {
     jointTool: "boltToolApp",
     arcTool: "arcToolApp",
     stackupTool: "stackupToolApp",
-    springTool: "springToolApp"
+    springTool: "springToolApp",
+    tvTool: "tvToolApp",
+    freqTool: "freqToolApp"
 }
 
 // Function to make nav expand adjustments
@@ -96,7 +98,15 @@ engApp.printQuotes = function(quote) {
 // App init method
 engApp.init = function() {
     // Load wip pages as applicable
-    $('#stressToolApp').load("../wip.html");
+    $('#stressToolApp').load('wip.html');
+    $('#boltToolApp').load('wip.html');
+    $('#arcToolApp').load('wip.html');
+    $('#stackupToolApp').load('wip.html');
+    $('#tvToolApp').load('wip.html');
+    $('#springToolApp').load('wip.html');
+    $('#freqToolApp').load('wip.html');
+
+
     // Display loader image on initial page load for 1500 ms
     function showPage() {
         document.getElementById("loader").style.display = "none";
@@ -151,7 +161,7 @@ engApp.init = function() {
         // Update the dashboard header with the tool that has been selected
         $(".headToolSwitch").html(this.text);
         // Hide anything that is in the content area
-        $( ".engTool, .dashboard" ).fadeOut( "slow" );
+        $( ".engTool, .dashboard" ).hide();
         // Show the tool the user selected
         $(theToolID).fadeIn( "slow" );
     });
