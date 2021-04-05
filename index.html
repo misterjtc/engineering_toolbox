@@ -16,8 +16,6 @@ Designed and developed by:
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Main Site Font -->
    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-   <!-- Flickity CSS -->
-   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
    <!-- Main Site Styles -->
    <link rel="stylesheet" href="./styles/styles.css"/>
 </head>
@@ -27,15 +25,15 @@ Designed and developed by:
     <!-- *************************************************** -->
     <aside class="navPanel">
         <div class="top">
-            <div class="logo">
-                <a href="#"><img src="./assets/jcook_engineering_v2_white_vectorized.png" alt="This is the Litens Logo"></a>
+            <div id="mainLogo" class="logo toolSelector">
+                <a href="#"><img src="./assets/jcook_engineering_v2_white_vectorized.png" alt="This is the JCook Engineering Logo"></a>
             </div>
             <div class="minify icon">
                 <a href="" onclick="return false"><i class="fas fa-chevron-left fa-fw"></i></a>
             </div>
         </div>
         <div class="nav">
-            <div class="dashSelector mainLink rootLink">
+            <div id="dashSelector" class="dashSelector mainLink rootLink litLink toolSelector">
                 <a href="" onclick="return false"><i class="fas fa-box fa-fw"></i></a>
                 <a class="linkText" href="" onclick="return false">Dashboard</a>
             </div>
@@ -43,7 +41,7 @@ Designed and developed by:
                 <h3 class="uppercase sectionBreak toolboxBreak engToolsSection">
                     Engineering Toolbox
                 </h3>
-                <div class="mechanical mechExpander mainLink">
+                <div class="mechanical mechExpander mainLink menuExpand">
                     <a href="#" onclick="return false"><i class="fas fa-cogs fa-fw"></i></a>
                     <a class="linkText" href="#" onclick="return false">Mechanical</a>
                     <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></a>
@@ -51,26 +49,26 @@ Designed and developed by:
                 <div class="mechTools toolList">
                     <ul>
                         <li>
-                            <a id="stressGen" class="stressGen subLink" href="#" onclick="return false">Stress Strain Generator</a>
+                            <a id="stressGen" class="stressGen subLink toolSelector" href="#" onclick="return false">Stress Strain Generator</a>
                         </li>
                         <li>
-                            <a id="pressTool" class="pressTool subLink" href="#" onclick="return false">Cylindrical Press-Fit Calculator</a>
+                            <a id="pressTool" class="pressTool subLink toolSelector" href="#" onclick="return false">Cylindrical Press-Fit Calculator</a>
                         </li>
                         <li>
-                            <a id="jointTool" class="jointTool subLink" href="#" onclick="return false">Bolted Joint Calculator</a>
+                            <a id="jointTool" class="jointTool subLink toolSelector" href="#" onclick="return false">Bolted Joint Calculator</a>
                         </li>
                         <li>
-                            <a id="arcTool" class="arcLengthTool subLink" href="#" onclick="return false">Arc Length Calculator</a>
+                            <a id="arcTool" class="arcLengthTool subLink toolSelector" href="#" onclick="return false">Arc Length Calculator</a>
                         </li>
                         <li>
-                            <a id="stackupTool" class="stackupTool subLink" href="#" onclick="return false">Stack-up Calculator</a>
+                            <a id="stackupTool" class="stackupTool subLink toolSelector" href="#" onclick="return false">Stack-up Calculator</a>
                         </li>
                         <li>
-                            <a class="basSpringTool subLink" href="#" onclick="return false">Arc Spring Designer</a>
+                            <a id="springTool" class="springTool subLink toolelector" href="#" onclick="return false">Arc Spring Designer</a>
                         </li>
                     </ul>
                 </div>
-                <div class="vibration vibExpander mainLink">
+                <div class="vibration vibExpander mainLink menuExpand">
                     <a href="#" onclick="return false"><i class="fas fa-wave-square fa-fw"></i></i></a>
                     <a class="linkText" href="#" onclick="return false">Vibrations</a>
                     <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></a>
@@ -78,10 +76,10 @@ Designed and developed by:
                 <div class="vibTools toolList">
                     <ul>
                         <li>
-                            <a id="tvTool" class="tvTool subLink" href="#" onclick="return false">Torsional Vibration Tool</a>
+                            <a id="tvTool" class="tvTool subLink toolSelector" href="#" onclick="return false">Torsional Vibration Tool</a>
                         </li>
                         <li>
-                            <a class="freqTool subLink" href="#" onclick="return false">System Natural Frequency</a>
+                            <a id="freqTool" class="freqTool subLink toolSelector" href="#" onclick="return false">System Natural Frequency</a>
                         </li>
                     </ul>
                 </div>
@@ -90,7 +88,7 @@ Designed and developed by:
                 <h3 class="uppercase sectionBreak toolboxBreak erpToolsSection">
                     ERP Toolbox
                 </h3>
-                <div class="erpEng erpEngExpander mainLink">
+                <div class="erpEng erpEngExpander mainLink menuExpand">
                     <a href="#" onclick="return false"><i class="fas fa-cogs fa-fw"></i></a>
                     <a class="linkText" href="#" onclick="return false">Engineering</a>
                     <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></a>
@@ -108,7 +106,7 @@ Designed and developed by:
                         </li>
                     </ul>
                 </div>
-                <div class="erpPur erpPurExpander mainLink">
+                <div class="erpPur erpPurExpander mainLink menuExpand">
                     <a href="#" onclick="return false"><i class="fas fa-money-check-alt fa-fw"></i></a>
                     <a class="linkText" href="#" onclick="return false">Purchasing</a>
                     <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></a>
@@ -120,7 +118,7 @@ Designed and developed by:
                         </li>
                     </ul>
                 </div>
-                <div class="erpDoc erpDocExpander mainLink">
+                <div class="erpDoc erpDocExpander mainLink menuExpand">
                     <a href="#" onclick="return false"><i class="fas fa-file-alt fa-fw"></i></a>
                     <a class="linkText" href="#" onclick="return false">Documentation</a>
                     <a class="expander" href="#" onclick="return false"><i class="fas fa-angle-right"></i></i></a>
@@ -195,7 +193,7 @@ Designed and developed by:
                                     </h3>
                                     <div class="toolContainerBelowTitle">
                                         <div class="quotePic">
-                                            <img src="./assets/ronsvibes.jpg" alt="These are random inspiration images from unsplash">
+                                            <img src="./assets/ronsvibes.jpg" alt="A photo reads that reads good vibes only">
                                         </div>
                                         <div class="quoteText">
                                             <div class="quoteBox">
@@ -363,7 +361,7 @@ Designed and developed by:
                                         <a class="twitter-timeline" href="https://twitter.com/misterjtc/lists/automotive?ref_src=twsrc%5Etfw">A Twitter List by misterjtc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                                     </div>
                                 </div>
-                                <div class="contentItem5 dashBox dashCalendar">
+                                <div id="dashCalendar" class="contentItem5 dashBox dashCalendar">
                                     <h3 class="appTitle">
                                         Day At-a-Glance
                                     </h3>
@@ -377,40 +375,37 @@ Designed and developed by:
                     <!-- *************************************************** -->
                     <!--                Torsional Vibration Tool             -->
                     <!-- *************************************************** -->
-                    <div id="tvToolApp" class="tvToolApp">
+                    <div id="tvToolApp" class="tvToolApp engTool">
                         
                     </div>
                     <!-- *************************************************** -->
                     <!--                  Stress-Strain Tool                 -->
                     <!-- *************************************************** -->
-                    <div class="stressToolApp" id="stressToolApp">
+                    <div class="stressToolApp" id="stressToolApp engTool">
                         
                     </div>
                     <!-- *************************************************** -->
                     <!--                  Bolted Joint Tool                  -->
                     <!-- *************************************************** -->
-                    <div id="boltToolApp">
+                    <div id="boltToolApp" class="boltToolApp engTool">
 
                     </div>
                     <!-- *************************************************** -->
                     <!--             Cylindrical Press-fit Tool              -->
                     <!-- *************************************************** -->
-                    <div id="pressToolApp">
-                        <div class="scrollAid pressMainScroll">
-                            <a href="" onclick="return false"><i class="fas fa-angle-down"></i></a>
-                        </div>
+                    <div id="pressToolApp" class="pressToolApp engTool">
                         <iframe src="https://pressfit.jordancook.dev" frameborder="0"></iframe>
                     </div>
                     <!-- *************************************************** -->
                     <!--                 Arc length calculator               -->
                     <!-- *************************************************** -->
-                    <div id="arcToolApp">
-                        
+                    <div id="arcToolApp" class="arcToolApp engTool">
+
                     </div>
                     <!-- *************************************************** -->
                     <!--                  Stack-up Calculator                -->
                     <!-- *************************************************** -->
-                    <div id="stackupToolApp">
+                    <div id="stackupToolApp" class="stackupToolApp engTool">
 
                     </div>
                 </div>
@@ -455,8 +450,7 @@ Designed and developed by:
     <script src="https://kit.fontawesome.com/acb50d146b.js" crossorigin="anonymous"></script>
     <!-- Main JS Site Script -->
     <script src="./scripts/main.js"></script>
-    <!-- Load Flickity -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- <script src="./"></script> -->
     <!-- Load smoothscroll -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
 </html>
